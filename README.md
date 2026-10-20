@@ -31,7 +31,14 @@ data archives (`d2data.mpq`, `d2exp.mpq`, ...) from your own install when it run
 
 ## Playing
 
-1. Build the game (below) or get a release build.
+**Easiest:** download `D2RUST-Setup-*.exe` from the [latest release](https://github.com/Nugwa628/d2rust/releases/latest)
+and run it (no admin rights needed). The launcher copies the game data from your own Diablo II install, downloads the game and keeps it up
+to date.
+
+**Game only:**
+
+1. Download `D2RUST-Game-*.zip` from the [latest release](https://github.com/Nugwa628/d2rust/releases/latest) and
+   unzip it, or build the game yourself (below).
 2. Put `D2RUST-Game.exe` in your Diablo II folder (the folder that has `d2data.mpq`), or point it at the folder:
    ```powershell
    D2RUST-Game.exe --game-dir "C:\Program Files (x86)\Diablo II"
