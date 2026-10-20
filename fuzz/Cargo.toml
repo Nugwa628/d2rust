@@ -1,0 +1,205 @@
+[package]
+name = "d2-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+# cargo-fuzz crate: not a member of the main workspace (needs nightly).
+# Run from this directory: `cargo +nightly fuzz run <target>`.
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+d2-formats = { path = "../crates/d2-formats", features = ["fuzz", "test-support"] }
+d2-data = { path = "../crates/d2-data" }
+d2-proto = { path = "../crates/d2-proto" }
+d2-server = { path = "../crates/d2-server" }
+d2-sim = { path = "../crates/d2-sim" }
+d2-native = { path = "../crates/d2-native" }
+d2-client = { path = "../crates/d2-client", features = ["dylib"], optional = true }
+
+[features]
+scenario-parser = ["dep:d2-client"]
+
+[workspace]
+members = ["."]
+
+[profile.release]
+debug = 1
+
+[[bin]]
+name = "mkseeds"
+path = "src/mkseeds.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "dc6"
+path = "fuzz_targets/dc6.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "dcc"
+path = "fuzz_targets/dcc.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "dt1"
+path = "fuzz_targets/dt1.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "ds1"
+path = "fuzz_targets/ds1.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "cof"
+path = "fuzz_targets/cof.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "tbl"
+path = "fuzz_targets/tbl.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "font_tbl"
+path = "fuzz_targets/font_tbl.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "palette"
+path = "fuzz_targets/palette.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "pl2"
+path = "fuzz_targets/pl2.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "animdata"
+path = "fuzz_targets/animdata.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "mpq_explode"
+path = "fuzz_targets/mpq_explode.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "mpq_huffman"
+path = "fuzz_targets/mpq_huffman.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "mpq_adpcm"
+path = "fuzz_targets/mpq_adpcm.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "mpq_sector"
+path = "fuzz_targets/mpq_sector.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "mpq_archive"
+path = "fuzz_targets/mpq_archive.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "txt"
+path = "fuzz_targets/txt.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "bin"
+path = "fuzz_targets/bin.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "patch_layer"
+path = "fuzz_targets/patch_layer.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "client_messages"
+path = "fuzz_targets/client_messages.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "server_messages"
+path = "fuzz_targets/server_messages.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "save_loader"
+path = "fuzz_targets/save_loader.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "mod_pack"
+path = "fuzz_targets/mod_pack.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "scenario"
+required-features = ["scenario-parser"]
+path = "fuzz_targets/scenario.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "mkrobustseeds"
+path = "src/mkrobustseeds.rs"
+test = false
+doc = false
+bench = false

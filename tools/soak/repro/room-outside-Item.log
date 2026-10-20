@@ -1,0 +1,8 @@
+soak-log 1 seed=1 new=barbarian difficulty=0 kit=1
+301 click L 322 216
+302 pick 21 1
+312 key toggle_run
+323 click L 293 286
+327 key toggle_quests
+332 click R 405 402
+349 click L 534 184

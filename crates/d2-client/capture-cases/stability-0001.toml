@@ -1,0 +1,8 @@
+# render/capture.md §7, §8 stability-0001: run right after recording it
+# (`record_frames.py --seconds 40`; the player stands still in a dead end
+# of the Den of Evil, no panels open). Reads the newest recording.
+version = 1
+kind = "scene"
+description = "capture.md §7: equal recorded state, equal frames"
+raw = "latest"
+check = "stability"

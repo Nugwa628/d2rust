@@ -1,0 +1,22 @@
+scenario 2
+tick_rate 60
+# The world view never stops the game: from the act IV town the player
+# warps into two of its outdoor levels; after each the game still runs and
+# the view draws a frame with map tiles, with no frame skipped.
+name view-warp-act4
+seed 1234
+end 420
+char class 1
+char level 30
+char area 3 103
+at 0 dev god on
+at 0 poke warp 105
+by 150 check player.area == 105
+at 180 check client.view.tiles > 0
+at 180 check client.view.tick changes
+at 180 check client.view.skipped == 0
+at 200 poke warp 106
+by 350 check player.area == 106
+at 400 check client.view.tiles > 0
+at 400 check client.view.tick changes
+at 400 check client.view.skipped == 0

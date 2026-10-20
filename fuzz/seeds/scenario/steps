@@ -1,0 +1,8 @@
+scenario 2
+name synthetic-steps
+end 40
+char class 1
+at 2 dev god on
+at 3 poke warp 2
+at 5 input rclickunit 1 *
+at 5 input click 400 300

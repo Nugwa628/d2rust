@@ -1,0 +1,21 @@
+[package]
+name = "mod-game-example"
+description = "An example mod game: its own binary on the D2RUST crates, with its own rules, layers and save folder. Not shipped in any release."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "mod-game-example"
+path = "src/main.rs"
+
+[dependencies]
+anyhow.workspace = true
+d2-client = { path = "../../crates/d2-client" }
+d2-server.workspace = true
+d2-sim.workspace = true
+
+[lints]
+workspace = true

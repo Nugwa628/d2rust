@@ -1,0 +1,3459 @@
+autoplay-route 1
+# Act II town probe: NPC talks, waypoint menu, waypoint out and back (unit targets and UI ids)
+save --name AutoTown2 --class sor --expansion --level 30 --waypoints all --quests acts=1 --act 1 --difficulty normal --time 1760000000 --map-seed 1234
+host --front --seed 1234
+# milestone front: main menu, Single Player, the character, OK
+click ui:menu.single_player
+step 1
+click ui:char_select.char(AutoTown2)
+step 1
+click ui:char_select.ok
+step 1
+check level 40
+key esc
+step 2
+step 6
+key esc
+step 2
+step 6
+press L 640 244
+step 1
+release L 640 244
+step 1
+step 8
+press L 599 240
+step 1
+release L 599 240
+step 1
+step 8
+press L 639 332
+step 1
+release L 639 332
+step 1
+step 8
+press L 367 426
+step 1
+release L 367 426
+step 1
+step 8
+press L 395 408
+step 1
+release L 395 408
+step 1
+step 8
+press L 556 206
+step 1
+release L 556 206
+step 1
+step 8
+press L 564 202
+step 1
+release L 564 202
+step 1
+step 8
+press L 552 208
+step 1
+release L 552 208
+step 1
+step 8
+press L 556 206
+step 1
+release L 556 206
+step 1
+step 8
+press L 560 204
+step 1
+release L 560 204
+step 1
+step 8
+press L 532 202
+step 1
+release L 532 202
+step 1
+step 8
+press L 541 202
+step 1
+release L 541 202
+step 1
+step 8
+press L 533 210
+step 1
+release L 533 210
+step 1
+step 8
+press L 540 209
+step 1
+release L 540 209
+step 1
+step 8
+press L 545 208
+step 1
+release L 545 208
+step 1
+step 8
+press L 550 206
+step 1
+release L 550 206
+step 1
+step 8
+press L 539 213
+step 1
+release L 539 213
+step 1
+step 8
+press L 319 163
+step 1
+release L 319 163
+step 1
+step 8
+press L 336 159
+step 1
+release L 336 159
+step 1
+step 8
+press L 227 212
+step 1
+release L 227 212
+step 1
+step 8
+press L 225 208
+step 1
+release L 225 208
+step 1
+step 8
+press L 240 212
+step 1
+release L 240 212
+step 1
+step 8
+press L 239 208
+step 1
+release L 239 208
+step 1
+step 8
+press L 237 206
+step 1
+release L 237 206
+step 1
+step 8
+press L 234 203
+step 1
+release L 234 203
+step 1
+step 8
+press L 246 209
+step 1
+release L 246 209
+step 1
+step 8
+press L 243 206
+step 1
+release L 243 206
+step 1
+step 8
+press L 239 204
+step 1
+release L 239 204
+step 1
+step 8
+press L 235 202
+step 1
+release L 235 202
+step 1
+step 8
+press L 247 208
+step 1
+release L 247 208
+step 1
+step 8
+press L 195 342
+step 1
+release L 195 342
+step 1
+step 8
+press L 173 328
+step 1
+release L 173 328
+step 1
+step 8
+press L 204 224
+step 1
+release L 204 224
+step 1
+step 8
+press L 195 220
+step 1
+release L 195 220
+step 1
+step 8
+press L 218 219
+step 1
+release L 218 219
+step 1
+step 8
+press L 207 220
+step 1
+release L 207 220
+step 1
+step 8
+press L 197 220
+step 1
+release L 197 220
+step 1
+step 8
+press L 204 227
+step 1
+release L 204 227
+step 1
+step 8
+press L 180 234
+step 1
+release L 180 234
+step 1
+step 8
+press L 193 236
+step 1
+release L 193 236
+step 1
+step 8
+press L 208 218
+step 1
+release L 208 218
+step 1
+step 8
+press L 208 225
+step 1
+release L 208 225
+step 1
+step 8
+press L 632 256
+step 1
+release L 632 256
+step 1
+step 8
+press L 606 228
+step 1
+release L 606 228
+step 1
+step 8
+press L 580 210
+step 1
+release L 580 210
+step 1
+step 8
+press L 563 213
+step 1
+release L 563 213
+step 1
+step 8
+press L 547 217
+step 1
+release L 547 217
+step 1
+step 8
+press L 548 214
+step 1
+release L 548 214
+step 1
+step 8
+press L 551 211
+step 1
+release L 551 211
+step 1
+step 8
+press L 506 200
+step 1
+release L 506 200
+step 1
+step 8
+press L 467 193
+step 1
+release L 467 193
+step 1
+step 8
+press L 420 178
+step 1
+release L 420 178
+step 1
+step 8
+press L 384 164
+step 1
+release L 384 164
+step 1
+step 8
+press L 384 191
+step 1
+release L 384 191
+step 1
+step 8
+press L 389 201
+step 1
+release L 389 201
+step 1
+step 8
+press L 538 252
+step 1
+release L 538 252
+step 1
+step 8
+press L 506 244
+step 1
+release L 506 244
+step 1
+step 8
+press L 471 222
+step 1
+release L 471 222
+step 1
+step 8
+press L 472 217
+step 1
+release L 472 217
+step 1
+step 8
+press L 461 222
+step 1
+release L 461 222
+step 1
+step 8
+press L 571 381
+step 1
+release L 571 381
+step 1
+step 8
+press L 608 372
+step 1
+release L 608 372
+step 1
+step 8
+press L 647 347
+step 1
+release L 647 347
+step 1
+step 8
+press L 604 226
+step 1
+release L 604 226
+step 1
+step 8
+press L 637 226
+step 1
+release L 637 226
+step 1
+step 8
+press L 603 202
+step 1
+release L 603 202
+step 1
+step 8
+press L 618 211
+step 1
+release L 618 211
+step 1
+step 8
+press L 612 207
+step 1
+release L 612 207
+step 1
+step 8
+press L 608 205
+step 1
+release L 608 205
+step 1
+step 8
+press L 609 205
+step 1
+release L 609 205
+step 1
+step 8
+press L 621 213
+step 1
+release L 621 213
+step 1
+step 8
+press L 590 195
+step 1
+release L 590 195
+step 1
+step 8
+press L 587 193
+step 1
+release L 587 193
+step 1
+step 8
+press L 273 188
+step 1
+release L 273 188
+step 1
+step 8
+press L 296 214
+step 1
+release L 296 214
+step 1
+step 8
+press L 315 232
+step 1
+release L 315 232
+step 1
+step 8
+press L 365 218
+step 1
+release L 365 218
+step 1
+step 8
+press L 416 172
+step 1
+release L 416 172
+step 1
+step 8
+press L 416 166
+step 1
+release L 416 166
+step 1
+step 8
+press L 416 177
+step 1
+release L 416 177
+step 1
+step 8
+press L 624 308
+step 1
+release L 624 308
+step 1
+step 8
+press L 596 332
+step 1
+release L 596 332
+step 1
+step 8
+press L 544 340
+step 1
+release L 544 340
+step 1
+step 8
+press L 515 364
+step 1
+release L 515 364
+step 1
+step 8
+press L 537 359
+step 1
+release L 537 359
+step 1
+step 8
+press L 544 359
+step 1
+release L 544 359
+step 1
+step 8
+press L 533 353
+step 1
+release L 533 353
+step 1
+step 8
+press L 538 354
+step 1
+release L 538 354
+step 1
+step 8
+press L 543 356
+step 1
+release L 543 356
+step 1
+step 8
+press L 547 358
+step 1
+release L 547 358
+step 1
+step 8
+press L 529 355
+step 1
+release L 529 355
+step 1
+step 8
+press L 534 364
+step 1
+release L 534 364
+step 1
+step 8
+press L 538 353
+step 1
+release L 538 353
+step 1
+step 8
+press L 542 355
+step 1
+release L 542 355
+step 1
+step 8
+press L 578 341
+step 1
+release L 578 341
+step 1
+step 8
+press L 539 349
+step 1
+release L 539 349
+step 1
+step 8
+press L 541 352
+step 1
+release L 541 352
+step 1
+step 8
+press L 544 355
+step 1
+release L 544 355
+step 1
+step 8
+press L 580 341
+step 1
+release L 580 341
+step 1
+step 8
+press L 541 350
+step 1
+release L 541 350
+step 1
+step 8
+press L 559 345
+step 1
+release L 559 345
+step 1
+step 8
+press L 553 353
+step 1
+release L 553 353
+step 1
+step 8
+press L 528 364
+step 1
+release L 528 364
+step 1
+step 8
+press L 538 347
+step 1
+release L 538 347
+step 1
+step 8
+press L 540 350
+step 1
+release L 540 350
+step 1
+step 8
+press L 526 345
+step 1
+release L 526 345
+step 1
+step 8
+press L 529 347
+step 1
+release L 529 347
+step 1
+step 8
+# milestone town-npcs: walk the town, list its NPCs
+check level 40
+press L 135 262
+step 1
+release L 135 262
+step 1
+step 8
+press L 151 295
+step 1
+release L 151 295
+step 1
+step 8
+press L 198 311
+step 1
+release L 198 311
+step 1
+step 8
+press L 208 364
+step 1
+release L 208 364
+step 1
+step 8
+press L 236 398
+step 1
+release L 236 398
+step 1
+step 8
+press L 278 377
+step 1
+release L 278 377
+step 1
+step 8
+press L 309 381
+step 1
+release L 309 381
+step 1
+step 8
+press L 282 375
+step 1
+release L 282 375
+step 1
+step 8
+press L 261 371
+step 1
+release L 261 371
+step 1
+step 8
+press L 258 359
+step 1
+release L 258 359
+step 1
+step 8
+press L 252 358
+step 1
+release L 252 358
+step 1
+step 8
+press L 248 360
+step 1
+release L 248 360
+step 1
+step 8
+press L 212 346
+step 1
+release L 212 346
+step 1
+step 8
+press L 208 348
+step 1
+release L 208 348
+step 1
+step 8
+press L 175 342
+step 1
+release L 175 342
+step 1
+step 8
+press L 202 346
+step 1
+release L 202 346
+step 1
+step 8
+press L 210 356
+step 1
+release L 210 356
+step 1
+step 8
+press L 217 365
+step 1
+release L 217 365
+step 1
+step 8
+press L 218 364
+step 1
+release L 218 364
+step 1
+step 8
+press L 239 364
+step 1
+release L 239 364
+step 1
+step 8
+press L 235 367
+step 1
+release L 235 367
+step 1
+step 8
+press L 231 368
+step 1
+release L 231 368
+step 1
+step 8
+press L 227 370
+step 1
+release L 227 370
+step 1
+step 8
+press L 239 364
+step 1
+release L 239 364
+step 1
+step 8
+press L 267 382
+step 1
+release L 267 382
+step 1
+step 8
+press L 267 388
+step 1
+release L 267 388
+step 1
+step 8
+press L 265 376
+step 1
+release L 265 376
+step 1
+step 8
+press L 235 366
+step 1
+release L 235 366
+step 1
+step 8
+press L 262 383
+step 1
+release L 262 383
+step 1
+step 8
+press L 247 381
+step 1
+release L 247 381
+step 1
+step 8
+press L 251 371
+step 1
+release L 251 371
+step 1
+step 8
+press L 238 369
+step 1
+release L 238 369
+step 1
+step 8
+press L 240 367
+step 1
+release L 240 367
+step 1
+step 8
+press L 246 361
+step 1
+release L 246 361
+step 1
+step 8
+press L 306 331
+step 1
+release L 306 331
+step 1
+step 8
+press L 366 301
+step 1
+release L 366 301
+step 1
+step 8
+press L 314 327
+step 1
+release L 314 327
+step 1
+step 8
+press L 374 297
+step 1
+release L 374 297
+step 1
+step 8
+# milestone talk-175: talk to npc 175: Talk opens a dialog
+interactunit 1 175
+step 200
+interactunit 1 175
+step 200
+check client npc_menu.class == 175
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 40
+check sent 2F >= 1
+check sent 30 >= 1
+press L 544 196
+step 1
+release L 544 196
+step 1
+step 8
+press L 559 209
+step 1
+release L 559 209
+step 1
+step 8
+press L 546 198
+step 1
+release L 546 198
+step 1
+step 8
+press L 555 199
+step 1
+release L 555 199
+step 1
+step 8
+press L 550 208
+step 1
+release L 550 208
+step 1
+step 8
+press L 546 211
+step 1
+release L 546 211
+step 1
+step 8
+press L 550 209
+step 1
+release L 550 209
+step 1
+step 8
+press L 554 207
+step 1
+release L 554 207
+step 1
+step 8
+press L 542 213
+step 1
+release L 542 213
+step 1
+step 8
+press L 546 211
+step 1
+release L 546 211
+step 1
+step 8
+press L 550 209
+step 1
+release L 550 209
+step 1
+step 8
+press L 522 191
+step 1
+release L 522 191
+step 1
+step 8
+press L 521 201
+step 1
+release L 521 201
+step 1
+step 8
+press L 520 196
+step 1
+release L 520 196
+step 1
+step 8
+press L 551 206
+step 1
+release L 551 206
+step 1
+step 8
+press L 552 208
+step 1
+release L 552 208
+step 1
+step 8
+press L 540 214
+step 1
+release L 540 214
+step 1
+step 8
+press L 512 196
+step 1
+release L 512 196
+step 1
+step 8
+press L 511 190
+step 1
+release L 511 190
+step 1
+step 8
+press L 530 194
+step 1
+release L 530 194
+step 1
+step 8
+press L 511 196
+step 1
+release L 511 196
+step 1
+step 8
+press L 511 191
+step 1
+release L 511 191
+step 1
+step 8
+press L 529 195
+step 1
+release L 529 195
+step 1
+step 8
+press L 510 197
+step 1
+release L 510 197
+step 1
+step 8
+press L 527 200
+step 1
+release L 527 200
+step 1
+step 8
+press L 525 194
+step 1
+release L 525 194
+step 1
+step 8
+press L 528 204
+step 1
+release L 528 204
+step 1
+step 8
+press L 548 210
+step 1
+release L 548 210
+step 1
+step 8
+press L 536 216
+step 1
+release L 536 216
+step 1
+step 8
+press L 540 214
+step 1
+release L 540 214
+step 1
+step 8
+press L 544 212
+step 1
+release L 544 212
+step 1
+step 8
+press L 548 210
+step 1
+release L 548 210
+step 1
+step 8
+press L 536 216
+step 1
+release L 536 216
+step 1
+step 8
+press L 540 214
+step 1
+release L 540 214
+step 1
+step 8
+press L 544 212
+step 1
+release L 544 212
+step 1
+step 8
+press L 500 216
+step 1
+release L 500 216
+step 1
+step 8
+press L 450 227
+step 1
+release L 450 227
+step 1
+step 8
+press L 410 264
+step 1
+release L 410 264
+step 1
+step 8
+press L 368 300
+step 1
+release L 368 300
+step 1
+step 8
+press L 422 273
+step 1
+release L 422 273
+step 1
+step 8
+press L 374 297
+step 1
+release L 374 297
+step 1
+step 8
+press L 416 276
+step 1
+release L 416 276
+step 1
+step 8
+# milestone talk-176: talk to npc 176: Talk opens a dialog
+interactunit 1 176
+step 200
+interactunit 1 176
+step 200
+check client npc_menu.class == 176
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+key q
+step 2
+step 6
+key esc
+step 2
+step 6
+check level 40
+check sent 2F >= 2
+check sent 30 >= 2
+press L 240 204
+step 1
+release L 240 204
+step 1
+step 8
+press L 265 188
+step 1
+release L 265 188
+step 1
+step 8
+press L 267 184
+step 1
+release L 267 184
+step 1
+step 8
+press L 286 184
+step 1
+release L 286 184
+step 1
+step 8
+press L 266 188
+step 1
+release L 266 188
+step 1
+step 8
+press L 283 175
+step 1
+release L 283 175
+step 1
+step 8
+press L 294 179
+step 1
+release L 294 179
+step 1
+step 8
+press L 303 169
+step 1
+release L 303 169
+step 1
+step 8
+press L 339 159
+step 1
+release L 339 159
+step 1
+step 8
+press L 368 157
+step 1
+release L 368 157
+step 1
+step 8
+press L 380 156
+step 1
+release L 380 156
+step 1
+step 8
+press L 387 156
+step 1
+release L 387 156
+step 1
+step 8
+press L 386 156
+step 1
+release L 386 156
+step 1
+step 8
+press L 389 161
+step 1
+release L 389 161
+step 1
+step 8
+press L 392 203
+step 1
+release L 392 203
+step 1
+step 8
+press L 396 245
+step 1
+release L 396 245
+step 1
+step 8
+press L 399 288
+step 1
+release L 399 288
+step 1
+step 8
+press L 441 259
+step 1
+release L 441 259
+step 1
+step 8
+press L 396 285
+step 1
+release L 396 285
+step 1
+step 8
+press L 428 253
+step 1
+release L 428 253
+step 1
+step 8
+# milestone talk-177: talk to npc 177: Talk opens a dialog
+interactunit 1 177
+step 200
+interactunit 1 177
+step 200
+check client npc_menu.class == 177
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 40
+check sent 2F >= 3
+check sent 30 >= 3
+press L 304 412
+step 1
+release L 304 412
+step 1
+step 8
+press L 331 423
+step 1
+release L 331 423
+step 1
+step 8
+press L 354 425
+step 1
+release L 354 425
+step 1
+step 8
+press L 368 426
+step 1
+release L 368 426
+step 1
+step 8
+press L 379 427
+step 1
+release L 379 427
+step 1
+step 8
+press L 386 427
+step 1
+release L 386 427
+step 1
+step 8
+press L 390 427
+step 1
+release L 390 427
+step 1
+step 8
+press L 393 427
+step 1
+release L 393 427
+step 1
+step 8
+press L 395 427
+step 1
+release L 395 427
+step 1
+step 8
+press L 383 427
+step 1
+release L 383 427
+step 1
+step 8
+press L 349 421
+step 1
+release L 349 421
+step 1
+step 8
+press L 352 407
+step 1
+release L 352 407
+step 1
+step 8
+press L 314 385
+step 1
+release L 314 385
+step 1
+step 8
+press L 256 367
+step 1
+release L 256 367
+step 1
+step 8
+press L 290 339
+step 1
+release L 290 339
+step 1
+step 8
+press L 350 309
+step 1
+release L 350 309
+step 1
+step 8
+# milestone talk-178: talk to npc 178: Talk opens a dialog
+interactunit 1 178
+step 200
+interactunit 1 178
+step 200
+check client npc_menu.class == 178
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 40
+check sent 2F >= 4
+check sent 30 >= 4
+press L 144 332
+step 1
+release L 144 332
+step 1
+step 8
+press L 133 317
+step 1
+release L 133 317
+step 1
+step 8
+press L 131 311
+step 1
+release L 131 311
+step 1
+step 8
+press L 129 304
+step 1
+release L 129 304
+step 1
+step 8
+press L 130 306
+step 1
+release L 130 306
+step 1
+step 8
+press L 131 312
+step 1
+release L 131 312
+step 1
+step 8
+press L 138 328
+step 1
+release L 138 328
+step 1
+step 8
+press L 215 324
+step 1
+release L 215 324
+step 1
+step 8
+press L 240 348
+step 1
+release L 240 348
+step 1
+step 8
+press L 252 358
+step 1
+release L 252 358
+step 1
+step 8
+press L 264 352
+step 1
+release L 264 352
+step 1
+step 8
+press L 260 354
+step 1
+release L 260 354
+step 1
+step 8
+press L 256 356
+step 1
+release L 256 356
+step 1
+step 8
+press L 220 342
+step 1
+release L 220 342
+step 1
+step 8
+press L 258 350
+step 1
+release L 258 350
+step 1
+step 8
+press L 288 321
+step 1
+release L 288 321
+step 1
+step 8
+press L 358 297
+step 1
+release L 358 297
+step 1
+step 8
+press L 422 270
+step 1
+release L 422 270
+step 1
+step 8
+press L 376 294
+step 1
+release L 376 294
+step 1
+step 8
+press L 416 276
+step 1
+release L 416 276
+step 1
+step 8
+press L 368 300
+step 1
+release L 368 300
+step 1
+step 8
+press L 406 281
+step 1
+release L 406 281
+step 1
+step 8
+press L 384 292
+step 1
+release L 384 292
+step 1
+step 8
+press L 320 324
+step 1
+release L 320 324
+step 1
+step 8
+press L 374 297
+step 1
+release L 374 297
+step 1
+step 8
+# milestone visit-195: visit unit 195: unit has no Talk menu
+interactunit 1 195
+step 200
+check level 40
+check sent 2F >= 4
+check sent 30 >= 4
+press L 592 348
+step 1
+release L 592 348
+step 1
+step 8
+press L 576 350
+step 1
+release L 576 350
+step 1
+step 8
+press L 540 373
+step 1
+release L 540 373
+step 1
+step 8
+press L 503 396
+step 1
+release L 503 396
+step 1
+step 8
+press L 517 381
+step 1
+release L 517 381
+step 1
+step 8
+press L 541 376
+step 1
+release L 541 376
+step 1
+step 8
+press L 528 370
+step 1
+release L 528 370
+step 1
+step 8
+press L 529 376
+step 1
+release L 529 376
+step 1
+step 8
+press L 511 389
+step 1
+release L 511 389
+step 1
+step 8
+press L 503 384
+step 1
+release L 503 384
+step 1
+step 8
+press L 480 402
+step 1
+release L 480 402
+step 1
+step 8
+press L 500 386
+step 1
+release L 500 386
+step 1
+step 8
+press L 522 377
+step 1
+release L 522 377
+step 1
+step 8
+press L 528 380
+step 1
+release L 528 380
+step 1
+step 8
+press L 532 382
+step 1
+release L 532 382
+step 1
+step 8
+press L 513 379
+step 1
+release L 513 379
+step 1
+step 8
+press L 510 387
+step 1
+release L 510 387
+step 1
+step 8
+press L 516 390
+step 1
+release L 516 390
+step 1
+step 8
+press L 503 390
+step 1
+release L 503 390
+step 1
+step 8
+press L 499 389
+step 1
+release L 499 389
+step 1
+step 8
+press L 527 382
+step 1
+release L 527 382
+step 1
+step 8
+press L 487 345
+step 1
+release L 487 345
+step 1
+step 8
+press L 464 332
+step 1
+release L 464 332
+step 1
+step 8
+press L 434 301
+step 1
+release L 434 301
+step 1
+step 8
+press L 374 271
+step 1
+release L 374 271
+step 1
+step 8
+press L 438 287
+step 1
+release L 438 287
+step 1
+step 8
+press L 374 271
+step 1
+release L 374 271
+step 1
+step 8
+press L 422 295
+step 1
+release L 422 295
+step 1
+step 8
+press L 384 276
+step 1
+release L 384 276
+step 1
+step 8
+press L 432 300
+step 1
+release L 432 300
+step 1
+step 8
+press L 234 201
+step 1
+release L 234 201
+step 1
+step 8
+press L 250 209
+step 1
+release L 250 209
+step 1
+step 8
+press L 310 239
+step 1
+release L 310 239
+step 1
+step 8
+press L 370 269
+step 1
+release L 370 269
+step 1
+step 8
+# milestone visit-196: visit unit 196: unit has no Talk menu
+interactunit 1 196
+step 200
+check level 40
+check sent 2F >= 4
+check sent 30 >= 4
+press L 444 158
+step 1
+release L 444 158
+step 1
+step 8
+press L 406 156
+step 1
+release L 406 156
+step 1
+step 8
+press L 403 164
+step 1
+release L 403 164
+step 1
+step 8
+press L 402 158
+step 1
+release L 402 158
+step 1
+step 8
+press L 401 156
+step 1
+release L 401 156
+step 1
+step 8
+press L 400 156
+step 1
+release L 400 156
+step 1
+step 8
+press L 400 157
+step 1
+release L 400 157
+step 1
+step 8
+press L 400 156
+step 1
+release L 400 156
+step 1
+step 8
+press L 399 156
+step 1
+release L 399 156
+step 1
+step 8
+press L 399 157
+step 1
+release L 399 157
+step 1
+step 8
+press L 399 156
+step 1
+release L 399 156
+step 1
+step 8
+press L 399 156
+step 1
+release L 399 156
+step 1
+step 8
+press L 399 156
+step 1
+release L 399 156
+step 1
+step 8
+press L 399 156
+step 1
+release L 399 156
+step 1
+step 8
+press L 399 156
+step 1
+release L 399 156
+step 1
+step 8
+press L 399 156
+step 1
+release L 399 156
+step 1
+step 8
+press L 404 156
+step 1
+release L 404 156
+step 1
+step 8
+press L 388 156
+step 1
+release L 388 156
+step 1
+step 8
+press L 407 156
+step 1
+release L 407 156
+step 1
+step 8
+press L 409 156
+step 1
+release L 409 156
+step 1
+step 8
+press L 391 156
+step 1
+release L 391 156
+step 1
+step 8
+press L 409 156
+step 1
+release L 409 156
+step 1
+step 8
+press L 406 156
+step 1
+release L 406 156
+step 1
+step 8
+press L 388 156
+step 1
+release L 388 156
+step 1
+step 8
+press L 407 156
+step 1
+release L 407 156
+step 1
+step 8
+press L 405 156
+step 1
+release L 405 156
+step 1
+step 8
+press L 403 157
+step 1
+release L 403 157
+step 1
+step 8
+press L 402 156
+step 1
+release L 402 156
+step 1
+step 8
+press L 401 156
+step 1
+release L 401 156
+step 1
+step 8
+press L 400 157
+step 1
+release L 400 157
+step 1
+step 8
+press L 400 156
+step 1
+release L 400 156
+step 1
+step 8
+press L 384 156
+step 1
+release L 384 156
+step 1
+step 8
+press L 383 164
+step 1
+release L 383 164
+step 1
+step 8
+press L 383 158
+step 1
+release L 383 158
+step 1
+step 8
+press L 400 156
+step 1
+release L 400 156
+step 1
+step 8
+press L 400 159
+step 1
+release L 400 159
+step 1
+step 8
+press L 432 170
+step 1
+release L 432 170
+step 1
+step 8
+press L 480 188
+step 1
+release L 480 188
+step 1
+step 8
+press L 512 214
+step 1
+release L 512 214
+step 1
+step 8
+press L 544 224
+step 1
+release L 544 224
+step 1
+step 8
+press L 490 207
+step 1
+release L 490 207
+step 1
+step 8
+press L 485 216
+step 1
+release L 485 216
+step 1
+step 8
+press L 485 211
+step 1
+release L 485 211
+step 1
+step 8
+press L 520 223
+step 1
+release L 520 223
+step 1
+step 8
+press L 493 205
+step 1
+release L 493 205
+step 1
+step 8
+press L 511 225
+step 1
+release L 511 225
+step 1
+step 8
+press L 485 208
+step 1
+release L 485 208
+step 1
+step 8
+press L 440 243
+step 1
+release L 440 243
+step 1
+step 8
+press L 397 280
+step 1
+release L 397 280
+step 1
+step 8
+press L 368 300
+step 1
+release L 368 300
+step 1
+step 8
+press L 406 281
+step 1
+release L 406 281
+step 1
+step 8
+press L 256 228
+step 1
+release L 256 228
+step 1
+step 8
+press L 316 251
+step 1
+release L 316 251
+step 1
+step 8
+press L 382 278
+step 1
+release L 382 278
+step 1
+step 8
+# milestone talk-198: talk to npc 198: Talk opens a dialog
+interactunit 1 198
+step 200
+interactunit 1 198
+step 200
+check client npc_menu.class == 198
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 40
+check sent 2F >= 5
+check sent 30 >= 5
+press L 288 388
+step 1
+release L 288 388
+step 1
+step 8
+press L 276 378
+step 1
+release L 276 378
+step 1
+step 8
+press L 290 374
+step 1
+release L 290 374
+step 1
+step 8
+press L 270 370
+step 1
+release L 270 370
+step 1
+step 8
+press L 273 360
+step 1
+release L 273 360
+step 1
+step 8
+press L 263 359
+step 1
+release L 263 359
+step 1
+step 8
+press L 256 360
+step 1
+release L 256 360
+step 1
+step 8
+press L 250 361
+step 1
+release L 250 361
+step 1
+step 8
+press L 261 355
+step 1
+release L 261 355
+step 1
+step 8
+press L 256 356
+step 1
+release L 256 356
+step 1
+step 8
+press L 252 358
+step 1
+release L 252 358
+step 1
+step 8
+press L 312 328
+step 1
+release L 312 328
+step 1
+step 8
+press L 371 298
+step 1
+release L 371 298
+step 1
+step 8
+# milestone talk-199: talk to npc 199: Talk opens a dialog
+interactunit 1 199
+step 200
+interactunit 1 199
+step 200
+check client npc_menu.class == 199
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 40
+check sent 2F >= 6
+check sent 30 >= 6
+press L 624 332
+step 1
+release L 624 332
+step 1
+step 8
+press L 601 340
+step 1
+release L 601 340
+step 1
+step 8
+press L 591 352
+step 1
+release L 591 352
+step 1
+step 8
+press L 586 359
+step 1
+release L 586 359
+step 1
+step 8
+press L 584 365
+step 1
+release L 584 365
+step 1
+step 8
+press L 568 361
+step 1
+release L 568 361
+step 1
+step 8
+press L 666 316
+step 1
+release L 666 316
+step 1
+step 8
+press L 617 321
+step 1
+release L 617 321
+step 1
+step 8
+press L 590 333
+step 1
+release L 590 333
+step 1
+step 8
+press L 532 348
+step 1
+release L 532 348
+step 1
+step 8
+press L 538 321
+step 1
+release L 538 321
+step 1
+step 8
+press L 544 324
+step 1
+release L 544 324
+step 1
+step 8
+press L 550 327
+step 1
+release L 550 327
+step 1
+step 8
+press L 525 330
+step 1
+release L 525 330
+step 1
+step 8
+press L 552 321
+step 1
+release L 552 321
+step 1
+step 8
+press L 556 326
+step 1
+release L 556 326
+step 1
+step 8
+press L 578 306
+step 1
+release L 578 306
+step 1
+step 8
+press L 624 295
+step 1
+release L 624 295
+step 1
+step 8
+press L 636 290
+step 1
+release L 636 290
+step 1
+step 8
+press L 647 290
+step 1
+release L 647 290
+step 1
+step 8
+press L 626 291
+step 1
+release L 626 291
+step 1
+step 8
+press L 637 291
+step 1
+release L 637 291
+step 1
+step 8
+press L 600 315
+step 1
+release L 600 315
+step 1
+step 8
+press L 564 334
+step 1
+release L 564 334
+step 1
+step 8
+press L 550 340
+step 1
+release L 550 340
+step 1
+step 8
+press L 562 333
+step 1
+release L 562 333
+step 1
+step 8
+press L 554 326
+step 1
+release L 554 326
+step 1
+step 8
+press L 576 321
+step 1
+release L 576 321
+step 1
+step 8
+press L 594 320
+step 1
+release L 594 320
+step 1
+step 8
+press L 611 305
+step 1
+release L 611 305
+step 1
+step 8
+press L 624 296
+step 1
+release L 624 296
+step 1
+step 8
+press L 636 291
+step 1
+release L 636 291
+step 1
+step 8
+press L 659 270
+step 1
+release L 659 270
+step 1
+step 8
+press L 608 272
+step 1
+release L 608 272
+step 1
+step 8
+press L 527 276
+step 1
+release L 527 276
+step 1
+step 8
+press L 455 284
+step 1
+release L 455 284
+step 1
+step 8
+press L 376 298
+step 1
+release L 376 298
+step 1
+step 8
+press L 416 276
+step 1
+release L 416 276
+step 1
+step 8
+# milestone talk-200: talk to npc 200: Talk opens a dialog
+interactunit 1 200
+step 200
+interactunit 1 200
+step 200
+check client npc_menu.class == 200
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 40
+check sent 2F >= 7
+check sent 30 >= 7
+press L 141 332
+step 1
+release L 141 332
+step 1
+step 8
+press L 148 343
+step 1
+release L 148 343
+step 1
+step 8
+press L 142 334
+step 1
+release L 142 334
+step 1
+step 8
+press L 150 345
+step 1
+release L 150 345
+step 1
+step 8
+press L 149 344
+step 1
+release L 149 344
+step 1
+step 8
+press L 140 331
+step 1
+release L 140 331
+step 1
+step 8
+press L 148 342
+step 1
+release L 148 342
+step 1
+step 8
+press L 150 345
+step 1
+release L 150 345
+step 1
+step 8
+press L 160 356
+step 1
+release L 160 356
+step 1
+step 8
+press L 167 361
+step 1
+release L 167 361
+step 1
+step 8
+press L 200 383
+step 1
+release L 200 383
+step 1
+step 8
+press L 214 391
+step 1
+release L 214 391
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 201 384
+step 1
+release L 201 384
+step 1
+step 8
+press L 228 397
+step 1
+release L 228 397
+step 1
+step 8
+press L 238 401
+step 1
+release L 238 401
+step 1
+step 8
+press L 230 398
+step 1
+release L 230 398
+step 1
+step 8
+press L 241 402
+step 1
+release L 241 402
+step 1
+step 8
+press L 232 398
+step 1
+release L 232 398
+step 1
+step 8
+press L 240 401
+step 1
+release L 240 401
+step 1
+step 8
+press L 249 404
+step 1
+release L 249 404
+step 1
+step 8
+press L 253 406
+step 1
+release L 253 406
+step 1
+step 8
+press L 299 418
+step 1
+release L 299 418
+step 1
+step 8
+press L 341 424
+step 1
+release L 341 424
+step 1
+step 8
+press L 344 424
+step 1
+release L 344 424
+step 1
+step 8
+press L 362 383
+step 1
+release L 362 383
+step 1
+step 8
+press L 396 349
+step 1
+release L 396 349
+step 1
+step 8
+# milestone talk-201: talk to npc 201: Talk opens a dialog
+interactunit 1 201
+step 200
+interactunit 1 201
+step 200
+check client npc_menu.class == 201
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 40
+check sent 2F >= 8
+check sent 30 >= 8
+press L 550 179
+step 1
+release L 550 179
+step 1
+step 8
+press L 524 171
+step 1
+release L 524 171
+step 1
+step 8
+press L 509 167
+step 1
+release L 509 167
+step 1
+step 8
+press L 532 173
+step 1
+release L 532 173
+step 1
+step 8
+press L 556 183
+step 1
+release L 556 183
+step 1
+step 8
+press L 560 188
+step 1
+release L 560 188
+step 1
+step 8
+press L 584 192
+step 1
+release L 584 192
+step 1
+step 8
+press L 599 199
+step 1
+release L 599 199
+step 1
+step 8
+press L 584 192
+step 1
+release L 584 192
+step 1
+step 8
+press L 584 192
+step 1
+release L 584 192
+step 1
+step 8
+press L 551 179
+step 1
+release L 551 179
+step 1
+step 8
+press L 541 176
+step 1
+release L 541 176
+step 1
+step 8
+press L 538 175
+step 1
+release L 538 175
+step 1
+step 8
+press L 553 180
+step 1
+release L 553 180
+step 1
+step 8
+press L 543 176
+step 1
+release L 543 176
+step 1
+step 8
+press L 522 170
+step 1
+release L 522 170
+step 1
+step 8
+press L 525 171
+step 1
+release L 525 171
+step 1
+step 8
+press L 523 171
+step 1
+release L 523 171
+step 1
+step 8
+press L 480 162
+step 1
+release L 480 162
+step 1
+step 8
+press L 454 158
+step 1
+release L 454 158
+step 1
+step 8
+press L 439 157
+step 1
+release L 439 157
+step 1
+step 8
+press L 430 157
+step 1
+release L 430 157
+step 1
+step 8
+press L 431 157
+step 1
+release L 431 157
+step 1
+step 8
+press L 416 193
+step 1
+release L 416 193
+step 1
+step 8
+press L 409 235
+step 1
+release L 409 235
+step 1
+step 8
+# milestone talk-202: talk to npc 202: Talk opens a dialog
+interactunit 1 202
+step 200
+interactunit 1 202
+step 200
+check client npc_menu.class == 202
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 40
+check sent 2F >= 9
+check sent 30 >= 9
+press L 337 424
+step 1
+release L 337 424
+step 1
+step 8
+press L 297 414
+step 1
+release L 297 414
+step 1
+step 8
+press L 271 387
+step 1
+release L 271 387
+step 1
+step 8
+press L 240 339
+step 1
+release L 240 339
+step 1
+step 8
+press L 200 288
+step 1
+release L 200 288
+step 1
+step 8
+press L 196 226
+step 1
+release L 196 226
+step 1
+step 8
+press L 165 223
+step 1
+release L 165 223
+step 1
+step 8
+press L 177 214
+step 1
+release L 177 214
+step 1
+step 8
+press L 173 216
+step 1
+release L 173 216
+step 1
+step 8
+press L 155 233
+step 1
+release L 155 233
+step 1
+step 8
+press L 144 246
+step 1
+release L 144 246
+step 1
+step 8
+press L 137 257
+step 1
+release L 137 257
+step 1
+step 8
+press L 133 265
+step 1
+release L 133 265
+step 1
+step 8
+press L 131 272
+step 1
+release L 131 272
+step 1
+step 8
+press L 130 277
+step 1
+release L 130 277
+step 1
+step 8
+press L 133 266
+step 1
+release L 133 266
+step 1
+step 8
+press L 138 256
+step 1
+release L 138 256
+step 1
+step 8
+press L 138 255
+step 1
+release L 138 255
+step 1
+step 8
+press L 215 263
+step 1
+release L 215 263
+step 1
+step 8
+press L 297 273
+step 1
+release L 297 273
+step 1
+step 8
+press L 363 268
+step 1
+release L 363 268
+step 1
+step 8
+# milestone visit-203: visit unit 203: unit has no Talk menu
+interactunit 1 203
+step 200
+check level 40
+check sent 2F >= 9
+check sent 30 >= 9
+press L 608 356
+step 1
+release L 608 356
+step 1
+step 8
+press L 593 358
+step 1
+release L 593 358
+step 1
+step 8
+press L 589 364
+step 1
+release L 589 364
+step 1
+step 8
+press L 589 369
+step 1
+release L 589 369
+step 1
+step 8
+press L 590 372
+step 1
+release L 590 372
+step 1
+step 8
+press L 576 367
+step 1
+release L 576 367
+step 1
+step 8
+press L 610 354
+step 1
+release L 610 354
+step 1
+step 8
+press L 589 370
+step 1
+release L 589 370
+step 1
+step 8
+press L 621 358
+step 1
+release L 621 358
+step 1
+step 8
+press L 596 361
+step 1
+release L 596 361
+step 1
+step 8
+press L 577 375
+step 1
+release L 577 375
+step 1
+step 8
+press L 581 377
+step 1
+release L 581 377
+step 1
+step 8
+press L 602 355
+step 1
+release L 602 355
+step 1
+step 8
+press L 629 346
+step 1
+release L 629 346
+step 1
+step 8
+press L 651 341
+step 1
+release L 651 341
+step 1
+step 8
+press L 654 331
+step 1
+release L 654 331
+step 1
+step 8
+press L 653 340
+step 1
+release L 653 340
+step 1
+step 8
+press L 668 311
+step 1
+release L 668 311
+step 1
+step 8
+press L 671 292
+step 1
+release L 671 292
+step 1
+step 8
+press L 671 285
+step 1
+release L 671 285
+step 1
+step 8
+press L 671 285
+step 1
+release L 671 285
+step 1
+step 8
+press L 670 281
+step 1
+release L 670 281
+step 1
+step 8
+press L 671 289
+step 1
+release L 671 289
+step 1
+step 8
+press L 670 302
+step 1
+release L 670 302
+step 1
+step 8
+press L 656 321
+step 1
+release L 656 321
+step 1
+step 8
+press L 640 338
+step 1
+release L 640 338
+step 1
+step 8
+press L 630 334
+step 1
+release L 630 334
+step 1
+step 8
+press L 649 297
+step 1
+release L 649 297
+step 1
+step 8
+press L 650 281
+step 1
+release L 650 281
+step 1
+step 8
+press L 664 261
+step 1
+release L 664 261
+step 1
+step 8
+press L 641 236
+step 1
+release L 641 236
+step 1
+step 8
+press L 562 250
+step 1
+release L 562 250
+step 1
+step 8
+press L 486 260
+step 1
+release L 486 260
+step 1
+step 8
+press L 410 263
+step 1
+release L 410 263
+step 1
+step 8
+# milestone visit-205: visit unit 205: unit has no Talk menu
+interactunit 1 205
+step 200
+check level 40
+check sent 2F >= 9
+check sent 30 >= 9
+press L 608 244
+step 1
+release L 608 244
+step 1
+step 8
+press L 600 241
+step 1
+release L 600 241
+step 1
+step 8
+press L 603 235
+step 1
+release L 603 235
+step 1
+step 8
+press L 592 222
+step 1
+release L 592 222
+step 1
+step 8
+press L 585 230
+step 1
+release L 585 230
+step 1
+step 8
+press L 590 220
+step 1
+release L 590 220
+step 1
+step 8
+press L 572 230
+step 1
+release L 572 230
+step 1
+step 8
+press L 597 237
+step 1
+release L 597 237
+step 1
+step 8
+press L 602 233
+step 1
+release L 602 233
+step 1
+step 8
+press L 607 245
+step 1
+release L 607 245
+step 1
+step 8
+press L 657 262
+step 1
+release L 657 262
+step 1
+step 8
+press L 668 271
+step 1
+release L 668 271
+step 1
+step 8
+press L 669 276
+step 1
+release L 669 276
+step 1
+step 8
+press L 670 279
+step 1
+release L 670 279
+step 1
+step 8
+press L 641 282
+step 1
+release L 641 282
+step 1
+step 8
+press L 557 285
+step 1
+release L 557 285
+step 1
+step 8
+press L 472 288
+step 1
+release L 472 288
+step 1
+step 8
+press L 388 291
+step 1
+release L 388 291
+step 1
+step 8
+press L 432 268
+step 1
+release L 432 268
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+press L 394 287
+step 1
+release L 394 287
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+# milestone talk-210: talk to npc 210: Talk opens a dialog
+interactunit 1 210
+step 200
+interactunit 1 210
+step 200
+check client npc_menu.class == 210
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 40
+check sent 2F >= 10
+check sent 30 >= 10
+press L 272 204
+step 1
+release L 272 204
+step 1
+step 8
+press L 271 209
+step 1
+release L 271 209
+step 1
+step 8
+press L 263 209
+step 1
+release L 263 209
+step 1
+step 8
+press L 257 208
+step 1
+release L 257 208
+step 1
+step 8
+press L 219 223
+step 1
+release L 219 223
+step 1
+step 8
+press L 224 232
+step 1
+release L 224 232
+step 1
+step 8
+press L 232 223
+step 1
+release L 232 223
+step 1
+step 8
+press L 220 224
+step 1
+release L 220 224
+step 1
+step 8
+press L 225 232
+step 1
+release L 225 232
+step 1
+step 8
+press L 233 223
+step 1
+release L 233 223
+step 1
+step 8
+press L 205 232
+step 1
+release L 205 232
+step 1
+step 8
+press L 214 237
+step 1
+release L 214 237
+step 1
+step 8
+press L 161 258
+step 1
+release L 161 258
+step 1
+step 8
+press L 146 269
+step 1
+release L 146 269
+step 1
+step 8
+press L 134 276
+step 1
+release L 134 276
+step 1
+step 8
+press L 129 281
+step 1
+release L 129 281
+step 1
+step 8
+press L 129 283
+step 1
+release L 129 283
+step 1
+step 8
+press L 163 285
+step 1
+release L 163 285
+step 1
+step 8
+press L 248 287
+step 1
+release L 248 287
+step 1
+step 8
+press L 333 289
+step 1
+release L 333 289
+step 1
+step 8
+press L 418 291
+step 1
+release L 418 291
+step 1
+step 8
+# milestone talk-244: talk to npc 244: Talk opens a dialog
+interactunit 1 244
+step 200
+interactunit 1 244
+step 200
+check client npc_menu.class == 244
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 40
+check sent 2F >= 11
+check sent 30 >= 11
+press L 224 276
+step 1
+release L 224 276
+step 1
+step 8
+press L 198 327
+step 1
+release L 198 327
+step 1
+step 8
+press L 140 314
+step 1
+release L 140 314
+step 1
+step 8
+press L 150 329
+step 1
+release L 150 329
+step 1
+step 8
+press L 180 337
+step 1
+release L 180 337
+step 1
+step 8
+press L 176 343
+step 1
+release L 176 343
+step 1
+step 8
+press L 203 347
+step 1
+release L 203 347
+step 1
+step 8
+press L 211 356
+step 1
+release L 211 356
+step 1
+step 8
+press L 215 363
+step 1
+release L 215 363
+step 1
+step 8
+press L 235 361
+step 1
+release L 235 361
+step 1
+step 8
+press L 208 316
+step 1
+release L 208 316
+step 1
+step 8
+press L 204 254
+step 1
+release L 204 254
+step 1
+step 8
+press L 209 220
+step 1
+release L 209 220
+step 1
+step 8
+press L 196 214
+step 1
+release L 196 214
+step 1
+step 8
+press L 168 222
+step 1
+release L 168 222
+step 1
+step 8
+press L 178 228
+step 1
+release L 178 228
+step 1
+step 8
+press L 141 250
+step 1
+release L 141 250
+step 1
+step 8
+press L 133 264
+step 1
+release L 133 264
+step 1
+step 8
+press L 130 274
+step 1
+release L 130 274
+step 1
+step 8
+press L 129 278
+step 1
+release L 129 278
+step 1
+step 8
+press L 129 280
+step 1
+release L 129 280
+step 1
+step 8
+press L 130 277
+step 1
+release L 130 277
+step 1
+step 8
+press L 134 264
+step 1
+release L 134 264
+step 1
+step 8
+press L 164 246
+step 1
+release L 164 246
+step 1
+step 8
+press L 243 261
+step 1
+release L 243 261
+step 1
+step 8
+press L 297 268
+step 1
+release L 297 268
+step 1
+step 8
+press L 374 271
+step 1
+release L 374 271
+step 1
+step 8
+# milestone visit-331: visit Kaelan: no Talk menu in this quest state
+interactunit 1 331
+step 200
+
+check level 40
+check sent 2F >= 11
+check sent 30 >= 11
+press L 624 348
+step 1
+release L 624 348
+step 1
+step 8
+press L 656 290
+step 1
+release L 656 290
+step 1
+step 8
+press L 665 264
+step 1
+release L 665 264
+step 1
+step 8
+press L 650 249
+step 1
+release L 650 249
+step 1
+step 8
+press L 629 228
+step 1
+release L 629 228
+step 1
+step 8
+press L 613 208
+step 1
+release L 613 208
+step 1
+step 8
+press L 586 198
+step 1
+release L 586 198
+step 1
+step 8
+press L 588 195
+step 1
+release L 588 195
+step 1
+step 8
+press L 587 193
+step 1
+release L 587 193
+step 1
+step 8
+press L 577 198
+step 1
+release L 577 198
+step 1
+step 8
+press L 580 195
+step 1
+release L 580 195
+step 1
+step 8
+press L 548 199
+step 1
+release L 548 199
+step 1
+step 8
+press L 538 205
+step 1
+release L 538 205
+step 1
+step 8
+press L 530 213
+step 1
+release L 530 213
+step 1
+step 8
+press L 499 187
+step 1
+release L 499 187
+step 1
+step 8
+press L 503 198
+step 1
+release L 503 198
+step 1
+step 8
+press L 457 170
+step 1
+release L 457 170
+step 1
+step 8
+press L 428 156
+step 1
+release L 428 156
+step 1
+step 8
+press L 425 156
+step 1
+release L 425 156
+step 1
+step 8
+press L 418 192
+step 1
+release L 418 192
+step 1
+step 8
+press L 411 234
+step 1
+release L 411 234
+step 1
+step 8
+press L 403 277
+step 1
+release L 403 277
+step 1
+step 8
+# milestone town-wp-menu: the town waypoint menu opens
+interactunit 2 156,157
+step 200
+useunit 2 156,157
+step 40
+check level 40
+check open 20
+check sent 2F >= 11
+check sent 30 >= 11
+# milestone wp-out: waypoint travel to the first other level
+click ui:waypoint.row(1)
+step 43
+check level 48
+# milestone wp-back: waypoint travel back to town
+interactunit 2 323
+step 200
+useunit 2 323
+step 40
+check open 20
+click ui:waypoint.row(0)
+step 43
+check level 40

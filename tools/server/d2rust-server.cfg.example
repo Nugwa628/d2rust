@@ -1,0 +1,38 @@
+# d2rust-server.cfg: the multiplayer server's settings, one `key = value` per line.
+# Relative paths are taken from this file's folder. Only `game_data` is required.
+# This file holds no secrets; keep it 0600 anyway (server-ctl setup does).
+
+# The QUIC endpoint: one UDP port, opened in the box's firewall by the admin.
+listen          = 0.0.0.0:6112
+# The name clients see in the server's Welcome.
+server_name     = D2RUST Europe
+
+# The game data the server reads its rules from: a converted native folder (with base/)
+# or a game install folder with its archives. Read-only; never under the download folder.
+game_data       = game
+
+# Accounts database, characters and deleted characters.
+data            = data
+# The log folder: d2rust-server.log, console.log and status.json (health, every 10 s).
+logs            = logs
+# The certificate and key made once by --new-identity (the launcher pins its fingerprint).
+identity        = identity
+
+# Limits that keep the server light next to the box's other services.
+max_sessions    = 256
+max_games       = 16
+max_players     = 8
+net_threads     = 2
+
+# How long a lost player's slot is held for a reconnect, and how often characters are saved.
+grace_s         = 30
+save_interval_s = 60
+
+# Accounts: `open` or `closed` registration, and characters per account.
+registration    = open
+max_characters  = 16
+
+# Backups: the folder and how many dated backups are kept. The nightly one (04:30) is asked
+# for by server-ctl's timer or cron; a running server makes it between saves.
+backups         = backups
+backup_keep     = 14

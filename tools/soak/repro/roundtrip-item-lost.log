@@ -1,0 +1,5 @@
+soak-log 1 seed=1 save=target/checkpoints/a1-andariel.d2s difficulty=0 kit=1
+288 key toggle_inventory
+294 click L 536 186
+298 insert 2 7 2 3
+300 roundtrip

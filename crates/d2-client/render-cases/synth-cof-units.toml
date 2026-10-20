@@ -1,0 +1,166 @@
+# render-pipeline.md §A7 end to end: COF bytes (cof.md layout) -> parser
+# -> composite::build (slot order, key sub = slot) -> scene::order ->
+# CPU and GPU compose. Two units of one 3-layer COF over a floor item;
+# unit 1 is listed later but has the smaller major key, so it draws first.
+# Component positions, shades and blends are case fixtures, not §B rules.
+version = 1
+kind = "synthetic"
+description = "two COF composites (shade, xor blend) over a floor, cross-unit key order"
+view = [0, 0, 64, 64]
+
+# COF: L=3 F=2 D=2, version 20, box -10..10 x -20..0, rate 25.
+# Layers HD(0) "hth", TR(1) "hth", RH(5) "1hs"; events 01 00.
+# Draw order (back to front): d0 f0 TR HD RH; d0 f1 RH TR HD;
+#                             d1 f0 HD RH TR; d1 f1 TR RH HD.
+
+[[frame]] # 0: HD
+width = 8
+height = 8
+fill = 10
+
+[[frame]] # 1: TR
+width = 8
+height = 8
+fill = 20
+
+[[frame]] # 2: RH
+width = 8
+height = 8
+fill = 40
+
+[[frame]] # 3: floor
+width = 64
+height = 64
+fill = 1
+
+[[map]]
+base = "identity"
+set = [[40, 43]]
+
+[[table]]
+rule = "xor"
+
+[[item]]
+frame = 3
+x = 0
+y = 0
+
+# Unit 0, d0 f1: RH TR HD (HD in front). RH shaded 40 -> 43.
+[[unit]]
+cof = """
+03 02 02 14 00000000
+f6ffffff 0a000000 ecffffff 00000000 19000000
+00 00 01 00 00 68746800
+01 01 01 00 00 68746800
+05 02 01 00 00 31687300
+01 00
+01 00 05  05 01 00
+00 05 01  01 05 00
+"""
+dir = 0
+frame = 1
+key = [1, 100, 0]
+
+[[unit.component]]
+component = 0
+frame = 0
+x = 4
+y = 4
+
+[[unit.component]]
+component = 1
+frame = 1
+x = 6
+y = 6
+
+[[unit.component]]
+component = 5
+frame = 2
+x = 8
+y = 8
+shade = [0]
+
+# Unit 1, d1 f0: HD RH TR (TR in front). RH xor-blended.
+[[unit]]
+cof = """
+03 02 02 14 00000000
+f6ffffff 0a000000 ecffffff 00000000 19000000
+00 00 01 00 00 68746800
+01 01 01 00 00 68746800
+05 02 01 00 00 31687300
+01 00
+01 00 05  05 01 00
+00 05 01  01 05 00
+"""
+dir = 1
+frame = 0
+key = [1, 50, 0]
+
+[[unit.component]]
+component = 0
+frame = 0
+x = 14
+y = 14
+
+[[unit.component]]
+component = 1
+frame = 1
+x = 18
+y = 18
+
+[[unit.component]]
+component = 5
+frame = 2
+x = 16
+y = 16
+table = 0
+
+[[expect]] # floor
+x = 0
+y = 0
+index = 1
+
+[[expect]] # unit 0: HD only
+x = 5
+y = 5
+index = 10
+
+[[expect]] # unit 0: HD, TR, RH -> HD in front
+x = 9
+y = 9
+index = 10
+
+[[expect]] # unit 0: TR over RH
+x = 12
+y = 12
+index = 20
+
+[[expect]] # unit 0 RH (shaded, major 100) over unit 1 HD (major 50)
+x = 14
+y = 14
+index = 43
+
+[[expect]] # unit 1: RH xor HD = 40 ^ 10
+x = 17
+y = 17
+index = 34
+
+[[expect]] # unit 1: TR in front of HD and RH
+x = 19
+y = 19
+index = 20
+
+[[expect]] # unit 1: RH xor floor = 40 ^ 1
+x = 23
+y = 17
+index = 41
+
+[[expect]] # unit 1: TR only
+x = 25
+y = 25
+index = 20
+
+[[expect]] # floor
+x = 26
+y = 26
+index = 1

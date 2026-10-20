@@ -1,0 +1,22 @@
+[package]
+name = "d2-proto"
+description = "Versioned client<->server message types."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+criterion.workspace = true
+
+[[bench]]
+name = "proto"
+harness = false

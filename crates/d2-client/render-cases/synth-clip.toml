@@ -1,0 +1,41 @@
+# render-pipeline.md Test vectors row 7 (§A3): no pixel outside clip.
+version = 1
+kind = "synthetic"
+description = "item clipped by its clip rectangle"
+view = [0, 0, 32, 32]
+
+[[frame]]
+width = 8
+height = 8
+fill = 42
+
+[[item]]
+frame = 0
+x = 4
+y = 4
+clip = [6, 6, 3, 2]
+
+[[expect]]
+x = 6
+y = 6
+index = 42
+
+[[expect]]
+x = 8
+y = 7
+index = 42
+
+[[expect]]
+x = 5
+y = 6
+index = 0
+
+[[expect]]
+x = 9
+y = 6
+index = 0
+
+[[expect]]
+x = 6
+y = 8
+index = 0

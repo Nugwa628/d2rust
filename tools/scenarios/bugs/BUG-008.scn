@@ -1,0 +1,30 @@
+scenario 2
+tick_rate 25
+# BUG-008: a ranged skill cast at a monster must play in place; the
+# character never walks or dashes toward the monster.
+name bug-008-cast-in-place
+seed 1234
+end 40
+# A level 30 Sorceress with Fire Ball (skill 47) at 20 on the right button.
+char class 1
+char level 30
+char skill 47 20
+char hand right 47
+# The Blood Moor, at the level's start, with mana refilled every tick (god)
+# so the cast never stops for mana.
+char area 0 2
+char at 5143 4263
+at 0 dev god on
+# A Fallen pack (monstats row 19) 12 sub-tiles east of the player.
+at 1 spawn 19 @x+12 @y normal
+# Right-click the nearest Fallen: Fire Ball at it.
+at 8 input rclickunit 1 19
+# She stays on her spot before, during and after the cast; the click goes
+# out as a skill on a unit (0x0D) and the cast plays.
+at 8 check player.pos ~ (5143, 4263) 0
+at 12 check player.pos ~ (5143, 4263) 0
+at 16 check player.pos ~ (5143, 4263) 0
+by 20 check sent(0x0D) >= 1
+by 20 check player.mode == cast
+at 24 check player.pos ~ (5143, 4263) 0
+at 40 check player.pos ~ (5143, 4263) 0

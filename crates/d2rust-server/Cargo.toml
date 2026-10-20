@@ -1,0 +1,24 @@
+[package]
+name = "d2rust-server"
+description = "The dedicated server: runs online games with no window, configured by a file, with server-side characters."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+d2-formats.workspace = true
+d2-net.workspace = true
+d2-proto.workspace = true
+d2-server.workspace = true
+d2-sim.workspace = true
+thiserror.workspace = true
+d2-quic.workspace = true
+tokio = { workspace = true, features = ["macros", "signal"] }
+rusqlite.workspace = true
+argon2.workspace = true
+getrandom.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,36 @@
+# render-pipeline.md Test vectors row 1 (§A3, §A8).
+version = 1
+kind = "synthetic"
+description = "2x2 frame [0,5;7,0] at (10,10), Opaque, empty chain"
+view = [0, 0, 32, 32]
+
+[[frame]]
+width = 2
+height = 2
+pixels = [0, 5, 7, 0]
+
+[[item]]
+frame = 0
+x = 10
+y = 10
+
+[[expect]]
+x = 11
+y = 10
+index = 5
+
+[[expect]]
+x = 10
+y = 11
+index = 7
+
+# Frame index 0 is transparent: the background (index 0) shows.
+[[expect]]
+x = 10
+y = 10
+index = 0
+
+[[expect]]
+x = 11
+y = 11
+index = 0

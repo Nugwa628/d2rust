@@ -1,0 +1,5 @@
+# Accepted determinism-lint exceptions (CLAUDE.md rule 6), one per line:
+#   <path from repo root> <TAB> <rule> <TAB> <reason>
+# Rules: float hash-collection clock ambient-rng io env global-state unsafe.
+# Every entry needs a reason; an entry that matches no hit is an error.
+crates/d2-sim/src/debug/rng_trace.rs	global-state	the per-thread RNG draw log (specs/tools/rng-trace.md): compiled only with the off-by-default `rng-trace` feature (debug/mod.rs, rng.rs: #[cfg(feature = "rng-trace")]), empty until debug export calls start(), only copies values each draw already computed; no draw, state or order reads it (tests::outcomes_do_not_depend_on_the_log: Fight fixture identical with the log on and off)

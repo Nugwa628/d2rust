@@ -1,0 +1,21 @@
+[package]
+name = "d2-report"
+description = "The bug report bundle: format, limits and validation, shared by the game, the launcher and the report service."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+# Screenshots are re-encoded as PNG to fit the size limit.
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+[dev-dependencies]
+proptest.workspace = true
+
+[lints]
+workspace = true

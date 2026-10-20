@@ -1,0 +1,43 @@
+[package]
+name = "d2-sim"
+description = "Deterministic D2 game simulation. No I/O, no rendering, no Bevy."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+d2-data.workspace = true
+d2-formats.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
+criterion.workspace = true
+# The benches reuse the unit tests' synthetic fixtures (`bench_fixtures`).
+d2-sim = { path = ".", features = ["bench-fixtures"] }
+
+# Cargo can't extend workspace lints, so this repeats them with additions.
+# Keep in sync with [workspace.lints] in the root Cargo.toml.
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = { level = "warn", priority = -1 }
+# Determinism (CLAUDE.md rule 6): no floats in game logic.
+float_arithmetic = "deny"
+
+
+[[bench]]
+name = "sim"
+harness = false
+
+[features]
+# Exposes the synthetic fixtures of the unit tests to `benches/` (criterion);
+# never enabled in a normal build.
+bench-fixtures = []
+# The RNG draw log of `debug::rng_trace` (specs/tools/rng-trace.md): only
+# the debug export turns it on (`d2-client state-dump --rng`); never in a
+# normal build.
+rng-trace = []

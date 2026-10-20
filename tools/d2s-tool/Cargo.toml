@@ -1,0 +1,23 @@
+[package]
+name = "d2s-tool"
+description = "Generates, edits, dumps and round-trip-checks D2RUST character saves (.d2s) on the user's own tables, for local game testing. Saves are never committed."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+d2-data.workspace = true
+d2-formats.workspace = true
+d2-proto.workspace = true
+d2-server.workspace = true
+d2-sim.workspace = true
+
+[dev-dependencies]
+# The synthetic install (made-up tables, no Blizzard data) for CI tests.
+test-fixtures.workspace = true
+
+[lints]
+workspace = true

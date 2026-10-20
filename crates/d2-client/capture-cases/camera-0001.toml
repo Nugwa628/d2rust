@@ -1,0 +1,7 @@
+# render/capture.md §8 camera-0001: Rogue Encampment, walk 5 s in a
+# straight line, run 5 s, stand. Reads the newest recording.
+version = 1
+kind = "scene"
+description = "capture.md §8: camera.md §2–§4, §6"
+raw = "latest"
+check = "compare"

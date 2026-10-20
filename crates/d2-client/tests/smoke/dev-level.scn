@@ -1,0 +1,14 @@
+scenario 2
+tick_rate 60
+# A level 5 Sorceress (raised by the setup's dev `level` line): the server
+# has her at level 5, and dev console lines reach the server.
+name smoke-dev-level
+seed 7
+end 6
+char class 1
+char level 5
+at 0 check player.level == 5
+at 0 check player.class == 1
+at 0 dev gold 1234
+at 2 dev god on
+at 4 check player.life > 0

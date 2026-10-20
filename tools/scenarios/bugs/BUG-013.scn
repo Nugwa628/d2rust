@@ -1,0 +1,14 @@
+scenario 2
+tick_rate 25
+# BUG-013: a gold pile on the ground is labelled with its amount
+# ("1234 Gold"), not just "Gold".
+name bug-013-gold-label
+seed 7
+end 20
+# A level 1 Amazon in the Rogue Encampment.
+char class 0
+# Carry 1234 gold, then drop all of it at her feet.
+at 0 dev gold 1234
+at 2 msg DropGold unit=@player amount=1234
+by 12 check ground_item(gold).gold == 1234
+by 12 check ground_item(gold).label == "1234 Gold"

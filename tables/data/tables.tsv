@@ -1,0 +1,93 @@
+table	txt_name	bin_name	record_size	load_step	key_column	live_source	notes
+compcode	compcode.txt	compcode.bin	4	1	code	patch_d2/compcode.bin	call 0x6127CF
+playerclass	playerclass.txt	playerclass.bin	4	1.01	code	-	call 0x612833; compile-only lookup; by-product d2exp/playerclass.bin never read; txt from d2exp
+bodylocs	bodylocs.txt	bodylocs.bin	4	1.02	code	-	call 0x6128AC; compile-only lookup; by-product d2exp/bodylocs.bin never read; txt from d2exp
+storepage	storepage.txt	storepage.bin	4	1.03	code	-	call 0x612925; compile-only lookup; by-product d2exp/storepage.bin never read; txt from d2exp
+elemtypes	elemtypes.txt	elemtypes.bin	4	1.04	code	-	call 0x61299E; compile-only lookup; by-product patch_d2/elemtypes.bin never read
+hitclass	hitclass.txt	hitclass.bin	4	1.05	code	d2exp/hitclass.bin	call 0x612A17; compile-only in the excel load; the .bin is read only by the client composite loader (loading.md 3.5); txt from d2exp
+colors	colors.txt	colors.bin	4	1.06	code	-	call 0x612A90; compile-only lookup; by-product d2exp/colors.bin never read; txt from d2exp
+hiredesc	hiredesc.txt	hiredesc.bin	4	1.07	code	-	call 0x612AE8; compile-only lookup; by-product d2exp/hiredesc.bin never read; txt from d2exp
+monmode_lookup	monmode.txt	monmode.bin	4	1.08	code	-	call 0x612B40; compile-only lookup; its .bin is overwritten by step 35
+plrmode_lookup	plrmode.txt	plrmode.bin	4	1.09	code	-	call 0x612BB6; compile-only lookup; its .bin is overwritten by step 34
+monai	monai.txt	monai.bin	2	1.10	AI	-	call 0x612C30; compile-only lookup; by-product patch_d2/monai.bin never read
+monplace	monplace.txt	monplace.bin	2	1.11	code	-	call 0x612CAA; compile-only lookup; by-product patch_d2/monplace.bin never read
+skillcalc	skillcalc.txt	skillcalc.bin	4	1.12	code	-	call 0x612D23; compile-only lookup; by-product patch_d2/skillcalc.bin never read
+misscalc	misscalc.txt	misscalc.bin	4	1.13	code	-	call 0x612D9C; compile-only lookup; by-product patch_d2/misscalc.bin never read
+skills_lookup	skills.txt	skills.bin	2	1.14	skill	-	call 0x612E15; compile-only lookup; its .bin is overwritten by step 10
+events	events.txt	events.bin	2	1.15	event	-	call 0x612E8E; compile-only lookup; by-product patch_d2/events.bin never read
+itemtypes	itemtypes.txt	itemtypes.bin	228	2	code	patch_d2/itemtypes.bin	call 0x6392D9; self link: itemtypes.code
+montype	montype.txt	montype.bin	12	3	type	patch_d2/montype.bin	call 0x658615; self link: montype.type
+sounds	sounds.txt	sounds.bin	2	3.01	Sound	-	call 0x659C16; compile-only lookup; by-product patch_d2/sounds.bin never read
+pettype	pettype.txt	pettype.bin	224	4	pet type	patch_d2/pettype.bin	call 0x61909A; unwritten: 5-7,176-177,186-223
+overlay	overlay.txt	overlay.bin	132	5	overlay	patch_d2/overlay.bin	call 0x664514; unwritten: 73-75,83,130-131
+itemstatcost	itemstatcost.txt	itemstatcost.bin	324	6	stat	patch_d2/itemstatcost.bin	call 0x6381D1; self link: itemstatcost.stat; unwritten: 2-3,6-7,27,40-43,49,81-83,94-319
+properties	properties.txt	properties.bin	46	7	code	patch_d2/properties.bin	call 0x638A84; unwritten: 9,31
+missiles	missiles.txt	missiles.bin	420	8	Missile	patch_d2/missiles.bin	call 0x66312C; self link: missiles.Missile; unwritten: 2-3,6-7,149,157,175,229-231,377-379,399,407-411,419
+states	states.txt	states.bin	60	9	state	patch_d2/states.bin	call 0x618B7D; unwritten: 21-23,37
+monstats_lookup	monstats.txt	monstats.bin	2	9.01	Id	-	call 0x6177ED; compile-only lookup; its .bin is overwritten by step 51
+skilldesc_lookup	skilldesc.txt	skilldesc.bin	2	9.02	skilldesc	-	call 0x617842; compile-only lookup; its .bin is overwritten by step 11
+skills	skills.txt	skills.bin	572	10	skill	patch_d2/skills.bin	call 0x61787B; @range built before this compile; self link: skills.skill; unwritten: 2-3,9-11,13-15,23,54-55,69,162-163,206-207,289,294-295,361,366-367,406-407,422-423,477-479,553,561
+skilldesc	skilldesc.txt	skilldesc.bin	288	11	skilldesc	patch_d2/skilldesc.bin	call 0x6178E1; unwritten: 22-23,35,83
+charstats	charstats.txt	charstats.bin	196	12		patch_d2/charstats.bin	call 0x613D07; unwritten: 0-31,59,74-75,81,98-99,106-107,114-115,122-123,130-131,138-139,146-147,154-155,162-163,170-171,194-195
+arena	arena.txt	arena.bin	28	13		d2exp/arena.bin	call 0x664A98; txt from d2exp
+chartemplate	chartemplate.txt	chartemplate.bin	240	14		d2exp/chartemplate.bin	call 0x66571A; txt from d2exp; unwritten: 43,126-127,134-135,142-143,150-151,158-159,166-167,174-175,182-183,190-191,198-199,206-207,214-215,222-223,230-231,238-239
+weapons	weapons.txt	weapons.bin	424	15	code	patch_d2/weapons.bin	call 0x633357; combined array: items; 35 list columns absent from txt; unwritten: 181,261,291,302,411,422-423
+armor	armor.txt	armor.bin	424	16	code	patch_d2/armor.bin	call 0x633376; combined array: items; 39 list columns absent from txt; unwritten: 181,261,291,302,411,422-423
+misc	misc.txt	misc.bin	424	17	code	patch_d2/misc.bin	call 0x633395; combined array: items; 33 list columns absent from txt; unwritten: 181,261,291,302,411,422-423
+magicsuffix	magicsuffix.txt	magicsuffix.bin	144	18		patch_d2/magicsuffix.bin	call 0x633D60; combined array: magic affixes; 2 list columns absent from txt; unwritten: 32-33,85,87,105,131
+magicprefix	magicprefix.txt	magicprefix.bin	144	19		patch_d2/magicprefix.bin	call 0x633D7D; combined array: magic affixes; unwritten: 32-33,85,87,105,131
+automagic	automagic.txt	automagic.bin	144	20		patch_d2/automagic.bin	call 0x633D9B; txt from d2exp; combined array: magic affixes; 3 list columns absent from txt; unwritten: 32-33,85,87,105,131
+raresuffix	raresuffix.txt	raresuffix.bin	72	21		patch_d2/raresuffix.bin	call 0x634132; txt from d2exp; combined array: rare affixes; unwritten: 0-13,70-71
+rareprefix	rareprefix.txt	rareprefix.bin	72	22		patch_d2/rareprefix.bin	call 0x63414C; txt from d2exp; combined array: rare affixes; unwritten: 0-13,70-71
+uniqueitems	uniqueitems.txt	uniqueitems.bin	332	23		patch_d2/uniqueitems.bin	call 0x634CEA; unwritten: 0-1,34-35,38-39,45-47,50-51,122-123,137-139
+sets	sets.txt	sets.bin	296	24	index	patch_d2/sets.bin	call 0x6357E1; unwritten: 6-15,272-295
+setitems	setitems.txt	setitems.bin	440	25		patch_d2/setitems.bin	call 0x636651; unwritten: 0-1,34-39,46-47
+gems	gems.txt	gems.bin	192	26		patch_d2/gems.bin	call 0x6371AB; unwritten: 38-39,44-45
+books	books.txt	books.bin	32	27		patch_d2/books.bin	call 0x637475; unwritten: 3
+qualityitems	qualityitems.txt	qualityitems.bin	112	28		d2exp/qualityitems.bin	call 0x636A83; txt from d2exp; unwritten: 11,108-111
+lowqualityitems	lowqualityitems.txt	lowqualityitems.bin	34	29		d2exp/lowqualityitems.bin	call 0x637549; txt from d2exp; unwritten: 32-33
+runes	runes.txt	runes.bin	288	30		patch_d2/runes.bin	call 0x639C3F; unwritten: 130-133
+itemratio	itemratio.txt	itemratio.bin	68	31		patch_d2/itemratio.bin	call 0x6378E0
+gamble	gamble.txt	gamble.bin	12	32		d2exp/gamble.bin	call 0x638B25; txt from d2exp; unwritten: 4-11
+plrtype	plrtype.txt	plrtype.bin	52	33		d2exp/plrtype.bin	call 0x65AE26; txt from d2exp; combined array: player tokens; unwritten: 36-51
+plrmode	plrmode.txt	plrmode.bin	52	34		d2exp/plrmode.bin	call 0x65AE3E; combined array: player tokens; unwritten: 36-51
+monmode	monmode.txt	monmode.bin	52	35		patch_d2/monmode.bin	call 0x65B18C; 16 list columns absent from txt
+objtype	objtype.txt	objtype.bin	52	36		d2exp/objtype.bin	call 0x65B216; txt from d2exp; combined array: object tokens; unwritten: 36-51
+objmode	objmode.txt	objmode.bin	52	37		d2exp/objmode.bin	call 0x65B22E; txt from d2exp; combined array: object tokens; unwritten: 36-51
+composit	composit.txt	composit.bin	52	38		d2exp/composit.bin	call 0x65B33E; txt from d2exp; unwritten: 36-51
+armtype	armtype.txt	armtype.bin	52	39		d2exp/armtype.bin	call 0x65B3AE; txt from d2exp; unwritten: 36-51
+experience	experience.txt	experience.bin	32	40		patch_d2/experience.bin	call 0x613E41
+uniquetitle	uniquetitle.txt	uniquetitle.bin	2	41		patch_d2/uniquetitle.bin	call 0x65A44D
+uniqueprefix	uniqueprefix.txt	uniqueprefix.bin	2	42		patch_d2/uniqueprefix.bin	call 0x65A492
+uniquesuffix	uniquesuffix.txt	uniquesuffix.bin	2	43		patch_d2/uniquesuffix.bin	call 0x65A4D7
+uniqueappellation	uniqueappellation.txt	uniqueappellation.bin	2	44		patch_d2/uniqueappellation.bin	call 0x65A51C
+monlvl	monlvl.txt	monlvl.bin	120	45		patch_d2/monlvl.bin	call 0x659956
+treasureclassex	treasureclassex.txt	treasureclassex.bin	736	46		patch_d2/treasureclassex.bin	call 0x654C29; loader fills @treasureclass; unwritten: 48-51
+monstats2	monstats2.txt	monstats2.bin	308	47	Id	patch_d2/monstats2.bin	call 0x658422; table-specific callbacks write outside list footprints; unwritten: 2-3,7,15,21-231,234-235,237-239,242-243,262-263,278-279,293-295,305-307
+monprop	monprop.txt	monprop.bin	312	48	Id	patch_d2/monprop.bin	call 0x6594B3; unwritten: 310-311
+monsounds	monsounds.txt	monsounds.bin	148	49	Id	patch_d2/monsounds.bin	call 0x656F45; unwritten: 2-3,126-127,134-135,142-143
+monseq	monseq.txt	monseq.bin	6	50	sequence	patch_d2/monseq.bin	call 0x659D24
+monstats	monstats.txt	monstats.bin	424	51	Id	patch_d2/monstats.bin	call 0x65384C; self link: monstats.Id; table-specific callbacks write outside list footprints; unwritten: 10-11,37,42-43,54-57,74-75,85,167,269,363,384-407
+monumod	monumod.txt	monumod.bin	32	52	uniquemod	patch_d2/monumod.bin	call 0x655279; unwritten: 2-3,26-27
+superuniques	superuniques.txt	superuniques.bin	52	53	Superunique	patch_d2/superuniques.bin	call 0x6555F3; unwritten: 43,50-51
+monpreset	monpreset.txt	monpreset.bin	4	54		patch_d2/monpreset.bin	call 0x659A72; table-specific callbacks write outside list footprints; unwritten: 1-3
+hireling	hireling.txt	hireling.bin	280	55		patch_d2/hireling.bin	call 0x65616B; unwritten: 2-3,276-279
+npc	npc.txt	npc.bin	76	56		patch_d2/npc.bin	call 0x6568DC
+monequip	monequip.txt	monequip.bin	28	57		patch_d2/monequip.bin	call 0x65A03B; unwritten: 5-7,26-27
+levels	levels.txt	levels.bin	544	58		patch_d2/levels.bin	call 0x61DA25; 45 list columns absent from txt; unwritten: 1,10-11,51-53,222-227,365-527,541-543
+leveldefs	levels.txt	leveldefs.bin	156	59		patch_d2/leveldefs.bin	call 0x61E41F; loader swaps name leveldefs -> levels for the .txt
+lvltypes	lvltypes.txt	lvltypes.bin	1928	60		patch_d2/lvltypes.bin	call 0x61EA29; unwritten: 1921-1923
+lvlprest	lvlprest.txt	lvlprest.bin	432	61		patch_d2/lvlprest.bin	call 0x61EF23; unwritten: 36-39
+lvlwarp	lvlwarp.txt	lvlwarp.bin	48	62		d2exp/lvlwarp.bin	call 0x61F2E1; txt from d2exp; unwritten: 46-47
+lvlmaze	lvlmaze.txt	lvlmaze.bin	28	63		patch_d2/lvlmaze.bin	call 0x61F46C
+lvlsub	lvlsub.txt	lvlsub.bin	348	64		patch_d2/lvlsub.bin	call 0x61F842; unwritten: 80-283
+automap	automap.txt	automap.bin	44	65		d2exp/automap.bin	call 0x61FE62; txt from d2exp; unwritten: 27
+objects	objects.txt	objects.bin	448	66		patch_d2/objects.bin	call 0x640DDE; unwritten: 64-191,205-207,327,364,374-375,414-415,441-443
+objgroup	objgroup.txt	objgroup.bin	52	67		d2exp/objgroup.bin	call 0x6412E0; txt from d2exp; unwritten: 50-51
+shrines	shrines.txt	shrines.bin	184	68		patch_d2/shrines.bin	call 0x641493; unwritten: 1-3,179
+inventory	inventory.txt	inventory.bin	240	69		d2exp/inventory.bin	call 0x65C0F7; unwritten: 18-19,38-39,58-59,78-79,98-99,118-119,138-139,158-159,178-179,198-199,218-219,238-239
+belts	belts.txt	belts.bin	264	70		d2exp/belts.bin	call 0x660C22; txt from d2exp; unwritten: 0-3,5-7
+monitempercent	monitempercent.txt	monitempercent.bin	4	71		d2exp/monitempercent.bin	call 0x654FA8; txt from d2exp
+cubemain	cubemain.txt	cubemain.bin	328	72		patch_d2/cubemain.bin	call 0x66A184; table-specific callbacks write outside list footprints; unwritten: 5-7,17,20-84,88-99,111,123,135,147,159-168,172-183,195,207,219,231,243-252,256-267,279,291,303,315,327
+difficultylevels	difficultylevels.txt	difficultylevels.bin	88	73		patch_d2/difficultylevels.bin	call 0x6180B9
+unused_653db0			2			-	call 0x653DFF; loader 0x653DB0 has no callers; table name and count come from its arguments

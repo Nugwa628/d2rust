@@ -1,0 +1,33 @@
+# render-pipeline.md Test vectors row 5 (§A6 stable sort): equal keys, the
+# later-built item is on top.
+version = 1
+kind = "synthetic"
+description = "equal keys, build order decides"
+view = [0, 0, 32, 32]
+
+[[frame]]
+width = 4
+height = 4
+fill = 20
+
+[[frame]]
+width = 4
+height = 4
+fill = 30
+
+[[item]]
+frame = 0
+x = 0
+y = 0
+key = [1, 5, 5, 5]
+
+[[item]]
+frame = 1
+x = 2
+y = 2
+key = [1, 5, 5, 5]
+
+[[expect]]
+x = 3
+y = 3
+index = 30

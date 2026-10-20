@@ -1,0 +1,18 @@
+scenario 2
+tick_rate 60
+# Level 36 (Catacombs 3), door class 16 at (22790, 8210). The player arrives from the west and
+# stops diagonally next to the door (2 sub-tiles on both axes). The door's own cells carry the
+# door collision bit, so the reach line to it must not count them as a blocker: the click opens
+# the door.
+name a1-catacombs-diagonal-door
+seed 1
+end 700
+allow stuck
+char class 3
+char level 20
+char area 0 36
+at 0 dev god on
+at 1 dev kill level
+at 2 check unit(object,16).mode_id == 0
+at 10 input clickunit 2 16
+at 300 check unit(object,16).mode_id != 0

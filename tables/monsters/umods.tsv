@@ -1,0 +1,44 @@
+id	uniquemod	init_fn	unique_gate	init_effect	cb_mode0	cb_mode1	cb_mode2_event7	cb_mode3	cb_mode4	cb_mode5	cl_phase0	cl_phase1	cl_phase2	cl_phase3	cl_phase4	status
+0	none	-	-	nothing	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+1	rndname	0x005A0CE0	yes	one unit-seed step; name seed = low 16 bits of lo'	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+2	hpmultiply	0x005A0DC0	branch	maxhp and hitpoints := M + pct(M, K) with M the total max life 0x00625D10 (items included); K = constants[diff+4] champion, [diff+7] other unique, [diff+1] when unique_gate=0; unique branch also sets hpregen 0	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+3	light	-	-	nothing at init	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+4	leveladd	0x005A0E40	no	level += 3; experience = 5 x base experience	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+5	strong	0x005A17E0	branch	damagepercent += constants[15 unique / 14 other] x ChampionDamageBonus / 100 (halved for BaseId 118); item_tohit_percent += constants[13 / 12] x ChampionDamageBonus / 100	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+6	fast	0x005A1910	no	velocitypercent += clamp(2048 / Velocity - 128, 10, 100) when Velocity > 0	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+7	curse	-	-	nothing at init	-	-	-	0x005A2530	-	-	-	-	-	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §5)
+8	resist	0x005A1370	yes	resistance raise, see init.md 19.3	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed (constants)
+9	fire	0x005A1990	branch	firemindam/firemaxdam += DM x constants[diff+28 / diff+31] / 100 (unique) or [diff+16 / diff+19] (other); then resist (fire +75)	-	0x005A25F0	0x005A2620	-	-	-	-	-	0x004AD1A0	-	-	1.14d-confirmed (init); callbacks 1.14d-confirmed (umod-callbacks.md §6)
+10	poisondead	-	-	nothing at init	-	0x005A3800	0x005A2C20	-	-	-	-	-	0x004AD510	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §4, §7)
+11	durieldead	-	-	nothing at init	-	-	-	-	-	-	-	-	0x004AD5F0	-	-	1.14d-confirmed
+12	bloodraven	-	-	nothing at init	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+13	rage	-	-	nothing at init	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+14	spcdamage	-	-	nothing at init	0x005A3B50	-	-	-	-	-	-	-	-	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §8)
+15	partydead	-	-	nothing at init	-	0x005A2D10	-	-	-	-	-	-	-	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §9)
+16	champion	0x005A0E80	yes	level -= 1; experience -= 2 x (experience / 5); damage/tohit percent; velocity (see init.md 19.2)	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+17	lightning	0x005A1B00	branch	lightmindam/lightmaxdam += DM x constants[d+28 / d+31] / 100 (unique) or [d+16 / d+19] (other); then resist (light +75); see umod-init-bodies.md §2	-	0x005A37D0	0x005A29A0	-	0x005A2BA0	-	-	-	0x004AD890	0x004AD8E0	-	1.14d-confirmed (init, umod-init-bodies.md §2); callbacks 1.14d-confirmed (umod-callbacks.md §10)
+18	cold	0x005A1C70	branch	coldmindam/coldmaxdam as fire; coldlength += 5 x r + 100 (r = clamped monlvl row); then resist (cold +75)	-	0x005A3800	0x005A2BD0	-	-	-	-	-	0x004AD510	-	-	1.14d-confirmed (init, umod-init-bodies.md §2); callbacks 1.14d-confirmed (umod-callbacks.md §4, §11)
+19	hireable	-	-	nothing at init	0x005A2D80	-	-	-	-	0x005A2E00	-	-	-	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §12)
+20	scarab	-	-	nothing at init	-	0x005A2EB0	0x005A2EE0	-	-	-	-	-	0x004AD920	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §13)
+21	killself	-	-	nothing at init	-	-	0x005A3AA0	-	-	-	-	-	-	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §14)
+22	questcomplete	-	-	nothing at init	-	0x005A3250	-	-	-	-	-	0x004AD2F0	-	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §15)
+23	poisonhit	0x005A1E00	branch	poisonmindam/poisonmaxdam as fire; poisonlength += 2 x (5 x r + 150) (r = clamped monlvl row); then resist (poison +75)	0x005A3490	-	-	-	-	-	0x004AD890	-	-	-	-	1.14d-confirmed (init, umod-init-bodies.md §2); callbacks 1.14d-confirmed (umod-callbacks.md §16)
+24	thief	-	-	nothing at init (disabled row)	-	-	-	0x005A30E0	-	-	-	-	-	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §17)
+25	manahit	0x005A1F90	branch	manadrainmindam/manadrainmaxdam as fire, each x 256 after the division; then resist (magic +20)	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed (init, umod-init-bodies.md §2)
+26	teleport	0x005A1600	yes	gives skill MonTeleport (184) level 1, skill mode 4; sets AI control flag 0x20	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed (umod-init-bodies.md §4)
+27	spectralhit	0x005A1370	yes	resist fn: cold/fire/light +20 each if below 75	0x005A3040	-	-	-	-	0x005A30B0	-	-	-	-	-	1.14d-confirmed (constants); callbacks 1.14d-confirmed (umod-callbacks.md §18)
+28	stoneskin	0x005A1370	yes	resist fn: armorclass doubled; damageresist +50	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed (constants)
+29	multishot	-	-	nothing at init	-	-	-	-	-	0x005A3610	-	-	-	-	0x004AD970	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §19)
+30	aura	0x005A1650	yes	aura skill from name seed (init.md 19.5)	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+31	goboom	-	-	nothing at init	-	0x005A3800	0x005A2840	-	-	-	-	-	0x004AD0C0	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §4, §20)
+32	firespike_explode	-	-	nothing at init	-	0x005A3800	0x005A3D20	-	-	-	-	-	0x004ADB20	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §4, §21)
+33	suicideminion_explode	-	-	nothing at init	-	0x005A3E70	0x005A3EF0	-	-	-	-	-	0x004ADBC0	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §22)
+34	ai_after_death	-	-	nothing at init	-	0x005A3840	0x005A3910	-	-	-	-	-	-	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §23)
+35	shatter_on_death	-	-	nothing at init	-	0x005A3A80	-	-	-	-	-	-	-	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §24)
+36	ghostly	0x005A1080	yes	type flag 0x40; damageresist = 80; champion fn; cold damage from DM; coldlength += 150	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+37	fanatic	0x005A11F0	yes	item_armor_percent = -70; champion fn	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+38	possessed	0x005A1230	yes	type flag 0x20; maxhp and hitpoints += 100%; champion fn	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+39	berserk	0x005A1280	yes	maxhp and hitpoints += pct(maxhp, -75); damagepercent += 3 x ChampionDamageBonus (halved for BaseId 118); item_tohit_percent += 3 x ChampionDamageBonus	-	-	-	-	-	-	-	-	-	-	-	1.14d-confirmed
+40	worms_on_death	-	-	nothing at init	-	0x005A4200	-	-	-	-	-	-	0x004ADD80	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §25); never assigned in 1.14d (umod-callbacks.md Open question 5, §28.4)
+41	always_run_ai	0x005A1330	no	schedules a type-7 event at frame + 75	-	-	0x005A4230	-	-	-	-	-	-	-	-	1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §26); never assigned in 1.14d (umod-callbacks.md Open question 5, §28.4)
+42	lightningdeath	-	-	nothing at init	-	0x005A3800	0x005A2910	-	-	-	-	-	0x004AD510	-	-	table 1.14d-confirmed; callbacks 1.14d-confirmed (umod-callbacks.md §4, §27)

@@ -1,0 +1,31 @@
+op	scope	subject	source	pass_if	address
+0	recipe	-	-	always	0x005665F0
+1	recipe	-	local day of month (1-31)	param <= day <= value	0x005666D8
+2	recipe	-	local day of week + 1 (Sunday 1 .. Saturday 7)	day == value	0x005666F3
+3	recipe	player	stat value	stat >= t	0x005666FB
+4	recipe	player	stat value	stat <= t	0x00566746
+5	recipe	player	stat value	stat != t	0x00566790
+6	recipe	player	stat value	stat == t	0x005667DB
+7	recipe	player	base stat	stat >= t	0x0056681D
+8	recipe	player	base stat	stat <= t	0x00566868
+9	recipe	player	base stat	stat != t	0x005668B2
+10	recipe	player	base stat	stat == t	0x005668FD
+11	recipe	player	stat bonus	stat >= t	0x0056693F
+12	recipe	player	stat bonus	stat <= t	0x0056698A
+13	recipe	player	stat bonus	stat != t	0x005669D1
+14	recipe	player	stat bonus	stat == t	0x00566A0D
+15	input0	item	stat value	stat >= t	0x00565010
+16	input0	item	stat value	stat <= t	0x00565010
+17	input0	item	stat value	stat != t	0x00565010
+18	input0	item	stat value	stat == t	0x00565010
+19	input0	item	base stat	stat >= t	0x00565010
+20	input0	item	base stat	stat <= t	0x00565010
+21	input0	item	base stat	stat != t	0x00565010
+22	input0	item	base stat	stat == t	0x00565010
+23	input0	item	stat bonus	stat >= t	0x00565010
+24	input0	item	stat bonus	stat <= t	0x00565010
+25	input0	item	stat bonus	stat != t	0x00565010
+26	input0	item	stat bonus	stat == t	0x00565010
+27	input0	item	file index	index != value	0x00565010
+28	inputs	item	stat 356 (quest item difficulty)	stat >= game difficulty, tested only when the item's items.txt quest and questdiffcheck are both non-zero	0x005652C9
+29	recipe	-	-	always (any op >= 29)	0x005665F0

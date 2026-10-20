@@ -1,0 +1,24 @@
+{
+  "name": "town-walk",
+  "args": [
+    "--new",
+    "sorceress",
+    "Picture",
+    "--seed",
+    "7",
+    "--input",
+    "frame 72; click 700 300"
+  ],
+  "ticks": [
+    144,
+    147
+  ],
+  "phases": [
+    0,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "size": "1280x720",
+  "tick_rate": 60
+}

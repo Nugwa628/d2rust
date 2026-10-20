@@ -1,0 +1,62 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__claude-code-remote__update_trigger",
+      "mcp__claude-code-remote__send_later",
+      "mcp__github__merge_pull_request",
+      "mcp__claude-code-remote__send_message",
+      "Bash(git push:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(py:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(wine:*)",
+      "Bash(xvfb-run:*)",
+      "Read(//home/user/D2RUST-GAME-DATA/**)",
+      "Read(//home/user/D2RUST-private-repo/**)",
+      "Read(//home/user/**)",
+      "mcp__claude-code-remote__list_sessions",
+      "mcp__claude-code-remote__interrupt_session",
+      "mcp__claude-code-remote__send_message",
+      "mcp__claude-code-remote__create_session",
+      "mcp__claude-code-remote__archive_session",
+      "mcp__claude-code-remote__get_session",
+      "mcp__claude-code-remote__list_events",
+      "mcp__claude-code-remote__send_later",
+      "Bash(git:*)",
+      "Bash(python3 tools/:*)",
+      "Bash(sh tools/:*)",
+      "Bash(tools/coord/coordinator/mergeone.sh:*)",
+      "Bash(cargo:*)",
+      "Bash(sh tools/coord/sync.sh)",
+      "Bash(sh tools/coord/sync.sh:*)",
+      "Bash(sh tools/cloud-setup.sh)",
+      "Bash(sh tools/cloud-setup.sh:*)",
+      "Bash(sh tools/cloud-game/setup_winpy.sh:*)",
+      "Bash(sh tools/cloud-game/prepare_saves.sh:*)",
+      "Bash(tools/cloud-game/setup_winpy.sh:*)",
+      "Bash(tools/cloud-game/prepare_saves.sh:*)",
+      "Bash(git fetch:*)",
+      "Bash(git merge:*)",
+      "mcp__claude-code-remote__add_repo"
+    ]
+  },
+  "autoCompactWindow": 300000,
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$CLAUDE_PROJECT_DIR/tools/coord/session-start-hook.sh\"",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

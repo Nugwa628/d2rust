@@ -1,0 +1,32 @@
+/target
+/game/
+/re/
+*.mpq
+*.MPQ
+*.exe
+*.dll
+*.d2s
+*.bin
+*.dc6
+*.dcc
+*.dt1
+*.ds1
+*.cof
+.env
+*.tbl
+# Except the game's MPQs and their parts in game-data/mpq/ (CLAUDE.md rule 1).
+!/game-data/mpq/*.mpq
+!/game-data/mpq/*.MPQ
+
+# Python bytecode
+__pycache__/
+*.pyc
+mutants.out/
+
+# cargo-fuzz (fuzz/): corpora are built from live Blizzard files, never committed
+/fuzz/target
+/fuzz/corpus/
+/fuzz/artifacts/
+
+# Per-checkout Claude settings
+.claude/settings.local.json

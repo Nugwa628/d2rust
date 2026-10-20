@@ -1,0 +1,5 @@
+soak-log 1 seed=1 save=target/soak/saves/Soaktown1.d2s difficulty=0 kit=1
+30 click L 603 18
+36 wp 11 76
+142 click L 251 99
+242 click L 367 198

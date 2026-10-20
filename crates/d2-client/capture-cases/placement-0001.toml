@@ -1,0 +1,7 @@
+# render/capture.md §8 placement-0001: Den of Evil dead end, stand 5 s,
+# open and close the inventory, stand 5 s. Reads the newest recording.
+version = 1
+kind = "scene"
+description = "capture.md §8: sprite-placement.md §2, §8; camera.md §1 modes 0/1"
+raw = "latest"
+check = "compare"

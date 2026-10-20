@@ -1,0 +1,12 @@
+#!/bin/sh
+# Blocks commits that include original game files or RE output (CLAUDE.md
+# rule 1). The one exception: the game's MPQs and their .part-NNN pieces
+# directly in game-data/mpq/ (this private repository carries them).
+blocked=$(git diff --cached --name-only --diff-filter=ACM | \
+  grep -Eiv '^game-data/mpq/[^/]+\.mpq(\.part-[0-9]+)?$' | \
+  grep -Ei '\.(mpq|exe|dll|d2s|dc6|dcc|dt1|ds1|cof|tbl|bin|wav)$|(^|/)excel/[^/]*\.txt$|\.part-[0-9]+$|^game/|^re/|^install/|^extracted/')
+if [ -n "$blocked" ]; then
+  echo "Commit blocked: original game files or RE output staged:"
+  echo "$blocked"
+  exit 1
+fi

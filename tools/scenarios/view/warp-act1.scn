@@ -1,0 +1,26 @@
+scenario 2
+tick_rate 60
+# The world view never stops the game: from the Rogue Encampment the
+# player takes the waypoint to the Cold Plains, then warps to the Blood
+# Moor; after each the game still runs and the view draws a frame with
+# map tiles, with no frame skipped.
+name view-warp-act1
+seed 1234
+end 420
+char class 1
+char level 30
+char area 0 1
+at 0 dev god on
+at 0 dev waypoints
+at 1 poke goto unit 2:119
+at 4 msg InteractWithEntity type=2 id=@2:119
+at 12 msg TakeOrCloseWp wp=@2:119 level=3
+by 150 check player.area == 3
+at 180 check client.view.tiles > 0
+at 180 check client.view.tick changes
+at 180 check client.view.skipped == 0
+at 200 poke warp 2
+by 350 check player.area == 2
+at 400 check client.view.tiles > 0
+at 400 check client.view.tick changes
+at 400 check client.view.skipped == 0

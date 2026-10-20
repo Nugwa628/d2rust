@@ -1,0 +1,702 @@
+table	a	b	c	d	e	f	g	h
+objpreset	0	0	12					
+objpreset	0	1	37					
+objpreset	0	2	39					
+objpreset	0	3	35					
+objpreset	0	4	36					
+objpreset	0	5	5					
+objpreset	0	6	17					
+objpreset	0	7	18					
+objpreset	0	8	19					
+objpreset	0	9	20					
+objpreset	0	10	21					
+objpreset	0	11	22					
+objpreset	0	12	30					
+objpreset	0	13	70					
+objpreset	0	14	70					
+objpreset	0	15	69					
+objpreset	0	16	69					
+objpreset	0	17	29					
+objpreset	0	18	31					
+objpreset	0	19	33					
+objpreset	0	20	34					
+objpreset	0	21	37					
+objpreset	0	22	61					
+objpreset	0	23	65					
+objpreset	0	24	66					
+objpreset	0	25	8					
+objpreset	0	26	26					
+objpreset	0	27	28					
+objpreset	0	28	82					
+objpreset	0	29	2					
+objpreset	0	30	81					
+objpreset	0	31	84					
+objpreset	0	32	83					
+objpreset	0	33	78					
+objpreset	0	34	61					
+objpreset	0	35	103					
+objpreset	0	36	108					
+objpreset	0	37	119					
+objpreset	0	38	580					
+objpreset	0	39	130					
+objpreset	0	40	159					
+objpreset	0	41	163					
+objpreset	0	42	169					
+objpreset	0	43	160					
+objpreset	0	44	161					
+objpreset	0	45	162					
+objpreset	0	46	104					
+objpreset	0	47	105					
+objpreset	0	48	106					
+objpreset	0	49	107					
+objpreset	0	50	179					
+objpreset	0	51	180					
+objpreset	0	52	119					
+objpreset	0	53	157					
+objpreset	0	54	247					
+objpreset	0	55	248					
+objpreset	0	56	155					
+objpreset	0	57	174					
+objpreset	0	58	175					
+objpreset	0	59	139					
+objpreset	0	60	140					
+objpreset	0	61	141					
+objpreset	0	62	144					
+objpreset	0	63	6					
+objpreset	0	64	240					
+objpreset	0	65	241					
+objpreset	0	66	242					
+objpreset	0	67	54					
+objpreset	0	68	55					
+objpreset	0	69	56					
+objpreset	0	70	57					
+objpreset	0	71	58					
+objpreset	0	72	171					
+objpreset	0	73	178					
+objpreset	0	74	239					
+objpreset	0	75	245					
+objpreset	0	76	250					
+objpreset	0	77	111					
+objpreset	0	78	138					
+objpreset	0	79	132					
+objpreset	0	80	164					
+objpreset	0	81	165					
+objpreset	0	82	77					
+objpreset	0	83	85					
+objpreset	0	84	86					
+objpreset	0	85	262					
+objpreset	0	86	263					
+objpreset	0	87	264					
+objpreset	0	88	265					
+objpreset	0	89	50					
+objpreset	0	90	51					
+objpreset	0	91	79					
+objpreset	0	92	53					
+objpreset	0	93	1					
+objpreset	0	94	3					
+objpreset	0	95	7					
+objpreset	0	96	46					
+objpreset	0	97	38					
+objpreset	0	98	256					
+objpreset	0	99	257					
+objpreset	0	100	258					
+objpreset	0	101	129					
+objpreset	0	102	267					
+objpreset	0	103	268					
+objpreset	0	104	269					
+objpreset	0	105	581					
+objpreset	0	106	351					
+objpreset	0	107	352					
+objpreset	0	108	353					
+objpreset	0	109	374					
+objpreset	0	110	385					
+objpreset	0	111	397					
+objpreset	0	112	321					
+objpreset	1	0	74					
+objpreset	1	1	37					
+objpreset	1	2	192					
+objpreset	1	3	304					
+objpreset	1	4	305					
+objpreset	1	5	306					
+objpreset	1	6	101					
+objpreset	1	7	102					
+objpreset	1	8	78					
+objpreset	1	9	103					
+objpreset	1	10	156					
+objpreset	1	11	580					
+objpreset	1	12	132					
+objpreset	1	13	129					
+objpreset	1	14	357					
+objpreset	1	15	153					
+objpreset	1	16	121					
+objpreset	1	17	122					
+objpreset	1	18	229					
+objpreset	1	19	230					
+objpreset	1	20	196					
+objpreset	1	21	267					
+objpreset	1	22	261					
+objpreset	1	23	149					
+objpreset	1	24	269					
+objpreset	1	25	4					
+objpreset	1	26	9					
+objpreset	1	27	52					
+objpreset	1	28	94					
+objpreset	1	29	95					
+objpreset	1	30	142					
+objpreset	1	31	143					
+objpreset	1	32	5					
+objpreset	1	33	6					
+objpreset	1	34	87					
+objpreset	1	35	88					
+objpreset	1	36	146					
+objpreset	1	37	146					
+objpreset	1	38	147					
+objpreset	1	39	148					
+objpreset	1	40	240					
+objpreset	1	41	241					
+objpreset	1	42	242					
+objpreset	1	43	243					
+objpreset	1	44	176					
+objpreset	1	45	177					
+objpreset	1	46	198					
+objpreset	1	47	246					
+objpreset	1	48	29					
+objpreset	1	49	160					
+objpreset	1	50	161					
+objpreset	1	51	162					
+objpreset	1	52	273					
+objpreset	1	53	283					
+objpreset	1	54	85					
+objpreset	1	55	86					
+objpreset	1	56	109					
+objpreset	1	57	116					
+objpreset	1	58	134					
+objpreset	1	59	135					
+objpreset	1	60	136					
+objpreset	1	61	150					
+objpreset	1	62	151					
+objpreset	1	63	172					
+objpreset	1	64	173					
+objpreset	1	65	279					
+objpreset	1	66	280					
+objpreset	1	67	281					
+objpreset	1	68	282					
+objpreset	1	69	166					
+objpreset	1	70	167					
+objpreset	1	71	113					
+objpreset	1	72	137					
+objpreset	1	73	89					
+objpreset	1	74	104					
+objpreset	1	75	105					
+objpreset	1	76	106					
+objpreset	1	77	107					
+objpreset	1	78	154					
+objpreset	1	79	171					
+objpreset	1	80	178					
+objpreset	1	81	270					
+objpreset	1	82	271					
+objpreset	1	83	272					
+objpreset	1	84	266					
+objpreset	1	85	274					
+objpreset	1	86	244					
+objpreset	1	87	284					
+objpreset	1	88	288					
+objpreset	1	89	298					
+objpreset	1	90	289					
+objpreset	1	91	296					
+objpreset	1	92	297					
+objpreset	1	93	287					
+objpreset	1	94	286					
+objpreset	1	95	285					
+objpreset	1	96	290					
+objpreset	1	97	291					
+objpreset	1	98	292					
+objpreset	1	99	293					
+objpreset	1	100	294					
+objpreset	1	101	295					
+objpreset	1	102	133					
+objpreset	1	103	303					
+objpreset	1	104	299					
+objpreset	1	105	300					
+objpreset	1	106	301					
+objpreset	1	107	302					
+objpreset	1	108	581					
+objpreset	1	109	354					
+objpreset	1	110	582					
+objpreset	1	111	314					
+objpreset	1	112	315					
+objpreset	1	113	316					
+objpreset	1	114	317					
+objpreset	1	115	323					
+objpreset	1	116	322					
+objpreset	1	117	110					
+objpreset	1	118	112					
+objpreset	1	119	114					
+objpreset	1	120	355					
+objpreset	1	121	356					
+objpreset	1	122	357					
+objpreset	1	123	351					
+objpreset	1	124	352					
+objpreset	1	125	353					
+objpreset	1	126	152					
+objpreset	1	127	374					
+objpreset	1	128	387					
+objpreset	1	129	389					
+objpreset	1	130	390					
+objpreset	1	131	391					
+objpreset	1	132	388					
+objpreset	1	133	397					
+objpreset	1	134	402					
+objpreset	2	0	117					
+objpreset	2	1	237					
+objpreset	2	2	580					
+objpreset	2	3	130					
+objpreset	2	4	102					
+objpreset	2	5	37					
+objpreset	2	6	160					
+objpreset	2	7	161					
+objpreset	2	8	162					
+objpreset	2	9	104					
+objpreset	2	10	105					
+objpreset	2	11	106					
+objpreset	2	12	107					
+objpreset	2	13	194					
+objpreset	2	14	195					
+objpreset	2	15	193					
+objpreset	2	16	207					
+objpreset	2	17	211					
+objpreset	2	18	210					
+objpreset	2	19	234					
+objpreset	2	20	214					
+objpreset	2	21	215					
+objpreset	2	22	213					
+objpreset	2	23	228					
+objpreset	2	24	216					
+objpreset	2	25	227					
+objpreset	2	26	217					
+objpreset	2	27	235					
+objpreset	2	28	218					
+objpreset	2	29	219					
+objpreset	2	30	220					
+objpreset	2	31	221					
+objpreset	2	32	223					
+objpreset	2	33	224					
+objpreset	2	34	267					
+objpreset	2	35	269					
+objpreset	2	36	581					
+objpreset	2	37	170					
+objpreset	2	38	325					
+objpreset	2	39	184					
+objpreset	2	40	190					
+objpreset	2	41	191					
+objpreset	2	42	197					
+objpreset	2	43	199					
+objpreset	2	44	200					
+objpreset	2	45	201					
+objpreset	2	46	202					
+objpreset	2	47	206					
+objpreset	2	48	278					
+objpreset	2	49	120					
+objpreset	2	50	130					
+objpreset	2	51	326					
+objpreset	2	52	158					
+objpreset	2	53	271					
+objpreset	2	54	272					
+objpreset	2	55	327					
+objpreset	2	56	328					
+objpreset	2	57	329					
+objpreset	2	58	330					
+objpreset	2	59	331					
+objpreset	2	60	332					
+objpreset	2	61	333					
+objpreset	2	62	334					
+objpreset	2	63	335					
+objpreset	2	64	336					
+objpreset	2	65	5					
+objpreset	2	66	6					
+objpreset	2	67	176					
+objpreset	2	68	240					
+objpreset	2	69	241					
+objpreset	2	70	181					
+objpreset	2	71	183					
+objpreset	2	72	246					
+objpreset	2	73	185					
+objpreset	2	74	186					
+objpreset	2	75	187					
+objpreset	2	76	188					
+objpreset	2	77	203					
+objpreset	2	78	204					
+objpreset	2	79	205					
+objpreset	2	80	208					
+objpreset	2	81	209					
+objpreset	2	82	169					
+objpreset	2	83	323					
+objpreset	2	84	324					
+objpreset	2	85	196					
+objpreset	2	86	212					
+objpreset	2	87	225					
+objpreset	2	88	244					
+objpreset	2	89	351					
+objpreset	2	90	352					
+objpreset	2	91	353					
+objpreset	2	92	360					
+objpreset	2	93	361					
+objpreset	2	94	362					
+objpreset	2	95	365					
+objpreset	2	96	251					
+objpreset	2	97	252					
+objpreset	2	98	208					
+objpreset	2	99	283					
+objpreset	2	100	367					
+objpreset	2	101	366					
+objpreset	2	102	368					
+objpreset	2	103	341					
+objpreset	2	104	342					
+objpreset	2	105	343					
+objpreset	2	106	344					
+objpreset	2	107	374					
+objpreset	2	108	370					
+objpreset	2	109	378					
+objpreset	2	110	379					
+objpreset	2	111	386					
+objpreset	2	112	397					
+objpreset	2	113	405					
+objpreset	2	114	407					
+objpreset	2	115	406					
+objpreset	3	0	238					
+objpreset	3	1	580					
+objpreset	3	2	267					
+objpreset	3	3	269					
+objpreset	3	4	581					
+objpreset	3	5	573					
+objpreset	3	6	573					
+objpreset	3	7	573					
+objpreset	3	8	345					
+objpreset	3	9	346					
+objpreset	3	10	347					
+objpreset	3	11	348					
+objpreset	3	12	349					
+objpreset	3	13	350					
+objpreset	3	14	351					
+objpreset	3	15	352					
+objpreset	3	16	353					
+objpreset	3	17	358					
+objpreset	3	18	359					
+objpreset	3	19	363					
+objpreset	3	20	259					
+objpreset	3	21	373					
+objpreset	3	22	372					
+objpreset	3	23	374					
+objpreset	3	24	236					
+objpreset	3	25	249					
+objpreset	3	26	226					
+objpreset	3	27	231					
+objpreset	3	28	232					
+objpreset	3	29	93					
+objpreset	3	30	97					
+objpreset	3	31	123					
+objpreset	3	32	124					
+objpreset	3	33	96					
+objpreset	3	34	225					
+objpreset	3	35	233					
+objpreset	3	36	222					
+objpreset	3	37	125					
+objpreset	3	38	126					
+objpreset	3	39	127					
+objpreset	3	40	128					
+objpreset	3	41	375					
+objpreset	3	42	376					
+objpreset	3	43	254					
+objpreset	3	44	253					
+objpreset	3	45	342					
+objpreset	3	46	255					
+objpreset	3	47	392					
+objpreset	3	48	393					
+objpreset	3	49	394					
+objpreset	3	50	395					
+objpreset	3	51	396					
+objpreset	3	52	398					
+objpreset	3	53	397					
+objpreset	3	54	399					
+objpreset	3	55	401					
+objpreset	3	56	400					
+objpreset	3	57	380					
+objpreset	3	58	383					
+objpreset	3	59	384					
+objpreset	3	60	296					
+objpreset	3	61	297					
+objpreset	3	62	403					
+objpreset	3	63	102					
+objpreset	3	64	408					
+objpreset	3	65	409					
+objpreset	4	0	452					
+objpreset	4	1	453					
+objpreset	4	2	338					
+objpreset	4	3	337					
+objpreset	4	4	267					
+objpreset	4	5	374					
+objpreset	4	6	482					
+objpreset	4	7	39					
+objpreset	4	8	35					
+objpreset	4	9	36					
+objpreset	4	10	33					
+objpreset	4	11	34					
+objpreset	4	12	38					
+objpreset	4	13	102					
+objpreset	4	14	411					
+objpreset	4	15	438					
+objpreset	4	16	412					
+objpreset	4	17	435					
+objpreset	4	18	436					
+objpreset	4	19	440					
+objpreset	4	20	441					
+objpreset	4	21	441					
+objpreset	4	22	442					
+objpreset	4	23	429					
+objpreset	4	24	420					
+objpreset	4	25	431					
+objpreset	4	26	430					
+objpreset	4	27	413					
+objpreset	4	28	432					
+objpreset	4	29	433					
+objpreset	4	30	418					
+objpreset	4	31	419					
+objpreset	4	32	424					
+objpreset	4	33	425					
+objpreset	4	34	416					
+objpreset	4	35	414					
+objpreset	4	36	415					
+objpreset	4	37	427					
+objpreset	4	38	428					
+objpreset	4	39	421					
+objpreset	4	40	422					
+objpreset	4	41	423					
+objpreset	4	42	426					
+objpreset	4	43	451					
+objpreset	4	44	267					
+objpreset	4	45	443					
+objpreset	4	46	444					
+objpreset	4	47	445					
+objpreset	4	48	446					
+objpreset	4	49	447					
+objpreset	4	50	448					
+objpreset	4	51	450					
+objpreset	4	52	451					
+objpreset	4	53	459					
+objpreset	4	54	460					
+objpreset	4	55	461					
+objpreset	4	56	462					
+objpreset	4	57	482					
+objpreset	4	58	473					
+objpreset	4	59	455					
+objpreset	4	60	456					
+objpreset	4	61	457					
+objpreset	4	62	458					
+objpreset	4	63	463					
+objpreset	4	64	464					
+objpreset	4	65	465					
+objpreset	4	66	466					
+objpreset	4	67	467					
+objpreset	4	68	468					
+objpreset	4	69	469					
+objpreset	4	70	470					
+objpreset	4	71	471					
+objpreset	4	72	472					
+objpreset	4	73	477					
+objpreset	4	74	479					
+objpreset	4	75	480					
+objpreset	4	76	481					
+objpreset	4	77	483					
+objpreset	4	78	484					
+objpreset	4	79	485					
+objpreset	4	80	486					
+objpreset	4	81	487					
+objpreset	4	82	454					
+objpreset	4	83	437					
+objpreset	4	84	508					
+objpreset	4	85	488					
+objpreset	4	86	493					
+objpreset	4	87	493					
+objpreset	4	88	495					
+objpreset	4	89	497					
+objpreset	4	90	499					
+objpreset	4	91	503					
+objpreset	4	92	509					
+objpreset	4	93	512					
+objpreset	4	94	489					
+objpreset	4	95	490					
+objpreset	4	96	514					
+objpreset	4	97	515					
+objpreset	4	98	493					
+objpreset	4	99	498					
+objpreset	4	100	513					
+objpreset	4	101	494					
+objpreset	4	102	496					
+objpreset	4	103	511					
+objpreset	4	104	500					
+objpreset	4	105	501					
+objpreset	4	106	502					
+objpreset	4	107	504					
+objpreset	4	108	505					
+objpreset	4	109	506					
+objpreset	4	110	507					
+objpreset	4	111	510					
+objpreset	4	112	160					
+objpreset	4	113	161					
+objpreset	4	114	162					
+objpreset	4	115	269					
+objpreset	4	116	523					
+objpreset	4	117	434					
+objpreset	4	118	496					
+objpreset	4	119	496					
+objpreset	4	120	496					
+objpreset	4	121	527					
+objpreset	4	122	528					
+objpreset	4	123	538					
+objpreset	4	124	539					
+objpreset	4	125	542					
+objpreset	4	126	543					
+objpreset	4	127	546					
+objpreset	4	128	547					
+objpreset	4	129	548					
+objpreset	4	130	549					
+objpreset	4	131	550					
+objpreset	4	132	551					
+objpreset	4	133	552					
+objpreset	4	134	555					
+objpreset	4	135	553					
+objpreset	4	136	554					
+objpreset	4	137	557					
+objpreset	4	138	541					
+objpreset	4	139	544					
+objpreset	4	140	559					
+objpreset	4	141	560					
+objpreset	4	142	564					
+objpreset	4	143	567					
+objpreset	4	144	568					
+objpreset	4	145	536					
+objpreset	4	146	537					
+objpreset	4	147	563					
+objpreset	4	148	570					
+objpreset	4	149	397					
+door	28	7	0	1	2	14	5	0
+door	28	7	0	0	2	13	0	5
+door	28	5	0	1	2	16	0	0
+door	28	5	0	0	2	15	0	0
+door	29	7	0	1	2	14	5	0
+door	29	7	0	0	2	13	0	5
+door	29	5	0	1	2	16	0	0
+door	29	5	0	0	2	15	0	0
+door	30	7	0	1	2	14	5	0
+door	30	7	0	0	2	13	0	5
+door	30	5	0	1	2	16	0	0
+door	30	5	0	0	2	15	0	0
+door	31	7	0	1	2	14	5	0
+door	31	7	0	0	2	13	0	5
+door	31	5	0	1	2	16	0	0
+door	31	5	0	0	2	15	0	0
+door	26	6	0	1	2	27	5	-2
+door	26	4	0	1	2	24	1	2
+door	26	4	0	0	2	23	0	0
+door	27	6	0	1	2	27	5	-2
+door	27	4	0	1	2	24	1	2
+door	27	4	0	0	2	23	0	0
+door	32	4	0	1	2	24	1	2
+door	32	4	0	0	2	23	0	0
+door	32	4	3	1	2	25	1	0
+door	32	1	2	0	2	62	0	3
+door	32	1	2	1	2	63	3	0
+door	33	4	0	1	2	24	1	2
+door	33	4	0	0	2	23	0	0
+door	33	4	3	1	2	25	1	0
+door	33	1	2	0	2	62	0	3
+door	33	1	2	1	2	63	3	0
+door	34	0	0	1	2	16	0	0
+door	34	0	0	0	2	64	0	0
+door	35	0	0	1	2	16	0	0
+door	35	0	0	0	2	64	0	0
+door	36	0	0	1	2	16	0	0
+door	36	0	0	0	2	64	0	0
+door	37	0	0	1	2	16	0	0
+door	37	0	0	0	2	64	0	0
+door	37	2	0	1	2	47	5	0
+door	51	0	1	1	2	291	2	0
+door	51	0	1	0	2	290	0	2
+door	52	5	0	1	2	293	2	0
+door	52	4	0	0	2	292	0	2
+door	52	0	0	1	2	295	2	0
+door	52	0	0	0	2	294	0	2
+door	53	5	0	1	2	293	2	0
+door	53	4	0	0	2	292	0	2
+door	53	0	0	1	2	295	2	0
+door	53	0	0	0	2	294	0	2
+door	54	5	0	1	2	293	2	0
+door	54	4	0	0	2	292	0	2
+door	54	0	0	1	2	295	2	0
+door	54	0	0	0	2	294	0	2
+door	55	2	4	1	2	92	1	0
+door	55	2	1	0	2	91	0	2
+door	56	2	4	1	2	92	1	0
+door	56	2	1	0	2	91	0	2
+door	57	2	4	1	2	92	1	0
+door	57	2	1	0	2	91	0	2
+door	58	2	4	1	2	92	1	0
+door	58	2	1	0	2	91	0	2
+door	59	2	4	1	2	92	1	0
+door	59	2	1	0	2	91	0	2
+door	60	2	4	1	2	92	1	0
+door	60	2	1	0	2	91	0	2
+door	61	2	4	1	2	92	1	0
+door	61	2	1	0	2	91	0	2
+door	66	2	4	1	2	92	1	0
+door	66	2	1	0	2	91	0	2
+door	67	2	4	1	2	92	1	0
+door	67	2	1	0	2	91	0	2
+door	68	2	4	1	2	92	1	0
+door	68	2	1	0	2	91	0	2
+door	69	2	4	1	2	92	1	0
+door	69	2	1	0	2	91	0	2
+door	70	2	4	1	2	92	1	0
+door	70	2	1	0	2	91	0	2
+door	71	2	4	1	2	92	1	0
+door	71	2	1	0	2	91	0	2
+door	72	2	4	1	2	92	1	0
+door	72	2	1	0	2	91	0	2
+door	62	0	1	1	2	229	0	0
+door	62	0	1	0	2	230	0	0
+door	63	0	1	1	2	229	0	0
+door	63	0	1	0	2	230	0	0
+door	64	0	1	1	2	229	0	0
+door	64	0	1	0	2	230	0	0
+door	109	3	3	0	2	449	-2	4
+door	109	2	1	0	1	435	1	2
+door	111	2	1	0	1	435	1	2
+door	111	2	1	1	1	435	2	1
+door	111	2	6	0	1	435	1	1
+door	111	2	2	0	1	433	0	1
+door	111	2	3	1	1	432	1	0
+door	111	26	0	0	1	434	0	1
+door	111	2	4	1	1	524	0	0
+door	111	2	4	0	1	525	0	0
+door	111	29	0	1	2	60	2	0
+door	111	29	0	0	2	60	0	2
+door	112	2	1	0	1	435	1	2
+door	112	2	1	1	1	435	2	1
+door	112	2	6	0	1	435	1	1
+door	112	2	2	0	1	433	0	1
+door	112	2	3	1	1	432	1	0
+door	112	26	0	0	1	434	0	1
+door	112	2	4	1	1	524	0	0
+door	112	2	4	0	1	525	0	0
+door	112	29	0	1	2	60	2	0
+door	112	29	0	0	2	60	0	2
+door	117	2	1	0	1	435	1	2
+door	117	2	1	1	1	435	2	1
+door	117	2	6	0	1	435	1	1
+door	117	2	2	0	1	433	0	1
+door	117	2	3	1	1	432	1	0
+door	117	26	0	0	1	434	0	1
+door	117	2	4	1	1	524	0	0
+door	117	2	4	0	1	525	0	0
+door	117	29	0	1	2	60	2	0
+door	117	29	0	0	2	60	0	2

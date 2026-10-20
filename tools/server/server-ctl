@@ -1,0 +1,406 @@
+#!/bin/bash
+# server-ctl: runs the D2RUST multiplayer server on its box, without root.
+#
+#   server-ctl setup                 first install: folders, config, identity, scheduler
+#   server-ctl install <binary>      add a version, check it, switch to it, restart (rolls back if it won't start)
+#   server-ctl start | stop | restart | status
+#   server-ctl rollback              switch back to the version before the last install
+#   server-ctl backup                one backup now (live through the server, or offline when it is stopped)
+#   server-ctl fingerprint           the certificate fingerprint for the launcher manifest
+#   server-ctl logs [N]              the last N lines of the server log
+#   server-ctl supervise | ensure    internal: the restart loop, and the cron check that keeps it running
+#
+# The server folder is $D2RUST_SERVER_HOME, default ~/d2rust-server:
+#
+#   current -> bin/d2rust-server-<version>    previous -> the one before
+#   d2rust-server.cfg (0600)   identity/   data/   game/   logs/   backups/   run/
+#
+# Two ways to keep the server running, picked by `setup` (and again by every `install`);
+# D2RUST_SERVER_MODE=systemd|cron|none forces one (none: no scheduler, for tests):
+#   - systemd user units, when the account has lingering on (`loginctl enable-linger`, an admin step):
+#     d2rust-server.service (restart on failure) and d2rust-server-backup.timer (nightly).
+#   - otherwise cron: a supervisor loop restarts the server when it exits, `ensure` runs every minute
+#     to start the supervisor after a reboot or a crash of the loop, and the backup runs nightly.
+set -u
+
+HOME_DIR=${D2RUST_SERVER_HOME:-$HOME/d2rust-server}
+CFG=$HOME_DIR/d2rust-server.cfg
+CURRENT=$HOME_DIR/current
+PREVIOUS=$HOME_DIR/previous
+RUN=$HOME_DIR/run
+LOGS=$HOME_DIR/logs
+UNIT=d2rust-server.service
+SELF=$HOME_DIR/server-ctl
+# How long a stop waits for the server to save everyone before it is killed.
+STOP_WAIT=${D2RUST_SERVER_STOP_WAIT:-60}
+# How long an install waits for the new version to report itself healthy.
+START_WAIT=${D2RUST_SERVER_START_WAIT:-45}
+
+say() { printf '%s\n' "$*"; }
+die() { printf 'server-ctl: %s\n' "$*" >&2; exit 1; }
+
+# systemd mode needs a user manager that outlives logins (lingering).
+use_systemd() {
+    case "${D2RUST_SERVER_MODE:-}" in cron | none) return 1 ;; esac
+    [ "${D2RUST_SERVER_MODE:-}" = systemd ] && return 0
+    [ "$(loginctl show-user "$(id -un)" -p Linger --value 2>/dev/null)" = yes ] || return 1
+    systemctl --user show-environment >/dev/null 2>&1
+}
+
+version_of() { "$1" --version 2>/dev/null | awk '{print $2}'; }
+
+# The PID of the running server process, or nothing.
+server_pid() {
+    local p
+    p=$(cat "$RUN/server.pid" 2>/dev/null) || return 0
+    [ -n "$p" ] && kill -0 "$p" 2>/dev/null && printf '%s' "$p"
+}
+
+supervisor_pid() {
+    local p
+    p=$(cat "$RUN/supervisor.pid" 2>/dev/null) || return 0
+    [ -n "$p" ] && kill -0 "$p" 2>/dev/null && printf '%s' "$p"
+}
+
+cmd_setup() {
+    mkdir -p "$HOME_DIR"/{bin,identity,data,game,logs,backups,run} || die "can't make $HOME_DIR"
+    chmod 700 "$HOME_DIR" "$HOME_DIR/identity" "$HOME_DIR/data" "$HOME_DIR/backups"
+    # Keep a copy of this script inside the folder: cron and the units run that one.
+    if [ "$(readlink -f "$0")" != "$(readlink -f "$SELF")" ]; then
+        cp "$0" "$SELF" && chmod 755 "$SELF"
+    fi
+    if [ ! -f "$CFG" ]; then
+        local here example
+        here=$(dirname "$(readlink -f "$0")")
+        example=$here/d2rust-server.cfg.example
+        [ -f "$example" ] || example=$HOME_DIR/d2rust-server.cfg.example
+        [ -f "$example" ] || die "no d2rust-server.cfg.example next to server-ctl"
+        cp "$example" "$CFG"
+        chmod 600 "$CFG"
+        say "wrote $CFG from the example: check it"
+    fi
+    if [ -x "$CURRENT" ] && [ ! -f "$HOME_DIR/identity/cert.der" ]; then
+        "$CURRENT" --config "$CFG" --new-identity || die "making the identity failed"
+    fi
+    install_scheduler
+}
+
+# Installs the units (systemd mode) or the crontab lines (cron mode), and removes the other.
+install_scheduler() {
+    local cron_tag="# d2rust-server"
+    # `none`: no units and no crontab (tests; a box where the admin runs it some other way).
+    [ "${D2RUST_SERVER_MODE:-}" = none ] && return 0
+    if use_systemd; then
+        local units=$HOME/.config/systemd/user
+        mkdir -p "$units"
+        cat >"$units/$UNIT" <<EOF
+[Unit]
+Description=D2RUST multiplayer server
+After=network-online.target
+
+[Service]
+WorkingDirectory=$HOME_DIR
+ExecStart=$CURRENT --config $CFG
+Restart=on-failure
+RestartSec=2
+# SIGTERM: the server saves every character, then exits.
+KillSignal=SIGTERM
+TimeoutStopSec=$STOP_WAIT
+# The live server runs at normal priority; the low-priority rule is for builds and CI.
+Nice=0
+# Caps from the measured use (idle 83 MB, a one-game probe 92 MB peak, under 1 s of
+# one core for a join burst) with room for the configured games: 800 MB soft, 1 GB hard,
+# three cores. The box has ~27 GB free and other servers.
+MemoryHigh=800M
+MemoryMax=1G
+CPUQuota=300%
+
+[Install]
+WantedBy=default.target
+EOF
+        cat >"$units/d2rust-server-backup.service" <<EOF
+[Unit]
+Description=D2RUST multiplayer server backup
+
+[Service]
+Type=oneshot
+ExecStart=$SELF backup
+EOF
+        cat >"$units/d2rust-server-backup.timer" <<EOF
+[Unit]
+Description=Nightly D2RUST multiplayer server backup
+
+[Timer]
+OnCalendar=*-*-* 04:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+EOF
+        systemctl --user daemon-reload
+        systemctl --user enable "$UNIT" d2rust-server-backup.timer >/dev/null 2>&1
+        systemctl --user start d2rust-server-backup.timer
+        # Switching from cron to the units: the server must not stay down.
+        if [ -x "$CURRENT" ] && [ ! -f "$RUN/stopped" ]; then
+            systemctl --user start "$UNIT"
+        fi
+        # Leave cron mode: stop its supervisor and drop its lines.
+        stop_supervisor
+        crontab -l 2>/dev/null | grep -v "$cron_tag" | crontab -
+        say "scheduler: systemd user units"
+    else
+        local lines
+        lines="* * * * * $SELF ensure >/dev/null 2>&1 $cron_tag
+30 4 * * * $SELF backup >>$LOGS/backup.log 2>&1 $cron_tag"
+        { crontab -l 2>/dev/null | grep -v "$cron_tag"; printf '%s\n' "$lines"; } | crontab -
+        say "scheduler: cron (lingering is off; the admin can turn it on, see tools/server/README.md)"
+    fi
+}
+
+cmd_start() {
+    [ -x "$CURRENT" ] || die "no version installed (server-ctl install <binary>)"
+    rm -f "$RUN/stopped"
+    if use_systemd; then
+        systemctl --user start "$UNIT"
+    else
+        if [ -z "$(supervisor_pid)" ]; then
+            setsid nohup "$SELF" supervise >>"$LOGS/supervisor.log" 2>&1 </dev/null &
+        fi
+    fi
+}
+
+stop_supervisor() {
+    local p
+    p=$(supervisor_pid)
+    [ -n "$p" ] && kill "$p" 2>/dev/null
+    return 0
+}
+
+cmd_stop() {
+    # The flag keeps cron's `ensure` from starting it again.
+    mkdir -p "$RUN"
+    touch "$RUN/stopped"
+    if use_systemd; then
+        systemctl --user stop "$UNIT"
+        return
+    fi
+    local p s i
+    s=$(supervisor_pid)
+    p=$(server_pid)
+    stop_supervisor
+    [ -n "$p" ] && kill -TERM "$p" 2>/dev/null
+    # Wait for both: a start right after must not find the old supervisor still alive.
+    for i in $(seq $((STOP_WAIT * 5))); do
+        { [ -n "$p" ] && kill -0 "$p" 2>/dev/null; } || { [ -n "$s" ] && kill -0 "$s" 2>/dev/null; } || return 0
+        sleep 0.2
+    done
+    say "the server did not stop in $STOP_WAIT s; killing it"
+    [ -n "$p" ] && kill -KILL "$p" 2>/dev/null
+    [ -n "$s" ] && kill -KILL "$s" 2>/dev/null
+    return 0
+}
+
+cmd_restart() { cmd_stop; cmd_start; }
+
+# The restart loop of cron mode. One at a time (the pid file and a lock).
+cmd_supervise() {
+    mkdir -p "$RUN" "$LOGS"
+    exec 9>"$RUN/supervisor.lock"
+    flock -n 9 || exit 0
+    echo $$ >"$RUN/supervisor.pid"
+    local child=
+    trap '[ -n "$child" ] && kill -TERM "$child" 2>/dev/null; wait "$child" 2>/dev/null; rm -f "$RUN/supervisor.pid"; exit 0' TERM INT
+    local backoff=1 started rc
+    while [ ! -f "$RUN/stopped" ]; do
+        started=$(date +%s)
+        "$CURRENT" --config "$CFG" >>"$LOGS/console.log" 2>&1 &
+        child=$!
+        echo "$child" >"$RUN/server.pid"
+        wait "$child"
+        rc=$?
+        child=
+        rm -f "$RUN/server.pid"
+        [ -f "$RUN/stopped" ] && break
+        echo "$(date -u +%FT%TZ) server exited with $rc; restarting in $backoff s"
+        # A server that ran ten minutes was healthy: start over with a short wait.
+        if [ $(($(date +%s) - started)) -ge 600 ]; then backoff=1; fi
+        sleep "$backoff"
+        backoff=$((backoff * 2))
+        [ "$backoff" -gt 60 ] && backoff=60
+    done
+    rm -f "$RUN/supervisor.pid"
+}
+
+cmd_ensure() {
+    use_systemd && return 0
+    [ -f "$RUN/stopped" ] && return 0
+    [ -x "$CURRENT" ] || return 0
+    [ -n "$(supervisor_pid)" ] && return 0
+    cmd_start
+}
+
+# Prints status.json's version once the server has written it after `since` (Unix seconds).
+wait_healthy() {
+    local since=$1 want=$2 i
+    for i in $(seq "$START_WAIT"); do
+        local f=$LOGS/status.json
+        if [ -f "$f" ] && [ "$(stat -c %Y "$f")" -ge "$since" ] && grep -q "\"version\": *\"$want\"" "$f"; then
+            return 0
+        fi
+        sleep 1
+    done
+    return 1
+}
+
+# A version that never became healthy is stopped, not left to a restart loop: cron's
+# `ensure` and a reboot have nothing to start (`current` is gone), and systemd is told
+# not to start the unit until `install` enables it again.
+stop_after_failed_install() {
+    cmd_stop
+    rm -f "$CURRENT"
+    if use_systemd; then
+        systemctl --user disable "$UNIT" >/dev/null 2>&1
+    fi
+}
+
+cmd_install() {
+    local src=${1:-}
+    [ -f "$src" ] || die "usage: server-ctl install <binary>"
+    chmod 755 "$src"
+    local ver
+    ver=$(version_of "$src")
+    [ -n "$ver" ] || die "$src --version printed no version: not a d2rust-server binary for this box?"
+    local dest=$HOME_DIR/bin/d2rust-server-$ver
+    mkdir -p "$HOME_DIR/bin"
+    cp "$src" "$dest.tmp" && mv "$dest.tmp" "$dest" || die "copying the binary failed"
+    if [ ! -f "$HOME_DIR/identity/cert.der" ]; then
+        "$dest" --config "$CFG" --new-identity || die "making the identity failed"
+    fi
+    "$dest" --config "$CFG" --check || die "version $ver refuses the config (nothing switched)"
+    local old old_prev
+    old=$(readlink "$CURRENT" 2>/dev/null)
+    old_prev=$(readlink "$PREVIOUS" 2>/dev/null)
+    if [ -n "$old" ] && [ "$old" != "$dest" ]; then ln -sfn "$old" "$PREVIOUS"; fi
+    ln -sfn "$dest" "$CURRENT"
+    install_scheduler >/dev/null
+    local t0
+    t0=$(date +%s)
+    cmd_restart
+    if ! wait_healthy "$t0" "$ver"; then
+        say "version $ver did not report healthy in $START_WAIT s; last log lines:"
+        tail -n 20 "$LOGS/console.log" 2>/dev/null
+        if [ -n "$old" ] && [ "$old" != "$dest" ]; then
+            say "rolling back to $(basename "$old")"
+            ln -sfn "$old" "$CURRENT"
+            # `previous` goes back to what it was, so a later rollback still has a target.
+            if [ -n "$old_prev" ]; then ln -sfn "$old_prev" "$PREVIOUS"; else rm -f "$PREVIOUS"; fi
+            local old_ver t1
+            old_ver=$(version_of "$old")
+            t1=$(date +%s)
+            cmd_restart
+            if [ -z "$old_ver" ] || ! wait_healthy "$t1" "$old_ver"; then
+                say "the previous version did not report healthy either; stopping it"
+                stop_after_failed_install
+                exit 1
+            fi
+            say "rolled back to d2rust-server $old_ver"
+        else
+            say "there is no previous version to roll back to; stopping it"
+            stop_after_failed_install
+        fi
+        exit 1
+    fi
+    say "running: d2rust-server $ver"
+    cmd_fingerprint
+    # Keep the five newest versions.
+    ls -1t "$HOME_DIR"/bin/d2rust-server-* 2>/dev/null | tail -n +6 | while read -r f; do
+        [ "$f" = "$(readlink "$CURRENT")" ] || [ "$f" = "$(readlink "$PREVIOUS")" ] || rm -f "$f"
+    done
+}
+
+cmd_rollback() {
+    local prev
+    prev=$(readlink "$PREVIOUS" 2>/dev/null) || die "no previous version"
+    [ -x "$prev" ] || die "previous version $prev is gone"
+    local cur
+    cur=$(readlink "$CURRENT")
+    ln -sfn "$prev" "$CURRENT"
+    ln -sfn "$cur" "$PREVIOUS"
+    cmd_restart
+    say "switched back to $(basename "$prev")"
+}
+
+cmd_status() {
+    local ver=
+    [ -x "$CURRENT" ] && ver=$(version_of "$CURRENT")
+    say "installed: ${ver:-none}"
+    if use_systemd; then
+        say "scheduler: systemd user units"
+        systemctl --user --no-pager status "$UNIT" 2>/dev/null | sed -n 1,4p
+    else
+        say "scheduler: cron"
+        local p
+        p=$(server_pid)
+        if [ -n "$p" ]; then say "server: running, pid $p"; else say "server: not running"; fi
+        [ -f "$RUN/stopped" ] && say "stopped on purpose (server-ctl start to run it again)"
+    fi
+    if [ -f "$LOGS/status.json" ]; then
+        say "status.json ($(($(date +%s) - $(stat -c %Y "$LOGS/status.json"))) s old):"
+        cat "$LOGS/status.json"
+    fi
+}
+
+cmd_backup() {
+    mkdir -p "$RUN"
+    local p
+    p=$(server_pid)
+    if use_systemd; then
+        p=$(systemctl --user show "$UNIT" -p MainPID --value 2>/dev/null)
+        [ "$p" = 0 ] && p=
+    fi
+    if [ -n "$p" ]; then
+        # The running server makes the backup between saves: it picks up the request
+        # within 10 s and writes the result next to it.
+        rm -f "$RUN/backup.done"
+        touch "$RUN/backup.request"
+        local i
+        for i in $(seq 600); do
+            if [ -f "$RUN/backup.done" ]; then
+                cat "$RUN/backup.done"
+                grep -q '^ok' "$RUN/backup.done"
+                return
+            fi
+            sleep 1
+        done
+        die "the server did not answer the backup request in 10 min"
+    fi
+    [ -x "$CURRENT" ] || die "no version installed"
+    "$CURRENT" --config "$CFG" --backup
+}
+
+cmd_fingerprint() {
+    [ -x "$CURRENT" ] || die "no version installed"
+    "$CURRENT" --config "$CFG" --fingerprint
+}
+
+cmd_logs() {
+    local f=$LOGS/d2rust-server.log
+    [ -f "$f" ] || f=$LOGS/console.log
+    tail -n "${1:-50}" "$f"
+}
+
+case "${1:-}" in
+    setup) cmd_setup ;;
+    install) shift; cmd_install "$@" ;;
+    start) cmd_start ;;
+    stop) cmd_stop ;;
+    restart) cmd_restart ;;
+    status) cmd_status ;;
+    rollback) cmd_rollback ;;
+    backup) cmd_backup ;;
+    fingerprint) cmd_fingerprint ;;
+    logs) shift; cmd_logs "$@" ;;
+    supervise) cmd_supervise ;;
+    ensure) cmd_ensure ;;
+    *) sed -n 2,13p "$0" | sed 's/^# \{0,1\}//'; exit 2 ;;
+esac

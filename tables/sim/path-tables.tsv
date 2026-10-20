@@ -1,0 +1,710 @@
+table	index	a	b	c	d	e	va
+pathtype_flags	0	137472					0x006EB690
+pathtype_flags	1	6400					0x006EB694
+pathtype_flags	2	0					0x006EB698
+pathtype_flags	3	0					0x006EB69C
+pathtype_flags	4	393216					0x006EB6A0
+pathtype_flags	5	0					0x006EB6A4
+pathtype_flags	6	0					0x006EB6A8
+pathtype_flags	7	137472					0x006EB6AC
+pathtype_flags	8	124416					0x006EB6B0
+pathtype_flags	9	124928					0x006EB6B4
+pathtype_flags	10	393216					0x006EB6B8
+pathtype_flags	11	124420					0x006EB6BC
+pathtype_flags	12	0					0x006EB6C0
+pathtype_flags	13	256					0x006EB6C4
+pathtype_flags	14	393216					0x006EB6C8
+pathtype_flags	15	2048					0x006EB6CC
+pathtype_flags	16	0					0x006EB6D0
+pathtype_flags	17	0					0x006EB6D4
+pathtype_diroff	0	0					0x006EB648
+pathtype_diroff	1	0					0x006EB64C
+pathtype_diroff	2	0					0x006EB650
+pathtype_diroff	3	0					0x006EB654
+pathtype_diroff	4	0					0x006EB658
+pathtype_diroff	5	2					0x006EB65C
+pathtype_diroff	6	-2					0x006EB660
+pathtype_diroff	7	0					0x006EB664
+pathtype_diroff	8	0					0x006EB668
+pathtype_diroff	9	0					0x006EB66C
+pathtype_diroff	10	0					0x006EB670
+pathtype_diroff	11	0					0x006EB674
+pathtype_diroff	12	-4					0x006EB678
+pathtype_diroff	13	0					0x006EB67C
+pathtype_diroff	14	0					0x006EB680
+pathtype_diroff	15	0					0x006EB684
+pathtype_diroff	16	0					0x006EB688
+pathtype_diroff	17	0					0x006EB68C
+pattern_of_size	0	0					0x006EB3DC
+pattern_of_size	1	1					0x006EB3E0
+pattern_of_size	2	1					0x006EB3E4
+pattern_of_size	3	2					0x006EB3E8
+dir8_toward	0	1	0				0x006F1798
+dir8_toward	1	1	1				0x006F17A0
+dir8_toward	2	0	1				0x006F17A8
+dir8_toward	3	-1	1				0x006F17B0
+dir8_toward	4	-1	0				0x006F17B8
+dir8_toward	5	-1	-1				0x006F17C0
+dir8_toward	6	0	-1				0x006F17C8
+dir8_toward	7	1	-1				0x006F17D0
+dir8_target	0	1	0				0x006EB398
+dir8_target	1	1	1				0x006EB3A0
+dir8_target	2	0	1				0x006EB3A8
+dir8_target	3	-1	1				0x006EB3B0
+dir8_target	4	-1	0				0x006EB3B8
+dir8_target	5	-1	-1				0x006EB3C0
+dir8_target	6	0	-1				0x006EB3C8
+dir8_target	7	1	-1				0x006EB3D0
+testdir	0	5	4	6			0x006F1518
+testdir	1	4	5	6			0x006F1524
+testdir	2	4	3	5			0x006F1530
+testdir	3	4	3	2			0x006F153C
+testdir	4	3	4	2			0x006F1548
+testdir	5	6	5	4			0x006F1554
+testdir	6	5	4	6			0x006F1560
+testdir	7	4	3	5			0x006F156C
+testdir	8	3	4	2			0x006F1578
+testdir	9	2	3	4			0x006F1584
+testdir	10	6	7	5			0x006F1590
+testdir	11	6	7	5			0x006F159C
+testdir	12	6	7	5			0x006F15A8
+testdir	13	2	1	3			0x006F15B4
+testdir	14	2	1	3			0x006F15C0
+testdir	15	6	7	0			0x006F15CC
+testdir	16	7	0	6			0x006F15D8
+testdir	17	0	1	7			0x006F15E4
+testdir	18	1	0	2			0x006F15F0
+testdir	19	2	1	0			0x006F15FC
+testdir	20	7	0	6			0x006F1608
+testdir	21	0	7	6			0x006F1614
+testdir	22	0	1	7			0x006F1620
+testdir	23	0	1	2			0x006F162C
+testdir	24	1	0	2			0x006F1638
+altdir	0	4	6	255			0x006F1648
+altdir	1	4	6	255			0x006F164B
+altdir	2	4	2	6			0x006F164E
+altdir	3	4	2	255			0x006F1651
+altdir	4	4	2	255			0x006F1654
+altdir	5	6	4	255			0x006F1657
+altdir	6	4	6	255			0x006F165A
+altdir	7	4	2	6			0x006F165D
+altdir	8	4	2	255			0x006F1660
+altdir	9	2	4	255			0x006F1663
+altdir	10	6	0	4			0x006F1666
+altdir	11	6	0	4			0x006F1669
+altdir	12	6	0	4			0x006F166C
+altdir	13	2	0	4			0x006F166F
+altdir	14	2	0	4			0x006F1672
+altdir	15	6	0	255			0x006F1675
+altdir	16	0	6	255			0x006F1678
+altdir	17	0	2	6			0x006F167B
+altdir	18	2	0	255			0x006F167E
+altdir	19	2	0	255			0x006F1681
+altdir	20	0	6	255			0x006F1684
+altdir	21	0	6	255			0x006F1687
+altdir	22	0	2	6			0x006F168A
+altdir	23	0	2	255			0x006F168D
+altdir	24	0	2	255			0x006F1690
+dist8_path	0	-1					0x006F1698
+dist8_path	1	-1					0x006F169C
+dist8_path	2	-1					0x006F16A0
+dist8_path	3	0					0x006F16A4
+dist8_path	4	2					0x006F16A8
+dist8_path	5	4					0x006F16AC
+dist8_path	6	6					0x006F16B0
+dist8_path	7	8					0x006F16B4
+dist8_path	8	-1					0x006F16B8
+dist8_path	9	-1					0x006F16BC
+dist8_path	10	0					0x006F16C0
+dist8_path	11	1					0x006F16C4
+dist8_path	12	2					0x006F16C8
+dist8_path	13	4					0x006F16CC
+dist8_path	14	6					0x006F16D0
+dist8_path	15	8					0x006F16D4
+dist8_path	16	-1					0x006F16D8
+dist8_path	17	0					0x006F16DC
+dist8_path	18	0					0x006F16E0
+dist8_path	19	2					0x006F16E4
+dist8_path	20	3					0x006F16E8
+dist8_path	21	5					0x006F16EC
+dist8_path	22	7					0x006F16F0
+dist8_path	23	8					0x006F16F4
+dist8_path	24	0					0x006F16F8
+dist8_path	25	1					0x006F16FC
+dist8_path	26	2					0x006F1700
+dist8_path	27	2					0x006F1704
+dist8_path	28	4					0x006F1708
+dist8_path	29	5					0x006F170C
+dist8_path	30	7					0x006F1710
+dist8_path	31	8					0x006F1714
+dist8_path	32	2					0x006F1718
+dist8_path	33	2					0x006F171C
+dist8_path	34	3					0x006F1720
+dist8_path	35	4					0x006F1724
+dist8_path	36	5					0x006F1728
+dist8_path	37	6					0x006F172C
+dist8_path	38	7					0x006F1730
+dist8_path	39	9					0x006F1734
+dist8_path	40	4					0x006F1738
+dist8_path	41	4					0x006F173C
+dist8_path	42	5					0x006F1740
+dist8_path	43	5					0x006F1744
+dist8_path	44	6					0x006F1748
+dist8_path	45	7					0x006F174C
+dist8_path	46	8					0x006F1750
+dist8_path	47	9					0x006F1754
+dist8_path	48	6					0x006F1758
+dist8_path	49	6					0x006F175C
+dist8_path	50	7					0x006F1760
+dist8_path	51	7					0x006F1764
+dist8_path	52	7					0x006F1768
+dist8_path	53	8					0x006F176C
+dist8_path	54	10					0x006F1770
+dist8_path	55	10					0x006F1774
+dist8_path	56	8					0x006F1778
+dist8_path	57	8					0x006F177C
+dist8_path	58	8					0x006F1780
+dist8_path	59	8					0x006F1784
+dist8_path	60	9					0x006F1788
+dist8_path	61	9					0x006F178C
+dist8_path	62	10					0x006F1790
+dist8_path	63	11					0x006F1794
+dist8_unit	0	-1					0x006EB180
+dist8_unit	1	-1					0x006EB184
+dist8_unit	2	-1					0x006EB188
+dist8_unit	3	0					0x006EB18C
+dist8_unit	4	2					0x006EB190
+dist8_unit	5	4					0x006EB194
+dist8_unit	6	6					0x006EB198
+dist8_unit	7	8					0x006EB19C
+dist8_unit	8	-1					0x006EB1A0
+dist8_unit	9	-1					0x006EB1A4
+dist8_unit	10	0					0x006EB1A8
+dist8_unit	11	1					0x006EB1AC
+dist8_unit	12	2					0x006EB1B0
+dist8_unit	13	4					0x006EB1B4
+dist8_unit	14	6					0x006EB1B8
+dist8_unit	15	8					0x006EB1BC
+dist8_unit	16	-1					0x006EB1C0
+dist8_unit	17	0					0x006EB1C4
+dist8_unit	18	0					0x006EB1C8
+dist8_unit	19	2					0x006EB1CC
+dist8_unit	20	3					0x006EB1D0
+dist8_unit	21	5					0x006EB1D4
+dist8_unit	22	7					0x006EB1D8
+dist8_unit	23	8					0x006EB1DC
+dist8_unit	24	0					0x006EB1E0
+dist8_unit	25	1					0x006EB1E4
+dist8_unit	26	2					0x006EB1E8
+dist8_unit	27	2					0x006EB1EC
+dist8_unit	28	4					0x006EB1F0
+dist8_unit	29	5					0x006EB1F4
+dist8_unit	30	7					0x006EB1F8
+dist8_unit	31	8					0x006EB1FC
+dist8_unit	32	2					0x006EB200
+dist8_unit	33	2					0x006EB204
+dist8_unit	34	3					0x006EB208
+dist8_unit	35	4					0x006EB20C
+dist8_unit	36	5					0x006EB210
+dist8_unit	37	6					0x006EB214
+dist8_unit	38	7					0x006EB218
+dist8_unit	39	9					0x006EB21C
+dist8_unit	40	4					0x006EB220
+dist8_unit	41	4					0x006EB224
+dist8_unit	42	5					0x006EB228
+dist8_unit	43	5					0x006EB22C
+dist8_unit	44	6					0x006EB230
+dist8_unit	45	7					0x006EB234
+dist8_unit	46	8					0x006EB238
+dist8_unit	47	9					0x006EB23C
+dist8_unit	48	6					0x006EB240
+dist8_unit	49	6					0x006EB244
+dist8_unit	50	7					0x006EB248
+dist8_unit	51	7					0x006EB24C
+dist8_unit	52	7					0x006EB250
+dist8_unit	53	8					0x006EB254
+dist8_unit	54	10					0x006EB258
+dist8_unit	55	10					0x006EB25C
+dist8_unit	56	8					0x006EB260
+dist8_unit	57	8					0x006EB264
+dist8_unit	58	8					0x006EB268
+dist8_unit	59	8					0x006EB26C
+dist8_unit	60	9					0x006EB270
+dist8_unit	61	9					0x006EB274
+dist8_unit	62	10					0x006EB278
+dist8_unit	63	11					0x006EB27C
+snap9	0	-1					0x006EB3F0
+snap9	1	0					0x006EB3F4
+snap9	2	0					0x006EB3F8
+snap9	3	0					0x006EB3FC
+snap9	4	0					0x006EB400
+snap9	5	0					0x006EB404
+snap9	6	0					0x006EB408
+snap9	7	0					0x006EB40C
+snap9	8	1					0x006EB410
+snap9	9	-1					0x006EB414
+snap9	10	-1					0x006EB418
+snap9	11	0					0x006EB41C
+snap9	12	0					0x006EB420
+snap9	13	0					0x006EB424
+snap9	14	0					0x006EB428
+snap9	15	0					0x006EB42C
+snap9	16	1					0x006EB430
+snap9	17	1					0x006EB434
+snap9	18	-1					0x006EB438
+snap9	19	-1					0x006EB43C
+snap9	20	-1					0x006EB440
+snap9	21	0					0x006EB444
+snap9	22	0					0x006EB448
+snap9	23	0					0x006EB44C
+snap9	24	1					0x006EB450
+snap9	25	1					0x006EB454
+snap9	26	1					0x006EB458
+snap9	27	-1					0x006EB45C
+snap9	28	-1					0x006EB460
+snap9	29	-1					0x006EB464
+snap9	30	-1					0x006EB468
+snap9	31	0					0x006EB46C
+snap9	32	1					0x006EB470
+snap9	33	1					0x006EB474
+snap9	34	1					0x006EB478
+snap9	35	1					0x006EB47C
+snap9	36	-1					0x006EB480
+snap9	37	-1					0x006EB484
+snap9	38	-1					0x006EB488
+snap9	39	-1					0x006EB48C
+snap9	40	0					0x006EB490
+snap9	41	1					0x006EB494
+snap9	42	1					0x006EB498
+snap9	43	1					0x006EB49C
+snap9	44	1					0x006EB4A0
+snap9	45	-1					0x006EB4A4
+snap9	46	-1					0x006EB4A8
+snap9	47	-1					0x006EB4AC
+snap9	48	-1					0x006EB4B0
+snap9	49	0					0x006EB4B4
+snap9	50	1					0x006EB4B8
+snap9	51	1					0x006EB4BC
+snap9	52	1					0x006EB4C0
+snap9	53	1					0x006EB4C4
+snap9	54	-1					0x006EB4C8
+snap9	55	-1					0x006EB4CC
+snap9	56	-1					0x006EB4D0
+snap9	57	0					0x006EB4D4
+snap9	58	0					0x006EB4D8
+snap9	59	0					0x006EB4DC
+snap9	60	1					0x006EB4E0
+snap9	61	1					0x006EB4E4
+snap9	62	1					0x006EB4E8
+snap9	63	-1					0x006EB4EC
+snap9	64	-1					0x006EB4F0
+snap9	65	0					0x006EB4F4
+snap9	66	0					0x006EB4F8
+snap9	67	0					0x006EB4FC
+snap9	68	0					0x006EB500
+snap9	69	0					0x006EB504
+snap9	70	1					0x006EB508
+snap9	71	1					0x006EB50C
+snap9	72	-1					0x006EB510
+snap9	73	0					0x006EB514
+snap9	74	0					0x006EB518
+snap9	75	0					0x006EB51C
+snap9	76	0					0x006EB520
+snap9	77	0					0x006EB524
+snap9	78	0					0x006EB528
+snap9	79	0					0x006EB52C
+snap9	80	1					0x006EB530
+tan	0	0	4096	0			0x006EB7E0
+tan	1	32	4095	0			0x006EB7EC
+tan	2	64	4095	0			0x006EB7F8
+tan	3	96	4094	0			0x006EB804
+tan	4	128	4093	0			0x006EB810
+tan	5	161	4092	0			0x006EB81C
+tan	6	193	4091	0			0x006EB828
+tan	7	225	4089	0			0x006EB834
+tan	8	257	4087	0			0x006EB840
+tan	9	289	4085	0			0x006EB84C
+tan	10	321	4083	0			0x006EB858
+tan	11	353	4080	0			0x006EB864
+tan	12	385	4077	0			0x006EB870
+tan	13	417	4074	1			0x006EB87C
+tan	14	448	4071	1			0x006EB888
+tan	15	480	4067	1			0x006EB894
+tan	16	511	4063	1			0x006EB8A0
+tan	17	543	4059	1			0x006EB8AC
+tan	18	574	4055	1			0x006EB8B8
+tan	19	606	4050	1			0x006EB8C4
+tan	20	637	4046	1			0x006EB8D0
+tan	21	668	4041	1			0x006EB8DC
+tan	22	699	4035	1			0x006EB8E8
+tan	23	729	4030	1			0x006EB8F4
+tan	24	760	4024	1			0x006EB900
+tan	25	791	4018	1			0x006EB90C
+tan	26	821	4012	2			0x006EB918
+tan	27	851	4006	2			0x006EB924
+tan	28	881	3999	2			0x006EB930
+tan	29	911	3993	2			0x006EB93C
+tan	30	941	3986	2			0x006EB948
+tan	31	971	3979	2			0x006EB954
+tan	32	1000	3971	2			0x006EB960
+tan	33	1030	3964	2			0x006EB96C
+tan	34	1059	3956	2			0x006EB978
+tan	35	1088	3948	2			0x006EB984
+tan	36	1117	3940	2			0x006EB990
+tan	37	1145	3932	2			0x006EB99C
+tan	38	1174	3924	2			0x006EB9A8
+tan	39	1202	3915	3			0x006EB9B4
+tan	40	1230	3906	3			0x006EB9C0
+tan	41	1258	3897	3			0x006EB9CC
+tan	42	1286	3888	3			0x006EB9D8
+tan	43	1313	3879	3			0x006EB9E4
+tan	44	1340	3870	3			0x006EB9F0
+tan	45	1368	3860	3			0x006EB9FC
+tan	46	1394	3851	3			0x006EBA08
+tan	47	1421	3841	3			0x006EBA14
+tan	48	1448	3831	3			0x006EBA20
+tan	49	1474	3821	3			0x006EBA2C
+tan	50	1500	3811	3			0x006EBA38
+tan	51	1526	3800	3			0x006EBA44
+tan	52	1552	3790	3			0x006EBA50
+tan	53	1577	3780	4			0x006EBA5C
+tan	54	1602	3769	4			0x006EBA68
+tan	55	1627	3758	4			0x006EBA74
+tan	56	1652	3747	4			0x006EBA80
+tan	57	1677	3736	4			0x006EBA8C
+tan	58	1701	3725	4			0x006EBA98
+tan	59	1725	3714	4			0x006EBAA4
+tan	60	1749	3703	4			0x006EBAB0
+tan	61	1773	3692	4			0x006EBABC
+tan	62	1796	3680	4			0x006EBAC8
+tan	63	1820	3669	4			0x006EBAD4
+tan	64	1843	3657	4			0x006EBAE0
+tan	65	1866	3646	4			0x006EBAEC
+tan	66	1888	3634	4			0x006EBAF8
+tan	67	1911	3622	4			0x006EBB04
+tan	68	1933	3610	5			0x006EBB10
+tan	69	1955	3599	5			0x006EBB1C
+tan	70	1977	3587	5			0x006EBB28
+tan	71	1998	3575	5			0x006EBB34
+tan	72	2020	3563	5			0x006EBB40
+tan	73	2041	3551	5			0x006EBB4C
+tan	74	2062	3539	5			0x006EBB58
+tan	75	2082	3526	5			0x006EBB64
+tan	76	2103	3514	5			0x006EBB70
+tan	77	2123	3502	5			0x006EBB7C
+tan	78	2143	3490	5			0x006EBB88
+tan	79	2163	3478	5			0x006EBB94
+tan	80	2183	3465	5			0x006EBBA0
+tan	81	2202	3453	5			0x006EBBAC
+tan	82	2221	3441	5			0x006EBBB8
+tan	83	2240	3428	5			0x006EBBC4
+tan	84	2259	3416	5			0x006EBBD0
+tan	85	2278	3403	6			0x006EBBDC
+tan	86	2296	3391	6			0x006EBBE8
+tan	87	2314	3379	6			0x006EBBF4
+tan	88	2332	3366	6			0x006EBC00
+tan	89	2350	3354	6			0x006EBC0C
+tan	90	2368	3341	6			0x006EBC18
+tan	91	2385	3329	6			0x006EBC24
+tan	92	2402	3317	6			0x006EBC30
+tan	93	2419	3304	6			0x006EBC3C
+tan	94	2436	3292	6			0x006EBC48
+tan	95	2453	3279	6			0x006EBC54
+tan	96	2469	3267	6			0x006EBC60
+tan	97	2486	3255	6			0x006EBC6C
+tan	98	2502	3242	6			0x006EBC78
+tan	99	2518	3230	6			0x006EBC84
+tan	100	2533	3218	6			0x006EBC90
+tan	101	2549	3205	6			0x006EBC9C
+tan	102	2564	3193	6			0x006EBCA8
+tan	103	2580	3181	6			0x006EBCB4
+tan	104	2595	3169	6			0x006EBCC0
+tan	105	2609	3156	7			0x006EBCCC
+tan	106	2624	3144	7			0x006EBCD8
+tan	107	2639	3132	7			0x006EBCE4
+tan	108	2653	3120	7			0x006EBCF0
+tan	109	2667	3108	7			0x006EBCFC
+tan	110	2681	3096	7			0x006EBD08
+tan	111	2695	3084	7			0x006EBD14
+tan	112	2709	3072	7			0x006EBD20
+tan	113	2722	3060	7			0x006EBD2C
+tan	114	2736	3048	7			0x006EBD38
+tan	115	2749	3036	7			0x006EBD44
+tan	116	2762	3024	7			0x006EBD50
+tan	117	2775	3012	7			0x006EBD5C
+tan	118	2788	3000	7			0x006EBD68
+tan	119	2800	2988	7			0x006EBD74
+tan	120	2813	2977	7			0x006EBD80
+tan	121	2825	2965	7			0x006EBD8C
+tan	122	2837	2953	7			0x006EBD98
+tan	123	2849	2942	7			0x006EBDA4
+tan	124	2861	2930	7			0x006EBDB0
+tan	125	2873	2919	7			0x006EBDBC
+tan	126	2884	2907	7			0x006EBDC8
+tan	127	2896	2896	7			0x006EBDD4
+tan_before	0	2	4	5			0x006EB1EC
+tan_before	1	7	8	2			0x006EB1F8
+tan_before	2	2	3	4			0x006EB204
+tan_before	3	5	6	7			0x006EB210
+tan_before	4	9	4	4			0x006EB21C
+tan_before	5	5	5	6			0x006EB228
+tan_before	6	7	8	9			0x006EB234
+tan_before	7	6	6	7			0x006EB240
+tan_before	8	7	7	8			0x006EB24C
+tan_before	9	10	10	8			0x006EB258
+tan_before	10	8	8	8			0x006EB264
+tan_before	11	9	9	10			0x006EB270
+tan_before	12	11	1415344933	1936026729			0x006EB27C
+tan_before	13	1952661852	1867799601	1180462711			0x006EB288
+tan_before	14	1919905644	829711406	0			0x006EB294
+tan_before	15	1415344933	1936026729	1952661852			0x006EB2A0
+tan_before	16	1867799602	1197239927	1853190002			0x006EB2AC
+tan_before	17	1952722532	49	1415344933			0x006EB2B8
+tan_before	18	1936026729	1413693788	1967873075			0x006EB2C4
+tan_before	19	1953718642	1952805724	1952722547			0x006EB2D0
+tan_before	20	49	1380211758	1146898252			0x006EB2DC
+tan_before	21	778529906	7368803	1			0x006EB2E8
+tan_before	22	40	75	103			0x006EB2F4
+tan_before	23	109	1024	0			0x006EB300
+tan_before	24	1	2	4			0x006EB30C
+tan_before	25	7	8	9			0x006EB318
+tan_before	26	10	13	14			0x006EB324
+tan_before	27	15	16	17			0x006EB330
+tan_before	28	19	18	3			0x006EB33C
+tan_before	29	0	1	2			0x006EB348
+tan_before	30	15	3	1			0x006EB354
+tan_before	31	2	4	5			0x006EB360
+tan_before	32	6	7	4			0x006EB36C
+tan_before	33	11	8	9			0x006EB378
+tan_before	34	10	11	12			0x006EB384
+tan_before	35	14	13	1			0x006EB390
+tan_before	36	0	1	1			0x006EB39C
+tan_before	37	0	1	-1			0x006EB3A8
+tan_before	38	1	-1	0			0x006EB3B4
+tan_before	39	-1	-1	0			0x006EB3C0
+tan_before	40	-1	1	-1			0x006EB3CC
+tan_before	41	0	0	1			0x006EB3D8
+tan_before	42	1	2	0			0x006EB3E4
+tan_before	43	-1	0	0			0x006EB3F0
+tan_before	44	0	0	0			0x006EB3FC
+tan_before	45	0	0	1			0x006EB408
+tan_before	46	-1	-1	0			0x006EB414
+tan_before	47	0	0	0			0x006EB420
+tan_before	48	0	1	1			0x006EB42C
+tan_before	49	-1	-1	-1			0x006EB438
+tan_before	50	0	0	0			0x006EB444
+tan_before	51	1	1	1			0x006EB450
+tan_before	52	-1	-1	-1			0x006EB45C
+tan_before	53	-1	0	1			0x006EB468
+tan_before	54	1	1	1			0x006EB474
+tan_before	55	-1	-1	-1			0x006EB480
+tan_before	56	-1	0	1			0x006EB48C
+tan_before	57	1	1	1			0x006EB498
+tan_before	58	-1	-1	-1			0x006EB4A4
+tan_before	59	-1	0	1			0x006EB4B0
+tan_before	60	1	1	1			0x006EB4BC
+tan_before	61	-1	-1	-1			0x006EB4C8
+tan_before	62	0	0	0			0x006EB4D4
+tan_before	63	1	1	1			0x006EB4E0
+tan_before	64	-1	-1	0			0x006EB4EC
+tan_before	65	0	0	0			0x006EB4F8
+tan_before	66	0	1	1			0x006EB504
+tan_before	67	-1	0	0			0x006EB510
+tan_before	68	0	0	0			0x006EB51C
+tan_before	69	0	0	1			0x006EB528
+tan_before	70	1095785518	1348225108	778597473			0x006EB534
+tan_before	71	7368803	0	0			0x006EB540
+tan_before	72	1	1	1			0x006EB54C
+tan_before	73	1	1	1			0x006EB558
+tan_before	74	1	1	4			0x006EB564
+tan_before	75	4	4	4			0x006EB570
+tan_before	76	4	4	4			0x006EB57C
+tan_before	77	4	8	8			0x006EB588
+tan_before	78	8	8	8			0x006EB594
+tan_before	79	8	8	8			0x006EB5A0
+tan_before	80	8	8	8			0x006EB5AC
+tan_before	81	8	8	8			0x006EB5B8
+tan_before	82	8	-8	-8			0x006EB5C4
+tan_before	83	-8	-8	-8			0x006EB5D0
+tan_before	84	-8	-8	-8			0x006EB5DC
+tan_before	85	-8	-8	-8			0x006EB5E8
+tan_before	86	-8	-8	-8			0x006EB5F4
+tan_before	87	-8	-8	-4			0x006EB600
+tan_before	88	-4	-4	-4			0x006EB60C
+tan_before	89	-4	-4	-4			0x006EB618
+tan_before	90	-4	-1	-1			0x006EB624
+tan_before	91	-1	-1	-1			0x006EB630
+tan_before	92	-1	-1	-1			0x006EB63C
+tan_before	93	0	0	0			0x006EB648
+tan_before	94	0	0	2			0x006EB654
+tan_before	95	-2	0	0			0x006EB660
+tan_before	96	0	0	0			0x006EB66C
+tan_before	97	-4	0	0			0x006EB678
+tan_before	98	0	0	0			0x006EB684
+tan_before	99	137472	6400	0			0x006EB690
+tan_before	100	0	393216	0			0x006EB69C
+tan_before	101	0	137472	124416			0x006EB6A8
+tan_before	102	124928	393216	124420			0x006EB6B4
+tan_before	103	0	256	393216			0x006EB6C0
+tan_before	104	2048	0	0			0x006EB6CC
+tan_before	105	6794496	6797392	6790272			0x006EB6D8
+tan_before	106	6790736	0	6790272			0x006EB6E4
+tan_before	107	6790272	6790864	6791168			0x006EB6F0
+tan_before	108	6791024	0	6791120			0x006EB6FC
+tan_before	109	6790752	6790272	0			0x006EB708
+tan_before	110	6800080	6794496	1314217006			0x006EB714
+tan_before	111	1548964937	1936943437	778398825			0x006EB720
+tan_before	112	7368803	1329814574	1397312588			0x006EB72C
+tan_before	113	1866685518	1936288876	1885548142			0x006EB738
+tan_before	114	112	544434225	2			0x006EB744
+tan_before	115	544499761	3	544698210			0x006EB750
+tan_before	116	1	544434226	5			0x006EB75C
+tan_before	117	544499762	6	544434737			0x006EB768
+tan_before	118	8	544500273	9			0x006EB774
+tan_before	119	544437041	10	544502577			0x006EB780
+tan_before	120	11	543585395	4			0x006EB78C
+tan_before	121	544694904	7	540111976			0x006EB798
+tan_before	122	12	540177512	13			0x006EB7A4
+tan_before	123	1329814574	1397706829	1130124361			0x006EB7B0
+tan_before	124	1869639023	779381107	7368803			0x006EB7BC
+tan_before	125	0	0	0			0x006EB7C8
+tan_before	126	0	0	0			0x006EB7D4
+dirdiff	0	0					0x006EB548
+dirdiff	1	1					0x006EB54C
+dirdiff	2	1					0x006EB550
+dirdiff	3	1					0x006EB554
+dirdiff	4	1					0x006EB558
+dirdiff	5	1					0x006EB55C
+dirdiff	6	1					0x006EB560
+dirdiff	7	1					0x006EB564
+dirdiff	8	1					0x006EB568
+dirdiff	9	4					0x006EB56C
+dirdiff	10	4					0x006EB570
+dirdiff	11	4					0x006EB574
+dirdiff	12	4					0x006EB578
+dirdiff	13	4					0x006EB57C
+dirdiff	14	4					0x006EB580
+dirdiff	15	4					0x006EB584
+dirdiff	16	4					0x006EB588
+dirdiff	17	8					0x006EB58C
+dirdiff	18	8					0x006EB590
+dirdiff	19	8					0x006EB594
+dirdiff	20	8					0x006EB598
+dirdiff	21	8					0x006EB59C
+dirdiff	22	8					0x006EB5A0
+dirdiff	23	8					0x006EB5A4
+dirdiff	24	8					0x006EB5A8
+dirdiff	25	8					0x006EB5AC
+dirdiff	26	8					0x006EB5B0
+dirdiff	27	8					0x006EB5B4
+dirdiff	28	8					0x006EB5B8
+dirdiff	29	8					0x006EB5BC
+dirdiff	30	8					0x006EB5C0
+dirdiff	31	8					0x006EB5C4
+dirdiff	32	-8					0x006EB5C8
+dirdiff	33	-8					0x006EB5CC
+dirdiff	34	-8					0x006EB5D0
+dirdiff	35	-8					0x006EB5D4
+dirdiff	36	-8					0x006EB5D8
+dirdiff	37	-8					0x006EB5DC
+dirdiff	38	-8					0x006EB5E0
+dirdiff	39	-8					0x006EB5E4
+dirdiff	40	-8					0x006EB5E8
+dirdiff	41	-8					0x006EB5EC
+dirdiff	42	-8					0x006EB5F0
+dirdiff	43	-8					0x006EB5F4
+dirdiff	44	-8					0x006EB5F8
+dirdiff	45	-8					0x006EB5FC
+dirdiff	46	-8					0x006EB600
+dirdiff	47	-8					0x006EB604
+dirdiff	48	-4					0x006EB608
+dirdiff	49	-4					0x006EB60C
+dirdiff	50	-4					0x006EB610
+dirdiff	51	-4					0x006EB614
+dirdiff	52	-4					0x006EB618
+dirdiff	53	-4					0x006EB61C
+dirdiff	54	-4					0x006EB620
+dirdiff	55	-4					0x006EB624
+dirdiff	56	-1					0x006EB628
+dirdiff	57	-1					0x006EB62C
+dirdiff	58	-1					0x006EB630
+dirdiff	59	-1					0x006EB634
+dirdiff	60	-1					0x006EB638
+dirdiff	61	-1					0x006EB63C
+dirdiff	62	-1					0x006EB640
+dirdiff	63	-1					0x006EB644
+field_dx	0	0					0x00749780
+field_dx	1	1					0x00749784
+field_dx	2	1					0x00749788
+field_dx	3	1					0x0074978C
+field_dx	4	0					0x00749790
+field_dx	5	-1					0x00749794
+field_dx	6	-1					0x00749798
+field_dx	7	-1					0x0074979C
+field_dx	8	0					0x007497A0
+field_dy	0	-1					0x007497A4
+field_dy	1	-1					0x007497A8
+field_dy	2	0					0x007497AC
+field_dy	3	1					0x007497B0
+field_dy	4	1					0x007497B4
+field_dy	5	1					0x007497B8
+field_dy	6	0					0x007497BC
+field_dy	7	-1					0x007497C0
+field_dy	8	0					0x007497C4
+velmod_player	0	0	0	0	0	1	0x006E8A00
+velmod_player	1	0	0	0	0	0	0x006E8A14
+velmod_player	2	0	1	0	0	0	0x006E8A28
+velmod_player	3	0	1	0	0	0	0x006E8A3C
+velmod_player	4	0	0	0	0	0	0x006E8A50
+velmod_player	5	0	0	0	0	0	0x006E8A64
+velmod_player	6	0	1	0	0	0	0x006E8A78
+velmod_player	7	0	0	0	1	0	0x006E8A8C
+velmod_player	8	0	0	0	1	0	0x006E8AA0
+velmod_player	9	0	0	0	0	0	0x006E8AB4
+velmod_player	10	0	0	0	0	0	0x006E8AC8
+velmod_player	11	0	0	0	1	0	0x006E8ADC
+velmod_player	12	0	0	0	1	0	0x006E8AF0
+velmod_player	13	1	0	1	0	0	0x006E8B04
+velmod_player	14	1	0	1	0	0	0x006E8B18
+velmod_player	15	1	0	1	0	0	0x006E8B2C
+velmod_player	16	1	0	1	0	0	0x006E8B40
+velmod_player	17	0	0	0	0	1	0x006E8B54
+velmod_player	18	1	0	1	0	0	0x006E8B68
+velmod_player	19	0	0	0	0	0	0x006E8B7C
+velmod_monster	0	0	0	0	0	1	0x006E8B90
+velmod_monster	1	0	0	0	0	0	0x006E8BA4
+velmod_monster	2	0	1	0	0	0	0x006E8BB8
+velmod_monster	3	0	0	0	0	0	0x006E8BCC
+velmod_monster	4	0	0	0	1	0	0x006E8BE0
+velmod_monster	5	0	0	0	1	0	0x006E8BF4
+velmod_monster	6	0	0	0	0	0	0x006E8C08
+velmod_monster	7	0	0	0	0	0	0x006E8C1C
+velmod_monster	8	1	1	1	0	0	0x006E8C30
+velmod_monster	9	1	1	1	0	0	0x006E8C44
+velmod_monster	10	1	1	1	0	0	0x006E8C58
+velmod_monster	11	1	1	1	0	0	0x006E8C6C
+velmod_monster	12	0	0	0	0	1	0x006E8C80
+velmod_monster	13	0	0	0	0	0	0x006E8C94
+velmod_monster	14	1	0	1	0	0	0x006E8CA8
+velmod_monster	15	0	1	0	0	0	0x006E8CBC
+velmod_monster_x	0	0	0	0	0	1	0x006E8CD0
+velmod_monster_x	1	0	0	0	0	0	0x006E8CE4
+velmod_monster_x	2	0	1	0	0	0	0x006E8CF8
+velmod_monster_x	3	0	0	0	0	0	0x006E8D0C
+velmod_monster_x	4	0	0	0	1	0	0x006E8D20
+velmod_monster_x	5	0	0	0	1	0	0x006E8D34
+velmod_monster_x	6	0	0	0	0	0	0x006E8D48
+velmod_monster_x	7	0	0	0	0	0	0x006E8D5C
+velmod_monster_x	8	1	0	1	0	0	0x006E8D70
+velmod_monster_x	9	1	0	1	0	0	0x006E8D84
+velmod_monster_x	10	1	0	1	0	0	0x006E8D98
+velmod_monster_x	11	1	0	1	0	0	0x006E8DAC
+velmod_monster_x	12	0	0	0	0	1	0x006E8DC0
+velmod_monster_x	13	0	0	0	0	0	0x006E8DD4
+velmod_monster_x	14	1	0	1	0	0	0x006E8DE8
+velmod_monster_x	15	0	1	0	0	0	0x006E8DFC
+animstat	0	1	120	93			0x006E8E24
+animstat	1	1	120	99			0x006E8E30
+animstat	2	1	120	105			0x006E8E3C
+animstat	3	1	120	102			0x006E8E48
+animstat	4	1	150	96			0x006E8E54

@@ -1,0 +1,7 @@
+# render/capture.md §8 composition-0001: Rogue Encampment, cast Town
+# Portal from a scroll, stand next to it 5 s. Reads the newest recording.
+version = 1
+kind = "scene"
+description = "capture.md §8: composition.md §5 (translucent draw)"
+raw = "latest"
+check = "compare"

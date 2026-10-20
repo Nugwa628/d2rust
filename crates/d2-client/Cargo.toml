@@ -1,0 +1,138 @@
+[package]
+autotests = false
+name = "d2-client"
+description = "Bevy client: rendering, input, UI, audio, and the bridge to the server."
+# The game's version (0.1.1). A release adds a 4th part, the build number
+# ($D2RUST_BUILD), in the exe's version resource (build.rs).
+version = "0.1.1"
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+# The only crate allowed to depend on Bevy (enforced by tools/depcheck).
+bevy.workspace = true
+d2-formats.workspace = true
+d2-native.workspace = true
+d2-proto.workspace = true
+d2-net.workspace = true
+# The in-process server of single player (`bridge::local`). Never the
+# reverse (tools/depcheck).
+d2-server.workspace = true
+# The app's single-player game (`app::single_player`): the wired sim and
+# the user's own tables. Game logic stays in d2-sim; the app only builds
+# and stages it, as the server tests do.
+d2-sim.workspace = true
+d2-data.workspace = true
+d2-verify.workspace = true
+# Online play (feature `online`): the client session and the QUIC streams.
+d2-online = { workspace = true, optional = true }
+# The bug report bundle `bugreport` writes (shared with the launcher and
+# the report service).
+d2-report.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+# PNG output for the CPU reference renderer and verification images. Same
+# version Bevy already uses, so no extra copy is built.
+image = { version = "0.25", default-features = false, features = ["png"] }
+# Frame captures for renderer verification:
+# the palettized PNGs are read raw (indices, PLTE) with the png crate the
+# image crate already builds; the raw format is JSON lines; hashes are
+# SHA-256. No new crate is downloaded.
+png = "0.18"
+sha2.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+# Baked animation packs are deflate streams (`unit_rules::animation_baked`).
+flate2 = "1.1"
+# Controls file parser (`specs/client/ui.md` §A6): same toml_edit Bevy's
+# macros already build, so no new crate is downloaded.
+toml_edit = { version = "0.25", default-features = false, features = ["parse"] }
+# GPU compute compositor (`specs/client/render-pipeline.md` §A9): the wgpu
+# Bevy already builds (same version and backends), used directly so the
+# compositor runs headless for verify; `wgpu::naga` validates its WGSL in CI.
+wgpu = { version = "29.0.3", default-features = false, features = ["wgsl", "dx12", "metal", "vulkan", "naga-ir"] }
+
+# Windows: the message box a fatal error shows (no console in the shipped
+# exe). A safe wrapper, since unsafe code is forbidden.
+[target.'cfg(windows)'.dependencies]
+win-msgbox = "0.2.2"
+# `play --control pipe`: the local named pipe the control channel listens
+# on (a safe API; no network sockets are opened).
+tokio = { version = "1", default-features = false, features = ["net", "rt", "io-util", "sync", "macros"] }
+
+# The game exe: D2RUST-Game.exe on Windows.
+[[bin]]
+name = "D2RUST-Game"
+path = "src/main.rs"
+
+# Windows: the exe's icon and version resource (build.rs).
+[build-dependencies]
+embed-resource = "3"
+
+[features]
+# Links Bevy as a shared library, for CI's test build only (ci.yml):
+# with it the grouped test binaries are a fraction of the size, so all
+# of them fit on the runner's disk. Never for a shipped build.
+dylib = ["bevy/dynamic_linking"]
+# `state-dump --rng FILE`: the RNG draw log of d2-sim
+# (`specs/tools/rng-trace.md`); off in every normal build.
+rng-trace = ["d2-sim/rng-trace"]
+# Online play: the main menu's ONLINE button, `play --online`, the remote
+# link (`bridge::remote`) and the online screens. Off by default (tests and
+# dev builds); the shipped builds turn it on (windows-build.yml and ci.yml's
+# windows-release, owner 2026-10-20).
+online = ["dep:d2-online"]
+
+[dev-dependencies]
+criterion.workspace = true
+# Synthetic archive fixtures use the test-only MPQ writer.
+d2-formats = { workspace = true, features = ["test-support"] }
+proptest.workspace = true
+# The local-server end-to-end test builds a wired sim from synthetic tables
+# (its combat / missile tables are the shared `bench_fixtures::combat`).
+d2-sim = { workspace = true, features = ["bench-fixtures"] }
+d2-data.workspace = true
+# The play-on-native test (tests/play_native.rs) converts a synthetic
+# install with d2-convert and loads it on both sources.
+d2-convert = { path = "../../tools/d2-convert" }
+# The far-act join test (tests/app_single_player.rs) makes its saves with
+# d2s-tool on the user's tables.
+d2s-tool = { path = "../../tools/d2s-tool" }
+test-fixtures.workspace = true
+# The online front-end test (tests/front_end_online.rs, feature `online`)
+# runs a scripted server over loopback QUIC.
+d2-quic.workspace = true
+tokio.workspace = true
+
+[lints]
+workspace = true
+
+[[bench]]
+name = "compose"
+harness = false
+
+[[test]]
+name = "app"
+path = "tests/app/main.rs"
+
+[[test]]
+name = "front_end"
+path = "tests/front_end/main.rs"
+
+[[test]]
+name = "properties"
+path = "tests/properties/main.rs"
+
+[[test]]
+name = "ui"
+path = "tests/ui/main.rs"
+
+[[test]]
+name = "world"
+path = "tests/world/main.rs"
+
+[[test]]
+name = "mutants_client"
+path = "tests/mutants_client/main.rs"

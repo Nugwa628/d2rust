@@ -1,0 +1,44 @@
+index	code	returns	columns_read	notes
+0	par1	Param1	0x38
+1	par2	Param2	0x3C
+2	par3	Param3	0x40
+3	par4	Param4	0x44
+4	par5	Param5	0x48
+5	cpa1	CltParam1	0x58
+6	cpa2	CltParam2	0x5C
+7	cpa3	CltParam3	0x60
+8	cpa4	CltParam4	0x64
+9	cpa5	CltParam5	0x68
+10	hpa1	sHitPar1	0x4C
+11	hpa2	sHitPar2	0x50
+12	hpa3	sHitPar3	0x54
+13	chp1	cHitPar1	0x6C
+14	chp2	cHitPar2	0x70
+15	chp3	cHitPar3	0x74
+16	dpa1	dParam1	0x78
+17	dpa2	dParam2	0x7C
+18	lvl	lvl	-
+19	edmn	miss_elem_min >> 8	EMin 0xE8, MinELev 0xF0, EDmgSymPerCalc 0x118, HitShift 0x196	synergy before shift
+20	edmx	miss_elem_max >> 8	EMax 0xEC, MaxELev 0x104
+21	edln	miss_elem_len	ELen 0x11C, ELevLen1-3 0x120	lvl<=0 gives ELen; no synergy
+22	edns	miss_elem_min	as edmn	1/256 points
+23	edxs	miss_elem_max	as edmx	1/256 points
+24	damn	miss_phys_min >> 8	MinDamage 0xB0, MinLevDam 0xB8, DmgSymPerCalc 0xE0
+25	damx	miss_phys_max >> 8	MaxDamage 0xB4, MaxLevDam 0xCC
+26	dmns	miss_phys_min	as damn	1/256 points
+27	dmxs	miss_phys_max	as damx	1/256 points
+28	rang	Range + lvl*LevRange	0x96, 0x98 (i16)
+29	sl12	Param1+(lvl-1)*Param2	0x38, 0x3C	no level guard
+30	sd12	DM(lvl,Param1,Param2)	0x38, 0x3C	no level guard
+31	sl34	Param3+(lvl-1)*Param4	0x40, 0x44
+32	sd34	DM(lvl,Param3,Param4)	0x40, 0x44
+33	cl12	CltParam1+(lvl-1)*CltParam2	0x58, 0x5C
+34	cd12	DM(lvl,CltParam1,CltParam2)	0x58, 0x5C
+35	cl34	CltParam3+(lvl-1)*CltParam4	0x60, 0x64
+36	cd34	DM(lvl,CltParam3,CltParam4)	0x60, 0x64
+37	shl1	sHitPar1+(lvl-1)*sHitPar2	0x4C, 0x50
+38	shd1	DM(lvl,sHitPar1,sHitPar2)	0x4C, 0x50
+39	chl1	cHitPar1+(lvl-1)*cHitPar2	0x6C, 0x70
+40	chd1	DM(lvl,cHitPar1,cHitPar2)	0x6C, 0x70
+41	dl12	dParam1+(lvl-1)*dParam2	0x78, 0x7C
+42	dd12	DM(lvl,dParam1,dParam2)	0x78, 0x7C

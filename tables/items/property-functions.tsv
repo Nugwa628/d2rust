@@ -1,0 +1,26 @@
+func	address	value	draws	reset_base	writes	layer	returns
+1	0x0065EB30	roll	roll(min..max)	mode1	stat	0	added
+2	0x0065EBA0	roll	roll(min..max)	always	stat	0	added
+3	0x0065EC10	prev_or_roll	roll(min..max) if prev=0	mode1	stat	0	added
+4	0x0065EC80	prev_or_roll	roll(min..max) if prev=0	always	stat	0	added
+5	0x0065ECF0	prev_or_roll	roll(min..max) if prev=0	no	21,23,159	0	value
+6	0x0065EE80	prev_or_roll	roll(min..max) if prev=0	no	22,24,160	0	value
+7	0x0065F010	prev_or_roll	roll(min..max) if prev=0	damage	18,17 or func6(1)	0	value
+8	0x0065F2B0	prev_or_roll	roll(min..max) if prev=0	no	stat	0	added
+9	0x0065F310	prev_or_roll	roll(min..max) if prev=0	no	stat	param	added
+10	0x0065F3F0	prev_or_roll	roll(min..max) if prev=0	no	stat	param%3+param/3*8	added
+11	0x0065F470	min	none	no	stat	param*64+level	added
+12	0x0065FC40	param	roll(min..max) for layer	no	stat	rolled	added
+13	0x0065FC90	roll	roll(min..max)	mode1	stat,72	0	added
+14	0x0065F590	prev_or_roll_or_param	roll(min..max) if prev<1	no	194 (set)	0	count
+15	0x0065F960	min	none	no	stat or func5	0	min
+16	0x0065F9D0	max	none	no	stat or func6	0	max
+17	0x0065FA40	param_or_roll	roll(min..max) if param=0	no	stat or func6	0	value
+18	0x0065F870	packed	none	no	stat (set)	0	max+256
+19	0x0065F6A0	packed	roll(charges-charges/8)	no	stat (set)	skill<<shift+level	charges
+20	0x0065FAE0	1	none	no	152 (add)	0	1
+21	0x0065FB50	roll	roll(min..max)	no	stat	val	added
+22	0x0065FBF0	roll	roll(min..max)	no	stat	param (u16)	added
+23	0x0065FD20	-	none	no	ethereal	-	1 or 0
+24	0x0065F390	prev_or_roll	roll(min..max) if prev=0	no	stat	param	added
+36	0x0065FBA0	val	roll(min..max) for layer	no	stat	rolled	added

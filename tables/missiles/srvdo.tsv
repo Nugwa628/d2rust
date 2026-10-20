@@ -1,0 +1,54 @@
+index	addr_114d	d2moo_name	rows	examples	params	rng	behaviour	status
+0	-	-	53	blood1(18) blood2(19) bigblood1(20) bigblood2(21)	-	-	no function: every caller skips an index <= 0 (signed 16-bit read)	spec'd-here
+1	0x005B0BC0	MISSMODE_SrvDo01_BasicMissile	551	arrow(0) javelin(1) bighead1(2) bighead2(3)	-	none of its own; hit path draws (missiles.md R5-R6)	default flight: the collision/expiry routine 0x005AE1F0 only (missiles.md R4)	spec'd-here
+2	0x005AE400	MISSMODE_SrvDo02_PlagueJavelin_PoisonJavelin_PoisonTrap	4	poisonjav(38) trap poison ball right(245) trap poison ball left(246) viper_poisjav(648)	SrvCalc1;SubMissile1	-	every run evaluates SrvCalc1; on a new path step creates a static SubMissile1 at the missile (loops 2*lvl-2 when SrvCalc1>0) via 0x005A9720; then default flight (R9.5)	spec'd-here
+3	0x005AE480	MISSMODE_SrvDo03_PoisonCloud_Blizzard_ThunderStorm_HandOfGod	26	poisonjavcloud(39) plaguejavelin(43) monbliz1(107) monbliz2(108)	-	-	without path velocity ORs collision 0x40 into the one cell under the missile; then default flight (R9.5)	spec'd-here
+4	-	-	0	-	-	-	null entry	spec'd-here
+5	0x005AE520	MISSMODE_SrvDo05_FireWall_ImmolationFire_MeteorFire_MoltenBoulderFirePath	9	blaze(67) firewall(69) vampirefirewall(131) immolationfire(230)	SubStart;SubStop	roll(SubStop-SubStart) on the missile seed when the animation frame is SubStart-1	stamps 0x40 with the missile size; loops the animation frame between SubStart and SubStop, runs it down near the end of life; then default flight (R9.5)	spec'd-here
+6	0x005AE680	MISSMODE_SrvDo06_MoltenBoulder_FireWallMaker	4	firewallmaker(68) vampirefirewallmaker(130) moltenboulder(452) countessfirewallmaker(653)	SubMissile1	none	on each new path step creates SubMissile1 at the missile (flags 0x21, owner required); then default flight (bodies.md §7)	spec'd-here
+7	0x005AE780	MISSMODE_SrvDo07_GuidedArrow_BoneSpirit	3	guidedarrow(86) bonespirit(193) monbonespirit(329)	Param1	-	removed (2) if owner gone/dead or in town; while homing (data+0x28 bit 0) re-paths at the target every Param1 frames (default 5) when 4<=distance<=24; then default flight (R9.5)	spec'd-here
+8	0x005AE8A0	MISSMODE_SrvDo08_MonBlizzCenter	1	monblizcenter(106)	Param1;Param2;Param3;SubMissile1	via 0x005A9820: seed reset + 2 rolls	q=lvl/max(Param3,1); every max(Param2-q,3) elapsed frames spawns SubMissile1 within Param1+max(q,2) (helper 0x005A9820, mask 5); then default flight (R9.5)	spec'd-here
+9	0x005AE940	MISSMODE_SrvDo09_BatLightningBolt	1	bat lightning bolt(123)	SubMissile1	none	each new path step creates SubMissile1 at the missile; then default flight (bodies.md §26)	spec'd-here
+10	0x005AEA60	MISSMODE_SrvDo10_BlizzardCenter	1	blizzardcenter(158)	SubMissile1 (+skills calc1/calc2)	via 0x005A9820: seed reset + 2 rolls	missile skill invalid -> 2; range = skill calc1, interval = skill calc2 (owner, missile level); helper 0x005A9820 mask 5; then default flight (R9.5)	spec'd-here
+11	0x005AEB60	MISSMODE_SrvDo11_FingerMageSpider	1	fingermagespider(177)	Param1;Param2;Param3	none	every Param1 frames left, within Param2 of its (or the owner's) target: re-aims one Param3 step toward it; then default flight (bodies.md §29)	spec'd-here
+12	0x005AECA0	MISSMODE_SrvDo12_DiabWallMaker	1	diabwallmaker(179)	SubMissile1	none	owner required; each new path step creates SubMissile1 at the missile; then default flight (bodies-2.md §31)	spec'd-here
+13	0x005AEDA0	MISSMODE_SrvDo13_BoneWallMaker	1	bonewallmaker(207)	- (skills PetType)	none	each new path step while data +0x2C > 0: summons the skill's summon class as a minion of monster GUID data +0x28; then default flight (bodies-2.md §33)	spec'd-here
+14	0x005AEF70	MISSMODE_SrvDo14_GrimWard	3	grimwardsmall(250) grimwardmedium(253) grimwardlarge(256)	Param1;Param2	none (the skill function's own)	every max(Param1,1) elapsed frames runs skill server-do Param2 with the missile as caster; then default flight (bodies.md §15)	spec'd-here
+15	0x005AF030	MISSMODE_SrvDo15_FrozenOrb	1	frozenorb(260)	Param1;Param2;SubMissile1	none	every max(Param1,1) elapsed frames: SubMissile1 toward circle step data +0x28 (radius 30, 64 steps), step += Param2; then default flight (bodies-2.md §39)	spec'd-here
+16	0x005AF170	MISSMODE_SrvDo16_FrozenOrbNova	1	frozenorbnova(262)	Param1;Param2	none	elapsed < Param1, every Param2 frames: offset rotated 45 degrees and scaled 1/sqrt2, re-aims; then default flight (bodies-2.md §40)	spec'd-here
+17	0x005AF240	MISSMODE_SrvDo17_CairnStones	1	cairnstones(288)	Param1-Param5;SubMissile1	via 0x005A9820: seed reset + 2 rolls	spawns SubMissile1 sparks via the R9.3 helper while Param1 < frames left < Range - Param1; once, at frames left <= Param5 + Param1, a portal object (class 60) to level Param4; then default flight (bodies.md §1)	spec'd-here
+18	0x005AF300	MISSMODE_SrvDo18_TowerChestSpawner	1	towerchestspawner(332)	Param1;Param2;Param3	roll(2r+1) x2 per gold pile (missile seed)	chest sound at frames left 1, chest drop at Range-Param1, then gold within Param3 every 4*Param2 frames; then default flight (bodies-2.md §43)	spec'd-here
+19	0x005B0940	MISSMODE_SrvDo19_RadamentDeath	1	radamentdeath(347)	-	none of its own	frames left 2..24: Redemption corpse effect (skill 124, level 1) around the missile; frames left 1: last-frame variant; then default flight (bodies-2.md §44)	spec'd-here
+20	0x005AF540	MISSMODE_SrvDo20_BladeCreeper	1	blade creeper(392)	-	none	owner gone or dead: no-unit expiry hit, 2; else sits on the owner (path teleport), frames left := 10, flight, returns 1 (bodies-2.md §46)	spec'd-here
+21	0x005AF590	MISSMODE_SrvDo21_Distraction	1	distraction(393)	SubMissile1	none	each new path step: SubMissile1 at the missile; then as server-do 20 (bodies-2.md §46)	spec'd-here
+22	0x005AF620	MISSMODE_SrvDo22_LightningTrailingJavelin	2	lightingtrailingjavalin(431) advlighttrailingjav(438)	Param1;SubMissile1	none	first frames store the perpendicular of the flight in data +0x28/+0x2C; each new path step creates SubMissile1 on both sides (loops Param1); then default flight (bodies.md §18)	spec'd-here
+23	0x005AF790	MISSMODE_SrvDo23_24_SuccFireBall_FirestormMaker	2	sucfireball(441) firestormmaker(458)	Param1;SubMissile1	none	each new path step creates SubMissile1 at the missile (loops Param1 when > 0); then default flight (bodies.md §20)	spec'd-here
+24	0x005AF790	MISSMODE_SrvDo23_24_SuccFireBall_FirestormMaker	0	-	Param1;SubMissile1	none	same function as 23 (bodies.md §20)	spec'd-here
+25	0x005AF880	MISSMODE_SrvDo25_EruptionCenter	1	erruption center(461)	SubMissile1 (+skills calc1/calc2)	via 0x005A9820: seed reset + 2 rolls	SubMissile1 = 0 or skill invalid -> 2; as 10 with mask 0x45; then default flight (R9.5)	spec'd-here
+26	0x005AF980	MISSMODE_SrvDo26_Vines_PlagueVines	2	vines(471) plague vines(474)	Param1;SubMissile1	none	every max(Param1,1) elapsed frames: SubMissile1 at the missile via 0x0056EDE0; then default flight (bodies.md §21)	spec'd-here
+27	0x005AFA30	MISSMODE_SrvDo27_Tornado	1	tornado(478)	Param1;Param2;skill calc4,aurarangecalc,aurafilter	damage rolls (missile seed)	every Param1 (<=0: calc4) elapsed frames: full damage roll and area damage with the missile as source, radius Param2 (<=0: aurarangecalc), skill aurafilter; then default flight (bodies-2.md §53)	spec'd-here
+28	0x005AFB80	MISSMODE_SrvDo28_Volcano	1	volcano(479)	Param1-Param5;SubMissile1	init_low(target x field) then 2 x roll(2r+1) on the missile seed; low word saved back	between Param3 and Param4 elapsed frames, every Param1 (or skill calc4) frames throws SubMissile1 at a random offset within Param2 (or aurarangecalc); seed word in data +0x28; then default flight (bodies.md §2)	spec'd-here
+29	0x005AFD70	MISSMODE_SrvDo29_RecyclerDelay	1	recycler delay(498)	Param1	none	at elapsed Param1 heals the owner by calc1 % of max life, ProgOverlay; then default flight (bodies-2.md §55)	spec'd-here
+30	0x005B0010	MISSMODE_SrvDo30_RabiesPlague	1	rabiesplague(515)	Param1;Param2;SubMissile1	roll(2r+1) x2 on the infected unit's seed	follows the owner; every Param1 frames a SubMissile1 owned by the infected unit within Param2 (its seed), stamped with the owner's state expiry; returns 1 (bodies-2.md §56)	spec'd-here
+31	0x005B01F0	MISSMODE_SrvDo31_WakeOfDestructionMaker_BaalColdMaker	2	wake of destruction maker(517) baal cold maker(589)	SubMissile1	none	no owner: inlined no-unit hit, return 2; each new path step: SubMissile1 at +/-(data +0x28, +0x2C); then default flight (bodies.md §22)	spec'd-here
+32	0x005B03E0	MISSMODE_SrvDo32_TigerFury	1	tigerfury(520)	SubMissile1	none	new path step: SubMissile1 with an unset position (creation fails); then server-do 7 (bodies-2.md §57)	spec'd-here
+33	0x005AFEC0	MISSMODE_SrvDo33_VineRecyclerDelay	1	vine recycler delay(540)	Param1	none	at elapsed Param1 restores calc1 % of the owner's max mana, ProgOverlay; then default flight (bodies-2.md §55)	spec'd-here
+34	0x005B04A0	MISSMODE_SrvDo34_BaalTauntControl	1	baal taunt control(546)	Param1-Param4;SubMissile1-3	init_low(path first point x) then roll(count) on the missile seed	after Param1 elapsed frames, re-seeds from x and picks one of up to 3 SubMissiles; fires it on its interval Param2-4 and runs its hit handler; then server-do 3 (bodies.md §3)	spec'd-here
+35	0x005B0640	MISSMODE_SrvDo35_RoyalStrikeChaosIce	1	royalstrikechaosice(569)	Param1	init_low(target x field), one step, bit 0 decides the turn side; low word saved back	every Param1 elapsed frames turns the direction in data +0x2C left or right (bit 0 of a re-seeded step) by about 14 degrees and rebuilds the path; then default flight (bodies.md §4)	spec'd-here
+36	0x005B0A40	MISSMODE_SrvDo36_BaalFxControl	1	baalfx control(625)	-	none	once, at frames left <= 100: Tyrael spawn (quest 36 test) and room refresh; then default flight (bodies-2.md §60)	spec'd-here
+37	0x005B0AA0	MISSMODE_SrvDo37_Unused	0	-	Param1-3;SubMissile1-3	none	unused: SubMissile1-3 at elapsed Param1-3 via 0x0056EDE0; then default flight (bodies-2.md §62)	spec'd-here
+38	-	-	0	-	-	-	null entry	spec'd-here
+39	-	-	0	-	-	-	null entry	spec'd-here
+40	-	-	0	-	-	-	null entry	spec'd-here
+41	-	-	0	-	-	-	null entry	spec'd-here
+42	-	-	0	-	-	-	null entry	spec'd-here
+43	-	-	0	-	-	-	null entry	spec'd-here
+44	-	-	0	-	-	-	null entry	spec'd-here
+45	-	-	0	-	-	-	null entry	spec'd-here
+46	-	-	0	-	-	-	null entry	spec'd-here
+47	-	-	0	-	-	-	null entry	spec'd-here
+48	-	-	0	-	-	-	null entry	spec'd-here
+49	-	-	0	-	-	-	null entry	spec'd-here
+50	-	-	0	-	-	-	null entry	spec'd-here
+51	-	-	0	-	-	-	null entry	spec'd-here
+52	-	-	0	-	-	-	null entry	spec'd-here

@@ -1,0 +1,21 @@
+id	condition	class	mode	radius	flags	then	source
+2	pick record exists	pick(chance 0, umon 1)	1	search	0x40	random boss, champion not allowed (population.md 11.5 rule 1)	0x0054E600 -> 0x005A43E0
+3	pick record exists	pick(chance 0, umon 1)	preset	-1	0	modifier 16; champion minions 1-3 (population.md 6.4)	0x0054E600 -> 0x005B2F20, 0x005A48C0, 0x0054E1E0
+4	always	266 navi	preset	-1	0	-	0x0054E600
+5	always	267 bloodraven	preset	-1	0	-	0x0054E600
+8	always	284 maggotqueen1	preset	-1	8	-	0x0054E600
+10	always	chain(261, n by level)	preset	-1	4	-	0x0054E600 -> 0x0054DA60
+11	always	chain(261, n by level)	preset	-1	0	-	0x0054E600 -> 0x0054DA60
+17	always	level(19 fallen1)	preset	-1 then 4	neverCount?8:0	fallen swap by level	0x0054E600 -> 0x0063EC70, 0x0054E2A0
+18	always	level(58 fallenshaman1)	preset	-1 then 4	neverCount?8:0	shaman swap by level	0x0054E600 -> 0x0063EC70, 0x0054E2A0
+22	always	level(141 fetish1)	preset	-1 then 4	neverCount?8:0	-	0x0054E600 -> 0x0063EC70
+23	always	level(278 fetishshaman1)	preset	-1 then 4	neverCount?8:0	-	0x0054E600 -> 0x0063EC70
+24	difficulty 0	level(level 110 ? 529 deathmauler1 : 492 imp1)	1	-1 leader, 3 members	0	pack MinGrp..MaxGrp at the preset point	0x0054E600 -> 0x0054E090
+25	never	-	-	-	-	nothing	0x0054E600
+26	difficulty 0	level(453 minion1)	1	-1 leader, 3 members	0	pack MinGrp..MaxGrp at the preset point	0x0054E600 -> 0x0054E090
+27	never	-	-	-	-	nothing	0x0054E600
+28	never	-	-	-	-	nothing	0x0054E600
+29	always	level(453 minion1)	12	-1 then 4	neverCount?8:0	unit flag 0x2000000	0x0054E600
+30	always	level(level 110 ? 529 deathmauler1 : 492 imp1)	12	-1 then 4	neverCount?8:0	unit flag 0x2000000	0x0054E600
+31	always	level(522 act5barb1)	12	-1 then 4	neverCount?8:0	unit flag 0x2000000	0x0054E600
+32	always	level(438 reanimatedhorde3)	12	-1 then 4	neverCount?8:0	unit flag 0x2000000; event 7 at frame + 250 + roll(50)	0x0054E600 -> 0x005417D0

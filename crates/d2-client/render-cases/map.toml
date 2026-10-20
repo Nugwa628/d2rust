@@ -1,0 +1,8 @@
+# Today's `d2-client verify` (Phase 1b, specs/render/map-preview.md):
+# the whole townN1 map, CPU reference vs the GPU palette material.
+# Needs $D2_GAME_DIR and a GPU (local only).
+version = 1
+kind = "map"
+description = "map-preview.md layout of townN1, whole map"
+ds1 = 'data\global\tiles\ACT1\TOWN\townN1.ds1'
+wall_base = 80

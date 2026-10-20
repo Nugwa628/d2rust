@@ -1,0 +1,28 @@
+[package]
+name = "data-tool"
+description = "Load, validate and cross-check the user's D2 data tables."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+d2-data.workspace = true
+d2-native.workspace = true
+d2-formats.workspace = true
+d2-proto.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+
+[dev-dependencies]
+d2-formats = { workspace = true, features = ["test-support"] }
+test-fixtures.workspace = true
+
+[lints]
+workspace = true
+
+[[bin]]
+name = "data-check"
+path = "src/data_check/main.rs"

@@ -1,0 +1,13 @@
+[package]
+name = "d2-verify"
+description = "Checks that the user has a usable D2 LoD install (ownership gate)."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+
+[lints]
+workspace = true

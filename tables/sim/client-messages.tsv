@@ -1,0 +1,116 @@
+id	name	transport_size	handler_size	layout	handler	kind	gate	request	scope	confirmed
+0x00	-	0	-		-	none	-	rejected by the dispatcher (id 0)	none	yes
+0x01	Walk	5	==5	x:u16@1 y:u16@3	0x005497E0	handler	alive	walk to a point	sim	yes
+0x02	WalkToUnit	9	==9	type:u32@1 id:u32@5	0x00549890	handler	alive	walk to a unit	sim	yes
+0x03	Run	5	==5	x:u16@1 y:u16@3	0x005498D0	handler	alive	run to a point	sim	yes
+0x04	RunToUnit	9	==9	type:u32@1 id:u32@5	0x00549920	handler	alive	run to a unit	sim	yes
+0x05	ShiftLeftSkill	5	==5	x:u16@1 y:u16@3	0x00549D00	handler	alive	left skill at a point (shift held)	sim	yes
+0x06	LeftSkillOnUnit	9	==9	type:u32@1 id:u32@5	0x00549D80	handler	alive	left skill on a unit	sim	yes
+0x07	ShiftLeftSkillOnUnit	9	==9	type:u32@1 id:u32@5	0x00549E00	handler	alive	left skill on a unit (shift held)	sim	yes
+0x08	ShiftLeftSkillHold	5	==5	x:u16@1 y:u16@3	0x00549E80	handler	alive	left skill at a point, button held	sim	yes
+0x09	LeftSkillOnUnitHold	9	==9	type:u32@1 id:u32@5	0x00549EE0	handler	alive	left skill on a unit, button held	sim	yes
+0x0A	ShiftLeftSkillOnUnitHold	9	==9	type:u32@1 id:u32@5	0x00549F40	handler	alive	left skill on a unit, shift and button held	sim	yes
+0x0B	Unused0B	1	==1		0x00549FA0	handler	alive	nothing (returns 0)	sim	yes
+0x0C	RightSkill	5	==5	x:u16@1 y:u16@3	0x00549FC0	handler	alive	right skill at a point	sim	yes
+0x0D	RightSkillOnUnit	9	==9	type:u32@1 id:u32@5	0x0054A040	handler	alive	right skill on a unit	sim	yes
+0x0E	ShiftRightSkillOnUnit	9	==9	type:u32@1 id:u32@5	0x0054A0C0	handler	alive	right skill on a unit (shift held)	sim	yes
+0x0F	RightSkillHold	5	==5	x:u16@1 y:u16@3	0x0054A140	handler	alive	right skill at a point, button held	sim	yes
+0x10	RightSkillOnUnitHold	9	==9	type:u32@1 id:u32@5	0x0054A1A0	handler	alive	right skill on a unit, button held	sim	yes
+0x11	ShiftRightSkillOnUnitHold	9	==9	type:u32@1 id:u32@5	0x0054A200	handler	alive	right skill on a unit, shift and button held	sim	yes
+0x12	EndInferno	1	==1		0x0054A260	handler	alive	clear state 12 (inferno) on the player	sim	yes
+0x13	InteractWithEntity	9	==9	type:u32@1 id:u32@5	0x0054AA90	handler	alive	interact with a unit (NPC, object, portal)	sim	yes
+0x14	OverheadChat	chat	4..275	unread:u8@1 lang:u8@2 msg:cstr@3 name:cstr	0x0054A290	handler	none	overhead chat text	sim	yes
+0x15	Chat	chat	chat	unread:u8@1 lang:u8@2 msg:cstr@3 target:cstr	0x0054A5D0	handler	none	chat message	sim	yes
+0x16	PickItem	13	==13	type:u32@1 id:u32@5 cursor:u32@9	0x0054AAD0	handler	alive	pick an item up from the ground	sim	yes
+0x17	DropItem	5	==5	item:u32@1	0x0054AB40	handler	alive	drop the cursor item	sim	yes
+0x18	InsertItemInBuffer	17	==17	item:u32@1 x:u32@5 y:u32@9 page:u32@13	0x0054ABB0	handler	alive	put the cursor item into a grid page	sim	yes
+0x19	RemoveItemFromBuffer	5	==5	item:u32@1	0x0054ACD0	handler	alive	take an item from a grid page to the cursor	sim	yes
+0x1A	EquipItem	9	==9	item:u32@1 bodyloc:u8@5	0x0054AD90	handler	alive	equip the cursor item	sim	yes
+0x1B	Swap2HandedItem	9	==9	item:u32@1 bodyloc:u8@5	0x0054AE30	handler	alive	equip a two-handed item over two one-handed	sim	yes
+0x1C	RemoveBodyItem	3	==3	bodyloc:u16@1	0x0054AEC0	handler	alive	unequip to the cursor	sim	yes
+0x1D	SwapCursorWithBody	9	==9	item:u32@1 bodyloc:u8@5	0x0054AF50	handler	alive	swap cursor item with an equipped item	sim	yes
+0x1E	Swap1HWith2H	9	==9	item:u32@1 bodyloc:u8@5	0x0054B030	handler	alive	swap two one-handed with one two-handed	sim	yes
+0x1F	SwapCursorBufferItem	17	==17	cursor:u32@1 target:u32@5 x:u32@9 y:u32@13	0x0054B0F0	handler	alive	swap cursor item with a grid item	sim	yes
+0x20	UseGridItem	13	==13	item:u32@1 x:u32@5 y:u32@9	0x0054B1E0	handler	alive	use an item in a grid (potion, scroll, book)	sim	yes
+0x21	StackItems	9	==9	src:u32@1 dst:u32@5	0x0054B300	handler	alive	stack the cursor item onto an item	sim	yes
+0x22	UnstackItems	5	==5	item:u32@1	0x0054B380	handler	alive	unstack an item	sim	yes
+0x23	ItemToBelt	9	==9	item:u32@1 slot:u32@5	0x0054B3E0	handler	alive	put the cursor item into the belt	sim	yes
+0x24	ItemFromBelt	5	==5	item:u32@1	0x0054B450	handler	alive	take a belt item to the cursor	sim	yes
+0x25	SwitchBeltItem	9	==9	cursor:u32@1 belt:u32@5	0x0054B4E0	handler	alive	swap cursor item with a belt item	sim	yes
+0x26	UseBeltItem	13	==13	item:u32@1 on_merc:u32@5	0x0054B560	handler	alive	use a belt item	sim	yes
+0x27	UseItemAction	9	==9	target:u32@1 used:u32@5	0x0054B280	handler	alive	use an item on an item (identify, repair kit)	sim	yes
+0x28	SocketItem	9	==9	socketable:u32@1 target:u32@5	0x0054B650	handler	alive	insert a socketable	sim	yes
+0x29	ScrollToBook	9	==9	scroll:u32@1 book:u32@5	0x0054B710	handler	alive	put a scroll into a tome	sim	yes
+0x2A	ItemToCube	9	==9	item:u32@1 cube:u32@5	0x0054B790	handler	alive	put an item into the cube	sim	yes
+0x2B	-	0	-		-	none	-	no handler; never queued (size table 0)	none	yes
+0x2C	Unused2C	0	-		0x0054B810	stub3	alive	rejected (handler returns 3); never queued (size table 0)	none	yes
+0x2D	Unused2D	1	-		0x0054B820	stub3	alive	rejected (handler returns 3)	none	yes
+0x2E	Unused2E	3	-		0x0054B920	stub0	alive	nothing (handler returns 0)	none	yes
+0x2F	InitEntityChat	9	==9	id:u32@5	0x0054B930	handler	alive	start talking to an NPC	sim	yes
+0x30	TerminateEntityChat	9	==9	id:u32@5	0x0054B9F0	handler	alive	stop talking to an NPC	sim	yes
+0x31	QuestMessage	9	==9	npc:u32@1 msg:u16@5	0x0054BA90	handler	alive	quest message shown by an NPC	sim	yes
+0x32	BuyItem	17	==17	npc:u32@1 item:u32@5 transaction:u32@9 client_price:u32@13	0x0054BAC0	handler	alive	buy from an NPC	sim	yes
+0x33	SellItem	17	==17	npc:u32@1 item:u32@5 item_mode:u16@9 client_price:u32@13	0x0054BB20	handler	alive	sell to an NPC	sim	yes
+0x34	IdentifyWithNpc	5	==5	npc:u32@1	0x0054BBA0	handler	alive	identify all items at an NPC (Cain)	sim	yes
+0x35	Repair	17	==17	npc:u32@1 item:u32@5 unread:u16@9 repair_flags:u32@13	0x0054BB60	handler	alive	repair at an NPC	sim	yes
+0x36	HireMerc	9	==9	npc:u32@1 merc:u16@5	0x0054BBD0	handler	alive	hire a mercenary	sim	yes
+0x37	IdentifyGamble	5	==5	item:u32@1	0x0054BC30	handler	alive	identify a gambled item	sim	yes
+0x38	EntityAction	13	==13	action:u32@1 npc:u32@5 item:u32@9	0x0054BCA0	handler	alive	NPC menu action (trade, gamble, ...)	sim	yes
+0x39	PurchaseLife	5	-		0x0054BD00	stub3	alive	rejected (handler returns 3)	none	yes
+0x3A	AddStatPoint	3	==3	stat:u8@1 repeat:u8@2	0x0054BD10	handler	alive	spend a stat point	sim	yes
+0x3B	AddSkillPoint	3	==3	skill:u16@1	0x0054BD90	handler	alive	spend a skill point	sim	yes
+0x3C	SelectSkill	9	==9	skill:u31@1 left:bit31@1 item:u32@5	0x0054BE70	handler	none	choose the left or right skill	sim	yes
+0x3D	HighlightDoor	5	==5	id:u32@1	0x0054BF10	handler	alive	door highlight hint	sim	yes
+0x3E	ActivateInifussScroll	5	==5	item:u32@1	0x0054BF60	handler	alive	read the Inifuss scroll (quest)	sim	yes
+0x3F	PlayAudio	3	==3	sound:u16@1	0x0054C070	handler	alive	play a character speech line	sim	yes
+0x40	RequestQuestData	1	==1		0x0054C0C0	handler	alive	request quest log data	sim	yes
+0x41	Resurrect	1	==1		0x0054C0E0	handler	dead	respawn after death	sim	yes
+0x42	Unused42	1	-		0x0054C360	stub0	alive	nothing (handler returns 0)	none	yes
+0x43	Unused43	1	-		0x0054C370	stub0	none	nothing (handler returns 0)	none	yes
+0x44	StaffInOrifice	17	==17	orifice:u32@5 item:u32@9 action:u16@13	0x0054C380	handler	alive	insert the Horadric staff	sim	yes
+0x45	ChangeTpLocation	9	-		0x0054C420	stub3	alive	rejected (handler returns 3)	none	yes
+0x46	MercInteract	13	==13	merc:u32@1 id:u32@5 type:u32@9	0x0054C4B0	handler	alive	mercenary interacts with a unit	sim	yes
+0x47	MoveMerc	13	==13	merc:u32@1 x:u16@5 y:u16@9	0x0054C520	handler	alive	move the mercenary	sim	yes
+0x48	TurnOffBusyState	1	==1		0x0054C590	handler	alive	clear the busy state	sim	yes
+0x49	TakeOrCloseWp	9	==9	wp:u32@1 level:u16@5	0x0054C5D0	handler	alive	travel by waypoint or close it	sim	yes
+0x4A	-	0	-		-	none	-	no handler; never queued (size table 0)	none	yes
+0x4B	RequestEntityUpdate	9	==9	type:u32@1 id:u32@5	0x0054C6D0	handler	alive	request a unit refresh	sim	yes
+0x4C	Transmogrify	5	==5	item:u32@1	0x0054C760	handler	alive	use a Transmogrify item (misc.txt); not the cube	sim	yes
+0x4D	PlayNpcMessage	3	==3	npc_class:u16@1	0x0054C690	handler	alive	clear an NPC's intro bit for the player	sim	yes
+0x4E	-	0	-		-	none	-	no handler; never queued (size table 0)	none	yes
+0x4F	ClickButton	7	==7	button:u16@1 p1:u16@3 p2:u16@5	0x0054C7C0	handler	alive	UI button (trade, stash gold, ...)	sim	yes
+0x50	DropGold	9	==9	unit:u32@1 amount:u32@5	0x0054C800	handler	alive	drop gold	sim	yes
+0x51	BindHotkey	9	==9	skill:u15@1 left:bit15@1 slot:u16@3 item:u32@5	0x0054C870	handler	alive	bind a skill to a hotkey	sim	yes
+0x52	Unused52	5	-		0x0054C930	stub3	alive	rejected (handler returns 3)	none	yes
+0x53	StaminaOn	1	==1		0x0054C940	handler	alive	turn running on	sim	yes
+0x54	StaminaOff	1	==1		0x0054C990	handler	alive	turn running off	sim	yes
+0x55	-	0	-		-	none	-	no handler; never queued (size table 0)	none	yes
+0x56	-	0	-		-	none	-	no handler; never queued (size table 0)	none	yes
+0x57	-	0	-		-	none	-	no handler; never queued (size table 0)	none	yes
+0x58	QuestCompleted	3	==3	quest:u16@1	0x0054C9C0	handler	alive	quest UI update request	sim	yes
+0x59	MakeEntityMove	17	==17	type:u32@1 id:u32@5 x:u32@9 y:u32@13	0x0054CA10	handler	alive	move a unit (NPC escort)	sim	yes
+0x5A	-	0	-		-	none	-	no handler; never queued (size table 0)	none	yes
+0x5B	-	0	-		-	none	-	no handler; never queued (size table 0)	none	yes
+0x5C	-	0	-		-	none	-	no handler; never queued (size table 0)	none	yes
+0x5D	SquelchHostile	7	==7	type:u8@1 toggle:u8@2 player:u32@3	0x0054C2A0	handler	alive	party relation toggle (squelch, hostile)	out	yes
+0x5E	PartyAction	6	==6	type:u8@1 player:u32@2	0x0054C300	handler	alive	party invite, accept, leave	out	yes
+0x5F	UpdatePlayerPos	5	==5	x:u16@1 y:u16@3	0x0054CD50	handler	alive	client position resync	sim	yes
+0x60	SwapWeapons	1	==1		0x0054CE70	handler	alive	weapon switch (expansion)	sim	yes
+0x61	MercItem	3	==3	bodyloc:u16@1	0x0054D430	handler	alive	equip or take a mercenary item (expansion)	sim	yes
+0x62	ResurrectMerc	5	==5	npc:u32@1	0x0054BC00	handler	alive	resurrect the mercenary (expansion)	sim	yes
+0x63	ItemToBeltShift	5	==5	item:u32@1	0x0054D520	handler	alive	shift-click an item into the belt	sim	yes
+0x64	-	0	-		-	none	-	no handler; never queued (size table 0)	none	yes
+0x65	-	0	-		-	none	-	no handler; never queued (size table 0)	none	yes
+0x66	WardenResponse	u16@1+3;cap=0x1FD;min=3	any	len:u16@1 data@3	0x0054D740	stub0	none	anti-cheat reply; handler does nothing	out	yes
+0x67	CreateGame	46	-	game_name:cstr16@1 game_type:u8@0x11 class:u8@0x12 template:u8@0x13 difficulty:u8@0x14 char_name:cstr16@0x15 arena:u16@0x25 flags:u32@0x27 view_gap:u8@0x2B unk:u8@0x2C locale:u8@0x2D	0x0053F100	system	system	create a game	session	yes
+0x68	JoinGame	37	-	token:u32@1 game:u16@5 class:u8@7 unk:u32@8 unk:u8@0x14 char_name:cstr16@0x15	0x0053F100	system	system	join a hosted game	out	yes
+0x69	LeaveGame	1	-		0x0053F100	system	system	leave the game	session	yes
+0x6A	Sys6A	1	-		0x0053F100	system	system	system message	session	yes
+0x6B	Sys6B	1	-		0x0053F100	system	system	system message sent by the client while entering a game	session	yes
+0x6C	UploadSave	u8@1+7;min=6	-	len:u8@1 total:u32@2 data@6	0x0053F100	system	system	character save upload chunk (total < 0x2000)	session	yes
+0x6D	Ping	13	-	tick:u32@1 value:u32@5	0x0053F100	system	system	keep-alive ping	out	yes
+0x6E	Sys6E	1	-		0x0053F100	system	system	system message	session	yes
+0x6F	-	0	-		-	none	-	no handler, unlike the system messages around it; never queued (size table 0)	none	yes
+0x70	Sys70	1	-		0x0053F100	system	system	system message (sets a field of the client's session record)	session	yes
+0x71	-	0	-		-	none	-	reserved mod envelope on mod wires	none	yes
+0x72	ViewChange	13	-	seq:u32@1 width:u32@5 height:u32@9	-	system	system	change the live view after room streaming catches up	session	yes

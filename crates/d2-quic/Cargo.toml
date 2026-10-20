@@ -1,0 +1,19 @@
+[package]
+name = "d2-quic"
+description = "The QUIC stream layer for online play. The game exe links it only with its `online` feature."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+d2-net.workspace = true
+quinn.workspace = true
+rustls.workspace = true
+tokio.workspace = true
+rcgen.workspace = true
+sha2.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,4 @@
+soak-log 1 seed=1 new=sorceress difficulty=0 kit=1
+68 key toggle_quests
+81 click L 350 229
+137 pick 22 0

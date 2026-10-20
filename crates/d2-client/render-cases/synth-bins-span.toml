@@ -1,0 +1,72 @@
+# render-pipeline.md Test vectors row 8 (§A9): a frame spanning 4 bins
+# composes the same with binning (the runner compares compose_binned with
+# compose for every case). Full 800x600 frame, view at the origin.
+version = 1
+kind = "synthetic"
+description = "frame spanning 4 bins plus a translucent overlay, full frame"
+
+[[frame]]
+width = 40
+height = 40
+fill = 9
+
+[[frame]]
+width = 3
+height = 3
+pixels = [1, 2, 3, 4, 0, 6, 7, 8, 9]
+
+[[map]]
+base = "zero"
+set = [[9, 77]]
+
+[[table]]
+rule = "xor"
+
+[[item]]
+frame = 0
+x = 12
+y = 12
+shade = [0]
+
+[[item]]
+frame = 1
+x = 31
+y = 31
+table = 0
+key = [0, 1, 0, 0]
+
+[[item]]
+frame = 0
+x = 790
+y = 590
+
+[[expect]]
+x = 12
+y = 12
+index = 77
+
+[[expect]]
+x = 51
+y = 51
+index = 77
+
+[[expect]]
+x = 52
+y = 52
+index = 0
+
+# 1 xor 77 = 76 at (31,31); transparent centre leaves 77.
+[[expect]]
+x = 31
+y = 31
+index = 76
+
+[[expect]]
+x = 32
+y = 32
+index = 77
+
+[[expect]]
+x = 799
+y = 599
+index = 9

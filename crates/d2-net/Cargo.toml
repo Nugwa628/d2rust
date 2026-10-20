@@ -1,0 +1,16 @@
+[package]
+name = "d2-net"
+description = "Transport for d2-proto messages (the transport seam, the in-memory transport for local play, and the wire format)."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+d2-proto.workspace = true
+thiserror.workspace = true
+getrandom.workspace = true
+
+[lints]
+workspace = true

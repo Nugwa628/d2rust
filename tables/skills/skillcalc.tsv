@@ -1,0 +1,74 @@
+index	code	returns	columns_read	notes
+0	ln12	lvl>0 ? Param1+(lvl-1)*Param2 : 0	Param1 0x148, Param2 0x14C	0x004E6CA0; i32 wrap
+1	dm12	lvl>0 ? DM(lvl,Param1,Param2) : 0	Param1, Param2	0x00645B70
+2	ln34	lvl>0 ? Param3+(lvl-1)*Param4 : 0	Param3 0x150, Param4 0x154	0x004CC7C0
+3	dm34	lvl>0 ? DM(lvl,Param3,Param4) : 0	Param3, Param4	0x00645BC0
+4	ln56	lvl>0 ? Param5+(lvl-1)*Param6 : 0	Param5 0x158, Param6 0x15C	0x004EFCB0
+5	dm56	lvl>0 ? DM(lvl,Param5,Param6) : 0	Param5, Param6	0x00645C10
+6	ln78	lvl>0 ? Param7+(lvl-1)*Param8 : 0	Param7 0x160, Param8 0x164	0x00643580
+7	dm78	DM(lvl,Param7,Param8)	Param7, Param8	no level guard: lvl 0 gives Param7; lvl -6 divides by zero
+8	par1	Param1	0x148	any level
+9	par2	Param2	0x14C	any level
+10	par3	Param3	0x150	any level
+11	par4	Param4	0x154	any level
+12	par5	Param5	0x158	any level
+13	par6	Param6	0x15C	any level
+14	par7	Param7	0x160	any level
+15	par8	Param8	0x164	any level
+16	lvl	lvl	-	context level as passed
+17	edmn	elem_min(mastery 0) >> 8	EMin, EMinLev1-5, HitShift, EDmgSymPerCalc	arithmetic shift; synergy gate
+18	edmx	elem_max(mastery 0) >> 8	EMax, EMaxLev1-5, HitShift, EDmgSymPerCalc
+19	edln	elem_len	ELen, ELevLen1-3, ELenSymPerCalc	frames
+20	toht	to_hit	ToHitCalc, ToHit, LevToHit	lvl<=0 gives 0
+21	mana	lvl>0 ? cost >> 8 : 0	mana, lvlmana (i16), manashift	no minmana; may be negative
+22	mps	lvl>0 ? (((mana+lvlmana*(lvl-1))*25/2) << manashift) >> 8 : 0	mana, lvlmana, manashift	whole sum times 25, truncating /2
+23	math	mastery(type 0)	passivestat1-5, passivecalc1-5	0x00647E00; stats 342/345
+24	madm	mastery(type 1)	passivestat1-5, passivecalc1-5	stats 343/346
+25	macr	mastery(type 2)	passivestat1-5, passivecalc1-5	stats 344/347
+26	m1en	lvl>0 ? miss_elem_min(descmissile1) >> 8 : 0	skilldesc descmissile1; missiles	missing skilldesc or missile gives 0
+27	m1ex	lvl>0 ? miss_elem_max(descmissile1) >> 8 : 0	descmissile1
+28	m1el	lvl>0 ? miss_elem_len(descmissile1) : 0	descmissile1
+29	m2en	lvl>0 ? miss_elem_min(descmissile2) >> 8 : 0	descmissile2	slot (index-26)/3
+30	m2ex	lvl>0 ? miss_elem_max(descmissile2) >> 8 : 0	descmissile2
+31	m2el	lvl>0 ? miss_elem_len(descmissile2) : 0	descmissile2
+32	m3en	lvl>0 ? miss_elem_min(descmissile3) >> 8 : 0	descmissile3
+33	m3ex	lvl>0 ? miss_elem_max(descmissile3) >> 8 : 0	descmissile3
+34	m3el	lvl>0 ? miss_elem_len(descmissile3) : 0	descmissile3
+35	m1rn	Range + lvl*LevRange of descmissile1	missiles Range 0x96, LevRange 0x98 (i16)	no level guard; lvl, not lvl-1
+36	m2rn	Range + lvl*LevRange of descmissile2	missiles Range, LevRange
+37	m3rn	Range + lvl*LevRange of descmissile3	missiles Range, LevRange
+38	edns	elem_min(mastery 0)	as edmn	1/256 points
+39	edxs	elem_max(mastery 0)	as edmx	1/256 points
+40	ulvl	unit ? level(12) : 0	-	unit getter
+41	blvl	unit ? skill_level(unit, highest entry of this skill, 0) : 0	-	hard points; ignores lvl
+42	usmc	lvl>0 ? cost : 0	mana, lvlmana, manashift	1/256 points, no minmana
+43	m1eo	lvl>0 ? miss_elem_min(descmissile1) : 0	descmissile1	1/256 points
+44	m1ey	lvl>0 ? miss_elem_max(descmissile1) : 0	descmissile1	1/256 points
+45	m2eo	lvl>0 ? miss_elem_min(descmissile1) : 0	descmissile1	original bug: slot (index-43)/3 = 0
+46	m2ey	lvl>0 ? miss_elem_max(descmissile1) : 0	descmissile1	original bug: slot (index-44)/3 = 0
+47	me3o	lvl>0 ? miss_elem_min(descmissile2) : 0	descmissile2	original bug: slot 1
+48	me3y	lvl>0 ? miss_elem_max(descmissile2) : 0	descmissile2	original bug: slot 1
+49	enma	elem_min(mastery 1) >> 8	as edmn plus mastery stat	mastery needs a unit
+50	exma	elem_max(mastery 1) >> 8	as edmx plus mastery stat
+51	edma	elem_len	as edln	equals edln
+52	enms	elem_min(mastery 1)	as enma	1/256 points
+53	exms	elem_max(mastery 1)	as exma	1/256 points
+54	len	eval auralencalc	0x60	field -1 or offset >= buffer: 0; any level
+55	clc1	eval calc1	0x138
+56	clc2	eval calc2	0x13C
+57	clc3	eval calc3	0x140
+58	clc4	eval calc4	0x144
+59	rng	eval aurarangecalc	0x64
+60	ast1	eval aurastatcalc1	0x68
+61	ast2	eval aurastatcalc2	0x6C
+62	ast3	eval aurastatcalc3	0x70
+63	ast4	eval aurastatcalc4	0x74
+64	ast5	eval aurastatcalc5	0x78
+65	ast6	eval aurastatcalc6	0x7C
+66	pst1	eval passivecalc1	0xA4
+67	pst2	eval passivecalc2	0xA8
+68	pst3	eval passivecalc3	0xAC
+69	pst4	eval passivecalc4	0xB0
+70	pst5	eval passivecalc5	0xB4
+71	pets	eval petmax	0xC0
+72	skpt	eval skpoints	0x170	empty in all 1.14d rows

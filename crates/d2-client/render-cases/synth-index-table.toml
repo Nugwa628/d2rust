@@ -1,0 +1,59 @@
+# render-pipeline.md Test vectors row 6 (§A5): IndexTable(base),
+# dest = table[dest][src] (row = destination, composition.md §5), over an
+# opaque underlay.
+version = 1
+kind = "synthetic"
+description = "IndexTable with a synthetic 256x256 add table"
+view = [0, 0, 32, 32]
+
+[[frame]]
+width = 4
+height = 4
+fill = 100
+
+[[frame]]
+width = 2
+height = 2
+pixels = [0, 5, 7, 200]
+
+[[table]]
+rule = "add"
+
+[[item]]
+frame = 0
+x = 0
+y = 0
+
+[[item]]
+frame = 1
+x = 1
+y = 1
+table = 0
+
+# Source 0 is transparent: underlay unchanged.
+[[expect]]
+x = 1
+y = 1
+index = 100
+
+[[expect]]
+x = 2
+y = 1
+index = 105
+
+[[expect]]
+x = 1
+y = 2
+index = 107
+
+# 200 + 100 wraps to 44.
+[[expect]]
+x = 2
+y = 2
+index = 44
+
+# Outside the blended item, on the background: table[0][src] = src.
+[[expect]]
+x = 5
+y = 5
+index = 0

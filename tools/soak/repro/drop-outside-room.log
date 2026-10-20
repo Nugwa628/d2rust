@@ -1,0 +1,10 @@
+soak-log 1 seed=100 new=sorceress difficulty=0 kit=1
+359 key toggle_inventory
+403 pick 13 1
+541 key game_menu
+554 click L 323 14
+583 click L 249 343
+592 pick 14 1
+597 key toggle_run
+599 click R 281 529
+611 click L 332 313

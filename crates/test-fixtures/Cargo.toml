@@ -1,0 +1,22 @@
+[package]
+name = "test-fixtures"
+description = "Test-only synthetic game data: MPQ archives, string tables and a made-up excel table set, built at test time (no Blizzard data)."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+d2-formats = { workspace = true, features = ["test-support"] }
+d2-data.workspace = true
+d2-sim.workspace = true
+d2-server.workspace = true
+thiserror.workspace = true
+sha2.workspace = true
+
+[build-dependencies]
+sha2.workspace = true
+
+[lints]
+workspace = true

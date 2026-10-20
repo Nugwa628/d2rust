@@ -1,0 +1,13 @@
+scenario 2
+tick_rate 60
+# A level 1 Amazon starts in the Rogue Encampment, clicks the ground a
+# short way to her right and walks.
+name smoke-town-walk
+seed 7
+end 30
+char class 0
+at 0 check player.area == 1
+at 0 check player.mode == town_neutral
+at 2 input click 440 300
+by 20 check player.mode == town_walk
+by 30 check player.pos changes

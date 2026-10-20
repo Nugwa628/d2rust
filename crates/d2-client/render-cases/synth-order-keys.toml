@@ -1,0 +1,39 @@
+# render-pipeline.md Test vectors row 4 (§A6): keys k1 < k2 decide, not
+# list order. The k2 item is listed first.
+version = 1
+kind = "synthetic"
+description = "two overlapping opaque items, keys k1 < k2"
+view = [0, 0, 32, 32]
+
+[[frame]]
+width = 4
+height = 4
+fill = 20
+
+[[frame]]
+width = 4
+height = 4
+fill = 30
+
+[[item]]
+frame = 1
+x = 2
+y = 2
+key = [0, 2, 0, 0]
+
+[[item]]
+frame = 0
+x = 0
+y = 0
+key = [0, 1, 0, 0]
+
+# Overlap: the k2 item (fill 30) is on top.
+[[expect]]
+x = 3
+y = 3
+index = 30
+
+[[expect]]
+x = 0
+y = 0
+index = 20

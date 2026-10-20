@@ -1,0 +1,5 @@
+# Keep LF everywhere (shell hooks break with CRLF; traces/FORMAT.md requires LF).
+* text=auto eol=lf
+
+# The game's MPQs (split into parts): binary, never converted.
+game-data/** -text

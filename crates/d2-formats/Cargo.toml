@@ -1,0 +1,33 @@
+[package]
+name = "d2-formats"
+description = "Readers for D2 file formats: MPQ, DC6, DCC, DT1, DS1, COF, palettes, string tables."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+
+[features]
+# Test-only writers (MPQ archives, string tables) for building synthetic
+# fixtures; never enabled by a game crate's normal dependencies.
+test-support = []
+# Exposes the crate-private MPQ decompressors to the `fuzz/` targets.
+fuzz = []
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+criterion.workspace = true
+# The MPQ bench builds a synthetic archive with the test-support writer.
+d2-formats = { path = ".", features = ["test-support"] }
+# Live-shaped DC6 / DCC files for the sprite benches (bytes only).
+test-fixtures = { path = "../test-fixtures" }
+proptest.workspace = true
+
+[[bench]]
+name = "formats"
+harness = false

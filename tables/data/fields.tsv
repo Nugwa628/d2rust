@@ -1,0 +1,3500 @@
+table	seq	column	type_id	type	length	offset	link
+compcode	0	code	10	key(code4)	0	0	compcode.code
+playerclass	0	code	10	key(code4)	0	0	playerclass.code
+bodylocs	0	code	10	key(code4)	0	0	bodylocs.code
+storepage	0	code	10	key(code4)	0	0	storepage.code
+elemtypes	0	code	10	key(code4)	0	0	elemtypes.code
+hitclass	0	code	10	key(code4)	0	0	hitclass.code
+colors	0	code	10	key(code4)	0	0	colors.code
+hiredesc	0	code	10	key(code4)	0	0	hiredesc.code
+monmode_lookup	0	code	10	key(code4)	0	0	monmode_lookup.code
+plrmode_lookup	0	code	10	key(code4)	0	0	plrmode_lookup.code
+monai	0	AI	17	key(name16)	0	0	monai.AI
+monplace	0	code	17	key(name16)	0	0	monplace.code
+skillcalc	0	code	10	key(code4)	0	0	skillcalc.code
+misscalc	0	code	10	key(code4)	0	0	misscalc.code
+skills_lookup	0	skill	17	key(name16)	0	0	skills_lookup.skill
+events	0	event	17	key(name16)	0	0	events.event
+itemtypes	0	code	10	key(code4)	0	0	itemtypes.code
+itemtypes	1	equiv1	15	link16	0	4	itemtypes.code
+itemtypes	2	equiv2	15	link16	0	6	itemtypes.code
+itemtypes	3	repair	4	u8	0	8	
+itemtypes	4	body	4	u8	0	9	
+itemtypes	5	bodyloc1	13	link8	0	10	bodylocs.code
+itemtypes	6	bodyloc2	13	link8	0	11	bodylocs.code
+itemtypes	7	shoots	15	link16	0	12	itemtypes.code
+itemtypes	8	quiver	15	link16	0	14	itemtypes.code
+itemtypes	9	throwable	4	u8	0	16	
+itemtypes	10	reload	4	u8	0	17	
+itemtypes	11	reequip	4	u8	0	18	
+itemtypes	12	autostack	4	u8	0	19	
+itemtypes	13	magic	4	u8	0	20	
+itemtypes	14	rare	4	u8	0	21	
+itemtypes	15	normal	4	u8	0	22	
+itemtypes	16	charm	4	u8	0	23	
+itemtypes	17	gem	4	u8	0	24	
+itemtypes	18	beltable	4	u8	0	25	
+itemtypes	19	maxsock1	4	u8	0	26	
+itemtypes	20	maxsock25	4	u8	0	27	
+itemtypes	21	maxsock40	4	u8	0	28	
+itemtypes	22	treasureclass	4	u8	0	29	
+itemtypes	23	rarity	4	u8	0	30	
+itemtypes	24	staffmods	13	link8	0	31	playerclass.code
+itemtypes	25	costformula	4	u8	0	32	
+itemtypes	26	class	13	link8	0	33	playerclass.code
+itemtypes	27	storepage	13	link8	0	34	storepage.code
+itemtypes	28	varinvgfx	4	u8	0	35	
+itemtypes	29	invgfx1	1	str	31	36	
+itemtypes	30	invgfx2	1	str	31	68	
+itemtypes	31	invgfx3	1	str	31	100	
+itemtypes	32	invgfx4	1	str	31	132	
+itemtypes	33	invgfx5	1	str	31	164	
+itemtypes	34	invgfx6	1	str	31	196	
+montype	0	type	17	key(name16)	0	0	montype.type
+montype	1	equiv1	20	link16	0	2	montype.type
+montype	2	equiv2	20	link16	0	4	montype.type
+montype	3	equiv3	20	link16	0	6	montype.type
+montype	4	strsing	22	strkey	0	8	
+montype	5	strplur	22	strkey	0	10	
+sounds	0	Sound	17	key(name16)	0	0	sounds.Sound
+pettype	0	pet type	18	key(name32)	0	0	pettype.pet type
+pettype	1	group	3	u16	0	8	
+pettype	2	basemax	3	u16	0	10	
+pettype	3	warp	26	bit	0	4	
+pettype	4	range	26	bit	1	4	
+pettype	5	partysend	26	bit	2	4	
+pettype	6	unsummon	26	bit	3	4	
+pettype	7	automap	26	bit	4	4	
+pettype	8	drawhp	26	bit	5	4	
+pettype	9	icontype	4	u8	0	14	
+pettype	10	baseicon	1	str	32	15	
+pettype	11	mclass1	3	u16	0	178	
+pettype	12	micon1	1	str	32	47	
+pettype	13	mclass2	3	u16	0	180	
+pettype	14	micon2	1	str	32	79	
+pettype	15	mclass3	3	u16	0	182	
+pettype	16	micon3	1	str	32	111	
+pettype	17	mclass4	3	u16	0	184	
+pettype	18	micon4	1	str	32	143	
+pettype	19	name	22	strkey	0	12	
+overlay	0	overlay	17	key(name16)	0	0	overlay.overlay
+overlay	1	Filename	1	str	64	2	
+overlay	2	version	3	u16	0	66	
+overlay	3	Frames	2	u32	0	68	
+overlay	4	PreDraw	4	u8	0	72	
+overlay	5	1ofN	2	u32	0	76	
+overlay	6	Dir	4	u8	0	80	
+overlay	7	Open	4	u8	0	81	
+overlay	8	Beta	4	u8	0	82	
+overlay	9	Xoffset	2	u32	0	84	
+overlay	10	Yoffset	2	u32	0	88	
+overlay	11	Height1	2	u32	0	92	
+overlay	12	Height2	2	u32	0	96	
+overlay	13	Height3	2	u32	0	100	
+overlay	14	Height4	2	u32	0	104	
+overlay	15	AnimRate	2	u32	0	108	
+overlay	16	LoopWaitTime	2	u32	0	120	
+overlay	17	Trans	4	u8	0	124	
+overlay	18	InitRadius	2	u32	0	112	
+overlay	19	Radius	2	u32	0	116	
+overlay	20	Red	4	u8	0	125	
+overlay	21	Green	4	u8	0	126	
+overlay	22	Blue	4	u8	0	127	
+overlay	23	NumDirections	4	u8	0	128	
+overlay	24	LocalBlood	4	u8	0	129	
+itemstatcost	0	stat	17	key(name16)	0	0	itemstatcost.stat
+itemstatcost	1	send bits	4	u8	0	8	
+itemstatcost	2	send param bits	4	u8	0	9	
+itemstatcost	3	divide	2	u32	0	12	
+itemstatcost	4	multiply	2	u32	0	16	
+itemstatcost	5	add	2	u32	0	20	
+itemstatcost	6	valshift	4	u8	0	24	
+itemstatcost	7	minaccr	2	u32	0	44	
+itemstatcost	8	save bits	4	u8	0	25	
+itemstatcost	9	save add	2	u32	0	28	
+itemstatcost	10	save param bits	2	u32	0	36	
+itemstatcost	11	1.09-save bits	4	u8	0	26	
+itemstatcost	12	1.09-save add	2	u32	0	32	
+itemstatcost	13	encode	4	u8	0	48	
+itemstatcost	14	send other	26	bit	0	4	
+itemstatcost	15	signed	26	bit	1	4	
+itemstatcost	16	updateanimrate	26	bit	9	4	
+itemstatcost	17	fmin	26	bit	10	4	
+itemstatcost	18	damagerelated	26	bit	2	4	
+itemstatcost	19	itemspecific	26	bit	3	4	
+itemstatcost	20	direct	26	bit	4	4	
+itemstatcost	21	fcallback	26	bit	11	4	
+itemstatcost	22	saved	26	bit	12	4	
+itemstatcost	23	csvsigned	26	bit	13	4	
+itemstatcost	24	csvbits	4	u8	0	10	
+itemstatcost	25	csvparam	4	u8	0	11	
+itemstatcost	26	maxstat	20	link16	0	50	itemstatcost.stat
+itemstatcost	27	itemevent1	20	link16	0	72	events.event
+itemstatcost	28	itemeventfunc1	3	u16	0	76	
+itemstatcost	29	itemevent2	20	link16	0	74	events.event
+itemstatcost	30	itemeventfunc2	3	u16	0	78	
+itemstatcost	31	descpriority	3	u16	0	52	
+itemstatcost	32	descfunc	4	u8	0	54	
+itemstatcost	33	descval	4	u8	0	55	
+itemstatcost	34	descstrpos	22	strkey	0	56	
+itemstatcost	35	descstrneg	22	strkey	0	58	
+itemstatcost	36	descstr2	22	strkey	0	60	
+itemstatcost	37	dgrp	3	u16	0	62	
+itemstatcost	38	dgrpfunc	4	u8	0	64	
+itemstatcost	39	dgrpval	4	u8	0	65	
+itemstatcost	40	dgrpstrpos	22	strkey	0	66	
+itemstatcost	41	dgrpstrneg	22	strkey	0	68	
+itemstatcost	42	dgrpstr2	22	strkey	0	70	
+itemstatcost	43	keepzero	4	u8	0	80	
+itemstatcost	44	op	4	u8	0	84	
+itemstatcost	45	op base	20	link16	0	86	itemstatcost.stat
+itemstatcost	46	op param	4	u8	0	85	
+itemstatcost	47	op stat1	20	link16	0	88	itemstatcost.stat
+itemstatcost	48	op stat2	20	link16	0	90	itemstatcost.stat
+itemstatcost	49	op stat3	20	link16	0	92	itemstatcost.stat
+itemstatcost	50	stuff	2	u32	0	320	
+properties	0	code	17	key(name16)	0	0	properties.code
+properties	1	set1	4	u8	0	2	
+properties	2	val1	3	u16	0	10	
+properties	3	func1	4	u8	0	24	
+properties	4	stat1	20	link16	0	32	itemstatcost.stat
+properties	5	set2	4	u8	0	3	
+properties	6	val2	3	u16	0	12	
+properties	7	func2	4	u8	0	25	
+properties	8	stat2	20	link16	0	34	itemstatcost.stat
+properties	9	set3	4	u8	0	4	
+properties	10	val3	3	u16	0	14	
+properties	11	func3	4	u8	0	26	
+properties	12	stat3	20	link16	0	36	itemstatcost.stat
+properties	13	set4	4	u8	0	5	
+properties	14	val4	3	u16	0	16	
+properties	15	func4	4	u8	0	27	
+properties	16	stat4	20	link16	0	38	itemstatcost.stat
+properties	17	set5	4	u8	0	6	
+properties	18	val5	3	u16	0	18	
+properties	19	func5	4	u8	0	28	
+properties	20	stat5	20	link16	0	40	itemstatcost.stat
+properties	21	set6	4	u8	0	7	
+properties	22	val6	3	u16	0	20	
+properties	23	func6	4	u8	0	29	
+properties	24	stat6	20	link16	0	42	itemstatcost.stat
+properties	25	set7	4	u8	0	8	
+properties	26	val7	3	u16	0	22	
+properties	27	func7	4	u8	0	30	
+properties	28	stat7	20	link16	0	44	itemstatcost.stat
+missiles	0	Missile	17	key(name16)	0	0	missiles.Missile
+missiles	1	LastCollide	26	bit	0	4	
+missiles	2	Explosion	26	bit	1	4	
+missiles	3	Pierce	26	bit	2	4	
+missiles	4	CanSlow	26	bit	3	4	
+missiles	5	CanDestroy	26	bit	4	4	
+missiles	6	NoMultiShot	26	bit	12	4	
+missiles	7	NoUniqueMod	26	bit	13	4	
+missiles	8	ClientSend	26	bit	5	4	
+missiles	9	GetHit	26	bit	6	4	
+missiles	10	SoftHit	26	bit	7	4	
+missiles	11	ApplyMastery	26	bit	8	4	
+missiles	12	ReturnFire	26	bit	9	4	
+missiles	13	Town	26	bit	10	4	
+missiles	14	SrcTown	26	bit	11	4	
+missiles	15	pCltDoFunc	3	u16	0	8	
+missiles	16	pCltHitFunc	3	u16	0	10	
+missiles	17	pSrvDoFunc	3	u16	0	12	
+missiles	18	pSrvHitFunc	3	u16	0	14	
+missiles	19	pSrvDmgFunc	3	u16	0	16	
+missiles	20	Param1	2	u32	0	56	
+missiles	21	Param2	2	u32	0	60	
+missiles	22	Param3	2	u32	0	64	
+missiles	23	Param4	2	u32	0	68	
+missiles	24	Param5	2	u32	0	72	
+missiles	25	SrvCalc1	25	cb	0	128	calc(misscode)
+missiles	26	CltParam1	2	u32	0	88	
+missiles	27	CltParam2	2	u32	0	92	
+missiles	28	CltParam3	2	u32	0	96	
+missiles	29	CltParam4	2	u32	0	100	
+missiles	30	CltParam5	2	u32	0	104	
+missiles	31	CltCalc1	25	cb	0	132	calc(misscode)
+missiles	32	sHitPar1	2	u32	0	76	
+missiles	33	sHitPar2	2	u32	0	80	
+missiles	34	sHitPar3	2	u32	0	84	
+missiles	35	SHitCalc1	25	cb	0	136	calc(misscode)
+missiles	36	cHitPar1	2	u32	0	108	
+missiles	37	cHitPar2	2	u32	0	112	
+missiles	38	cHitPar3	2	u32	0	116	
+missiles	39	CHitCalc1	25	cb	0	140	calc(misscode)
+missiles	40	dParam1	2	u32	0	120	
+missiles	41	dParam2	2	u32	0	124	
+missiles	42	DmgCalc1	25	cb	0	144	calc(misscode)
+missiles	43	TravelSound	20	link16	0	18	sounds.Sound
+missiles	44	HitSound	20	link16	0	20	sounds.Sound
+missiles	45	ProgSound	20	link16	0	52	sounds.Sound
+missiles	46	ProgOverlay	20	link16	0	54	overlay.overlay
+missiles	47	ExplosionMissile	20	link16	0	22	missiles.Missile
+missiles	48	SubMissile1	20	link16	0	24	missiles.Missile
+missiles	49	SubMissile2	20	link16	0	26	missiles.Missile
+missiles	50	SubMissile3	20	link16	0	28	missiles.Missile
+missiles	51	HitSubMissile1	20	link16	0	36	missiles.Missile
+missiles	52	HitSubMissile2	20	link16	0	38	missiles.Missile
+missiles	53	HitSubMissile3	20	link16	0	40	missiles.Missile
+missiles	54	HitSubMissile4	20	link16	0	42	missiles.Missile
+missiles	55	CltSubMissile1	20	link16	0	30	missiles.Missile
+missiles	56	CltSubMissile2	20	link16	0	32	missiles.Missile
+missiles	57	CltSubMissile3	20	link16	0	34	missiles.Missile
+missiles	58	CltHitSubMissile1	20	link16	0	44	missiles.Missile
+missiles	59	CltHitSubMissile2	20	link16	0	46	missiles.Missile
+missiles	60	CltHitSubMissile3	20	link16	0	48	missiles.Missile
+missiles	61	CltHitSubMissile4	20	link16	0	50	missiles.Missile
+missiles	62	ResultFlags	3	u16	0	172	
+missiles	63	HitFlags	8	u32	0	168	
+missiles	64	HitClass	4	u8	0	148	
+missiles	65	Range	3	u16	0	150	
+missiles	66	LevRange	3	u16	0	152	
+missiles	67	KnockBack	4	u8	0	174	
+missiles	68	animrate	3	u16	0	160	
+missiles	69	xoffset	3	u16	0	162	
+missiles	70	yoffset	3	u16	0	164	
+missiles	71	zoffset	3	u16	0	166	
+missiles	72	MissileSkill	26	bit	15	4	
+missiles	73	Skill	20	link16	0	404	skills_lookup.skill
+missiles	74	MinDamage	2	u32	0	176	
+missiles	75	MinLevDam1	2	u32	0	184	
+missiles	76	MinLevDam2	2	u32	0	188	
+missiles	77	MinLevDam3	2	u32	0	192	
+missiles	78	MinLevDam4	2	u32	0	196	
+missiles	79	MinLevDam5	2	u32	0	200	
+missiles	80	MaxDamage	2	u32	0	180	
+missiles	81	MaxLevDam1	2	u32	0	204	
+missiles	82	MaxLevDam2	2	u32	0	208	
+missiles	83	MaxLevDam3	2	u32	0	212	
+missiles	84	MaxLevDam4	2	u32	0	216	
+missiles	85	MaxLevDam5	2	u32	0	220	
+missiles	86	DmgSymPerCalc	25	cb	0	224	calc(misscode)
+missiles	87	EType	13	link8	0	228	elemtypes.code
+missiles	88	EMin	2	u32	0	232	
+missiles	89	MinELev1	2	u32	0	240	
+missiles	90	MinELev2	2	u32	0	244	
+missiles	91	MinELev3	2	u32	0	248	
+missiles	92	MinELev4	2	u32	0	252	
+missiles	93	MinELev5	2	u32	0	256	
+missiles	94	EMax	2	u32	0	236	
+missiles	95	MaxELev1	2	u32	0	260	
+missiles	96	MaxELev2	2	u32	0	264	
+missiles	97	MaxELev3	2	u32	0	268	
+missiles	98	MaxELev4	2	u32	0	272	
+missiles	99	MaxELev5	2	u32	0	276	
+missiles	100	EDmgSymPerCalc	25	cb	0	280	calc(misscode)
+missiles	101	ELen	2	u32	0	284	
+missiles	102	ELevLen1	2	u32	0	288	
+missiles	103	ELevLen2	2	u32	0	292	
+missiles	104	ELevLen3	2	u32	0	296	
+missiles	105	CltSrcTown	4	u8	0	300	
+missiles	106	SrcDamage	4	u8	0	301	
+missiles	107	SrcMissDmg	4	u8	0	302	
+missiles	108	Half2HSrc	26	bit	14	4	
+missiles	109	Vel	4	u8	0	154	
+missiles	110	VelLev	4	u8	0	155	
+missiles	111	MaxVel	4	u8	0	156	
+missiles	112	Accel	3	u16	0	158	
+missiles	113	Holy	4	u8	0	303	
+missiles	114	Light	4	u8	0	304	
+missiles	115	Flicker	4	u8	0	305	
+missiles	116	Red	4	u8	0	306	
+missiles	117	Green	4	u8	0	307	
+missiles	118	Blue	4	u8	0	308	
+missiles	119	InitSteps	4	u8	0	309	
+missiles	120	Activate	4	u8	0	310	
+missiles	121	LoopAnim	4	u8	0	311	
+missiles	122	CelFile	1	str	64	312	
+missiles	123	AnimLen	4	u8	0	376	
+missiles	124	RandStart	2	u32	0	380	
+missiles	125	SubLoop	4	u8	0	384	
+missiles	126	SubStart	4	u8	0	385	
+missiles	127	SubStop	4	u8	0	386	
+missiles	128	CollideType	4	u8	0	387	
+missiles	129	CollideKill	4	u8	0	390	
+missiles	130	CollideFriend	4	u8	0	391	
+missiles	131	Collision	4	u8	0	388	
+missiles	132	ClientCol	4	u8	0	389	
+missiles	133	NextHit	4	u8	0	392	
+missiles	134	NextDelay	4	u8	0	393	
+missiles	135	Size	4	u8	0	394	
+missiles	136	ToHit	4	u8	0	395	
+missiles	137	AlwaysExplode	4	u8	0	396	
+missiles	138	Trans	4	u8	0	397	
+missiles	139	Qty	4	u8	0	398	
+missiles	140	SpecialSetup	2	u32	0	400	
+missiles	141	HitShift	4	u8	0	406	
+missiles	142	NumDirections	4	u8	0	416	
+missiles	143	AnimSpeed	4	u8	0	417	
+missiles	144	LocalBlood	4	u8	0	418	
+missiles	145	DamageRate	2	u32	0	412	
+states	0	state	17	key(name16)	0	0	states.state
+states	1	group	3	u16	0	30	
+states	2	nosend	26	bit	0	16	
+states	3	hide	26	bit	2	16	
+states	4	transform	26	bit	3	16	
+states	5	aura	26	bit	1	16	
+states	6	pgsv	26	bit	4	16	
+states	7	active	26	bit	5	16	
+states	8	remhit	26	bit	6	16	
+states	9	damblue	26	bit	7	16	
+states	10	damred	26	bit	8	16	
+states	11	attblue	26	bit	9	16	
+states	12	attred	26	bit	10	16	
+states	13	curse	26	bit	11	16	
+states	14	curable	26	bit	12	16	
+states	15	plrstaydeath	26	bit	13	16	
+states	16	monstaydeath	26	bit	14	16	
+states	17	bossstaydeath	26	bit	15	16	
+states	18	disguise	26	bit	16	16	
+states	19	bossinv	26	bit	37	16	
+states	20	meleeonly	26	bit	38	16	
+states	21	restrict	26	bit	17	16	
+states	22	blue	26	bit	18	16	
+states	23	armblue	26	bit	19	16	
+states	24	rfblue	26	bit	20	16	
+states	25	rcblue	26	bit	21	16	
+states	26	rlblue	26	bit	22	16	
+states	27	rpblue	26	bit	23	16	
+states	28	stambarblue	26	bit	24	16	
+states	29	armred	26	bit	25	16	
+states	30	rfred	26	bit	26	16	
+states	31	rcred	26	bit	27	16	
+states	32	rlred	26	bit	28	16	
+states	33	rpred	26	bit	29	16	
+states	34	exp	26	bit	30	16	
+states	35	shatter	26	bit	31	16	
+states	36	life	26	bit	32	16	
+states	37	udead	26	bit	33	16	
+states	38	green	26	bit	34	16	
+states	39	nooverlays	26	bit	35	16	
+states	40	notondead	26	bit	39	16	
+states	41	noclear	26	bit	36	16	
+states	42	overlay1	20	link16	0	2	overlay.overlay
+states	43	overlay2	20	link16	0	4	overlay.overlay
+states	44	overlay3	20	link16	0	6	overlay.overlay
+states	45	overlay4	20	link16	0	8	overlay.overlay
+states	46	pgsvoverlay	20	link16	0	14	overlay.overlay
+states	47	castoverlay	20	link16	0	10	overlay.overlay
+states	48	removerlay	20	link16	0	12	overlay.overlay
+states	49	stat	20	link16	0	24	itemstatcost.stat
+states	50	setfunc	3	u16	0	26	
+states	51	remfunc	3	u16	0	28	
+states	52	missile	20	link16	0	58	missiles.Missile
+states	53	skill	20	link16	0	56	skills_lookup.skill
+states	54	colorpri	4	u8	0	32	
+states	55	colorshift	4	u8	0	33	
+states	56	light-r	4	u8	0	34	
+states	57	light-g	4	u8	0	35	
+states	58	light-b	4	u8	0	36	
+states	59	onsound	20	link16	0	38	sounds.Sound
+states	60	offsound	20	link16	0	40	sounds.Sound
+states	61	itemtype	15	link16	0	42	itemtypes.code
+states	62	itemtrans	13	link8	0	44	colors.code
+states	63	gfxtype	4	u8	0	45	
+states	64	gfxclass	3	u16	0	46	
+states	65	cltevent	20	link16	0	48	events.event
+states	66	clteventfunc	3	u16	0	50	
+states	67	cltactivefunc	3	u16	0	52	
+states	68	srvactivefunc	3	u16	0	54	
+monstats_lookup	0	Id	17	key(name16)	0	0	monstats_lookup.Id
+skilldesc_lookup	0	skilldesc	17	key(name16)	0	0	skilldesc_lookup.skilldesc
+skills	0	skill	17	key(name16)	0	0	skills.skill
+skills	1	charclass	13	link8	0	12	playerclass.code
+skills	2	skilldesc	20	link16	0	404	skilldesc_lookup.skilldesc
+skills	3	srvstfunc	3	u16	0	44	
+skills	4	srvdofunc	3	u16	0	46	
+skills	5	srvprgfunc1	3	u16	0	48	
+skills	6	srvprgfunc2	3	u16	0	50	
+skills	7	srvprgfunc3	3	u16	0	52	
+skills	8	prgcalc1	25	cb	0	56	calc(skillscode)
+skills	9	prgcalc2	25	cb	0	60	calc(skillscode)
+skills	10	prgcalc3	25	cb	0	64	calc(skillscode)
+skills	11	prgdam	4	u8	0	68	
+skills	12	srvmissile	20	link16	0	70	missiles.Missile
+skills	13	srvmissilea	20	link16	0	72	missiles.Missile
+skills	14	srvmissileb	20	link16	0	74	missiles.Missile
+skills	15	srvmissilec	20	link16	0	76	missiles.Missile
+skills	16	srvoverlay	20	link16	0	78	overlay.overlay
+skills	17	lob	26	bit	1	4	
+skills	18	decquant	26	bit	0	4	
+skills	19	immediate	26	bit	15	4	
+skills	20	aurafilter	2	u32	0	80	
+skills	21	aurastate	20	link16	0	128	states.state
+skills	22	auratargetstate	20	link16	0	130	states.state
+skills	23	auralencalc	25	cb	0	96	calc(skillscode)
+skills	24	aurarangecalc	25	cb	0	100	calc(skillscode)
+skills	25	aurastat1	20	link16	0	84	itemstatcost.stat
+skills	26	aurastatcalc1	25	cb	0	104	calc(skillscode)
+skills	27	aurastat2	20	link16	0	86	itemstatcost.stat
+skills	28	aurastatcalc2	25	cb	0	108	calc(skillscode)
+skills	29	aurastat3	20	link16	0	88	itemstatcost.stat
+skills	30	aurastatcalc3	25	cb	0	112	calc(skillscode)
+skills	31	aurastat4	20	link16	0	90	itemstatcost.stat
+skills	32	aurastatcalc4	25	cb	0	116	calc(skillscode)
+skills	33	aurastat5	20	link16	0	92	itemstatcost.stat
+skills	34	aurastatcalc5	25	cb	0	120	calc(skillscode)
+skills	35	aurastat6	20	link16	0	94	itemstatcost.stat
+skills	36	aurastatcalc6	25	cb	0	124	calc(skillscode)
+skills	37	auraevent1	20	link16	0	132	events.event
+skills	38	auraeventfunc1	3	u16	0	138	
+skills	39	auraevent2	20	link16	0	134	events.event
+skills	40	auraeventfunc2	3	u16	0	140	
+skills	41	auraevent3	20	link16	0	136	events.event
+skills	42	auraeventfunc3	3	u16	0	142	
+skills	43	auratgtevent	20	link16	0	144	events.event
+skills	44	auratgteventfunc	3	u16	0	146	
+skills	45	passivestate	20	link16	0	148	states.state
+skills	46	passiveitype	15	link16	0	150	itemtypes.code
+skills	47	passivestat1	20	link16	0	152	itemstatcost.stat
+skills	48	passivecalc1	25	cb	0	164	calc(skillscode)
+skills	49	passivestat2	20	link16	0	154	itemstatcost.stat
+skills	50	passivecalc2	25	cb	0	168	calc(skillscode)
+skills	51	passivestat3	20	link16	0	156	itemstatcost.stat
+skills	52	passivecalc3	25	cb	0	172	calc(skillscode)
+skills	53	passivestat4	20	link16	0	158	itemstatcost.stat
+skills	54	passivecalc4	25	cb	0	176	calc(skillscode)
+skills	55	passivestat5	20	link16	0	160	itemstatcost.stat
+skills	56	passivecalc5	25	cb	0	180	calc(skillscode)
+skills	57	passiveevent	20	link16	0	184	events.event
+skills	58	passiveeventfunc	3	u16	0	186	
+skills	59	summon	20	link16	0	188	monstats_lookup.Id
+skills	60	pettype	21	link8	0	190	pettype.pet type
+skills	61	summode	13	link8	0	191	monmode_lookup.code
+skills	62	petmax	25	cb	0	192	calc(skillscode)
+skills	63	sumskill1	20	link16	0	196	skills.skill
+skills	64	sumsk1calc	25	cb	0	208	calc(skillscode)
+skills	65	sumskill2	20	link16	0	198	skills.skill
+skills	66	sumsk2calc	25	cb	0	212	calc(skillscode)
+skills	67	sumskill3	20	link16	0	200	skills.skill
+skills	68	sumsk3calc	25	cb	0	216	calc(skillscode)
+skills	69	sumskill4	20	link16	0	202	skills.skill
+skills	70	sumsk4calc	25	cb	0	220	calc(skillscode)
+skills	71	sumskill5	20	link16	0	204	skills.skill
+skills	72	sumsk5calc	25	cb	0	224	calc(skillscode)
+skills	73	sumumod	3	u16	0	228	
+skills	74	sumoverlay	20	link16	0	230	overlay.overlay
+skills	75	cltmissile	20	link16	0	232	missiles.Missile
+skills	76	cltmissilea	20	link16	0	234	missiles.Missile
+skills	77	cltmissileb	20	link16	0	236	missiles.Missile
+skills	78	cltmissilec	20	link16	0	238	missiles.Missile
+skills	79	cltmissiled	20	link16	0	240	missiles.Missile
+skills	80	cltstfunc	3	u16	0	242	
+skills	81	cltdofunc	3	u16	0	244	
+skills	82	cltprgfunc1	3	u16	0	246	
+skills	83	cltprgfunc2	3	u16	0	248	
+skills	84	cltprgfunc3	3	u16	0	250	
+skills	85	stsuccessonly	26	bit	12	4	
+skills	86	stsound	20	link16	0	252	sounds.Sound
+skills	87	stsoundclass	20	link16	0	254	sounds.Sound
+skills	88	stsounddelay	26	bit	13	4	
+skills	89	weaponsnd	26	bit	14	4	
+skills	90	dosound	20	link16	0	256	sounds.Sound
+skills	91	dosound a	20	link16	0	258	sounds.Sound
+skills	92	dosound b	20	link16	0	260	sounds.Sound
+skills	93	tgtsound	20	link16	0	266	sounds.Sound
+skills	94	tgtoverlay	20	link16	0	264	overlay.overlay
+skills	95	castoverlay	20	link16	0	262	overlay.overlay
+skills	96	cltoverlaya	20	link16	0	272	overlay.overlay
+skills	97	cltoverlayb	20	link16	0	274	overlay.overlay
+skills	98	prgsound	20	link16	0	270	sounds.Sound
+skills	99	prgoverlay	20	link16	0	268	overlay.overlay
+skills	100	cltcalc1	25	cb	0	276	calc(skillscode)
+skills	101	cltcalc2	25	cb	0	280	calc(skillscode)
+skills	102	cltcalc3	25	cb	0	284	calc(skillscode)
+skills	103	warp	26	bit	38	4	
+skills	104	anim	13	link8	0	16	plrmode_lookup.code
+skills	105	seqtrans	13	link8	0	18	plrmode_lookup.code
+skills	106	monanim	13	link8	0	17	monmode_lookup.code
+skills	107	seqnum	4	u8	0	19	
+skills	108	seqinput	4	u8	0	22	
+skills	109	range	13	link8	0	20	@range
+skills	110	weapsel	4	u8	0	360	
+skills	111	itypea1	15	link16	0	24	itemtypes.code
+skills	112	itypea2	15	link16	0	26	itemtypes.code
+skills	113	itypea3	15	link16	0	28	itemtypes.code
+skills	114	etypea1	15	link16	0	36	itemtypes.code
+skills	115	etypea2	15	link16	0	38	itemtypes.code
+skills	116	itypeb1	15	link16	0	30	itemtypes.code
+skills	117	itypeb2	15	link16	0	32	itemtypes.code
+skills	118	itypeb3	15	link16	0	34	itemtypes.code
+skills	119	etypeb1	15	link16	0	40	itemtypes.code
+skills	120	etypeb2	15	link16	0	42	itemtypes.code
+skills	121	maxlvl	3	u16	0	300	
+skills	122	progressive	26	bit	2	4	
+skills	123	finishing	26	bit	3	4	
+skills	124	prgstack	26	bit	7	4	
+skills	125	InTown	26	bit	8	4	
+skills	126	ResultFlags	3	u16	0	302	
+skills	127	HitFlags	8	u32	0	304	
+skills	128	HitClass	8	u32	0	308	
+skills	129	Kick	26	bit	9	4	
+skills	130	passive	26	bit	4	4	
+skills	131	aura	26	bit	5	4	
+skills	132	periodic	26	bit	6	4	
+skills	133	perdelay	25	cb	0	296	calc(skillscode)
+skills	134	general	26	bit	35	4	
+skills	135	scroll	26	bit	36	4	
+skills	136	ItemEffect	3	u16	0	362	
+skills	137	ItemCltEffect	3	u16	0	364	
+skills	138	ItemTgtDo	26	bit	29	4	
+skills	139	ItemCheckStart	26	bit	33	4	
+skills	140	ItemCltCheckStart	26	bit	34	4	
+skills	141	ItemTarget	4	u8	0	288	
+skills	142	ItemCastSound	20	link16	0	290	sounds.Sound
+skills	143	ItemCastOverlay	20	link16	0	292	overlay.overlay
+skills	144	InGame	26	bit	10	4	
+skills	145	lineofsight	4	u8	0	399	
+skills	146	attackrank	4	u8	0	398	
+skills	147	noammo	26	bit	16	4	
+skills	148	enhanceable	26	bit	17	4	
+skills	149	durability	26	bit	18	4	
+skills	150	UseAttackRate	26	bit	19	4	
+skills	151	SelectProc	4	u8	0	21	
+skills	152	TargetableOnly	26	bit	20	4	
+skills	153	SearchEnemyXY	26	bit	21	4	
+skills	154	SearchEnemyNear	26	bit	22	4	
+skills	155	SearchOpenXY	26	bit	23	4	
+skills	156	TargetCorpse	26	bit	24	4	
+skills	157	TargetPet	26	bit	25	4	
+skills	158	TargetAlly	26	bit	26	4	
+skills	159	TargetItem	26	bit	27	4	
+skills	160	AttackNoMana	26	bit	28	4	
+skills	161	leftskill	26	bit	30	4	
+skills	162	interrupt	26	bit	31	4	
+skills	163	TgtPlaceCheck	26	bit	32	4	
+skills	164	repeat	26	bit	11	4	
+skills	165	skpoints	25	cb	0	368	calc(skillscode)
+skills	166	reqlevel	3	u16	0	372	
+skills	167	reqstr	3	u16	0	374	
+skills	168	reqdex	3	u16	0	376	
+skills	169	reqint	3	u16	0	378	
+skills	170	reqvit	3	u16	0	380	
+skills	171	reqskill1	20	link16	0	382	skills.skill
+skills	172	reqskill2	20	link16	0	384	skills.skill
+skills	173	reqskill3	20	link16	0	386	skills.skill
+skills	174	delay	25	cb	0	400	calc(skillscode)
+skills	175	usemanaondo	26	bit	37	4	
+skills	176	startmana	3	u16	0	388	
+skills	177	minmana	3	u16	0	390	
+skills	178	manashift	3	u16	0	392	
+skills	179	mana	3	u16	0	394	
+skills	180	lvlmana	3	u16	0	396	
+skills	181	Param1	2	u32	0	328	
+skills	182	Param2	2	u32	0	332	
+skills	183	Param3	2	u32	0	336	
+skills	184	Param4	2	u32	0	340	
+skills	185	Param5	2	u32	0	344	
+skills	186	Param6	2	u32	0	348	
+skills	187	Param7	2	u32	0	352	
+skills	188	Param8	2	u32	0	356	
+skills	189	calc1	25	cb	0	312	calc(skillscode)
+skills	190	calc2	25	cb	0	316	calc(skillscode)
+skills	191	calc3	25	cb	0	320	calc(skillscode)
+skills	192	calc4	25	cb	0	324	calc(skillscode)
+skills	193	ToHit	2	u32	0	408	
+skills	194	LevToHit	2	u32	0	412	
+skills	195	ToHitCalc	25	cb	0	416	calc(skillscode)
+skills	196	HitShift	4	u8	0	420	
+skills	197	SrcDam	4	u8	0	421	
+skills	198	MinDam	2	u32	0	424	
+skills	199	MinLevDam1	2	u32	0	432	
+skills	200	MinLevDam2	2	u32	0	436	
+skills	201	MinLevDam3	2	u32	0	440	
+skills	202	MinLevDam4	2	u32	0	444	
+skills	203	MinLevDam5	2	u32	0	448	
+skills	204	MaxDam	2	u32	0	428	
+skills	205	MaxLevDam1	2	u32	0	452	
+skills	206	MaxLevDam2	2	u32	0	456	
+skills	207	MaxLevDam3	2	u32	0	460	
+skills	208	MaxLevDam4	2	u32	0	464	
+skills	209	MaxLevDam5	2	u32	0	468	
+skills	210	DmgSymPerCalc	25	cb	0	472	calc(skillscode)
+skills	211	EType	13	link8	0	476	elemtypes.code
+skills	212	EMin	2	u32	0	480	
+skills	213	EMinLev1	2	u32	0	488	
+skills	214	EMinLev2	2	u32	0	492	
+skills	215	EMinLev3	2	u32	0	496	
+skills	216	EMinLev4	2	u32	0	500	
+skills	217	EMinLev5	2	u32	0	504	
+skills	218	EMax	2	u32	0	484	
+skills	219	EMaxLev1	2	u32	0	508	
+skills	220	EMaxLev2	2	u32	0	512	
+skills	221	EMaxLev3	2	u32	0	516	
+skills	222	EMaxLev4	2	u32	0	520	
+skills	223	EMaxLev5	2	u32	0	524	
+skills	224	EDmgSymPerCalc	25	cb	0	528	calc(skillscode)
+skills	225	ELen	2	u32	0	532	
+skills	226	ELevLen1	2	u32	0	536	
+skills	227	ELevLen2	2	u32	0	540	
+skills	228	ELevLen3	2	u32	0	544	
+skills	229	ELenSymPerCalc	25	cb	0	548	calc(skillscode)
+skills	230	restrict	4	u8	0	552	
+skills	231	state1	20	link16	0	554	states.state
+skills	232	state2	20	link16	0	556	states.state
+skills	233	state3	20	link16	0	558	states.state
+skills	234	aitype	4	u8	0	560	
+skills	235	aibonus	3	u16	0	562	
+skills	236	cost mult	2	u32	0	564	
+skills	237	cost add	2	u32	0	568	
+skilldesc	0	skilldesc	17	key(name16)	0	0	skilldesc.skilldesc
+skilldesc	1	skillpage	4	u8	0	2	
+skilldesc	2	skillrow	4	u8	0	3	
+skilldesc	3	skillcolumn	4	u8	0	4	
+skilldesc	4	ListRow	4	u8	0	5	
+skilldesc	5	ListPool	4	u8	0	6	
+skilldesc	6	iconcel	4	u8	0	7	
+skilldesc	7	str name	22	strkey	0	8	
+skilldesc	8	str short	22	strkey	0	10	
+skilldesc	9	str long	22	strkey	0	12	
+skilldesc	10	str alt	22	strkey	0	14	
+skilldesc	11	str mana	22	strkey	0	16	
+skilldesc	12	descdam	3	u16	0	18	
+skilldesc	13	descatt	3	u16	0	20	
+skilldesc	14	ddam calc1	25	cb	0	24	calc(skilldesccode)
+skilldesc	15	ddam calc2	25	cb	0	28	calc(skilldesccode)
+skilldesc	16	p1dmelem	13	link8	0	32	elemtypes.code
+skilldesc	17	p1dmmin	25	cb	0	36	calc(skilldesccode)
+skilldesc	18	p1dmmax	25	cb	0	48	calc(skilldesccode)
+skilldesc	19	p2dmelem	13	link8	0	33	elemtypes.code
+skilldesc	20	p2dmmin	25	cb	0	40	calc(skilldesccode)
+skilldesc	21	p2dmmax	25	cb	0	52	calc(skilldesccode)
+skilldesc	22	p3dmelem	13	link8	0	34	elemtypes.code
+skilldesc	23	p3dmmin	25	cb	0	44	calc(skilldesccode)
+skilldesc	24	p3dmmax	25	cb	0	56	calc(skilldesccode)
+skilldesc	25	descmissile1	20	link16	0	60	missiles.Missile
+skilldesc	26	descmissile2	20	link16	0	62	missiles.Missile
+skilldesc	27	descmissile3	20	link16	0	64	missiles.Missile
+skilldesc	28	descline1	4	u8	0	66	
+skilldesc	29	desctexta1	22	strkey	0	84	
+skilldesc	30	desctextb1	22	strkey	0	118	
+skilldesc	31	desccalca1	25	cb	0	152	calc(skilldesccode)
+skilldesc	32	desccalcb1	25	cb	0	220	calc(skilldesccode)
+skilldesc	33	descline2	4	u8	0	67	
+skilldesc	34	desctexta2	22	strkey	0	86	
+skilldesc	35	desctextb2	22	strkey	0	120	
+skilldesc	36	desccalca2	25	cb	0	156	calc(skilldesccode)
+skilldesc	37	desccalcb2	25	cb	0	224	calc(skilldesccode)
+skilldesc	38	descline3	4	u8	0	68	
+skilldesc	39	desctexta3	22	strkey	0	88	
+skilldesc	40	desctextb3	22	strkey	0	122	
+skilldesc	41	desccalca3	25	cb	0	160	calc(skilldesccode)
+skilldesc	42	desccalcb3	25	cb	0	228	calc(skilldesccode)
+skilldesc	43	descline4	4	u8	0	69	
+skilldesc	44	desctexta4	22	strkey	0	90	
+skilldesc	45	desctextb4	22	strkey	0	124	
+skilldesc	46	desccalca4	25	cb	0	164	calc(skilldesccode)
+skilldesc	47	desccalcb4	25	cb	0	232	calc(skilldesccode)
+skilldesc	48	descline5	4	u8	0	70	
+skilldesc	49	desctexta5	22	strkey	0	92	
+skilldesc	50	desctextb5	22	strkey	0	126	
+skilldesc	51	desccalca5	25	cb	0	168	calc(skilldesccode)
+skilldesc	52	desccalcb5	25	cb	0	236	calc(skilldesccode)
+skilldesc	53	descline6	4	u8	0	71	
+skilldesc	54	desctexta6	22	strkey	0	94	
+skilldesc	55	desctextb6	22	strkey	0	128	
+skilldesc	56	desccalca6	25	cb	0	172	calc(skilldesccode)
+skilldesc	57	desccalcb6	25	cb	0	240	calc(skilldesccode)
+skilldesc	58	dsc2line1	4	u8	0	72	
+skilldesc	59	dsc2texta1	22	strkey	0	96	
+skilldesc	60	dsc2textb1	22	strkey	0	130	
+skilldesc	61	dsc2calca1	25	cb	0	176	calc(skilldesccode)
+skilldesc	62	dsc2calcb1	25	cb	0	244	calc(skilldesccode)
+skilldesc	63	dsc2line2	4	u8	0	73	
+skilldesc	64	dsc2texta2	22	strkey	0	98	
+skilldesc	65	dsc2textb2	22	strkey	0	132	
+skilldesc	66	dsc2calca2	25	cb	0	180	calc(skilldesccode)
+skilldesc	67	dsc2calcb2	25	cb	0	248	calc(skilldesccode)
+skilldesc	68	dsc2line3	4	u8	0	74	
+skilldesc	69	dsc2texta3	22	strkey	0	100	
+skilldesc	70	dsc2textb3	22	strkey	0	134	
+skilldesc	71	dsc2calca3	25	cb	0	184	calc(skilldesccode)
+skilldesc	72	dsc2calcb3	25	cb	0	252	calc(skilldesccode)
+skilldesc	73	dsc2line4	4	u8	0	75	
+skilldesc	74	dsc2texta4	22	strkey	0	102	
+skilldesc	75	dsc2textb4	22	strkey	0	136	
+skilldesc	76	dsc2calca4	25	cb	0	188	calc(skilldesccode)
+skilldesc	77	dsc2calcb4	25	cb	0	256	calc(skilldesccode)
+skilldesc	78	dsc3line1	4	u8	0	76	
+skilldesc	79	dsc3texta1	22	strkey	0	104	
+skilldesc	80	dsc3textb1	22	strkey	0	138	
+skilldesc	81	dsc3calca1	25	cb	0	192	calc(skilldesccode)
+skilldesc	82	dsc3calcb1	25	cb	0	260	calc(skilldesccode)
+skilldesc	83	dsc3line2	4	u8	0	77	
+skilldesc	84	dsc3texta2	22	strkey	0	106	
+skilldesc	85	dsc3textb2	22	strkey	0	140	
+skilldesc	86	dsc3calca2	25	cb	0	196	calc(skilldesccode)
+skilldesc	87	dsc3calcb2	25	cb	0	264	calc(skilldesccode)
+skilldesc	88	dsc3line3	4	u8	0	78	
+skilldesc	89	dsc3texta3	22	strkey	0	108	
+skilldesc	90	dsc3textb3	22	strkey	0	142	
+skilldesc	91	dsc3calca3	25	cb	0	200	calc(skilldesccode)
+skilldesc	92	dsc3calcb3	25	cb	0	268	calc(skilldesccode)
+skilldesc	93	dsc3line4	4	u8	0	79	
+skilldesc	94	dsc3texta4	22	strkey	0	110	
+skilldesc	95	dsc3textb4	22	strkey	0	144	
+skilldesc	96	dsc3calca4	25	cb	0	204	calc(skilldesccode)
+skilldesc	97	dsc3calcb4	25	cb	0	272	calc(skilldesccode)
+skilldesc	98	dsc3line5	4	u8	0	80	
+skilldesc	99	dsc3texta5	22	strkey	0	112	
+skilldesc	100	dsc3textb5	22	strkey	0	146	
+skilldesc	101	dsc3calca5	25	cb	0	208	calc(skilldesccode)
+skilldesc	102	dsc3calcb5	25	cb	0	276	calc(skilldesccode)
+skilldesc	103	dsc3line6	4	u8	0	81	
+skilldesc	104	dsc3texta6	22	strkey	0	114	
+skilldesc	105	dsc3textb6	22	strkey	0	148	
+skilldesc	106	dsc3calca6	25	cb	0	212	calc(skilldesccode)
+skilldesc	107	dsc3calcb6	25	cb	0	280	calc(skilldesccode)
+skilldesc	108	dsc3line7	4	u8	0	82	
+skilldesc	109	dsc3texta7	22	strkey	0	116	
+skilldesc	110	dsc3textb7	22	strkey	0	150	
+skilldesc	111	dsc3calca7	25	cb	0	216	calc(skilldesccode)
+skilldesc	112	dsc3calcb7	25	cb	0	284	calc(skilldesccode)
+charstats	0	class	1	str	15	32	
+charstats	1	str	4	u8	0	48	
+charstats	2	dex	4	u8	0	49	
+charstats	3	vit	4	u8	0	51	
+charstats	4	int	4	u8	0	50	
+charstats	5	stamina	4	u8	0	52	
+charstats	6	hpadd	4	u8	0	53	
+charstats	7	PercentStr	4	u8	0	54	
+charstats	8	PercentDex	4	u8	0	56	
+charstats	9	PercentVit	4	u8	0	57	
+charstats	10	PercentInt	4	u8	0	55	
+charstats	11	ManaRegen	4	u8	0	58	
+charstats	12	ToHitFactor	2	u32	0	60	
+charstats	13	WalkVelocity	4	u8	0	64	
+charstats	14	RunVelocity	4	u8	0	65	
+charstats	15	RunDrain	4	u8	0	66	
+charstats	16	LifePerLevel	4	u8	0	67	
+charstats	17	StaminaPerLevel	4	u8	0	68	
+charstats	18	ManaPerLevel	4	u8	0	69	
+charstats	19	LifePerVitality	4	u8	0	70	
+charstats	20	StaminaPerVitality	4	u8	0	71	
+charstats	21	ManaPerMagic	4	u8	0	72	
+charstats	22	BlockFactor	4	u8	0	73	
+charstats	23	basewclass	9	code4	0	76	
+charstats	24	StrAllSkills	22	strkey	0	82	
+charstats	25	StrSkillTab1	22	strkey	0	84	
+charstats	26	StrSkillTab2	22	strkey	0	86	
+charstats	27	StrSkillTab3	22	strkey	0	88	
+charstats	28	StrClassOnly	22	strkey	0	90	
+charstats	29	StartSkill	20	link16	0	172	skills.skill
+charstats	30	Skill 1	20	link16	0	174	skills.skill
+charstats	31	Skill 2	20	link16	0	176	skills.skill
+charstats	32	Skill 3	20	link16	0	178	skills.skill
+charstats	33	Skill 4	20	link16	0	180	skills.skill
+charstats	34	Skill 5	20	link16	0	182	skills.skill
+charstats	35	Skill 6	20	link16	0	184	skills.skill
+charstats	36	Skill 7	20	link16	0	186	skills.skill
+charstats	37	Skill 8	20	link16	0	188	skills.skill
+charstats	38	Skill 9	20	link16	0	190	skills.skill
+charstats	39	Skill 10	20	link16	0	192	skills.skill
+charstats	40	StatPerLevel	4	u8	0	80	
+charstats	41	item1loc	13	link8	0	96	bodylocs.code
+charstats	42	item2loc	13	link8	0	104	bodylocs.code
+charstats	43	item3loc	13	link8	0	112	bodylocs.code
+charstats	44	item4loc	13	link8	0	120	bodylocs.code
+charstats	45	item5loc	13	link8	0	128	bodylocs.code
+charstats	46	item6loc	13	link8	0	136	bodylocs.code
+charstats	47	item7loc	13	link8	0	144	bodylocs.code
+charstats	48	item8loc	13	link8	0	152	bodylocs.code
+charstats	49	item9loc	13	link8	0	160	bodylocs.code
+charstats	50	item10loc	13	link8	0	168	bodylocs.code
+charstats	51	item1	9	code4	0	92	
+charstats	52	item1count	4	u8	0	97	
+charstats	53	item2	9	code4	0	100	
+charstats	54	item2count	4	u8	0	105	
+charstats	55	item3	9	code4	0	108	
+charstats	56	item3count	4	u8	0	113	
+charstats	57	item4	9	code4	0	116	
+charstats	58	item4count	4	u8	0	121	
+charstats	59	item5	9	code4	0	124	
+charstats	60	item5count	4	u8	0	129	
+charstats	61	item6	9	code4	0	132	
+charstats	62	item6count	4	u8	0	137	
+charstats	63	item7	9	code4	0	140	
+charstats	64	item7count	4	u8	0	145	
+charstats	65	item8	9	code4	0	148	
+charstats	66	item8count	4	u8	0	153	
+charstats	67	item9	9	code4	0	156	
+charstats	68	item9count	4	u8	0	161	
+charstats	69	item10	9	code4	0	164	
+charstats	70	item10count	4	u8	0	169	
+arena	0	Suicide	2	u32	0	0	
+arena	1	PlayerKill	2	u32	0	4	
+arena	2	PlayerKillPercent	2	u32	0	8	
+arena	3	MonsterKill	2	u32	0	12	
+arena	4	PlayerDeath	2	u32	0	16	
+arena	5	PlayerDeathPercent	2	u32	0	20	
+arena	6	MonsterDeath	2	u32	0	24	
+chartemplate	0	Name	1	str	29	0	
+chartemplate	1	class	13	link8	0	30	playerclass.code
+chartemplate	2	act	4	u8	0	32	
+chartemplate	3	level	4	u8	0	31	
+chartemplate	4	str	4	u8	0	33	
+chartemplate	5	dex	4	u8	0	34	
+chartemplate	6	vit	4	u8	0	36	
+chartemplate	7	int	4	u8	0	35	
+chartemplate	8	Hitpoints	4	u8	0	38	
+chartemplate	9	Mana	4	u8	0	37	
+chartemplate	10	ManaRegenBonus	4	u8	0	39	
+chartemplate	11	Velocity	4	u8	0	40	
+chartemplate	12	AttackRate	4	u8	0	41	
+chartemplate	13	OtherRate	4	u8	0	42	
+chartemplate	14	RightSkill	2	u32	0	44	
+chartemplate	15	Skill1	2	u32	0	48	
+chartemplate	16	SkillLevel1	2	u32	0	84	
+chartemplate	17	Skill2	2	u32	0	52	
+chartemplate	18	SkillLevel2	2	u32	0	88	
+chartemplate	19	Skill3	2	u32	0	56	
+chartemplate	20	SkillLevel3	2	u32	0	92	
+chartemplate	21	Skill4	2	u32	0	60	
+chartemplate	22	SkillLevel4	2	u32	0	96	
+chartemplate	23	Skill5	2	u32	0	64	
+chartemplate	24	SkillLevel5	2	u32	0	100	
+chartemplate	25	Skill6	2	u32	0	68	
+chartemplate	26	SkillLevel6	2	u32	0	104	
+chartemplate	27	Skill7	2	u32	0	72	
+chartemplate	28	SkillLevel7	2	u32	0	108	
+chartemplate	29	Skill8	2	u32	0	76	
+chartemplate	30	SkillLevel8	2	u32	0	112	
+chartemplate	31	Skill9	2	u32	0	80	
+chartemplate	32	SkillLevel9	2	u32	0	116	
+chartemplate	33	item1	9	code4	0	120	
+chartemplate	34	item1loc	4	u8	0	124	
+chartemplate	35	item1count	4	u8	0	125	
+chartemplate	36	item2	9	code4	0	128	
+chartemplate	37	item2loc	4	u8	0	132	
+chartemplate	38	item2count	4	u8	0	133	
+chartemplate	39	item3	9	code4	0	136	
+chartemplate	40	item3loc	4	u8	0	140	
+chartemplate	41	item3count	4	u8	0	141	
+chartemplate	42	item4	9	code4	0	144	
+chartemplate	43	item4loc	4	u8	0	148	
+chartemplate	44	item4count	4	u8	0	149	
+chartemplate	45	item5	9	code4	0	152	
+chartemplate	46	item5loc	4	u8	0	156	
+chartemplate	47	item5count	4	u8	0	157	
+chartemplate	48	item6	9	code4	0	160	
+chartemplate	49	item6loc	4	u8	0	164	
+chartemplate	50	item6count	4	u8	0	165	
+chartemplate	51	item7	9	code4	0	168	
+chartemplate	52	item7loc	4	u8	0	172	
+chartemplate	53	item7count	4	u8	0	173	
+chartemplate	54	item8	9	code4	0	176	
+chartemplate	55	item8loc	4	u8	0	180	
+chartemplate	56	item8count	4	u8	0	181	
+chartemplate	57	item9	9	code4	0	184	
+chartemplate	58	item9loc	4	u8	0	188	
+chartemplate	59	item9count	4	u8	0	189	
+chartemplate	60	item10	9	code4	0	192	
+chartemplate	61	item10loc	4	u8	0	196	
+chartemplate	62	item10count	4	u8	0	197	
+chartemplate	63	item11	9	code4	0	200	
+chartemplate	64	item11loc	4	u8	0	204	
+chartemplate	65	item11count	4	u8	0	205	
+chartemplate	66	item12	9	code4	0	208	
+chartemplate	67	item12loc	4	u8	0	212	
+chartemplate	68	item12count	4	u8	0	213	
+chartemplate	69	item13	9	code4	0	216	
+chartemplate	70	item13loc	4	u8	0	220	
+chartemplate	71	item13count	4	u8	0	221	
+chartemplate	72	item14	9	code4	0	224	
+chartemplate	73	item14loc	4	u8	0	228	
+chartemplate	74	item14count	4	u8	0	229	
+chartemplate	75	item15	9	code4	0	232	
+chartemplate	76	item15loc	4	u8	0	236	
+chartemplate	77	item15count	4	u8	0	237	
+weapons	0	code	10	key(code4)	0	128	items.code
+weapons	1	namestr	22	strkey	0	244	
+weapons	2	version	3	u16	0	246	
+weapons	3	compactsave	6	u8	0	323	
+weapons	4	type	15	link16	0	286	itemtypes.code
+weapons	5	type2	15	link16	0	288	itemtypes.code
+weapons	6	hit class	13	link8	0	316	hitclass.code
+weapons	7	gemapplytype	4	u8	0	318	
+weapons	8	levelreq	4	u8	0	319	
+weapons	9	magic lvl	4	u8	0	320	
+weapons	10	auto prefix	3	u16	0	248	
+weapons	11	gamble cost	2	u32	0	212	
+weapons	12	alternategfx	9	code4	0	144	
+weapons	13	spawnable	4	u8	0	307	
+weapons	14	rarity	4	u8	0	252	
+weapons	15	level	4	u8	0	253	
+weapons	16	mindam	6	u8	0	254	
+weapons	17	maxdam	6	u8	0	255	
+weapons	18	2handmindam	6	u8	0	258	
+weapons	19	2handmaxdam	6	u8	0	259	
+weapons	20	minmisdam	4	u8	0	256	
+weapons	21	maxmisdam	4	u8	0	257	
+weapons	22	minac	2	u32	0	204	
+weapons	23	maxac	2	u32	0	208	
+weapons	24	block	6	u8	0	273	
+weapons	25	absorbs	6	u8	0	270	
+weapons	26	rangeadder	6	u8	0	260	
+weapons	27	speed	2	u32	0	216	
+weapons	28	strbonus	3	u16	0	262	
+weapons	29	dexbonus	3	u16	0	264	
+weapons	30	reqstr	3	u16	0	266	
+weapons	31	reqdex	3	u16	0	268	
+weapons	32	invwidth	4	u8	0	271	
+weapons	33	invheight	4	u8	0	272	
+weapons	34	stackable	4	u8	0	306	
+weapons	35	minstack	2	u32	0	228	
+weapons	36	maxstack	2	u32	0	232	
+weapons	37	spawnstack	2	u32	0	236	
+weapons	38	flippyfile	1	str	31	0	
+weapons	39	invfile	1	str	31	32	
+weapons	40	uniqueinvfile	1	str	31	64	
+weapons	41	setinvfile	1	str	31	96	
+weapons	42	durability	6	u8	0	274	
+weapons	43	nodurability	4	u8	0	275	
+weapons	44	missile	6	u8	0	276	
+weapons	45	component	4	u8	0	277	
+weapons	46	cost	2	u32	0	224	
+weapons	47	normcode	9	code4	0	132	
+weapons	48	ubercode	9	code4	0	136	
+weapons	49	ultracode	9	code4	0	140	
+weapons	50	wclass	9	code4	0	192	
+weapons	51	2handedwclass	9	code4	0	196	
+weapons	52	1or2handed	6	u8	0	317	
+weapons	53	BetterGem	9	code4	0	188	
+weapons	54	rArm	6	u8	0	278	
+weapons	55	lArm	6	u8	0	279	
+weapons	56	torso	6	u8	0	280	
+weapons	57	legs	6	u8	0	281	
+weapons	58	rspad	6	u8	0	282	
+weapons	59	lspad	6	u8	0	283	
+weapons	60	2handed	6	u8	0	284	
+weapons	61	useable	4	u8	0	285	
+weapons	62	subtype	6	u8	0	290	
+weapons	63	dropsound	20	link16	0	292	sounds.Sound
+weapons	64	dropsfxframe	4	u8	0	296	
+weapons	65	usesound	20	link16	0	294	sounds.Sound
+weapons	66	unique	4	u8	0	297	
+weapons	67	quest	4	u8	0	298	
+weapons	68	questdiffcheck	4	u8	0	299	
+weapons	69	transparent	4	u8	0	300	
+weapons	70	transtbl	4	u8	0	301	
+weapons	71	lightradius	4	u8	0	303	
+weapons	72	belt	4	u8	0	304	
+weapons	73	autobelt	4	u8	0	305	
+weapons	74	missiletype	3	u16	0	250	
+weapons	75	spellicon	6	u8	0	308	
+weapons	76	durwarning	4	u8	0	309	
+weapons	77	qntwarning	4	u8	0	310	
+weapons	78	hasinv	6	u8	0	311	
+weapons	79	gemsockets	6	u8	0	312	
+weapons	80	gemoffset	2	u32	0	240	
+weapons	81	pSpell	2	u32	0	148	
+weapons	82	state	20	link16	0	152	states.state
+weapons	83	cstate1	20	link16	0	154	states.state
+weapons	84	cstate2	20	link16	0	156	states.state
+weapons	85	len	25	cb	0	176	calc(itemscode)
+weapons	86	stat1	20	link16	0	158	itemstatcost.stat
+weapons	87	calc1	25	cb	0	164	calc(itemscode)
+weapons	88	stat2	20	link16	0	160	itemstatcost.stat
+weapons	89	calc2	25	cb	0	168	calc(itemscode)
+weapons	90	stat3	20	link16	0	162	itemstatcost.stat
+weapons	91	calc3	25	cb	0	172	calc(itemscode)
+weapons	92	spelldesc	4	u8	0	180	
+weapons	93	spelldescstr	22	strkey	0	182	
+weapons	94	spelldesccalc	25	cb	0	184	calc(itemscode)
+weapons	95	SkipName	4	u8	0	324	
+weapons	96	bitfield1	2	u32	0	220	
+weapons	97	CharsiMin	4	u8	0	328	
+weapons	98	CharsiMax	4	u8	0	345	
+weapons	99	CharsiMagicMin	4	u8	0	362	
+weapons	100	CharsiMagicMax	4	u8	0	379	
+weapons	101	CharsiMagicLvl	4	u8	0	396	
+weapons	102	GheedMin	4	u8	0	327	
+weapons	103	GheedMax	4	u8	0	344	
+weapons	104	GheedMagicMin	4	u8	0	361	
+weapons	105	GheedMagicMax	4	u8	0	378	
+weapons	106	GheedMagicLvl	4	u8	0	395	
+weapons	107	AkaraMin	4	u8	0	326	
+weapons	108	AkaraMax	4	u8	0	343	
+weapons	109	AkaraMagicMin	4	u8	0	360	
+weapons	110	AkaraMagicMax	4	u8	0	377	
+weapons	111	AkaraMagicLvl	4	u8	0	394	
+weapons	112	FaraMin	4	u8	0	329	
+weapons	113	FaraMax	4	u8	0	346	
+weapons	114	FaraMagicMin	4	u8	0	363	
+weapons	115	FaraMagicMax	4	u8	0	380	
+weapons	116	FaraMagicLvl	4	u8	0	397	
+weapons	117	LysanderMin	4	u8	0	330	
+weapons	118	LysanderMax	4	u8	0	347	
+weapons	119	LysanderMagicMin	4	u8	0	364	
+weapons	120	LysanderMagicMax	4	u8	0	381	
+weapons	121	LysanderMagicLvl	4	u8	0	398	
+weapons	122	DrognanMin	4	u8	0	331	
+weapons	123	DrognanMax	4	u8	0	348	
+weapons	124	DrognanMagicMin	4	u8	0	365	
+weapons	125	DrognanMagicMax	4	u8	0	382	
+weapons	126	DrognanMagicLvl	4	u8	0	399	
+weapons	127	HraltiMin	4	u8	0	332	
+weapons	128	HraltiMax	4	u8	0	349	
+weapons	129	HraltiMagicMin	4	u8	0	366	
+weapons	130	HraltiMagicMax	4	u8	0	383	
+weapons	131	HraltiMagicLvl	4	u8	0	400	
+weapons	132	AlkorMin	4	u8	0	333	
+weapons	133	AlkorMax	4	u8	0	350	
+weapons	134	AlkorMagicMin	4	u8	0	367	
+weapons	135	AlkorMagicMax	4	u8	0	384	
+weapons	136	AlkorMagicLvl	4	u8	0	401	
+weapons	137	OrmusMin	4	u8	0	334	
+weapons	138	OrmusMax	4	u8	0	351	
+weapons	139	OrmusMagicMin	4	u8	0	368	
+weapons	140	OrmusMagicMax	4	u8	0	385	
+weapons	141	OrmusMagicLvl	4	u8	0	402	
+weapons	142	ElzixMin	4	u8	0	335	
+weapons	143	ElzixMax	4	u8	0	352	
+weapons	144	ElzixMagicMin	4	u8	0	369	
+weapons	145	ElzixMagicMax	4	u8	0	386	
+weapons	146	ElzixMagicLvl	4	u8	0	403	
+weapons	147	AshearaMin	4	u8	0	336	
+weapons	148	AshearaMax	4	u8	0	353	
+weapons	149	AshearaMagicMin	4	u8	0	370	
+weapons	150	AshearaMagicMax	4	u8	0	387	
+weapons	151	AshearaMagicLvl	4	u8	0	404	
+weapons	152	CainMin	4	u8	0	337	
+weapons	153	CainMax	4	u8	0	354	
+weapons	154	CainMagicMin	4	u8	0	371	
+weapons	155	CainMagicMax	4	u8	0	388	
+weapons	156	CainMagicLvl	4	u8	0	405	
+weapons	157	HalbuMin	4	u8	0	338	
+weapons	158	HalbuMax	4	u8	0	355	
+weapons	159	HalbuMagicMin	4	u8	0	372	
+weapons	160	HalbuMagicMax	4	u8	0	389	
+weapons	161	HalbuMagicLvl	4	u8	0	406	
+weapons	162	JamellaMin	4	u8	0	339	
+weapons	163	JamellaMax	4	u8	0	356	
+weapons	164	JamellaMagicMin	4	u8	0	373	
+weapons	165	JamellaMagicMax	4	u8	0	390	
+weapons	166	JamellaMagicLvl	4	u8	0	407	
+weapons	167	MalahMin	4	u8	0	340	
+weapons	168	MalahMax	4	u8	0	357	
+weapons	169	MalahMagicMin	4	u8	0	374	
+weapons	170	MalahMagicMax	4	u8	0	391	
+weapons	171	MalahMagicLvl	4	u8	0	408	
+weapons	172	LarzukMin	4	u8	0	341	
+weapons	173	LarzukMax	4	u8	0	358	
+weapons	174	LarzukMagicMin	4	u8	0	375	
+weapons	175	LarzukMagicMax	4	u8	0	392	
+weapons	176	LarzukMagicLvl	4	u8	0	409	
+weapons	177	DrehyaMin	4	u8	0	342	
+weapons	178	DrehyaMax	4	u8	0	359	
+weapons	179	DrehyaMagicMin	4	u8	0	376	
+weapons	180	DrehyaMagicMax	4	u8	0	393	
+weapons	181	DrehyaMagicLvl	4	u8	0	410	
+weapons	182	Transmogrify	6	u8	0	313	
+weapons	183	TMogType	9	code4	0	200	
+weapons	184	TMogMin	6	u8	0	314	
+weapons	185	TMogMax	6	u8	0	315	
+weapons	186	Transform	4	u8	0	321	
+weapons	187	InvTrans	4	u8	0	322	
+weapons	188	PermStoreItem	4	u8	0	420	
+weapons	189	multibuy	4	u8	0	421	
+weapons	190	NightmareUpgrade	9	code4	0	412	
+weapons	191	HellUpgrade	9	code4	0	416	
+weapons	192	Nameable	4	u8	0	325	
+armor	0	code	10	key(code4)	0	128	items.code
+armor	1	namestr	22	strkey	0	244	
+armor	2	version	3	u16	0	246	
+armor	3	compactsave	6	u8	0	323	
+armor	4	type	15	link16	0	286	itemtypes.code
+armor	5	type2	15	link16	0	288	itemtypes.code
+armor	6	hit class	13	link8	0	316	hitclass.code
+armor	7	gemapplytype	4	u8	0	318	
+armor	8	levelreq	4	u8	0	319	
+armor	9	magic lvl	4	u8	0	320	
+armor	10	auto prefix	3	u16	0	248	
+armor	11	gamble cost	2	u32	0	212	
+armor	12	alternategfx	9	code4	0	144	
+armor	13	spawnable	4	u8	0	307	
+armor	14	rarity	4	u8	0	252	
+armor	15	level	4	u8	0	253	
+armor	16	mindam	6	u8	0	254	
+armor	17	maxdam	6	u8	0	255	
+armor	18	2handmindam	6	u8	0	258	
+armor	19	2handmaxdam	6	u8	0	259	
+armor	20	minmisdam	4	u8	0	256	
+armor	21	maxmisdam	4	u8	0	257	
+armor	22	minac	2	u32	0	204	
+armor	23	maxac	2	u32	0	208	
+armor	24	block	6	u8	0	273	
+armor	25	absorbs	6	u8	0	270	
+armor	26	rangeadder	6	u8	0	260	
+armor	27	speed	2	u32	0	216	
+armor	28	strbonus	3	u16	0	262	
+armor	29	dexbonus	3	u16	0	264	
+armor	30	reqstr	3	u16	0	266	
+armor	31	reqdex	3	u16	0	268	
+armor	32	invwidth	4	u8	0	271	
+armor	33	invheight	4	u8	0	272	
+armor	34	stackable	4	u8	0	306	
+armor	35	minstack	2	u32	0	228	
+armor	36	maxstack	2	u32	0	232	
+armor	37	spawnstack	2	u32	0	236	
+armor	38	flippyfile	1	str	31	0	
+armor	39	invfile	1	str	31	32	
+armor	40	uniqueinvfile	1	str	31	64	
+armor	41	setinvfile	1	str	31	96	
+armor	42	durability	6	u8	0	274	
+armor	43	nodurability	4	u8	0	275	
+armor	44	missile	6	u8	0	276	
+armor	45	component	4	u8	0	277	
+armor	46	cost	2	u32	0	224	
+armor	47	normcode	9	code4	0	132	
+armor	48	ubercode	9	code4	0	136	
+armor	49	ultracode	9	code4	0	140	
+armor	50	wclass	9	code4	0	192	
+armor	51	2handedwclass	9	code4	0	196	
+armor	52	1or2handed	6	u8	0	317	
+armor	53	BetterGem	9	code4	0	188	
+armor	54	rArm	6	u8	0	278	
+armor	55	lArm	6	u8	0	279	
+armor	56	torso	6	u8	0	280	
+armor	57	legs	6	u8	0	281	
+armor	58	rspad	6	u8	0	282	
+armor	59	lspad	6	u8	0	283	
+armor	60	2handed	6	u8	0	284	
+armor	61	useable	4	u8	0	285	
+armor	62	subtype	6	u8	0	290	
+armor	63	dropsound	20	link16	0	292	sounds.Sound
+armor	64	dropsfxframe	4	u8	0	296	
+armor	65	usesound	20	link16	0	294	sounds.Sound
+armor	66	unique	4	u8	0	297	
+armor	67	quest	4	u8	0	298	
+armor	68	questdiffcheck	4	u8	0	299	
+armor	69	transparent	4	u8	0	300	
+armor	70	transtbl	4	u8	0	301	
+armor	71	lightradius	4	u8	0	303	
+armor	72	belt	4	u8	0	304	
+armor	73	autobelt	4	u8	0	305	
+armor	74	missiletype	3	u16	0	250	
+armor	75	spellicon	6	u8	0	308	
+armor	76	durwarning	4	u8	0	309	
+armor	77	qntwarning	4	u8	0	310	
+armor	78	hasinv	6	u8	0	311	
+armor	79	gemsockets	6	u8	0	312	
+armor	80	gemoffset	2	u32	0	240	
+armor	81	pSpell	2	u32	0	148	
+armor	82	state	20	link16	0	152	states.state
+armor	83	cstate1	20	link16	0	154	states.state
+armor	84	cstate2	20	link16	0	156	states.state
+armor	85	len	25	cb	0	176	calc(itemscode)
+armor	86	stat1	20	link16	0	158	itemstatcost.stat
+armor	87	calc1	25	cb	0	164	calc(itemscode)
+armor	88	stat2	20	link16	0	160	itemstatcost.stat
+armor	89	calc2	25	cb	0	168	calc(itemscode)
+armor	90	stat3	20	link16	0	162	itemstatcost.stat
+armor	91	calc3	25	cb	0	172	calc(itemscode)
+armor	92	spelldesc	4	u8	0	180	
+armor	93	spelldescstr	22	strkey	0	182	
+armor	94	spelldesccalc	25	cb	0	184	calc(itemscode)
+armor	95	SkipName	4	u8	0	324	
+armor	96	bitfield1	2	u32	0	220	
+armor	97	CharsiMin	4	u8	0	328	
+armor	98	CharsiMax	4	u8	0	345	
+armor	99	CharsiMagicMin	4	u8	0	362	
+armor	100	CharsiMagicMax	4	u8	0	379	
+armor	101	CharsiMagicLvl	4	u8	0	396	
+armor	102	GheedMin	4	u8	0	327	
+armor	103	GheedMax	4	u8	0	344	
+armor	104	GheedMagicMin	4	u8	0	361	
+armor	105	GheedMagicMax	4	u8	0	378	
+armor	106	GheedMagicLvl	4	u8	0	395	
+armor	107	AkaraMin	4	u8	0	326	
+armor	108	AkaraMax	4	u8	0	343	
+armor	109	AkaraMagicMin	4	u8	0	360	
+armor	110	AkaraMagicMax	4	u8	0	377	
+armor	111	AkaraMagicLvl	4	u8	0	394	
+armor	112	FaraMin	4	u8	0	329	
+armor	113	FaraMax	4	u8	0	346	
+armor	114	FaraMagicMin	4	u8	0	363	
+armor	115	FaraMagicMax	4	u8	0	380	
+armor	116	FaraMagicLvl	4	u8	0	397	
+armor	117	LysanderMin	4	u8	0	330	
+armor	118	LysanderMax	4	u8	0	347	
+armor	119	LysanderMagicMin	4	u8	0	364	
+armor	120	LysanderMagicMax	4	u8	0	381	
+armor	121	LysanderMagicLvl	4	u8	0	398	
+armor	122	DrognanMin	4	u8	0	331	
+armor	123	DrognanMax	4	u8	0	348	
+armor	124	DrognanMagicMin	4	u8	0	365	
+armor	125	DrognanMagicMax	4	u8	0	382	
+armor	126	DrognanMagicLvl	4	u8	0	399	
+armor	127	HraltiMin	4	u8	0	332	
+armor	128	HraltiMax	4	u8	0	349	
+armor	129	HraltiMagicMin	4	u8	0	366	
+armor	130	HraltiMagicMax	4	u8	0	383	
+armor	131	HraltiMagicLvl	4	u8	0	400	
+armor	132	AlkorMin	4	u8	0	333	
+armor	133	AlkorMax	4	u8	0	350	
+armor	134	AlkorMagicMin	4	u8	0	367	
+armor	135	AlkorMagicMax	4	u8	0	384	
+armor	136	AlkorMagicLvl	4	u8	0	401	
+armor	137	OrmusMin	4	u8	0	334	
+armor	138	OrmusMax	4	u8	0	351	
+armor	139	OrmusMagicMin	4	u8	0	368	
+armor	140	OrmusMagicMax	4	u8	0	385	
+armor	141	OrmusMagicLvl	4	u8	0	402	
+armor	142	ElzixMin	4	u8	0	335	
+armor	143	ElzixMax	4	u8	0	352	
+armor	144	ElzixMagicMin	4	u8	0	369	
+armor	145	ElzixMagicMax	4	u8	0	386	
+armor	146	ElzixMagicLvl	4	u8	0	403	
+armor	147	AshearaMin	4	u8	0	336	
+armor	148	AshearaMax	4	u8	0	353	
+armor	149	AshearaMagicMin	4	u8	0	370	
+armor	150	AshearaMagicMax	4	u8	0	387	
+armor	151	AshearaMagicLvl	4	u8	0	404	
+armor	152	CainMin	4	u8	0	337	
+armor	153	CainMax	4	u8	0	354	
+armor	154	CainMagicMin	4	u8	0	371	
+armor	155	CainMagicMax	4	u8	0	388	
+armor	156	CainMagicLvl	4	u8	0	405	
+armor	157	HalbuMin	4	u8	0	338	
+armor	158	HalbuMax	4	u8	0	355	
+armor	159	HalbuMagicMin	4	u8	0	372	
+armor	160	HalbuMagicMax	4	u8	0	389	
+armor	161	HalbuMagicLvl	4	u8	0	406	
+armor	162	JamellaMin	4	u8	0	339	
+armor	163	JamellaMax	4	u8	0	356	
+armor	164	JamellaMagicMin	4	u8	0	373	
+armor	165	JamellaMagicMax	4	u8	0	390	
+armor	166	JamellaMagicLvl	4	u8	0	407	
+armor	167	MalahMin	4	u8	0	340	
+armor	168	MalahMax	4	u8	0	357	
+armor	169	MalahMagicMin	4	u8	0	374	
+armor	170	MalahMagicMax	4	u8	0	391	
+armor	171	MalahMagicLvl	4	u8	0	408	
+armor	172	LarzukMin	4	u8	0	341	
+armor	173	LarzukMax	4	u8	0	358	
+armor	174	LarzukMagicMin	4	u8	0	375	
+armor	175	LarzukMagicMax	4	u8	0	392	
+armor	176	LarzukMagicLvl	4	u8	0	409	
+armor	177	DrehyaMin	4	u8	0	342	
+armor	178	DrehyaMax	4	u8	0	359	
+armor	179	DrehyaMagicMin	4	u8	0	376	
+armor	180	DrehyaMagicMax	4	u8	0	393	
+armor	181	DrehyaMagicLvl	4	u8	0	410	
+armor	182	Transmogrify	6	u8	0	313	
+armor	183	TMogType	9	code4	0	200	
+armor	184	TMogMin	6	u8	0	314	
+armor	185	TMogMax	6	u8	0	315	
+armor	186	Transform	4	u8	0	321	
+armor	187	InvTrans	4	u8	0	322	
+armor	188	PermStoreItem	4	u8	0	420	
+armor	189	multibuy	4	u8	0	421	
+armor	190	NightmareUpgrade	9	code4	0	412	
+armor	191	HellUpgrade	9	code4	0	416	
+armor	192	Nameable	4	u8	0	325	
+misc	0	code	10	key(code4)	0	128	items.code
+misc	1	namestr	22	strkey	0	244	
+misc	2	version	3	u16	0	246	
+misc	3	compactsave	6	u8	0	323	
+misc	4	type	15	link16	0	286	itemtypes.code
+misc	5	type2	15	link16	0	288	itemtypes.code
+misc	6	hit class	13	link8	0	316	hitclass.code
+misc	7	gemapplytype	4	u8	0	318	
+misc	8	levelreq	4	u8	0	319	
+misc	9	magic lvl	4	u8	0	320	
+misc	10	auto prefix	3	u16	0	248	
+misc	11	gamble cost	2	u32	0	212	
+misc	12	alternategfx	9	code4	0	144	
+misc	13	spawnable	4	u8	0	307	
+misc	14	rarity	4	u8	0	252	
+misc	15	level	4	u8	0	253	
+misc	16	mindam	6	u8	0	254	
+misc	17	maxdam	6	u8	0	255	
+misc	18	2handmindam	6	u8	0	258	
+misc	19	2handmaxdam	6	u8	0	259	
+misc	20	minmisdam	4	u8	0	256	
+misc	21	maxmisdam	4	u8	0	257	
+misc	22	minac	2	u32	0	204	
+misc	23	maxac	2	u32	0	208	
+misc	24	block	6	u8	0	273	
+misc	25	absorbs	6	u8	0	270	
+misc	26	rangeadder	6	u8	0	260	
+misc	27	speed	2	u32	0	216	
+misc	28	strbonus	3	u16	0	262	
+misc	29	dexbonus	3	u16	0	264	
+misc	30	reqstr	3	u16	0	266	
+misc	31	reqdex	3	u16	0	268	
+misc	32	invwidth	4	u8	0	271	
+misc	33	invheight	4	u8	0	272	
+misc	34	stackable	4	u8	0	306	
+misc	35	minstack	2	u32	0	228	
+misc	36	maxstack	2	u32	0	232	
+misc	37	spawnstack	2	u32	0	236	
+misc	38	flippyfile	1	str	31	0	
+misc	39	invfile	1	str	31	32	
+misc	40	uniqueinvfile	1	str	31	64	
+misc	41	setinvfile	1	str	31	96	
+misc	42	durability	6	u8	0	274	
+misc	43	nodurability	4	u8	0	275	
+misc	44	missile	6	u8	0	276	
+misc	45	component	4	u8	0	277	
+misc	46	cost	2	u32	0	224	
+misc	47	normcode	9	code4	0	132	
+misc	48	ubercode	9	code4	0	136	
+misc	49	ultracode	9	code4	0	140	
+misc	50	wclass	9	code4	0	192	
+misc	51	2handedwclass	9	code4	0	196	
+misc	52	1or2handed	6	u8	0	317	
+misc	53	BetterGem	9	code4	0	188	
+misc	54	rArm	6	u8	0	278	
+misc	55	lArm	6	u8	0	279	
+misc	56	torso	6	u8	0	280	
+misc	57	legs	6	u8	0	281	
+misc	58	rspad	6	u8	0	282	
+misc	59	lspad	6	u8	0	283	
+misc	60	2handed	6	u8	0	284	
+misc	61	useable	4	u8	0	285	
+misc	62	subtype	6	u8	0	290	
+misc	63	dropsound	20	link16	0	292	sounds.Sound
+misc	64	dropsfxframe	4	u8	0	296	
+misc	65	usesound	20	link16	0	294	sounds.Sound
+misc	66	unique	4	u8	0	297	
+misc	67	quest	4	u8	0	298	
+misc	68	questdiffcheck	4	u8	0	299	
+misc	69	transparent	4	u8	0	300	
+misc	70	transtbl	4	u8	0	301	
+misc	71	lightradius	4	u8	0	303	
+misc	72	belt	4	u8	0	304	
+misc	73	autobelt	4	u8	0	305	
+misc	74	missiletype	3	u16	0	250	
+misc	75	spellicon	6	u8	0	308	
+misc	76	durwarning	4	u8	0	309	
+misc	77	qntwarning	4	u8	0	310	
+misc	78	hasinv	6	u8	0	311	
+misc	79	gemsockets	6	u8	0	312	
+misc	80	gemoffset	2	u32	0	240	
+misc	81	pSpell	2	u32	0	148	
+misc	82	state	20	link16	0	152	states.state
+misc	83	cstate1	20	link16	0	154	states.state
+misc	84	cstate2	20	link16	0	156	states.state
+misc	85	len	25	cb	0	176	calc(itemscode)
+misc	86	stat1	20	link16	0	158	itemstatcost.stat
+misc	87	calc1	25	cb	0	164	calc(itemscode)
+misc	88	stat2	20	link16	0	160	itemstatcost.stat
+misc	89	calc2	25	cb	0	168	calc(itemscode)
+misc	90	stat3	20	link16	0	162	itemstatcost.stat
+misc	91	calc3	25	cb	0	172	calc(itemscode)
+misc	92	spelldesc	4	u8	0	180	
+misc	93	spelldescstr	22	strkey	0	182	
+misc	94	spelldesccalc	25	cb	0	184	calc(itemscode)
+misc	95	SkipName	4	u8	0	324	
+misc	96	bitfield1	2	u32	0	220	
+misc	97	CharsiMin	4	u8	0	328	
+misc	98	CharsiMax	4	u8	0	345	
+misc	99	CharsiMagicMin	4	u8	0	362	
+misc	100	CharsiMagicMax	4	u8	0	379	
+misc	101	CharsiMagicLvl	4	u8	0	396	
+misc	102	GheedMin	4	u8	0	327	
+misc	103	GheedMax	4	u8	0	344	
+misc	104	GheedMagicMin	4	u8	0	361	
+misc	105	GheedMagicMax	4	u8	0	378	
+misc	106	GheedMagicLvl	4	u8	0	395	
+misc	107	AkaraMin	4	u8	0	326	
+misc	108	AkaraMax	4	u8	0	343	
+misc	109	AkaraMagicMin	4	u8	0	360	
+misc	110	AkaraMagicMax	4	u8	0	377	
+misc	111	AkaraMagicLvl	4	u8	0	394	
+misc	112	FaraMin	4	u8	0	329	
+misc	113	FaraMax	4	u8	0	346	
+misc	114	FaraMagicMin	4	u8	0	363	
+misc	115	FaraMagicMax	4	u8	0	380	
+misc	116	FaraMagicLvl	4	u8	0	397	
+misc	117	LysanderMin	4	u8	0	330	
+misc	118	LysanderMax	4	u8	0	347	
+misc	119	LysanderMagicMin	4	u8	0	364	
+misc	120	LysanderMagicMax	4	u8	0	381	
+misc	121	LysanderMagicLvl	4	u8	0	398	
+misc	122	DrognanMin	4	u8	0	331	
+misc	123	DrognanMax	4	u8	0	348	
+misc	124	DrognanMagicMin	4	u8	0	365	
+misc	125	DrognanMagicMax	4	u8	0	382	
+misc	126	DrognanMagicLvl	4	u8	0	399	
+misc	127	HraltiMin	4	u8	0	332	
+misc	128	HraltiMax	4	u8	0	349	
+misc	129	HraltiMagicMin	4	u8	0	366	
+misc	130	HraltiMagicMax	4	u8	0	383	
+misc	131	HraltiMagicLvl	4	u8	0	400	
+misc	132	AlkorMin	4	u8	0	333	
+misc	133	AlkorMax	4	u8	0	350	
+misc	134	AlkorMagicMin	4	u8	0	367	
+misc	135	AlkorMagicMax	4	u8	0	384	
+misc	136	AlkorMagicLvl	4	u8	0	401	
+misc	137	OrmusMin	4	u8	0	334	
+misc	138	OrmusMax	4	u8	0	351	
+misc	139	OrmusMagicMin	4	u8	0	368	
+misc	140	OrmusMagicMax	4	u8	0	385	
+misc	141	OrmusMagicLvl	4	u8	0	402	
+misc	142	ElzixMin	4	u8	0	335	
+misc	143	ElzixMax	4	u8	0	352	
+misc	144	ElzixMagicMin	4	u8	0	369	
+misc	145	ElzixMagicMax	4	u8	0	386	
+misc	146	ElzixMagicLvl	4	u8	0	403	
+misc	147	AshearaMin	4	u8	0	336	
+misc	148	AshearaMax	4	u8	0	353	
+misc	149	AshearaMagicMin	4	u8	0	370	
+misc	150	AshearaMagicMax	4	u8	0	387	
+misc	151	AshearaMagicLvl	4	u8	0	404	
+misc	152	CainMin	4	u8	0	337	
+misc	153	CainMax	4	u8	0	354	
+misc	154	CainMagicMin	4	u8	0	371	
+misc	155	CainMagicMax	4	u8	0	388	
+misc	156	CainMagicLvl	4	u8	0	405	
+misc	157	HalbuMin	4	u8	0	338	
+misc	158	HalbuMax	4	u8	0	355	
+misc	159	HalbuMagicMin	4	u8	0	372	
+misc	160	HalbuMagicMax	4	u8	0	389	
+misc	161	HalbuMagicLvl	4	u8	0	406	
+misc	162	JamellaMin	4	u8	0	339	
+misc	163	JamellaMax	4	u8	0	356	
+misc	164	JamellaMagicMin	4	u8	0	373	
+misc	165	JamellaMagicMax	4	u8	0	390	
+misc	166	JamellaMagicLvl	4	u8	0	407	
+misc	167	MalahMin	4	u8	0	340	
+misc	168	MalahMax	4	u8	0	357	
+misc	169	MalahMagicMin	4	u8	0	374	
+misc	170	MalahMagicMax	4	u8	0	391	
+misc	171	MalahMagicLvl	4	u8	0	408	
+misc	172	LarzukMin	4	u8	0	341	
+misc	173	LarzukMax	4	u8	0	358	
+misc	174	LarzukMagicMin	4	u8	0	375	
+misc	175	LarzukMagicMax	4	u8	0	392	
+misc	176	LarzukMagicLvl	4	u8	0	409	
+misc	177	DrehyaMin	4	u8	0	342	
+misc	178	DrehyaMax	4	u8	0	359	
+misc	179	DrehyaMagicMin	4	u8	0	376	
+misc	180	DrehyaMagicMax	4	u8	0	393	
+misc	181	DrehyaMagicLvl	4	u8	0	410	
+misc	182	Transmogrify	6	u8	0	313	
+misc	183	TMogType	9	code4	0	200	
+misc	184	TMogMin	6	u8	0	314	
+misc	185	TMogMax	6	u8	0	315	
+misc	186	Transform	4	u8	0	321	
+misc	187	InvTrans	4	u8	0	322	
+misc	188	PermStoreItem	4	u8	0	420	
+misc	189	multibuy	4	u8	0	421	
+misc	190	NightmareUpgrade	9	code4	0	412	
+misc	191	HellUpgrade	9	code4	0	416	
+misc	192	Nameable	4	u8	0	325	
+magicsuffix	0	name	1	str	31	0	
+magicsuffix	1	spawnable	4	u8	0	84	
+magicsuffix	2	level	2	u32	0	88	
+magicsuffix	3	group	2	u32	0	92	
+magicsuffix	4	version	3	u16	0	34	
+magicsuffix	5	divide	2	u32	0	132	
+magicsuffix	6	multiply	2	u32	0	136	
+magicsuffix	7	add	2	u32	0	140	
+magicsuffix	8	rare	4	u8	0	100	
+magicsuffix	9	maxlevel	2	u32	0	96	
+magicsuffix	10	levelreq	4	u8	0	101	
+magicsuffix	11	classspecific	13	link8	0	102	playerclass.code
+magicsuffix	12	class	13	link8	0	103	playerclass.code
+magicsuffix	13	classlevelreq	4	u8	0	104	
+magicsuffix	14	itype1	15	link16	0	106	itemtypes.code
+magicsuffix	15	itype2	15	link16	0	108	itemtypes.code
+magicsuffix	16	itype3	15	link16	0	110	itemtypes.code
+magicsuffix	17	itype4	15	link16	0	112	itemtypes.code
+magicsuffix	18	itype5	15	link16	0	114	itemtypes.code
+magicsuffix	19	itype6	15	link16	0	116	itemtypes.code
+magicsuffix	20	itype7	15	link16	0	118	itemtypes.code
+magicsuffix	21	etype1	15	link16	0	120	itemtypes.code
+magicsuffix	22	etype2	15	link16	0	122	itemtypes.code
+magicsuffix	23	etype3	15	link16	0	124	itemtypes.code
+magicsuffix	24	etype4	15	link16	0	126	itemtypes.code
+magicsuffix	25	etype5	15	link16	0	128	itemtypes.code
+magicsuffix	26	transformcolor	13	link8	0	86	colors.code
+magicsuffix	27	frequency	4	u8	0	130	
+magicsuffix	28	mod1code	19	link32	0	36	properties.code
+magicsuffix	29	mod1param	25	cb	0	40	param
+magicsuffix	30	mod1min	2	u32	0	44	
+magicsuffix	31	mod1max	2	u32	0	48	
+magicsuffix	32	mod2code	19	link32	0	52	properties.code
+magicsuffix	33	mod2param	25	cb	0	56	param
+magicsuffix	34	mod2min	2	u32	0	60	
+magicsuffix	35	mod2max	2	u32	0	64	
+magicsuffix	36	mod3code	19	link32	0	68	properties.code
+magicsuffix	37	mod3param	25	cb	0	72	param
+magicsuffix	38	mod3min	2	u32	0	76	
+magicsuffix	39	mod3max	2	u32	0	80	
+magicprefix	0	name	1	str	31	0	
+magicprefix	1	spawnable	4	u8	0	84	
+magicprefix	2	level	2	u32	0	88	
+magicprefix	3	group	2	u32	0	92	
+magicprefix	4	version	3	u16	0	34	
+magicprefix	5	divide	2	u32	0	132	
+magicprefix	6	multiply	2	u32	0	136	
+magicprefix	7	add	2	u32	0	140	
+magicprefix	8	rare	4	u8	0	100	
+magicprefix	9	maxlevel	2	u32	0	96	
+magicprefix	10	levelreq	4	u8	0	101	
+magicprefix	11	classspecific	13	link8	0	102	playerclass.code
+magicprefix	12	class	13	link8	0	103	playerclass.code
+magicprefix	13	classlevelreq	4	u8	0	104	
+magicprefix	14	itype1	15	link16	0	106	itemtypes.code
+magicprefix	15	itype2	15	link16	0	108	itemtypes.code
+magicprefix	16	itype3	15	link16	0	110	itemtypes.code
+magicprefix	17	itype4	15	link16	0	112	itemtypes.code
+magicprefix	18	itype5	15	link16	0	114	itemtypes.code
+magicprefix	19	itype6	15	link16	0	116	itemtypes.code
+magicprefix	20	itype7	15	link16	0	118	itemtypes.code
+magicprefix	21	etype1	15	link16	0	120	itemtypes.code
+magicprefix	22	etype2	15	link16	0	122	itemtypes.code
+magicprefix	23	etype3	15	link16	0	124	itemtypes.code
+magicprefix	24	etype4	15	link16	0	126	itemtypes.code
+magicprefix	25	etype5	15	link16	0	128	itemtypes.code
+magicprefix	26	transformcolor	13	link8	0	86	colors.code
+magicprefix	27	frequency	4	u8	0	130	
+magicprefix	28	mod1code	19	link32	0	36	properties.code
+magicprefix	29	mod1param	25	cb	0	40	param
+magicprefix	30	mod1min	2	u32	0	44	
+magicprefix	31	mod1max	2	u32	0	48	
+magicprefix	32	mod2code	19	link32	0	52	properties.code
+magicprefix	33	mod2param	25	cb	0	56	param
+magicprefix	34	mod2min	2	u32	0	60	
+magicprefix	35	mod2max	2	u32	0	64	
+magicprefix	36	mod3code	19	link32	0	68	properties.code
+magicprefix	37	mod3param	25	cb	0	72	param
+magicprefix	38	mod3min	2	u32	0	76	
+magicprefix	39	mod3max	2	u32	0	80	
+automagic	0	name	1	str	31	0	
+automagic	1	spawnable	4	u8	0	84	
+automagic	2	level	2	u32	0	88	
+automagic	3	group	2	u32	0	92	
+automagic	4	version	3	u16	0	34	
+automagic	5	divide	2	u32	0	132	
+automagic	6	multiply	2	u32	0	136	
+automagic	7	add	2	u32	0	140	
+automagic	8	rare	4	u8	0	100	
+automagic	9	maxlevel	2	u32	0	96	
+automagic	10	levelreq	4	u8	0	101	
+automagic	11	classspecific	13	link8	0	102	playerclass.code
+automagic	12	class	13	link8	0	103	playerclass.code
+automagic	13	classlevelreq	4	u8	0	104	
+automagic	14	itype1	15	link16	0	106	itemtypes.code
+automagic	15	itype2	15	link16	0	108	itemtypes.code
+automagic	16	itype3	15	link16	0	110	itemtypes.code
+automagic	17	itype4	15	link16	0	112	itemtypes.code
+automagic	18	itype5	15	link16	0	114	itemtypes.code
+automagic	19	itype6	15	link16	0	116	itemtypes.code
+automagic	20	itype7	15	link16	0	118	itemtypes.code
+automagic	21	etype1	15	link16	0	120	itemtypes.code
+automagic	22	etype2	15	link16	0	122	itemtypes.code
+automagic	23	etype3	15	link16	0	124	itemtypes.code
+automagic	24	etype4	15	link16	0	126	itemtypes.code
+automagic	25	etype5	15	link16	0	128	itemtypes.code
+automagic	26	transformcolor	13	link8	0	86	colors.code
+automagic	27	frequency	4	u8	0	130	
+automagic	28	mod1code	19	link32	0	36	properties.code
+automagic	29	mod1param	25	cb	0	40	param
+automagic	30	mod1min	2	u32	0	44	
+automagic	31	mod1max	2	u32	0	48	
+automagic	32	mod2code	19	link32	0	52	properties.code
+automagic	33	mod2param	25	cb	0	56	param
+automagic	34	mod2min	2	u32	0	60	
+automagic	35	mod2max	2	u32	0	64	
+automagic	36	mod3code	19	link32	0	68	properties.code
+automagic	37	mod3param	25	cb	0	72	param
+automagic	38	mod3min	2	u32	0	76	
+automagic	39	mod3max	2	u32	0	80	
+raresuffix	0	name	1	str	31	38	
+raresuffix	1	version	3	u16	0	14	
+raresuffix	2	itype1	15	link16	0	16	itemtypes.code
+raresuffix	3	itype2	15	link16	0	18	itemtypes.code
+raresuffix	4	itype3	15	link16	0	20	itemtypes.code
+raresuffix	5	itype4	15	link16	0	22	itemtypes.code
+raresuffix	6	itype5	15	link16	0	24	itemtypes.code
+raresuffix	7	itype6	15	link16	0	26	itemtypes.code
+raresuffix	8	itype7	15	link16	0	28	itemtypes.code
+raresuffix	9	etype1	15	link16	0	30	itemtypes.code
+raresuffix	10	etype2	15	link16	0	32	itemtypes.code
+raresuffix	11	etype3	15	link16	0	34	itemtypes.code
+raresuffix	12	etype4	15	link16	0	36	itemtypes.code
+rareprefix	0	name	1	str	31	38	
+rareprefix	1	version	3	u16	0	14	
+rareprefix	2	itype1	15	link16	0	16	itemtypes.code
+rareprefix	3	itype2	15	link16	0	18	itemtypes.code
+rareprefix	4	itype3	15	link16	0	20	itemtypes.code
+rareprefix	5	itype4	15	link16	0	22	itemtypes.code
+rareprefix	6	itype5	15	link16	0	24	itemtypes.code
+rareprefix	7	itype6	15	link16	0	26	itemtypes.code
+rareprefix	8	itype7	15	link16	0	28	itemtypes.code
+rareprefix	9	etype1	15	link16	0	30	itemtypes.code
+rareprefix	10	etype2	15	link16	0	32	itemtypes.code
+rareprefix	11	etype3	15	link16	0	34	itemtypes.code
+rareprefix	12	etype4	15	link16	0	36	itemtypes.code
+uniqueitems	0	index	1	str	31	2	
+uniqueitems	1	version	3	u16	0	36	
+uniqueitems	2	enabled	26	bit	0	44	
+uniqueitems	3	ladder	26	bit	3	44	
+uniqueitems	4	code	9	code4	0	40	
+uniqueitems	5	rarity	3	u16	0	48	
+uniqueitems	6	lvl	3	u16	0	52	
+uniqueitems	7	lvl req	3	u16	0	54	
+uniqueitems	8	nolimit	26	bit	1	44	
+uniqueitems	9	carry1	26	bit	2	44	
+uniqueitems	10	chrtransform	13	link8	0	56	colors.code
+uniqueitems	11	invtransform	13	link8	0	57	colors.code
+uniqueitems	12	flippyfile	1	str	31	58	
+uniqueitems	13	invfile	1	str	31	90	
+uniqueitems	14	cost mult	2	u32	0	124	
+uniqueitems	15	cost add	2	u32	0	128	
+uniqueitems	16	dropsound	20	link16	0	132	sounds.Sound
+uniqueitems	17	dropsfxframe	4	u8	0	136	
+uniqueitems	18	usesound	20	link16	0	134	sounds.Sound
+uniqueitems	19	prop1	19	link32	0	140	properties.code
+uniqueitems	20	par1	25	cb	0	144	param
+uniqueitems	21	min1	2	u32	0	148	
+uniqueitems	22	max1	2	u32	0	152	
+uniqueitems	23	prop2	19	link32	0	156	properties.code
+uniqueitems	24	par2	25	cb	0	160	param
+uniqueitems	25	min2	2	u32	0	164	
+uniqueitems	26	max2	2	u32	0	168	
+uniqueitems	27	prop3	19	link32	0	172	properties.code
+uniqueitems	28	par3	25	cb	0	176	param
+uniqueitems	29	min3	2	u32	0	180	
+uniqueitems	30	max3	2	u32	0	184	
+uniqueitems	31	prop4	19	link32	0	188	properties.code
+uniqueitems	32	par4	25	cb	0	192	param
+uniqueitems	33	min4	2	u32	0	196	
+uniqueitems	34	max4	2	u32	0	200	
+uniqueitems	35	prop5	19	link32	0	204	properties.code
+uniqueitems	36	par5	25	cb	0	208	param
+uniqueitems	37	min5	2	u32	0	212	
+uniqueitems	38	max5	2	u32	0	216	
+uniqueitems	39	prop6	19	link32	0	220	properties.code
+uniqueitems	40	par6	25	cb	0	224	param
+uniqueitems	41	min6	2	u32	0	228	
+uniqueitems	42	max6	2	u32	0	232	
+uniqueitems	43	prop7	19	link32	0	236	properties.code
+uniqueitems	44	par7	25	cb	0	240	param
+uniqueitems	45	min7	2	u32	0	244	
+uniqueitems	46	max7	2	u32	0	248	
+uniqueitems	47	prop8	19	link32	0	252	properties.code
+uniqueitems	48	par8	25	cb	0	256	param
+uniqueitems	49	min8	2	u32	0	260	
+uniqueitems	50	max8	2	u32	0	264	
+uniqueitems	51	prop9	19	link32	0	268	properties.code
+uniqueitems	52	par9	25	cb	0	272	param
+uniqueitems	53	min9	2	u32	0	276	
+uniqueitems	54	max9	2	u32	0	280	
+uniqueitems	55	prop10	19	link32	0	284	properties.code
+uniqueitems	56	par10	25	cb	0	288	param
+uniqueitems	57	min10	2	u32	0	292	
+uniqueitems	58	max10	2	u32	0	296	
+uniqueitems	59	prop11	19	link32	0	300	properties.code
+uniqueitems	60	par11	25	cb	0	304	param
+uniqueitems	61	min11	2	u32	0	308	
+uniqueitems	62	max11	2	u32	0	312	
+uniqueitems	63	prop12	19	link32	0	316	properties.code
+uniqueitems	64	par12	25	cb	0	320	param
+uniqueitems	65	min12	2	u32	0	324	
+uniqueitems	66	max12	2	u32	0	328	
+sets	0	index	17	key(name16)	0	0	sets.index
+sets	1	name	22	strkey	0	2	
+sets	2	version	3	u16	0	4	
+sets	3	pcode2a	19	link32	0	16	properties.code
+sets	4	pparam2a	25	cb	0	20	param
+sets	5	pmin2a	2	u32	0	24	
+sets	6	pmax2a	2	u32	0	28	
+sets	7	pcode2b	19	link32	0	32	properties.code
+sets	8	pparam2b	25	cb	0	36	param
+sets	9	pmin2b	2	u32	0	40	
+sets	10	pmax2b	2	u32	0	44	
+sets	11	pcode3a	19	link32	0	48	properties.code
+sets	12	pparam3a	25	cb	0	52	param
+sets	13	pmin3a	2	u32	0	56	
+sets	14	pmax3a	2	u32	0	60	
+sets	15	pcode3b	19	link32	0	64	properties.code
+sets	16	pparam3b	25	cb	0	68	param
+sets	17	pmin3b	2	u32	0	72	
+sets	18	pmax3b	2	u32	0	76	
+sets	19	pcode4a	19	link32	0	80	properties.code
+sets	20	pparam4a	25	cb	0	84	param
+sets	21	pmin4a	2	u32	0	88	
+sets	22	pmax4a	2	u32	0	92	
+sets	23	pcode4b	19	link32	0	96	properties.code
+sets	24	pparam4b	25	cb	0	100	param
+sets	25	pmin4b	2	u32	0	104	
+sets	26	pmax4b	2	u32	0	108	
+sets	27	pcode5a	19	link32	0	112	properties.code
+sets	28	pparam5a	25	cb	0	116	param
+sets	29	pmin5a	2	u32	0	120	
+sets	30	pmax5a	2	u32	0	124	
+sets	31	pcode5b	19	link32	0	128	properties.code
+sets	32	pparam5b	25	cb	0	132	param
+sets	33	pmin5b	2	u32	0	136	
+sets	34	pmax5b	2	u32	0	140	
+sets	35	fcode1	19	link32	0	144	properties.code
+sets	36	fparam1	25	cb	0	148	param
+sets	37	fmin1	2	u32	0	152	
+sets	38	fmax1	2	u32	0	156	
+sets	39	fcode2	19	link32	0	160	properties.code
+sets	40	fparam2	25	cb	0	164	param
+sets	41	fmin2	2	u32	0	168	
+sets	42	fmax2	2	u32	0	172	
+sets	43	fcode3	19	link32	0	176	properties.code
+sets	44	fparam3	25	cb	0	180	param
+sets	45	fmin3	2	u32	0	184	
+sets	46	fmax3	2	u32	0	188	
+sets	47	fcode4	19	link32	0	192	properties.code
+sets	48	fparam4	25	cb	0	196	param
+sets	49	fmin4	2	u32	0	200	
+sets	50	fmax4	2	u32	0	204	
+sets	51	fcode5	19	link32	0	208	properties.code
+sets	52	fparam5	25	cb	0	212	param
+sets	53	fmin5	2	u32	0	216	
+sets	54	fmax5	2	u32	0	220	
+sets	55	fcode6	19	link32	0	224	properties.code
+sets	56	fparam6	25	cb	0	228	param
+sets	57	fmin6	2	u32	0	232	
+sets	58	fmax6	2	u32	0	236	
+sets	59	fcode7	19	link32	0	240	properties.code
+sets	60	fparam7	25	cb	0	244	param
+sets	61	fmin7	2	u32	0	248	
+sets	62	fmax7	2	u32	0	252	
+sets	63	fcode8	19	link32	0	256	properties.code
+sets	64	fparam8	25	cb	0	260	param
+sets	65	fmin8	2	u32	0	264	
+sets	66	fmax8	2	u32	0	268	
+setitems	0	index	1	str	31	2	
+setitems	1	item	9	code4	0	40	
+setitems	2	set	20	link16	0	44	sets.index
+setitems	3	lvl	3	u16	0	48	
+setitems	4	lvl req	3	u16	0	50	
+setitems	5	rarity	2	u32	0	52	
+setitems	6	cost mult	2	u32	0	56	
+setitems	7	cost add	2	u32	0	60	
+setitems	8	chrtransform	13	link8	0	64	colors.code
+setitems	9	invtransform	13	link8	0	65	colors.code
+setitems	10	flippyfile	1	str	31	66	
+setitems	11	invfile	1	str	31	98	
+setitems	12	dropsound	20	link16	0	130	sounds.Sound
+setitems	13	dropsfxframe	4	u8	0	134	
+setitems	14	usesound	20	link16	0	132	sounds.Sound
+setitems	15	add func	4	u8	0	135	
+setitems	16	prop1	19	link32	0	136	properties.code
+setitems	17	par1	25	cb	0	140	param
+setitems	18	min1	2	u32	0	144	
+setitems	19	max1	2	u32	0	148	
+setitems	20	prop2	19	link32	0	152	properties.code
+setitems	21	par2	25	cb	0	156	param
+setitems	22	min2	2	u32	0	160	
+setitems	23	max2	2	u32	0	164	
+setitems	24	prop3	19	link32	0	168	properties.code
+setitems	25	par3	25	cb	0	172	param
+setitems	26	min3	2	u32	0	176	
+setitems	27	max3	2	u32	0	180	
+setitems	28	prop4	19	link32	0	184	properties.code
+setitems	29	par4	25	cb	0	188	param
+setitems	30	min4	2	u32	0	192	
+setitems	31	max4	2	u32	0	196	
+setitems	32	prop5	19	link32	0	200	properties.code
+setitems	33	par5	25	cb	0	204	param
+setitems	34	min5	2	u32	0	208	
+setitems	35	max5	2	u32	0	212	
+setitems	36	prop6	19	link32	0	216	properties.code
+setitems	37	par6	25	cb	0	220	param
+setitems	38	min6	2	u32	0	224	
+setitems	39	max6	2	u32	0	228	
+setitems	40	prop7	19	link32	0	232	properties.code
+setitems	41	par7	25	cb	0	236	param
+setitems	42	min7	2	u32	0	240	
+setitems	43	max7	2	u32	0	244	
+setitems	44	prop8	19	link32	0	248	properties.code
+setitems	45	par8	25	cb	0	252	param
+setitems	46	min8	2	u32	0	256	
+setitems	47	max8	2	u32	0	260	
+setitems	48	prop9	19	link32	0	264	properties.code
+setitems	49	par9	25	cb	0	268	param
+setitems	50	min9	2	u32	0	272	
+setitems	51	max9	2	u32	0	276	
+setitems	52	aprop1a	19	link32	0	280	properties.code
+setitems	53	apar1a	25	cb	0	284	param
+setitems	54	amin1a	2	u32	0	288	
+setitems	55	amax1a	2	u32	0	292	
+setitems	56	aprop1b	19	link32	0	296	properties.code
+setitems	57	apar1b	25	cb	0	300	param
+setitems	58	amin1b	2	u32	0	304	
+setitems	59	amax1b	2	u32	0	308	
+setitems	60	aprop2a	19	link32	0	312	properties.code
+setitems	61	apar2a	25	cb	0	316	param
+setitems	62	amin2a	2	u32	0	320	
+setitems	63	amax2a	2	u32	0	324	
+setitems	64	aprop2b	19	link32	0	328	properties.code
+setitems	65	apar2b	25	cb	0	332	param
+setitems	66	amin2b	2	u32	0	336	
+setitems	67	amax2b	2	u32	0	340	
+setitems	68	aprop3a	19	link32	0	344	properties.code
+setitems	69	apar3a	25	cb	0	348	param
+setitems	70	amin3a	2	u32	0	352	
+setitems	71	amax3a	2	u32	0	356	
+setitems	72	aprop3b	19	link32	0	360	properties.code
+setitems	73	apar3b	25	cb	0	364	param
+setitems	74	amin3b	2	u32	0	368	
+setitems	75	amax3b	2	u32	0	372	
+setitems	76	aprop4a	19	link32	0	376	properties.code
+setitems	77	apar4a	25	cb	0	380	param
+setitems	78	amin4a	2	u32	0	384	
+setitems	79	amax4a	2	u32	0	388	
+setitems	80	aprop4b	19	link32	0	392	properties.code
+setitems	81	apar4b	25	cb	0	396	param
+setitems	82	amin4b	2	u32	0	400	
+setitems	83	amax4b	2	u32	0	404	
+setitems	84	aprop5a	19	link32	0	408	properties.code
+setitems	85	apar5a	25	cb	0	412	param
+setitems	86	amin5a	2	u32	0	416	
+setitems	87	amax5a	2	u32	0	420	
+setitems	88	aprop5b	19	link32	0	424	properties.code
+setitems	89	apar5b	25	cb	0	428	param
+setitems	90	amin5b	2	u32	0	432	
+setitems	91	amax5b	2	u32	0	436	
+gems	0	name	1	str	31	0	
+gems	1	letter	1	str	5	32	
+gems	2	code	11	link32	0	40	items.code
+gems	3	transform	4	u8	0	47	
+gems	4	nummods	4	u8	0	46	
+gems	5	weaponmod1code	19	link32	0	48	properties.code
+gems	6	weaponmod1param	25	cb	0	52	param
+gems	7	weaponmod1min	2	u32	0	56	
+gems	8	weaponmod1max	2	u32	0	60	
+gems	9	weaponmod2code	19	link32	0	64	properties.code
+gems	10	weaponmod2param	25	cb	0	68	param
+gems	11	weaponmod2min	2	u32	0	72	
+gems	12	weaponmod2max	2	u32	0	76	
+gems	13	weaponmod3code	19	link32	0	80	properties.code
+gems	14	weaponmod3param	25	cb	0	84	param
+gems	15	weaponmod3min	2	u32	0	88	
+gems	16	weaponmod3max	2	u32	0	92	
+gems	17	helmmod1code	19	link32	0	96	properties.code
+gems	18	helmmod1param	25	cb	0	100	param
+gems	19	helmmod1min	2	u32	0	104	
+gems	20	helmmod1max	2	u32	0	108	
+gems	21	helmmod2code	19	link32	0	112	properties.code
+gems	22	helmmod2param	25	cb	0	116	param
+gems	23	helmmod2min	2	u32	0	120	
+gems	24	helmmod2max	2	u32	0	124	
+gems	25	helmmod3code	19	link32	0	128	properties.code
+gems	26	helmmod3param	25	cb	0	132	param
+gems	27	helmmod3min	2	u32	0	136	
+gems	28	helmmod3max	2	u32	0	140	
+gems	29	shieldmod1code	19	link32	0	144	properties.code
+gems	30	shieldmod1param	25	cb	0	148	param
+gems	31	shieldmod1min	2	u32	0	152	
+gems	32	shieldmod1max	2	u32	0	156	
+gems	33	shieldmod2code	19	link32	0	160	properties.code
+gems	34	shieldmod2param	25	cb	0	164	param
+gems	35	shieldmod2min	2	u32	0	168	
+gems	36	shieldmod2max	2	u32	0	172	
+gems	37	shieldmod3code	19	link32	0	176	properties.code
+gems	38	shieldmod3param	25	cb	0	180	param
+gems	39	shieldmod3min	2	u32	0	184	
+gems	40	shieldmod3max	2	u32	0	188	
+books	0	name	22	strkey	0	0	
+books	1	scrollspellcode	9	code4	0	24	
+books	2	bookspellcode	9	code4	0	28	
+books	3	pSpell	2	u32	0	4	
+books	4	scrollskill	19	link32	0	8	skills.skill
+books	5	bookskill	19	link32	0	12	skills.skill
+books	6	spellicon	4	u8	0	2	
+books	7	basecost	2	u32	0	16	
+books	8	costpercharge	2	u32	0	20	
+qualityitems	0	nummods	4	u8	0	10	
+qualityitems	1	mod1code	19	link32	0	12	properties.code
+qualityitems	2	mod2code	19	link32	0	28	properties.code
+qualityitems	3	mod1param	2	u32	0	16	
+qualityitems	4	mod1min	2	u32	0	20	
+qualityitems	5	mod1max	2	u32	0	24	
+qualityitems	6	mod2param	2	u32	0	32	
+qualityitems	7	mod2min	2	u32	0	36	
+qualityitems	8	mod2max	2	u32	0	40	
+qualityitems	9	effect1	1	str	31	44	
+qualityitems	10	effect2	1	str	31	76	
+qualityitems	11	armor	4	u8	0	0	
+qualityitems	12	weapon	4	u8	0	1	
+qualityitems	13	shield	4	u8	0	2	
+qualityitems	14	scepter	4	u8	0	3	
+qualityitems	15	wand	4	u8	0	4	
+qualityitems	16	staff	4	u8	0	5	
+qualityitems	17	bow	4	u8	0	6	
+qualityitems	18	boots	4	u8	0	7	
+qualityitems	19	gloves	4	u8	0	8	
+qualityitems	20	belt	4	u8	0	9	
+lowqualityitems	0	Name	1	str	31	0	
+runes	0	name	1	str	63	0	
+runes	1	rune name	1	str	63	64	
+runes	2	complete	4	u8	0	128	
+runes	3	server	4	u8	0	129	
+runes	4	itype1	15	link16	0	134	itemtypes.code
+runes	5	itype2	15	link16	0	136	itemtypes.code
+runes	6	itype3	15	link16	0	138	itemtypes.code
+runes	7	itype4	15	link16	0	140	itemtypes.code
+runes	8	itype5	15	link16	0	142	itemtypes.code
+runes	9	itype6	15	link16	0	144	itemtypes.code
+runes	10	etype1	15	link16	0	146	itemtypes.code
+runes	11	etype2	15	link16	0	148	itemtypes.code
+runes	12	etype3	15	link16	0	150	itemtypes.code
+runes	13	rune1	11	link32	0	152	items.code
+runes	14	rune2	11	link32	0	156	items.code
+runes	15	rune3	11	link32	0	160	items.code
+runes	16	rune4	11	link32	0	164	items.code
+runes	17	rune5	11	link32	0	168	items.code
+runes	18	rune6	11	link32	0	172	items.code
+runes	19	t1code1	19	link32	0	176	properties.code
+runes	20	t1param1	25	cb	0	180	param
+runes	21	t1min1	2	u32	0	184	
+runes	22	t1max1	2	u32	0	188	
+runes	23	t1code2	19	link32	0	192	properties.code
+runes	24	t1param2	25	cb	0	196	param
+runes	25	t1min2	2	u32	0	200	
+runes	26	t1max2	2	u32	0	204	
+runes	27	t1code3	19	link32	0	208	properties.code
+runes	28	t1param3	25	cb	0	212	param
+runes	29	t1min3	2	u32	0	216	
+runes	30	t1max3	2	u32	0	220	
+runes	31	t1code4	19	link32	0	224	properties.code
+runes	32	t1param4	25	cb	0	228	param
+runes	33	t1min4	2	u32	0	232	
+runes	34	t1max4	2	u32	0	236	
+runes	35	t1code5	19	link32	0	240	properties.code
+runes	36	t1param5	25	cb	0	244	param
+runes	37	t1min5	2	u32	0	248	
+runes	38	t1max5	2	u32	0	252	
+runes	39	t1code6	19	link32	0	256	properties.code
+runes	40	t1param6	25	cb	0	260	param
+runes	41	t1min6	2	u32	0	264	
+runes	42	t1max6	2	u32	0	268	
+runes	43	t1code7	19	link32	0	272	properties.code
+runes	44	t1param7	25	cb	0	276	param
+runes	45	t1min7	2	u32	0	280	
+runes	46	t1max7	2	u32	0	284	
+itemratio	0	Version	3	u16	0	64	
+itemratio	1	Uber	4	u8	0	66	
+itemratio	2	Class Specific	4	u8	0	67	
+itemratio	3	Unique	2	u32	0	0	
+itemratio	4	UniqueDivisor	2	u32	0	4	
+itemratio	5	UniqueMin	2	u32	0	8	
+itemratio	6	Rare	2	u32	0	12	
+itemratio	7	RareDivisor	2	u32	0	16	
+itemratio	8	RareMin	2	u32	0	20	
+itemratio	9	Set	2	u32	0	24	
+itemratio	10	SetDivisor	2	u32	0	28	
+itemratio	11	SetMin	2	u32	0	32	
+itemratio	12	Magic	2	u32	0	36	
+itemratio	13	MagicDivisor	2	u32	0	40	
+itemratio	14	MagicMin	2	u32	0	44	
+itemratio	15	HiQuality	2	u32	0	48	
+itemratio	16	HiQualityDivisor	2	u32	0	52	
+itemratio	17	Normal	2	u32	0	56	
+itemratio	18	NormalDivisor	2	u32	0	60	
+gamble	0	code	9	code4	0	0	
+plrtype	0	name	1	str	31	0	
+plrtype	1	token	9	code4	0	32	
+plrmode	0	name	1	str	31	0	
+plrmode	1	token	9	code4	0	32	
+monmode	0	name	1	str	31	0	
+monmode	1	token	9	code4	0	32	
+monmode	2	DT_Dir	6	u8	0	36	
+monmode	3	NU_Dir	6	u8	0	37	
+monmode	4	WL_Dir	6	u8	0	38	
+monmode	5	GH_Dir	6	u8	0	39	
+monmode	6	A1_Dir	6	u8	0	40	
+monmode	7	A2_Dir	6	u8	0	41	
+monmode	8	BL_Dir	6	u8	0	42	
+monmode	9	SC_Dir	6	u8	0	43	
+monmode	10	S1_Dir	6	u8	0	44	
+monmode	11	S2_Dir	6	u8	0	45	
+monmode	12	S3_Dir	6	u8	0	46	
+monmode	13	S4_Dir	6	u8	0	47	
+monmode	14	DD_Dir	6	u8	0	48	
+monmode	15	KB_Dir	6	u8	0	49	
+monmode	16	SQ_Dir	6	u8	0	50	
+monmode	17	RN_Dir	6	u8	0	51	
+objtype	0	name	1	str	31	0	
+objtype	1	token	9	code4	0	32	
+objmode	0	name	1	str	31	0	
+objmode	1	token	9	code4	0	32	
+composit	0	name	1	str	31	0	
+composit	1	token	9	code4	0	32	
+armtype	0	name	1	str	31	0	
+armtype	1	token	9	code4	0	32	
+experience	0	Amazon	2	u32	0	0	
+experience	1	Sorceress	2	u32	0	4	
+experience	2	Necromancer	2	u32	0	8	
+experience	3	Paladin	2	u32	0	12	
+experience	4	Barbarian	2	u32	0	16	
+experience	5	Druid	2	u32	0	20	
+experience	6	Assassin	2	u32	0	24	
+experience	7	ExpRatio	2	u32	0	28	
+uniquetitle	0	Name	22	strkey	0	0	
+uniqueprefix	0	Name	22	strkey	0	0	
+uniquesuffix	0	Name	22	strkey	0	0	
+uniqueappellation	0	Name	22	strkey	0	0	
+monlvl	0	AC	2	u32	0	0	
+monlvl	1	AC(N)	2	u32	0	4	
+monlvl	2	AC(H)	2	u32	0	8	
+monlvl	3	TH	2	u32	0	24	
+monlvl	4	TH(N)	2	u32	0	28	
+monlvl	5	TH(H)	2	u32	0	32	
+monlvl	6	HP	2	u32	0	48	
+monlvl	7	HP(N)	2	u32	0	52	
+monlvl	8	HP(H)	2	u32	0	56	
+monlvl	9	DM	2	u32	0	72	
+monlvl	10	DM(N)	2	u32	0	76	
+monlvl	11	DM(H)	2	u32	0	80	
+monlvl	12	XP	2	u32	0	96	
+monlvl	13	XP(N)	2	u32	0	100	
+monlvl	14	XP(H)	2	u32	0	104	
+monlvl	15	L-AC	2	u32	0	12	
+monlvl	16	L-AC(N)	2	u32	0	16	
+monlvl	17	L-AC(H)	2	u32	0	20	
+monlvl	18	L-TH	2	u32	0	36	
+monlvl	19	L-TH(N)	2	u32	0	40	
+monlvl	20	L-TH(H)	2	u32	0	44	
+monlvl	21	L-HP	2	u32	0	60	
+monlvl	22	L-HP(N)	2	u32	0	64	
+monlvl	23	L-HP(H)	2	u32	0	68	
+monlvl	24	L-DM	2	u32	0	84	
+monlvl	25	L-DM(N)	2	u32	0	88	
+monlvl	26	L-DM(H)	2	u32	0	92	
+monlvl	27	L-XP	2	u32	0	108	
+monlvl	28	L-XP(N)	2	u32	0	112	
+monlvl	29	L-XP(H)	2	u32	0	116	
+treasureclassex	0	treasure class	1	str	32	0	
+treasureclassex	1	group	3	u16	0	36	
+treasureclassex	2	level	3	u16	0	38	
+treasureclassex	3	picks	2	u32	0	32	
+treasureclassex	4	unique	3	u16	0	46	
+treasureclassex	5	set	3	u16	0	44	
+treasureclassex	6	rare	3	u16	0	42	
+treasureclassex	7	magic	3	u16	0	40	
+treasureclassex	8	nodrop	2	u32	0	52	
+treasureclassex	9	item1	1	str	64	56	
+treasureclassex	10	prob1	2	u32	0	696	
+treasureclassex	11	item2	1	str	64	120	
+treasureclassex	12	prob2	2	u32	0	700	
+treasureclassex	13	item3	1	str	64	184	
+treasureclassex	14	prob3	2	u32	0	704	
+treasureclassex	15	item4	1	str	64	248	
+treasureclassex	16	prob4	2	u32	0	708	
+treasureclassex	17	item5	1	str	64	312	
+treasureclassex	18	prob5	2	u32	0	712	
+treasureclassex	19	item6	1	str	64	376	
+treasureclassex	20	prob6	2	u32	0	716	
+treasureclassex	21	item7	1	str	64	440	
+treasureclassex	22	prob7	2	u32	0	720	
+treasureclassex	23	item8	1	str	64	504	
+treasureclassex	24	prob8	2	u32	0	724	
+treasureclassex	25	item9	1	str	64	568	
+treasureclassex	26	prob9	2	u32	0	728	
+treasureclassex	27	item10	1	str	64	632	
+treasureclassex	28	prob10	2	u32	0	732	
+monstats2	0	Id	17	key(name16)	0	0	monstats2.Id
+monstats2	1	Height	4	u8	0	11	
+monstats2	2	overlayHeight	4	u8	0	12	
+monstats2	3	pixHeight	4	u8	0	13	
+monstats2	4	SizeX	4	u8	0	8	
+monstats2	5	SizeY	4	u8	0	9	
+monstats2	6	spawnCol	4	u8	0	10	
+monstats2	7	MeleeRng	4	u8	0	14	
+monstats2	8	BaseW	9	code4	0	16	
+monstats2	9	HitClass	4	u8	0	20	
+monstats2	10	HDv	23	cb	0	0	cb(monstats2.composit)
+monstats2	11	TRv	23	cb	0	1	cb(monstats2.composit)
+monstats2	12	LGv	23	cb	0	2	cb(monstats2.composit)
+monstats2	13	Rav	23	cb	0	3	cb(monstats2.composit)
+monstats2	14	Lav	23	cb	0	4	cb(monstats2.composit)
+monstats2	15	RHv	23	cb	0	5	cb(monstats2.composit)
+monstats2	16	LHv	23	cb	0	6	cb(monstats2.composit)
+monstats2	17	SHv	23	cb	0	7	cb(monstats2.composit)
+monstats2	18	S1v	23	cb	0	8	cb(monstats2.composit)
+monstats2	19	S2v	23	cb	0	9	cb(monstats2.composit)
+monstats2	20	S3v	23	cb	0	10	cb(monstats2.composit)
+monstats2	21	S4v	23	cb	0	11	cb(monstats2.composit)
+monstats2	22	S5v	23	cb	0	12	cb(monstats2.composit)
+monstats2	23	S6v	23	cb	0	13	cb(monstats2.composit)
+monstats2	24	S7v	23	cb	0	14	cb(monstats2.composit)
+monstats2	25	S8v	23	cb	0	15	cb(monstats2.composit)
+monstats2	26	HD	26	bit	0	232	
+monstats2	27	TR	26	bit	1	232	
+monstats2	28	LG	26	bit	2	232	
+monstats2	29	RA	26	bit	3	232	
+monstats2	30	LA	26	bit	4	232	
+monstats2	31	RH	26	bit	5	232	
+monstats2	32	LH	26	bit	6	232	
+monstats2	33	SH	26	bit	7	232	
+monstats2	34	S1	26	bit	8	232	
+monstats2	35	S2	26	bit	9	232	
+monstats2	36	S3	26	bit	10	232	
+monstats2	37	S4	26	bit	11	232	
+monstats2	38	S5	26	bit	12	232	
+monstats2	39	S6	26	bit	13	232	
+monstats2	40	S7	26	bit	14	232	
+monstats2	41	S8	26	bit	15	232	
+monstats2	42	TotalPieces	4	u8	0	236	
+monstats2	43	mDT	26	bit	0	240	
+monstats2	44	mNU	26	bit	1	240	
+monstats2	45	mWL	26	bit	2	240	
+monstats2	46	mGH	26	bit	3	240	
+monstats2	47	mA1	26	bit	4	240	
+monstats2	48	mA2	26	bit	5	240	
+monstats2	49	mBL	26	bit	6	240	
+monstats2	50	mSC	26	bit	7	240	
+monstats2	51	mS1	26	bit	8	240	
+monstats2	52	mS2	26	bit	9	240	
+monstats2	53	mS3	26	bit	10	240	
+monstats2	54	mS4	26	bit	11	240	
+monstats2	55	mDD	26	bit	12	240	
+monstats2	56	mKB	26	bit	13	240	
+monstats2	57	mSQ	26	bit	14	240	
+monstats2	58	mRN	26	bit	15	240	
+monstats2	59	dDT	4	u8	0	244	
+monstats2	60	dNU	4	u8	0	245	
+monstats2	61	dWL	4	u8	0	246	
+monstats2	62	dGH	4	u8	0	247	
+monstats2	63	dA1	4	u8	0	248	
+monstats2	64	dA2	4	u8	0	249	
+monstats2	65	dBL	4	u8	0	250	
+monstats2	66	dSC	4	u8	0	251	
+monstats2	67	dS1	4	u8	0	252	
+monstats2	68	dS2	4	u8	0	253	
+monstats2	69	dS3	4	u8	0	254	
+monstats2	70	dS4	4	u8	0	255	
+monstats2	71	dDD	4	u8	0	256	
+monstats2	72	dKB	4	u8	0	257	
+monstats2	73	dSQ	4	u8	0	258	
+monstats2	74	dRN	4	u8	0	259	
+monstats2	75	A1mv	26	bit	4	260	
+monstats2	76	A2mv	26	bit	5	260	
+monstats2	77	SCmv	26	bit	7	260	
+monstats2	78	S1mv	26	bit	8	260	
+monstats2	79	S2mv	26	bit	9	260	
+monstats2	80	S3mv	26	bit	10	260	
+monstats2	81	S4mv	26	bit	11	260	
+monstats2	82	noGfxHitTest	26	bit	0	4	
+monstats2	83	htTop	3	u16	0	270	
+monstats2	84	htLeft	3	u16	0	272	
+monstats2	85	htWidth	3	u16	0	274	
+monstats2	86	htHeight	3	u16	0	276	
+monstats2	87	restore	4	u8	0	304	
+monstats2	88	automapCel	2	u32	0	280	
+monstats2	89	noMap	26	bit	1	4	
+monstats2	90	noOvly	26	bit	2	4	
+monstats2	91	isSel	26	bit	3	4	
+monstats2	92	alSel	26	bit	4	4	
+monstats2	93	noSel	26	bit	5	4	
+monstats2	94	shiftSel	26	bit	6	4	
+monstats2	95	corpseSel	26	bit	7	4	
+monstats2	96	revive	26	bit	8	4	
+monstats2	97	isAtt	26	bit	9	4	
+monstats2	98	large	26	bit	11	4	
+monstats2	99	small	26	bit	10	4	
+monstats2	100	soft	26	bit	12	4	
+monstats2	101	critter	26	bit	13	4	
+monstats2	102	inert	26	bit	17	4	
+monstats2	103	objCol	26	bit	18	4	
+monstats2	104	deadCol	26	bit	19	4	
+monstats2	105	unflatDead	26	bit	20	4	
+monstats2	106	shadow	26	bit	14	4	
+monstats2	107	noUniqueShift	26	bit	15	4	
+monstats2	108	compositeDeath	26	bit	16	4	
+monstats2	109	localBlood	4	u8	0	284	
+monstats2	110	bleed	4	u8	0	285	
+monstats2	111	light	4	u8	0	286	
+monstats2	112	light-r	4	u8	0	287	
+monstats2	113	light-g	4	u8	0	288	
+monstats2	114	light-b	4	u8	0	289	
+monstats2	115	Utrans	4	u8	0	290	
+monstats2	116	Utrans(N)	4	u8	0	291	
+monstats2	117	Utrans(H)	4	u8	0	292	
+monstats2	118	Heart	9	code4	0	296	
+monstats2	119	BodyPart	9	code4	0	300	
+monstats2	120	InfernoLen	4	u8	0	264	
+monstats2	121	InfernoAnim	4	u8	0	265	
+monstats2	122	InfernoRollback	4	u8	0	266	
+monstats2	123	ResurrectMode	13	link8	0	267	monmode_lookup.code
+monstats2	124	ResurrectSkill	20	link16	0	268	skills.skill
+monprop	0	Id	18	key(name32)	0	0	monprop.Id
+monprop	1	prop1	19	link32	0	4	properties.code
+monprop	2	par1	2	u32	0	8	
+monprop	3	chance1	4	u8	0	292	
+monprop	4	min1	2	u32	0	12	
+monprop	5	max1	2	u32	0	16	
+monprop	6	prop2	19	link32	0	20	properties.code
+monprop	7	chance2	4	u8	0	293	
+monprop	8	par2	2	u32	0	24	
+monprop	9	min2	2	u32	0	28	
+monprop	10	max2	2	u32	0	32	
+monprop	11	prop3	19	link32	0	36	properties.code
+monprop	12	chance3	4	u8	0	294	
+monprop	13	par3	2	u32	0	40	
+monprop	14	min3	2	u32	0	44	
+monprop	15	max3	2	u32	0	48	
+monprop	16	prop4	19	link32	0	52	properties.code
+monprop	17	chance4	4	u8	0	295	
+monprop	18	par4	2	u32	0	56	
+monprop	19	min4	2	u32	0	60	
+monprop	20	max4	2	u32	0	64	
+monprop	21	prop5	19	link32	0	68	properties.code
+monprop	22	chance5	4	u8	0	296	
+monprop	23	par5	2	u32	0	72	
+monprop	24	min5	2	u32	0	76	
+monprop	25	max5	2	u32	0	80	
+monprop	26	prop6	19	link32	0	84	properties.code
+monprop	27	chance6	4	u8	0	297	
+monprop	28	par6	2	u32	0	88	
+monprop	29	min6	2	u32	0	92	
+monprop	30	max6	2	u32	0	96	
+monprop	31	prop1 (N)	19	link32	0	100	properties.code
+monprop	32	chance1 (N)	4	u8	0	298	
+monprop	33	par1 (N)	2	u32	0	104	
+monprop	34	min1 (N)	2	u32	0	108	
+monprop	35	max1 (N)	2	u32	0	112	
+monprop	36	prop2 (N)	19	link32	0	116	properties.code
+monprop	37	chance2 (N)	4	u8	0	299	
+monprop	38	par2 (N)	2	u32	0	120	
+monprop	39	min2 (N)	2	u32	0	124	
+monprop	40	max2 (N)	2	u32	0	128	
+monprop	41	prop3 (N)	19	link32	0	132	properties.code
+monprop	42	chance3 (N)	4	u8	0	300	
+monprop	43	par3 (N)	2	u32	0	136	
+monprop	44	min3 (N)	2	u32	0	140	
+monprop	45	max3 (N)	2	u32	0	144	
+monprop	46	prop4 (N)	19	link32	0	148	properties.code
+monprop	47	chance4 (N)	4	u8	0	301	
+monprop	48	par4 (N)	2	u32	0	152	
+monprop	49	min4 (N)	2	u32	0	156	
+monprop	50	max4 (N)	2	u32	0	160	
+monprop	51	prop5 (N)	19	link32	0	164	properties.code
+monprop	52	chance5 (N)	4	u8	0	302	
+monprop	53	par5 (N)	2	u32	0	168	
+monprop	54	min5 (N)	2	u32	0	172	
+monprop	55	max5 (N)	2	u32	0	176	
+monprop	56	prop6 (N)	19	link32	0	180	properties.code
+monprop	57	chance6 (N)	4	u8	0	303	
+monprop	58	par6 (N)	2	u32	0	184	
+monprop	59	min6 (N)	2	u32	0	188	
+monprop	60	max6 (N)	2	u32	0	192	
+monprop	61	prop1 (H)	19	link32	0	196	properties.code
+monprop	62	chance1 (H)	4	u8	0	304	
+monprop	63	par1 (H)	2	u32	0	200	
+monprop	64	min1 (H)	2	u32	0	204	
+monprop	65	max1 (H)	2	u32	0	208	
+monprop	66	prop2 (H)	19	link32	0	212	properties.code
+monprop	67	chance2 (H)	4	u8	0	305	
+monprop	68	par2 (H)	2	u32	0	216	
+monprop	69	min2 (H)	2	u32	0	220	
+monprop	70	max2 (H)	2	u32	0	224	
+monprop	71	prop3 (H)	19	link32	0	228	properties.code
+monprop	72	chance3 (H)	4	u8	0	306	
+monprop	73	par3 (H)	2	u32	0	232	
+monprop	74	min3 (H)	2	u32	0	236	
+monprop	75	max3 (H)	2	u32	0	240	
+monprop	76	prop4 (H)	19	link32	0	244	properties.code
+monprop	77	chance4 (H)	4	u8	0	307	
+monprop	78	par4 (H)	2	u32	0	248	
+monprop	79	min4 (H)	2	u32	0	252	
+monprop	80	max4 (H)	2	u32	0	256	
+monprop	81	prop5 (H)	19	link32	0	260	properties.code
+monprop	82	chance5 (H)	4	u8	0	308	
+monprop	83	par5 (H)	2	u32	0	264	
+monprop	84	min5 (H)	2	u32	0	268	
+monprop	85	max5 (H)	2	u32	0	272	
+monprop	86	prop6 (H)	19	link32	0	276	properties.code
+monprop	87	chance6 (H)	4	u8	0	309	
+monprop	88	par6 (H)	2	u32	0	280	
+monprop	89	min6 (H)	2	u32	0	284	
+monprop	90	max6 (H)	2	u32	0	288	
+monsounds	0	Id	17	key(name16)	0	0	monsounds.Id
+monsounds	1	Attack1	19	link32	0	4	sounds.Sound
+monsounds	2	Att1Del	2	u32	0	8	
+monsounds	3	Att1Prb	2	u32	0	12	
+monsounds	4	Attack2	19	link32	0	28	sounds.Sound
+monsounds	5	Att2Del	2	u32	0	32	
+monsounds	6	Att2Prb	2	u32	0	36	
+monsounds	7	Weapon1	19	link32	0	16	sounds.Sound
+monsounds	8	Wea1Del	2	u32	0	20	
+monsounds	9	Wea1Vol	2	u32	0	24	
+monsounds	10	Weapon2	19	link32	0	40	sounds.Sound
+monsounds	11	Wea2Del	2	u32	0	44	
+monsounds	12	Wea2Vol	2	u32	0	48	
+monsounds	13	HitSound	19	link32	0	52	sounds.Sound
+monsounds	14	HitDelay	2	u32	0	56	
+monsounds	15	DeathSound	19	link32	0	60	sounds.Sound
+monsounds	16	DeaDelay	2	u32	0	64	
+monsounds	17	Skill1	19	link32	0	68	sounds.Sound
+monsounds	18	Skill2	19	link32	0	72	sounds.Sound
+monsounds	19	Skill3	19	link32	0	76	sounds.Sound
+monsounds	20	Skill4	19	link32	0	80	sounds.Sound
+monsounds	21	Footstep	19	link32	0	84	sounds.Sound
+monsounds	22	FootstepLayer	19	link32	0	88	sounds.Sound
+monsounds	23	FsCnt	2	u32	0	92	
+monsounds	24	FsOff	2	u32	0	96	
+monsounds	25	FsPrb	2	u32	0	100	
+monsounds	26	Neutral	19	link32	0	104	sounds.Sound
+monsounds	27	NeuTime	2	u32	0	108	
+monsounds	28	Init	19	link32	0	112	sounds.Sound
+monsounds	29	Taunt	19	link32	0	116	sounds.Sound
+monsounds	30	Flee	19	link32	0	120	sounds.Sound
+monsounds	31	CvtMo1	13	link8	0	124	monmode_lookup.code
+monsounds	32	CvtMo2	13	link8	0	132	monmode_lookup.code
+monsounds	33	CvtMo3	13	link8	0	140	monmode_lookup.code
+monsounds	34	CvtSk1	19	link32	0	128	skills.skill
+monsounds	35	CvtSk2	19	link32	0	136	skills.skill
+monsounds	36	CvtSk3	19	link32	0	144	skills.skill
+monsounds	37	CvtTgt1	13	link8	0	125	monmode_lookup.code
+monsounds	38	CvtTgt2	13	link8	0	133	monmode_lookup.code
+monsounds	39	CvtTgt3	13	link8	0	141	monmode_lookup.code
+monseq	0	sequence	17	key(name16)	0	0	monseq.sequence
+monseq	1	mode	13	link8	0	2	monmode_lookup.code
+monseq	2	frame	4	u8	0	3	
+monseq	3	dir	4	u8	0	4	
+monseq	4	event	4	u8	0	5	
+monstats	0	Id	17	key(name16)	0	0	monstats.Id
+monstats	1	BaseId	20	link16	0	2	monstats.Id
+monstats	2	NextInClass	20	link16	0	4	monstats.Id
+monstats	3	NameStr	22	strkey	0	6	
+monstats	4	DescStr	22	strkey	0	8	
+monstats	5	Code	9	code4	0	16	
+monstats	6	TransLvl	4	u8	0	77	
+monstats	7	MonSound	20	link16	0	20	monsounds.Id
+monstats	8	UMonSound	20	link16	0	22	monsounds.Id
+monstats	9	MonStatsEx	20	link16	0	24	monstats2.Id
+monstats	10	MonType	20	link16	0	28	montype.type
+monstats	11	MonProp	20	link16	0	26	monprop.Id
+monstats	12	AI	20	link16	0	30	monai.AI
+monstats	13	spawn	20	link16	0	32	monstats.Id
+monstats	14	spawnx	4	u8	0	34	
+monstats	15	spawny	4	u8	0	35	
+monstats	16	spawnmode	13	link8	0	36	monmode_lookup.code
+monstats	17	minion1	20	link16	0	38	monstats.Id
+monstats	18	minion2	20	link16	0	40	monstats.Id
+monstats	19	PartyMin	4	u8	0	44	
+monstats	20	PartyMax	4	u8	0	45	
+monstats	21	Rarity	4	u8	0	46	
+monstats	22	MinGrp	4	u8	0	47	
+monstats	23	MaxGrp	4	u8	0	48	
+monstats	24	sparsePopulate	4	u8	0	49	
+monstats	25	Velocity	3	u16	0	50	
+monstats	26	Run	3	u16	0	52	
+monstats	27	Align	4	u8	0	76	
+monstats	28	enabled	26	bit	25	12	
+monstats	29	rangedtype	26	bit	28	12	
+monstats	30	placespawn	26	bit	23	12	
+monstats	31	isSpawn	26	bit	0	12	
+monstats	32	isMelee	26	bit	1	12	
+monstats	33	noRatio	26	bit	2	12	
+monstats	34	SetBoss	26	bit	4	12	
+monstats	35	BossXfer	26	bit	5	12	
+monstats	36	boss	26	bit	6	12	
+monstats	37	primeevil	26	bit	7	12	
+monstats	38	opendoors	26	bit	3	12	
+monstats	39	npc	26	bit	8	12	
+monstats	40	interact	26	bit	9	12	
+monstats	41	inventory	26	bit	24	12	
+monstats	42	inTown	26	bit	10	12	
+monstats	43	lUndead	26	bit	11	12	
+monstats	44	hUndead	26	bit	12	12	
+monstats	45	demon	26	bit	13	12	
+monstats	46	flying	26	bit	14	12	
+monstats	47	killable	26	bit	15	12	
+monstats	48	switchai	26	bit	16	12	
+monstats	49	noaura	26	bit	27	12	
+monstats	50	nomultishot	26	bit	17	12	
+monstats	51	neverCount	26	bit	18	12	
+monstats	52	petIgnore	26	bit	19	12	
+monstats	53	deathDmg	26	bit	20	12	
+monstats	54	genericSpawn	26	bit	21	12	
+monstats	55	zoo	26	bit	22	12	
+monstats	56	MissA1	20	link16	0	58	missiles.Missile
+monstats	57	MissA2	20	link16	0	60	missiles.Missile
+monstats	58	MissS1	20	link16	0	62	missiles.Missile
+monstats	59	MissS2	20	link16	0	64	missiles.Missile
+monstats	60	MissS3	20	link16	0	66	missiles.Missile
+monstats	61	MissS4	20	link16	0	68	missiles.Missile
+monstats	62	MissC	20	link16	0	70	missiles.Missile
+monstats	63	MissSQ	20	link16	0	72	missiles.Missile
+monstats	64	TreasureClass1	20	link16	0	134	@treasureclass
+monstats	65	TreasureClass2	20	link16	0	136	@treasureclass
+monstats	66	TreasureClass3	20	link16	0	138	@treasureclass
+monstats	67	TreasureClass4	20	link16	0	140	@treasureclass
+monstats	68	TreasureClass1(N)	20	link16	0	142	@treasureclass
+monstats	69	TreasureClass2(N)	20	link16	0	144	@treasureclass
+monstats	70	TreasureClass3(N)	20	link16	0	146	@treasureclass
+monstats	71	TreasureClass4(N)	20	link16	0	148	@treasureclass
+monstats	72	TreasureClass1(H)	20	link16	0	150	@treasureclass
+monstats	73	TreasureClass2(H)	20	link16	0	152	@treasureclass
+monstats	74	TreasureClass3(H)	20	link16	0	154	@treasureclass
+monstats	75	TreasureClass4(H)	20	link16	0	156	@treasureclass
+monstats	76	TCQuestId	4	u8	0	158	
+monstats	77	TCQuestCP	4	u8	0	159	
+monstats	78	threat	4	u8	0	78	
+monstats	79	aidel	4	u8	0	79	
+monstats	80	aidel(N)	4	u8	0	80	
+monstats	81	aidel(H)	4	u8	0	81	
+monstats	82	aidist	4	u8	0	82	
+monstats	83	aidist(N)	4	u8	0	83	
+monstats	84	aidist(H)	4	u8	0	84	
+monstats	85	aip1	3	u16	0	86	
+monstats	86	aip1(N)	3	u16	0	88	
+monstats	87	aip1(H)	3	u16	0	90	
+monstats	88	aip2	3	u16	0	92	
+monstats	89	aip2(N)	3	u16	0	94	
+monstats	90	aip2(H)	3	u16	0	96	
+monstats	91	aip3	3	u16	0	98	
+monstats	92	aip3(N)	3	u16	0	100	
+monstats	93	aip3(H)	3	u16	0	102	
+monstats	94	aip4	3	u16	0	104	
+monstats	95	aip4(N)	3	u16	0	106	
+monstats	96	aip4(H)	3	u16	0	108	
+monstats	97	aip5	3	u16	0	110	
+monstats	98	aip5(N)	3	u16	0	112	
+monstats	99	aip5(H)	3	u16	0	114	
+monstats	100	aip6	3	u16	0	116	
+monstats	101	aip6(N)	3	u16	0	118	
+monstats	102	aip6(H)	3	u16	0	120	
+monstats	103	aip7	3	u16	0	122	
+monstats	104	aip7(N)	3	u16	0	124	
+monstats	105	aip7(H)	3	u16	0	126	
+monstats	106	aip8	3	u16	0	128	
+monstats	107	aip8(N)	3	u16	0	130	
+monstats	108	aip8(H)	3	u16	0	132	
+monstats	109	Level	3	u16	0	170	
+monstats	110	Level(N)	3	u16	0	172	
+monstats	111	Level(H)	3	u16	0	174	
+monstats	112	SkillDamage	20	link16	0	168	skills.skill
+monstats	113	NoShldBlock	26	bit	26	12	
+monstats	114	Drain	4	u8	0	160	
+monstats	115	Drain(N)	4	u8	0	161	
+monstats	116	Drain(H)	4	u8	0	162	
+monstats	117	ToBlock	4	u8	0	163	
+monstats	118	ToBlock(N)	4	u8	0	164	
+monstats	119	ToBlock(H)	4	u8	0	165	
+monstats	120	Crit	4	u8	0	166	
+monstats	121	MinHP	3	u16	0	176	
+monstats	122	MinHP(N)	3	u16	0	178	
+monstats	123	MinHP(H)	3	u16	0	180	
+monstats	124	MaxHP	3	u16	0	182	
+monstats	125	MaxHP(N)	3	u16	0	184	
+monstats	126	MaxHP(H)	3	u16	0	186	
+monstats	127	AC	3	u16	0	188	
+monstats	128	AC(N)	3	u16	0	190	
+monstats	129	AC(H)	3	u16	0	192	
+monstats	130	Exp	3	u16	0	212	
+monstats	131	Exp(N)	3	u16	0	214	
+monstats	132	Exp(H)	3	u16	0	216	
+monstats	133	A1TH	3	u16	0	194	
+monstats	134	A1TH(N)	3	u16	0	196	
+monstats	135	A1TH(H)	3	u16	0	198	
+monstats	136	A1MinD	3	u16	0	218	
+monstats	137	A1MinD(N)	3	u16	0	220	
+monstats	138	A1MinD(H)	3	u16	0	222	
+monstats	139	A1MaxD	3	u16	0	224	
+monstats	140	A1MaxD(N)	3	u16	0	226	
+monstats	141	A1MaxD(H)	3	u16	0	228	
+monstats	142	A2TH	3	u16	0	200	
+monstats	143	A2TH(N)	3	u16	0	202	
+monstats	144	A2TH(H)	3	u16	0	204	
+monstats	145	A2MinD	3	u16	0	230	
+monstats	146	A2MinD(N)	3	u16	0	232	
+monstats	147	A2MinD(H)	3	u16	0	234	
+monstats	148	A2MaxD	3	u16	0	236	
+monstats	149	A2MaxD(N)	3	u16	0	238	
+monstats	150	A2MaxD(H)	3	u16	0	240	
+monstats	151	S1TH	3	u16	0	206	
+monstats	152	S1TH(N)	3	u16	0	208	
+monstats	153	S1TH(H)	3	u16	0	210	
+monstats	154	S1MinD	3	u16	0	242	
+monstats	155	S1MinD(N)	3	u16	0	244	
+monstats	156	S1MinD(H)	3	u16	0	246	
+monstats	157	S1MaxD	3	u16	0	248	
+monstats	158	S1MaxD(N)	3	u16	0	250	
+monstats	159	S1MaxD(H)	3	u16	0	252	
+monstats	160	El1Mode	13	link8	0	254	monmode_lookup.code
+monstats	161	El1Type	13	link8	0	257	elemtypes.code
+monstats	162	El1Pct	4	u8	0	260	
+monstats	163	El1Pct(N)	4	u8	0	261	
+monstats	164	El1Pct(H)	4	u8	0	262	
+monstats	165	El1MinD	3	u16	0	270	
+monstats	166	El1MinD(N)	3	u16	0	272	
+monstats	167	El1MinD(H)	3	u16	0	274	
+monstats	168	El1MaxD	3	u16	0	288	
+monstats	169	El1MaxD(N)	3	u16	0	290	
+monstats	170	El1MaxD(H)	3	u16	0	292	
+monstats	171	El1Dur	3	u16	0	306	
+monstats	172	El1Dur(N)	3	u16	0	308	
+monstats	173	El1Dur(H)	3	u16	0	310	
+monstats	174	El2Mode	13	link8	0	255	monmode_lookup.code
+monstats	175	El2Type	13	link8	0	258	elemtypes.code
+monstats	176	El2Pct	4	u8	0	263	
+monstats	177	El2Pct(N)	4	u8	0	264	
+monstats	178	El2Pct(H)	4	u8	0	265	
+monstats	179	El2MinD	3	u16	0	276	
+monstats	180	El2MinD(N)	3	u16	0	278	
+monstats	181	El2MinD(H)	3	u16	0	280	
+monstats	182	El2MaxD	3	u16	0	294	
+monstats	183	El2MaxD(N)	3	u16	0	296	
+monstats	184	El2MaxD(H)	3	u16	0	298	
+monstats	185	El2Dur	3	u16	0	312	
+monstats	186	El2Dur(N)	3	u16	0	314	
+monstats	187	El2Dur(H)	3	u16	0	316	
+monstats	188	El3Mode	13	link8	0	256	monmode_lookup.code
+monstats	189	El3Type	13	link8	0	259	elemtypes.code
+monstats	190	El3Pct	4	u8	0	266	
+monstats	191	El3Pct(N)	4	u8	0	267	
+monstats	192	El3Pct(H)	4	u8	0	268	
+monstats	193	El3MinD	3	u16	0	282	
+monstats	194	El3MinD(N)	3	u16	0	284	
+monstats	195	El3MinD(H)	3	u16	0	286	
+monstats	196	El3MaxD	3	u16	0	300	
+monstats	197	El3MaxD(N)	3	u16	0	302	
+monstats	198	El3MaxD(H)	3	u16	0	304	
+monstats	199	El3Dur	3	u16	0	318	
+monstats	200	El3Dur(N)	3	u16	0	320	
+monstats	201	El3Dur(H)	3	u16	0	322	
+monstats	202	ColdEffect	4	u8	0	360	
+monstats	203	ColdEffect(N)	4	u8	0	361	
+monstats	204	ColdEffect(H)	4	u8	0	362	
+monstats	205	ResDm	3	u16	0	324	
+monstats	206	ResDm(N)	3	u16	0	326	
+monstats	207	ResDm(H)	3	u16	0	328	
+monstats	208	ResMa	3	u16	0	330	
+monstats	209	ResMa(N)	3	u16	0	332	
+monstats	210	ResMa(H)	3	u16	0	334	
+monstats	211	ResFi	3	u16	0	336	
+monstats	212	ResFi(N)	3	u16	0	338	
+monstats	213	ResFi(H)	3	u16	0	340	
+monstats	214	ResLi	3	u16	0	342	
+monstats	215	ResLi(N)	3	u16	0	344	
+monstats	216	ResLi(H)	3	u16	0	346	
+monstats	217	ResCo	3	u16	0	348	
+monstats	218	ResCo(N)	3	u16	0	350	
+monstats	219	ResCo(H)	3	u16	0	352	
+monstats	220	ResPo	3	u16	0	354	
+monstats	221	ResPo(N)	3	u16	0	356	
+monstats	222	ResPo(H)	3	u16	0	358	
+monstats	223	SendSkills	8	u32	0	364	
+monstats	224	Skill1	20	link16	0	368	skills.skill
+monstats	225	Sk1mode	23	cb	0	0	cb(monstats.skillmode)
+monstats	226	Sk1lvl	4	u8	0	408	
+monstats	227	Skill2	20	link16	0	370	skills.skill
+monstats	228	Sk2mode	23	cb	0	1	cb(monstats.skillmode)
+monstats	229	Sk2lvl	4	u8	0	409	
+monstats	230	Skill3	20	link16	0	372	skills.skill
+monstats	231	Sk3mode	23	cb	0	2	cb(monstats.skillmode)
+monstats	232	Sk3lvl	4	u8	0	410	
+monstats	233	Skill4	20	link16	0	374	skills.skill
+monstats	234	Sk4mode	23	cb	0	3	cb(monstats.skillmode)
+monstats	235	Sk4lvl	4	u8	0	411	
+monstats	236	Skill5	20	link16	0	376	skills.skill
+monstats	237	Sk5mode	23	cb	0	4	cb(monstats.skillmode)
+monstats	238	Sk5lvl	4	u8	0	412	
+monstats	239	Skill6	20	link16	0	378	skills.skill
+monstats	240	Sk6mode	23	cb	0	5	cb(monstats.skillmode)
+monstats	241	Sk6lvl	4	u8	0	413	
+monstats	242	Skill7	20	link16	0	380	skills.skill
+monstats	243	Sk7mode	23	cb	0	6	cb(monstats.skillmode)
+monstats	244	Sk7lvl	4	u8	0	414	
+monstats	245	Skill8	20	link16	0	382	skills.skill
+monstats	246	Sk8mode	23	cb	0	7	cb(monstats.skillmode)
+monstats	247	Sk8lvl	4	u8	0	415	
+monstats	248	DamageRegen	2	u32	0	416	
+monstats	249	SplEndDeath	4	u8	0	420	
+monstats	250	SplGetModeChart	4	u8	0	421	
+monstats	251	SplEndGeneric	4	u8	0	422	
+monstats	252	SplClientEnd	4	u8	0	423	
+monumod	0	uniquemod	17	key(name16)	0	0	monumod.uniquemod
+monumod	1	version	3	u16	0	4	
+monumod	2	enabled	4	u8	0	6	
+monumod	3	xfer	4	u8	0	7	
+monumod	4	champion	4	u8	0	8	
+monumod	5	fpick	4	u8	0	9	
+monumod	6	exclude1	20	link16	0	10	montype.type
+monumod	7	exclude2	20	link16	0	12	montype.type
+monumod	8	cpick	3	u16	0	14	
+monumod	9	cpick (N)	3	u16	0	16	
+monumod	10	cpick (H)	3	u16	0	18	
+monumod	11	upick	3	u16	0	20	
+monumod	12	upick (N)	3	u16	0	22	
+monumod	13	upick (H)	3	u16	0	24	
+monumod	14	constants	2	u32	0	28	
+superuniques	0	Superunique	17	key(name16)	0	0	superuniques.Superunique
+superuniques	1	Name	22	strkey	0	2	
+superuniques	2	Class	19	link32	0	4	monstats.Id
+superuniques	3	hcIdx	2	u32	0	8	
+superuniques	4	MonSound	19	link32	0	24	monsounds.Id
+superuniques	5	Mod1	2	u32	0	12	
+superuniques	6	Mod2	2	u32	0	16	
+superuniques	7	Mod3	2	u32	0	20	
+superuniques	8	MinGrp	2	u32	0	28	
+superuniques	9	MaxGrp	2	u32	0	32	
+superuniques	10	AutoPos	4	u8	0	36	
+superuniques	11	EClass	4	u8	0	37	
+superuniques	12	Stacks	4	u8	0	38	
+superuniques	13	Replaceable	4	u8	0	39	
+superuniques	14	Utrans	4	u8	0	40	
+superuniques	15	Utrans(N)	4	u8	0	41	
+superuniques	16	Utrans(H)	4	u8	0	42	
+superuniques	17	TC	20	link16	0	44	@treasureclass
+superuniques	18	TC(N)	20	link16	0	46	@treasureclass
+superuniques	19	TC(H)	20	link16	0	48	@treasureclass
+monpreset	0	Act	4	u8	0	0	
+monpreset	1	Place	23	cb	0	0	cb(monpreset.place)
+hireling	0	version	3	u16	0	0	
+hireling	1	id	2	u32	0	4	
+hireling	2	class	2	u32	0	8	
+hireling	3	act	2	u32	0	12	
+hireling	4	difficulty	2	u32	0	16	
+hireling	5	seller	2	u32	0	20	
+hireling	6	gold	2	u32	0	24	
+hireling	7	level	2	u32	0	28	
+hireling	8	namefirst	1	str	32	211	
+hireling	9	namelast	1	str	32	243	
+hireling	10	exp/lvl	2	u32	0	32	
+hireling	11	hp	2	u32	0	36	
+hireling	12	hp/lvl	2	u32	0	40	
+hireling	13	defense	2	u32	0	44	
+hireling	14	def/lvl	2	u32	0	48	
+hireling	15	str	2	u32	0	52	
+hireling	16	str/lvl	2	u32	0	56	
+hireling	17	dex	2	u32	0	60	
+hireling	18	dex/lvl	2	u32	0	64	
+hireling	19	ar	2	u32	0	68	
+hireling	20	ar/lvl	2	u32	0	72	
+hireling	21	share	2	u32	0	76	
+hireling	22	dmg-min	2	u32	0	80	
+hireling	23	dmg-max	2	u32	0	84	
+hireling	24	dmg/lvl	2	u32	0	88	
+hireling	25	resist	2	u32	0	92	
+hireling	26	resist/lvl	2	u32	0	96	
+hireling	27	hiredesc	13	link8	0	210	hiredesc.code
+hireling	28	defaultchance	2	u32	0	100	
+hireling	29	skill1	19	link32	0	120	skills.skill
+hireling	30	mode1	4	u8	0	192	
+hireling	31	chance1	2	u32	0	144	
+hireling	32	chanceperlvl1	2	u32	0	168	
+hireling	33	level1	4	u8	0	198	
+hireling	34	lvlperlvl1	4	u8	0	204	
+hireling	35	skill2	19	link32	0	124	skills.skill
+hireling	36	mode2	4	u8	0	193	
+hireling	37	chance2	2	u32	0	148	
+hireling	38	chanceperlvl2	2	u32	0	172	
+hireling	39	level2	4	u8	0	199	
+hireling	40	lvlperlvl2	4	u8	0	205	
+hireling	41	skill3	19	link32	0	128	skills.skill
+hireling	42	mode3	4	u8	0	194	
+hireling	43	chance3	2	u32	0	152	
+hireling	44	chanceperlvl3	2	u32	0	176	
+hireling	45	level3	4	u8	0	200	
+hireling	46	lvlperlvl3	4	u8	0	206	
+hireling	47	skill4	19	link32	0	132	skills.skill
+hireling	48	mode4	4	u8	0	195	
+hireling	49	chance4	2	u32	0	156	
+hireling	50	chanceperlvl4	2	u32	0	180	
+hireling	51	level4	4	u8	0	201	
+hireling	52	lvlperlvl4	4	u8	0	207	
+hireling	53	skill5	19	link32	0	136	skills.skill
+hireling	54	mode5	4	u8	0	196	
+hireling	55	chance5	2	u32	0	160	
+hireling	56	chanceperlvl5	2	u32	0	184	
+hireling	57	level5	4	u8	0	202	
+hireling	58	lvlperlvl5	4	u8	0	208	
+hireling	59	skill6	19	link32	0	140	skills.skill
+hireling	60	mode6	4	u8	0	197	
+hireling	61	chance6	2	u32	0	164	
+hireling	62	chanceperlvl6	2	u32	0	188	
+hireling	63	level6	4	u8	0	203	
+hireling	64	lvlperlvl6	4	u8	0	209	
+hireling	65	head	2	u32	0	104	
+hireling	66	torso	2	u32	0	108	
+hireling	67	weapon	2	u32	0	112	
+hireling	68	shield	2	u32	0	116	
+npc	0	npc	19	link32	0	0	monstats.Id
+npc	1	sell mult	2	u32	0	4	
+npc	2	buy mult	2	u32	0	8	
+npc	3	rep mult	2	u32	0	12	
+npc	4	questflag A	2	u32	0	16	
+npc	5	questflag B	2	u32	0	20	
+npc	6	questflag C	2	u32	0	24	
+npc	7	questsellmult A	2	u32	0	28	
+npc	8	questsellmult B	2	u32	0	32	
+npc	9	questsellmult C	2	u32	0	36	
+npc	10	questbuymult A	2	u32	0	40	
+npc	11	questbuymult B	2	u32	0	44	
+npc	12	questbuymult C	2	u32	0	48	
+npc	13	questrepmult A	2	u32	0	52	
+npc	14	questrepmult B	2	u32	0	56	
+npc	15	questrepmult C	2	u32	0	60	
+npc	16	max buy	2	u32	0	64	
+npc	17	max buy (N)	2	u32	0	68	
+npc	18	max buy (H)	2	u32	0	72	
+monequip	0	monster	20	link16	0	0	monstats.Id
+monequip	1	level	3	u16	0	2	
+monequip	2	oninit	4	u8	0	4	
+monequip	3	item1	9	code4	0	8	items.code
+monequip	4	loc1	13	link8	0	20	bodylocs.code
+monequip	5	mod1	4	u8	0	23	
+monequip	6	item2	9	code4	0	12	items.code
+monequip	7	loc2	13	link8	0	21	bodylocs.code
+monequip	8	mod2	4	u8	0	24	
+monequip	9	item3	9	code4	0	16	items.code
+monequip	10	loc3	13	link8	0	22	bodylocs.code
+monequip	11	mod3	4	u8	0	25	
+levels	0	Id	4	u8	0	0	
+levels	1	Pal	4	u8	0	2	
+levels	2	Act	4	u8	0	3	
+levels	3	Teleport	4	u8	0	4	
+levels	4	Rain	4	u8	0	5	
+levels	5	Mud	4	u8	0	6	
+levels	6	NoPer	4	u8	0	7	
+levels	7	IsInside	4	u8	0	8	
+levels	8	DrawEdges	4	u8	0	9	
+levels	9	WarpDist	2	u32	0	12	
+levels	10	MonLvl1	3	u16	0	16	
+levels	11	MonLvl2	3	u16	0	18	
+levels	12	MonLvl3	3	u16	0	20	
+levels	13	MonLvl1Ex	3	u16	0	22	
+levels	14	MonLvl2Ex	3	u16	0	24	
+levels	15	MonLvl3Ex	3	u16	0	26	
+levels	16	MonDen	2	u32	0	28	
+levels	17	MonDen(N)	2	u32	0	32	
+levels	18	MonDen(H)	2	u32	0	36	
+levels	19	MonUMin	4	u8	0	40	
+levels	20	MonUMax	4	u8	0	43	
+levels	21	MonUMin(N)	4	u8	0	41	
+levels	22	MonUMax(N)	4	u8	0	44	
+levels	23	MonUMin(H)	4	u8	0	42	
+levels	24	MonUMax(H)	4	u8	0	45	
+levels	25	MonWndr	4	u8	0	46	
+levels	26	MonSpcWalk	4	u8	0	47	
+levels	27	ObjGrp0	4	u8	0	229	
+levels	28	ObjGrp1	4	u8	0	230	
+levels	29	ObjGrp2	4	u8	0	231	
+levels	30	ObjGrp3	4	u8	0	232	
+levels	31	ObjGrp4	4	u8	0	233	
+levels	32	ObjGrp5	4	u8	0	234	
+levels	33	ObjGrp6	4	u8	0	235	
+levels	34	ObjGrp7	4	u8	0	236	
+levels	35	ObjPrb0	4	u8	0	237	
+levels	36	ObjPrb1	4	u8	0	238	
+levels	37	ObjPrb2	4	u8	0	239	
+levels	38	ObjPrb3	4	u8	0	240	
+levels	39	ObjPrb4	4	u8	0	241	
+levels	40	ObjPrb5	4	u8	0	242	
+levels	41	ObjPrb6	4	u8	0	243	
+levels	42	ObjPrb7	4	u8	0	244	
+levels	43	Quest	4	u8	0	48	
+levels	44	NumMon	4	u8	0	50	
+levels	45	mon1	20	link16	0	54	monstats.Id
+levels	46	mon2	20	link16	0	56	monstats.Id
+levels	47	mon3	20	link16	0	58	monstats.Id
+levels	48	mon4	20	link16	0	60	monstats.Id
+levels	49	mon5	20	link16	0	62	monstats.Id
+levels	50	mon6	20	link16	0	64	monstats.Id
+levels	51	mon7	20	link16	0	66	monstats.Id
+levels	52	mon8	20	link16	0	68	monstats.Id
+levels	53	mon9	20	link16	0	70	monstats.Id
+levels	54	mon10	20	link16	0	72	monstats.Id
+levels	55	mon11	20	link16	0	74	monstats.Id
+levels	56	mon12	20	link16	0	76	monstats.Id
+levels	57	mon13	20	link16	0	78	monstats.Id
+levels	58	mon14	20	link16	0	80	monstats.Id
+levels	59	mon15	20	link16	0	82	monstats.Id
+levels	60	mon16	20	link16	0	84	monstats.Id
+levels	61	mon17	20	link16	0	86	monstats.Id
+levels	62	mon18	20	link16	0	88	monstats.Id
+levels	63	mon19	20	link16	0	90	monstats.Id
+levels	64	mon20	20	link16	0	92	monstats.Id
+levels	65	mon21	20	link16	0	94	monstats.Id
+levels	66	mon22	20	link16	0	96	monstats.Id
+levels	67	mon23	20	link16	0	98	monstats.Id
+levels	68	mon24	20	link16	0	100	monstats.Id
+levels	69	mon25	20	link16	0	102	monstats.Id
+levels	70	rangedspawn	4	u8	0	49	
+levels	71	nmon1	20	link16	0	104	monstats.Id
+levels	72	nmon2	20	link16	0	106	monstats.Id
+levels	73	nmon3	20	link16	0	108	monstats.Id
+levels	74	nmon4	20	link16	0	110	monstats.Id
+levels	75	nmon5	20	link16	0	112	monstats.Id
+levels	76	nmon6	20	link16	0	114	monstats.Id
+levels	77	nmon7	20	link16	0	116	monstats.Id
+levels	78	nmon8	20	link16	0	118	monstats.Id
+levels	79	nmon9	20	link16	0	120	monstats.Id
+levels	80	nmon10	20	link16	0	122	monstats.Id
+levels	81	nmon11	20	link16	0	124	monstats.Id
+levels	82	nmon12	20	link16	0	126	monstats.Id
+levels	83	nmon13	20	link16	0	128	monstats.Id
+levels	84	nmon14	20	link16	0	130	monstats.Id
+levels	85	nmon15	20	link16	0	132	monstats.Id
+levels	86	nmon16	20	link16	0	134	monstats.Id
+levels	87	nmon17	20	link16	0	136	monstats.Id
+levels	88	nmon18	20	link16	0	138	monstats.Id
+levels	89	nmon19	20	link16	0	140	monstats.Id
+levels	90	nmon20	20	link16	0	142	monstats.Id
+levels	91	nmon21	20	link16	0	144	monstats.Id
+levels	92	nmon22	20	link16	0	146	monstats.Id
+levels	93	nmon23	20	link16	0	148	monstats.Id
+levels	94	nmon24	20	link16	0	150	monstats.Id
+levels	95	nmon25	20	link16	0	152	monstats.Id
+levels	96	umon1	20	link16	0	154	monstats.Id
+levels	97	umon2	20	link16	0	156	monstats.Id
+levels	98	umon3	20	link16	0	158	monstats.Id
+levels	99	umon4	20	link16	0	160	monstats.Id
+levels	100	umon5	20	link16	0	162	monstats.Id
+levels	101	umon6	20	link16	0	164	monstats.Id
+levels	102	umon7	20	link16	0	166	monstats.Id
+levels	103	umon8	20	link16	0	168	monstats.Id
+levels	104	umon9	20	link16	0	170	monstats.Id
+levels	105	umon10	20	link16	0	172	monstats.Id
+levels	106	umon11	20	link16	0	174	monstats.Id
+levels	107	umon12	20	link16	0	176	monstats.Id
+levels	108	umon13	20	link16	0	178	monstats.Id
+levels	109	umon14	20	link16	0	180	monstats.Id
+levels	110	umon15	20	link16	0	182	monstats.Id
+levels	111	umon16	20	link16	0	184	monstats.Id
+levels	112	umon17	20	link16	0	186	monstats.Id
+levels	113	umon18	20	link16	0	188	monstats.Id
+levels	114	umon19	20	link16	0	190	monstats.Id
+levels	115	umon20	20	link16	0	192	monstats.Id
+levels	116	umon21	20	link16	0	194	monstats.Id
+levels	117	umon22	20	link16	0	196	monstats.Id
+levels	118	umon23	20	link16	0	198	monstats.Id
+levels	119	umon24	20	link16	0	200	monstats.Id
+levels	120	umon25	20	link16	0	202	monstats.Id
+levels	121	cmon1	20	link16	0	204	monstats.Id
+levels	122	cmon2	20	link16	0	206	monstats.Id
+levels	123	cmon3	20	link16	0	208	monstats.Id
+levels	124	cmon4	20	link16	0	210	monstats.Id
+levels	125	cpct1	3	u16	0	212	
+levels	126	cpct2	3	u16	0	214	
+levels	127	cpct3	3	u16	0	216	
+levels	128	cpct4	3	u16	0	218	
+levels	129	camt1	3	u16	0	220	
+levels	130	camt2	3	u16	0	220	
+levels	131	camt3	3	u16	0	220	
+levels	132	camt4	3	u16	0	220	
+levels	133	Themes	2	u32	0	528	
+levels	134	FloorFilter	2	u32	0	532	
+levels	135	BlankScreen	2	u32	0	536	
+levels	136	SoundEnv	4	u8	0	540	
+levels	137	Waypoint	4	u8	0	228	
+levels	138	LevelName	1	str	39	245	
+levels	139	LevelWarp	1	str	39	285	
+levels	140	EntryFile	1	str	39	325	
+leveldefs	0	QuestFlag	2	u32	0	0	
+leveldefs	1	QuestFlagEx	2	u32	0	4	
+leveldefs	2	Layer	2	u32	0	8	
+leveldefs	3	SizeX	2	u32	0	12	
+leveldefs	4	SizeY	2	u32	0	24	
+leveldefs	5	SizeX(N)	2	u32	0	16	
+leveldefs	6	SizeY(N)	2	u32	0	28	
+leveldefs	7	SizeX(H)	2	u32	0	20	
+leveldefs	8	SizeY(H)	2	u32	0	32	
+leveldefs	9	OffsetX	2	u32	0	36	
+leveldefs	10	OffsetY	2	u32	0	40	
+leveldefs	11	Depend	2	u32	0	44	
+leveldefs	12	DrlgType	2	u32	0	48	
+leveldefs	13	LevelType	2	u32	0	52	
+leveldefs	14	SubType	2	u32	0	56	
+leveldefs	15	SubTheme	2	u32	0	60	
+leveldefs	16	SubWaypoint	2	u32	0	64	
+leveldefs	17	SubShrine	2	u32	0	68	
+leveldefs	18	Vis0	2	u32	0	72	
+leveldefs	19	Vis1	2	u32	0	76	
+leveldefs	20	Vis2	2	u32	0	80	
+leveldefs	21	Vis3	2	u32	0	84	
+leveldefs	22	Vis4	2	u32	0	88	
+leveldefs	23	Vis5	2	u32	0	92	
+leveldefs	24	Vis6	2	u32	0	96	
+leveldefs	25	Vis7	2	u32	0	100	
+leveldefs	26	Warp0	2	u32	0	104	
+leveldefs	27	Warp1	2	u32	0	108	
+leveldefs	28	Warp2	2	u32	0	112	
+leveldefs	29	Warp3	2	u32	0	116	
+leveldefs	30	Warp4	2	u32	0	120	
+leveldefs	31	Warp5	2	u32	0	124	
+leveldefs	32	Warp6	2	u32	0	128	
+leveldefs	33	Warp7	2	u32	0	132	
+leveldefs	34	Intensity	4	u8	0	136	
+leveldefs	35	Red	4	u8	0	137	
+leveldefs	36	Green	4	u8	0	138	
+leveldefs	37	Blue	4	u8	0	139	
+leveldefs	38	Portal	2	u32	0	140	
+leveldefs	39	Position	2	u32	0	144	
+leveldefs	40	SaveMonsters	2	u32	0	148	
+leveldefs	41	LOSDraw	2	u32	0	152	
+lvltypes	0	File 1	1	str	59	0	
+lvltypes	1	File 2	1	str	59	60	
+lvltypes	2	File 3	1	str	59	120	
+lvltypes	3	File 4	1	str	59	180	
+lvltypes	4	File 5	1	str	59	240	
+lvltypes	5	File 6	1	str	59	300	
+lvltypes	6	File 7	1	str	59	360	
+lvltypes	7	File 8	1	str	59	420	
+lvltypes	8	File 9	1	str	59	480	
+lvltypes	9	File 10	1	str	59	540	
+lvltypes	10	File 11	1	str	59	600	
+lvltypes	11	File 12	1	str	59	660	
+lvltypes	12	File 13	1	str	59	720	
+lvltypes	13	File 14	1	str	59	780	
+lvltypes	14	File 15	1	str	59	840	
+lvltypes	15	File 16	1	str	59	900	
+lvltypes	16	File 17	1	str	59	960	
+lvltypes	17	File 18	1	str	59	1020	
+lvltypes	18	File 19	1	str	59	1080	
+lvltypes	19	File 20	1	str	59	1140	
+lvltypes	20	File 21	1	str	59	1200	
+lvltypes	21	File 22	1	str	59	1260	
+lvltypes	22	File 23	1	str	59	1320	
+lvltypes	23	File 24	1	str	59	1380	
+lvltypes	24	File 25	1	str	59	1440	
+lvltypes	25	File 26	1	str	59	1500	
+lvltypes	26	File 27	1	str	59	1560	
+lvltypes	27	File 28	1	str	59	1620	
+lvltypes	28	File 29	1	str	59	1680	
+lvltypes	29	File 30	1	str	59	1740	
+lvltypes	30	File 31	1	str	59	1800	
+lvltypes	31	File 32	1	str	59	1860	
+lvltypes	32	Act	4	u8	0	1920	
+lvltypes	33	Expansion	2	u32	0	1924	
+lvlprest	0	Def	2	u32	0	0	
+lvlprest	1	LevelId	2	u32	0	4	
+lvlprest	2	Populate	2	u32	0	8	
+lvlprest	3	Logicals	2	u32	0	12	
+lvlprest	4	Outdoors	2	u32	0	16	
+lvlprest	5	Animate	2	u32	0	20	
+lvlprest	6	KillEdge	2	u32	0	24	
+lvlprest	7	FillBlanks	2	u32	0	28	
+lvlprest	8	SizeX	2	u32	0	40	
+lvlprest	9	SizeY	2	u32	0	44	
+lvlprest	10	AutoMap	2	u32	0	48	
+lvlprest	11	Scan	2	u32	0	52	
+lvlprest	12	Pops	2	u32	0	56	
+lvlprest	13	PopPad	2	u32	0	60	
+lvlprest	14	Files	2	u32	0	64	
+lvlprest	15	File1	1	str	59	68	
+lvlprest	16	File2	1	str	59	128	
+lvlprest	17	File3	1	str	59	188	
+lvlprest	18	File4	1	str	59	248	
+lvlprest	19	File5	1	str	59	308	
+lvlprest	20	File6	1	str	59	368	
+lvlprest	21	Dt1Mask	2	u32	0	428	
+lvlprest	22	Expansion	2	u32	0	32	
+lvlwarp	0	Id	2	u32	0	0	
+lvlwarp	1	SelectX	2	u32	0	4	
+lvlwarp	2	SelectY	2	u32	0	8	
+lvlwarp	3	SelectDX	2	u32	0	12	
+lvlwarp	4	SelectDY	2	u32	0	16	
+lvlwarp	5	ExitWalkX	2	u32	0	20	
+lvlwarp	6	ExitWalkY	2	u32	0	24	
+lvlwarp	7	OffsetX	2	u32	0	28	
+lvlwarp	8	OffsetY	2	u32	0	32	
+lvlwarp	9	LitVersion	2	u32	0	36	
+lvlwarp	10	Tiles	2	u32	0	40	
+lvlwarp	11	Direction	1	str	1	44	
+lvlmaze	0	Level	2	u32	0	0	
+lvlmaze	1	Rooms	2	u32	0	4	
+lvlmaze	2	Rooms(N)	2	u32	0	8	
+lvlmaze	3	Rooms(H)	2	u32	0	12	
+lvlmaze	4	SizeX	2	u32	0	16	
+lvlmaze	5	SizeY	2	u32	0	20	
+lvlmaze	6	Merge	2	u32	0	24	
+lvlsub	0	Type	2	u32	0	0	
+lvlsub	1	File	1	str	59	4	
+lvlsub	2	CheckAll	2	u32	0	64	
+lvlsub	3	BordType	2	u32	0	68	
+lvlsub	4	GridSize	2	u32	0	76	
+lvlsub	5	Dt1Mask	2	u32	0	72	
+lvlsub	6	Prob0	2	u32	0	284	
+lvlsub	7	Trials0	2	u32	0	304	
+lvlsub	8	Max0	2	u32	0	324	
+lvlsub	9	Prob1	2	u32	0	288	
+lvlsub	10	Trials1	2	u32	0	308	
+lvlsub	11	Max1	2	u32	0	328	
+lvlsub	12	Prob2	2	u32	0	292	
+lvlsub	13	Trials2	2	u32	0	312	
+lvlsub	14	Max2	2	u32	0	332	
+lvlsub	15	Prob3	2	u32	0	296	
+lvlsub	16	Trials3	2	u32	0	316	
+lvlsub	17	Max3	2	u32	0	336	
+lvlsub	18	Prob4	2	u32	0	300	
+lvlsub	19	Trials4	2	u32	0	320	
+lvlsub	20	Max4	2	u32	0	340	
+lvlsub	21	Expansion	2	u32	0	344	
+automap	0	LevelName	1	str	15	0	
+automap	1	TileName	1	str	7	16	
+automap	2	Style	4	u8	0	24	
+automap	3	StartSequence	4	u8	0	25	
+automap	4	EndSequence	4	u8	0	26	
+automap	5	Cel1	2	u32	0	28	
+automap	6	Cel2	2	u32	0	32	
+automap	7	Cel3	2	u32	0	36	
+automap	8	Cel4	2	u32	0	40	
+objects	0	Name	1	str	63	0	
+objects	1	Token	1	str	2	192	
+objects	2	SpawnMax	4	u8	0	195	
+objects	3	Selectable0	4	u8	0	196	
+objects	4	Selectable1	4	u8	0	197	
+objects	5	Selectable2	4	u8	0	198	
+objects	6	Selectable3	4	u8	0	199	
+objects	7	Selectable4	4	u8	0	200	
+objects	8	Selectable5	4	u8	0	201	
+objects	9	Selectable6	4	u8	0	202	
+objects	10	Selectable7	4	u8	0	203	
+objects	11	TrapProb	4	u8	0	204	
+objects	12	SizeX	2	u32	0	208	
+objects	13	SizeY	2	u32	0	212	
+objects	14	FrameCnt0	2	u32	0	216	
+objects	15	FrameCnt1	2	u32	0	220	
+objects	16	FrameCnt2	2	u32	0	224	
+objects	17	FrameCnt3	2	u32	0	228	
+objects	18	FrameCnt4	2	u32	0	232	
+objects	19	FrameCnt5	2	u32	0	236	
+objects	20	FrameCnt6	2	u32	0	240	
+objects	21	FrameCnt7	2	u32	0	244	
+objects	22	FrameDelta0	3	u16	0	248	
+objects	23	FrameDelta1	3	u16	0	250	
+objects	24	FrameDelta2	3	u16	0	252	
+objects	25	FrameDelta3	3	u16	0	254	
+objects	26	FrameDelta4	3	u16	0	256	
+objects	27	FrameDelta5	3	u16	0	258	
+objects	28	FrameDelta6	3	u16	0	260	
+objects	29	FrameDelta7	3	u16	0	262	
+objects	30	CycleAnim0	4	u8	0	264	
+objects	31	CycleAnim1	4	u8	0	265	
+objects	32	CycleAnim2	4	u8	0	266	
+objects	33	CycleAnim3	4	u8	0	267	
+objects	34	CycleAnim4	4	u8	0	268	
+objects	35	CycleAnim5	4	u8	0	269	
+objects	36	CycleAnim6	4	u8	0	270	
+objects	37	CycleAnim7	4	u8	0	271	
+objects	38	Lit0	4	u8	0	272	
+objects	39	Lit1	4	u8	0	273	
+objects	40	Lit2	4	u8	0	274	
+objects	41	Lit3	4	u8	0	275	
+objects	42	Lit4	4	u8	0	276	
+objects	43	Lit5	4	u8	0	277	
+objects	44	Lit6	4	u8	0	278	
+objects	45	Lit7	4	u8	0	279	
+objects	46	BlocksLight0	4	u8	0	280	
+objects	47	BlocksLight1	4	u8	0	281	
+objects	48	BlocksLight2	4	u8	0	282	
+objects	49	BlocksLight3	4	u8	0	283	
+objects	50	BlocksLight4	4	u8	0	284	
+objects	51	BlocksLight5	4	u8	0	285	
+objects	52	BlocksLight6	4	u8	0	286	
+objects	53	BlocksLight7	4	u8	0	287	
+objects	54	HasCollision0	4	u8	0	288	
+objects	55	HasCollision1	4	u8	0	289	
+objects	56	HasCollision2	4	u8	0	290	
+objects	57	HasCollision3	4	u8	0	291	
+objects	58	HasCollision4	4	u8	0	292	
+objects	59	HasCollision5	4	u8	0	293	
+objects	60	HasCollision6	4	u8	0	294	
+objects	61	HasCollision7	4	u8	0	295	
+objects	62	IsAttackable0	4	u8	0	296	
+objects	63	Start0	4	u8	0	297	
+objects	64	Start1	4	u8	0	298	
+objects	65	Start2	4	u8	0	299	
+objects	66	Start3	4	u8	0	300	
+objects	67	Start4	4	u8	0	301	
+objects	68	Start5	4	u8	0	302	
+objects	69	Start6	4	u8	0	303	
+objects	70	Start7	4	u8	0	304	
+objects	71	OrderFlag0	4	u8	0	305	
+objects	72	OrderFlag1	4	u8	0	306	
+objects	73	OrderFlag2	4	u8	0	307	
+objects	74	OrderFlag3	4	u8	0	308	
+objects	75	OrderFlag4	4	u8	0	309	
+objects	76	OrderFlag5	4	u8	0	310	
+objects	77	OrderFlag6	4	u8	0	311	
+objects	78	OrderFlag7	4	u8	0	312	
+objects	79	EnvEffect	4	u8	0	313	
+objects	80	IsDoor	4	u8	0	314	
+objects	81	BlocksVis	4	u8	0	315	
+objects	82	Orientation	4	u8	0	316	
+objects	83	Trans	4	u8	0	318	
+objects	84	PreOperate	4	u8	0	317	
+objects	85	Mode0	4	u8	0	319	
+objects	86	Mode1	4	u8	0	320	
+objects	87	Mode2	4	u8	0	321	
+objects	88	Mode3	4	u8	0	322	
+objects	89	Mode4	4	u8	0	323	
+objects	90	Mode5	4	u8	0	324	
+objects	91	Mode6	4	u8	0	325	
+objects	92	Mode7	4	u8	0	326	
+objects	93	Xoffset	2	u32	0	328	
+objects	94	Yoffset	2	u32	0	332	
+objects	95	Draw	4	u8	0	336	
+objects	96	HD	4	u8	0	337	
+objects	97	TR	4	u8	0	338	
+objects	98	LG	4	u8	0	339	
+objects	99	RA	4	u8	0	340	
+objects	100	LA	4	u8	0	341	
+objects	101	RH	4	u8	0	342	
+objects	102	LH	4	u8	0	343	
+objects	103	SH	4	u8	0	344	
+objects	104	S1	4	u8	0	345	
+objects	105	S2	4	u8	0	346	
+objects	106	S3	4	u8	0	347	
+objects	107	S4	4	u8	0	348	
+objects	108	S5	4	u8	0	349	
+objects	109	S6	4	u8	0	350	
+objects	110	S7	4	u8	0	351	
+objects	111	S8	4	u8	0	352	
+objects	112	TotalPieces	4	u8	0	353	
+objects	113	XSpace	4	u8	0	354	
+objects	114	YSpace	4	u8	0	355	
+objects	115	Red	4	u8	0	356	
+objects	116	Green	4	u8	0	357	
+objects	117	Blue	4	u8	0	358	
+objects	118	SubClass	4	u8	0	359	
+objects	119	NameOffset	2	u32	0	360	
+objects	120	MonsterOK	4	u8	0	365	
+objects	121	OperateRange	4	u8	0	366	
+objects	122	ShrineFunction	4	u8	0	367	
+objects	123	Act	4	u8	0	368	
+objects	124	Restore	4	u8	0	371	
+objects	125	RestoreVirgins	4	u8	0	372	
+objects	126	Parm0	2	u32	0	376	
+objects	127	Parm1	2	u32	0	380	
+objects	128	Parm2	2	u32	0	384	
+objects	129	Parm3	2	u32	0	388	
+objects	130	Parm4	2	u32	0	392	
+objects	131	Parm5	2	u32	0	396	
+objects	132	Parm6	2	u32	0	400	
+objects	133	Parm7	2	u32	0	404	
+objects	134	Lockable	4	u8	0	369	
+objects	135	Gore	4	u8	0	370	
+objects	136	Sync	4	u8	0	373	
+objects	137	Beta	4	u8	0	432	
+objects	138	nTgtFX	4	u8	0	408	
+objects	139	nTgtFY	4	u8	0	409	
+objects	140	nTgtBX	4	u8	0	410	
+objects	141	nTgtBY	4	u8	0	411	
+objects	142	Damage	4	u8	0	412	
+objects	143	CollisionSubst	4	u8	0	413	
+objects	144	Left	2	u32	0	416	
+objects	145	Top	2	u32	0	420	
+objects	146	Width	2	u32	0	424	
+objects	147	Height	2	u32	0	428	
+objects	148	OperateFn	4	u8	0	435	
+objects	149	PopulateFn	4	u8	0	434	
+objects	150	ClientFn	4	u8	0	436	
+objects	151	InitFn	4	u8	0	433	
+objects	152	Overlay	4	u8	0	437	
+objects	153	BlockMissile	4	u8	0	438	
+objects	154	DrawUnder	4	u8	0	439	
+objects	155	OpenWarp	4	u8	0	440	
+objects	156	AutoMap	2	u32	0	444	
+objgroup	0	ID0	2	u32	0	0	
+objgroup	1	DENSITY0	4	u8	0	32	
+objgroup	2	PROB0	4	u8	0	40	
+objgroup	3	ID1	2	u32	0	4	
+objgroup	4	DENSITY1	4	u8	0	33	
+objgroup	5	PROB1	4	u8	0	41	
+objgroup	6	ID2	2	u32	0	8	
+objgroup	7	DENSITY2	4	u8	0	34	
+objgroup	8	PROB2	4	u8	0	42	
+objgroup	9	ID3	2	u32	0	12	
+objgroup	10	DENSITY3	4	u8	0	35	
+objgroup	11	PROB3	4	u8	0	43	
+objgroup	12	ID4	2	u32	0	16	
+objgroup	13	DENSITY4	4	u8	0	36	
+objgroup	14	PROB4	4	u8	0	44	
+objgroup	15	ID5	2	u32	0	20	
+objgroup	16	DENSITY5	4	u8	0	37	
+objgroup	17	PROB5	4	u8	0	45	
+objgroup	18	ID6	2	u32	0	24	
+objgroup	19	DENSITY6	4	u8	0	38	
+objgroup	20	PROB6	4	u8	0	46	
+objgroup	21	ID7	2	u32	0	28	
+objgroup	22	DENSITY7	4	u8	0	39	
+objgroup	23	PROB7	4	u8	0	47	
+objgroup	24	SHRINES	4	u8	0	48	
+objgroup	25	WELLS	4	u8	0	49	
+shrines	0	Code	4	u8	0	0	
+shrines	1	Arg0	2	u32	0	4	
+shrines	2	Arg1	2	u32	0	8	
+shrines	3	Duration in frames	2	u32	0	12	
+shrines	4	reset time in minutes	4	u8	0	16	
+shrines	5	rarity	4	u8	0	17	
+shrines	6	view name	1	str	31	18	
+shrines	7	niftyphrase	1	str	127	50	
+shrines	8	effectclass	4	u8	0	178	
+shrines	9	LevelMin	2	u32	0	180	
+inventory	0	invLeft	2	u32	0	0	
+inventory	1	invRight	2	u32	0	4	
+inventory	2	invTop	2	u32	0	8	
+inventory	3	invBottom	2	u32	0	12	
+inventory	4	gridX	4	u8	0	16	
+inventory	5	gridY	4	u8	0	17	
+inventory	6	gridLeft	2	u32	0	20	
+inventory	7	gridRight	2	u32	0	24	
+inventory	8	gridTop	2	u32	0	28	
+inventory	9	gridBottom	2	u32	0	32	
+inventory	10	gridBoxWidth	4	u8	0	36	
+inventory	11	gridBoxHeight	4	u8	0	37	
+inventory	12	rArmLeft	2	u32	0	40	
+inventory	13	rArmRight	2	u32	0	44	
+inventory	14	rArmTop	2	u32	0	48	
+inventory	15	rArmBottom	2	u32	0	52	
+inventory	16	rArmWidth	4	u8	0	56	
+inventory	17	rArmHeight	4	u8	0	57	
+inventory	18	torsoLeft	2	u32	0	60	
+inventory	19	torsoRight	2	u32	0	64	
+inventory	20	torsoTop	2	u32	0	68	
+inventory	21	torsoBottom	2	u32	0	72	
+inventory	22	torsoWidth	4	u8	0	76	
+inventory	23	torsoHeight	4	u8	0	77	
+inventory	24	lArmLeft	2	u32	0	80	
+inventory	25	lArmRight	2	u32	0	84	
+inventory	26	lArmTop	2	u32	0	88	
+inventory	27	lArmBottom	2	u32	0	92	
+inventory	28	lArmWidth	4	u8	0	96	
+inventory	29	lArmHeight	4	u8	0	97	
+inventory	30	headLeft	2	u32	0	100	
+inventory	31	headRight	2	u32	0	104	
+inventory	32	headTop	2	u32	0	108	
+inventory	33	headBottom	2	u32	0	112	
+inventory	34	headWidth	4	u8	0	116	
+inventory	35	headHeight	4	u8	0	117	
+inventory	36	neckLeft	2	u32	0	120	
+inventory	37	neckRight	2	u32	0	124	
+inventory	38	neckTop	2	u32	0	128	
+inventory	39	neckBottom	2	u32	0	132	
+inventory	40	neckWidth	4	u8	0	136	
+inventory	41	neckHeight	4	u8	0	137	
+inventory	42	rHandLeft	2	u32	0	140	
+inventory	43	rHandRight	2	u32	0	144	
+inventory	44	rHandTop	2	u32	0	148	
+inventory	45	rHandBottom	2	u32	0	152	
+inventory	46	rHandWidth	4	u8	0	156	
+inventory	47	rHandHeight	4	u8	0	157	
+inventory	48	lHandLeft	2	u32	0	160	
+inventory	49	lHandRight	2	u32	0	164	
+inventory	50	lHandTop	2	u32	0	168	
+inventory	51	lHandBottom	2	u32	0	172	
+inventory	52	lHandWidth	4	u8	0	176	
+inventory	53	lHandHeight	4	u8	0	177	
+inventory	54	beltLeft	2	u32	0	180	
+inventory	55	beltRight	2	u32	0	184	
+inventory	56	beltTop	2	u32	0	188	
+inventory	57	beltBottom	2	u32	0	192	
+inventory	58	beltWidth	4	u8	0	196	
+inventory	59	beltHeight	4	u8	0	197	
+inventory	60	feetLeft	2	u32	0	200	
+inventory	61	feetRight	2	u32	0	204	
+inventory	62	feetTop	2	u32	0	208	
+inventory	63	feetBottom	2	u32	0	212	
+inventory	64	feetWidth	4	u8	0	216	
+inventory	65	feetHeight	4	u8	0	217	
+inventory	66	glovesLeft	2	u32	0	220	
+inventory	67	glovesRight	2	u32	0	224	
+inventory	68	glovesTop	2	u32	0	228	
+inventory	69	glovesBottom	2	u32	0	232	
+inventory	70	glovesWidth	4	u8	0	236	
+inventory	71	glovesHeight	4	u8	0	237	
+belts	0	numboxes	4	u8	0	4	
+belts	1	box1left	2	u32	0	8	
+belts	2	box1right	2	u32	0	12	
+belts	3	box1top	2	u32	0	16	
+belts	4	box1bottom	2	u32	0	20	
+belts	5	box2left	2	u32	0	24	
+belts	6	box2right	2	u32	0	28	
+belts	7	box2top	2	u32	0	32	
+belts	8	box2bottom	2	u32	0	36	
+belts	9	box3left	2	u32	0	40	
+belts	10	box3right	2	u32	0	44	
+belts	11	box3top	2	u32	0	48	
+belts	12	box3bottom	2	u32	0	52	
+belts	13	box4left	2	u32	0	56	
+belts	14	box4right	2	u32	0	60	
+belts	15	box4top	2	u32	0	64	
+belts	16	box4bottom	2	u32	0	68	
+belts	17	box5left	2	u32	0	72	
+belts	18	box5right	2	u32	0	76	
+belts	19	box5top	2	u32	0	80	
+belts	20	box5bottom	2	u32	0	84	
+belts	21	box6left	2	u32	0	88	
+belts	22	box6right	2	u32	0	92	
+belts	23	box6top	2	u32	0	96	
+belts	24	box6bottom	2	u32	0	100	
+belts	25	box7left	2	u32	0	104	
+belts	26	box7right	2	u32	0	108	
+belts	27	box7top	2	u32	0	112	
+belts	28	box7bottom	2	u32	0	116	
+belts	29	box8left	2	u32	0	120	
+belts	30	box8right	2	u32	0	124	
+belts	31	box8top	2	u32	0	128	
+belts	32	box8bottom	2	u32	0	132	
+belts	33	box9left	2	u32	0	136	
+belts	34	box9right	2	u32	0	140	
+belts	35	box9top	2	u32	0	144	
+belts	36	box9bottom	2	u32	0	148	
+belts	37	box10left	2	u32	0	152	
+belts	38	box10right	2	u32	0	156	
+belts	39	box10top	2	u32	0	160	
+belts	40	box10bottom	2	u32	0	164	
+belts	41	box11left	2	u32	0	168	
+belts	42	box11right	2	u32	0	172	
+belts	43	box11top	2	u32	0	176	
+belts	44	box11bottom	2	u32	0	180	
+belts	45	box12left	2	u32	0	184	
+belts	46	box12right	2	u32	0	188	
+belts	47	box12top	2	u32	0	192	
+belts	48	box12bottom	2	u32	0	196	
+belts	49	box13left	2	u32	0	200	
+belts	50	box13right	2	u32	0	204	
+belts	51	box13top	2	u32	0	208	
+belts	52	box13bottom	2	u32	0	212	
+belts	53	box14left	2	u32	0	216	
+belts	54	box14right	2	u32	0	220	
+belts	55	box14top	2	u32	0	224	
+belts	56	box14bottom	2	u32	0	228	
+belts	57	box15left	2	u32	0	232	
+belts	58	box15right	2	u32	0	236	
+belts	59	box15top	2	u32	0	240	
+belts	60	box15bottom	2	u32	0	244	
+belts	61	box16left	2	u32	0	248	
+belts	62	box16right	2	u32	0	252	
+belts	63	box16top	2	u32	0	256	
+belts	64	box16bottom	2	u32	0	260	
+monitempercent	0	HeartPercent	4	u8	0	0	
+monitempercent	1	BodyPartPercent	4	u8	0	1	
+monitempercent	2	TreasureClassPercent	4	u8	0	2	
+monitempercent	3	ComponentPercent	4	u8	0	3	
+cubemain	0	enabled	4	u8	0	0	
+cubemain	1	ladder	4	u8	0	1	
+cubemain	2	min diff	4	u8	0	2	
+cubemain	3	op	4	u8	0	4	
+cubemain	4	param	2	u32	0	8	cb(cubemain.param)
+cubemain	5	value	2	u32	0	12	
+cubemain	6	class	13	link8	0	3	playerclass.code
+cubemain	7	numinputs	4	u8	0	16	
+cubemain	8	version	3	u16	0	18	
+cubemain	9	input 1	23	cb	0	0	cb(cubemain.input)
+cubemain	10	input 2	23	cb	0	1	cb(cubemain.input)
+cubemain	11	input 3	23	cb	0	2	cb(cubemain.input)
+cubemain	12	input 4	23	cb	0	3	cb(cubemain.input)
+cubemain	13	input 5	23	cb	0	4	cb(cubemain.input)
+cubemain	14	input 6	23	cb	0	5	cb(cubemain.input)
+cubemain	15	input 7	23	cb	0	6	cb(cubemain.input)
+cubemain	16	output	23	cb	0	0	cb(cubemain.output)
+cubemain	17	lvl	4	u8	0	85	
+cubemain	18	plvl	4	u8	0	86	
+cubemain	19	ilvl	4	u8	0	87	
+cubemain	20	mod 1	19	link32	0	100	properties.code
+cubemain	21	mod 1 chance	4	u8	0	110	
+cubemain	22	mod 1 param	3	u16	0	104	
+cubemain	23	mod 1 min	3	u16	0	106	
+cubemain	24	mod 1 max	3	u16	0	108	
+cubemain	25	mod 2	19	link32	0	112	properties.code
+cubemain	26	mod 2 chance	4	u8	0	122	
+cubemain	27	mod 2 param	3	u16	0	116	
+cubemain	28	mod 2 min	3	u16	0	118	
+cubemain	29	mod 2 max	3	u16	0	120	
+cubemain	30	mod 3	19	link32	0	124	properties.code
+cubemain	31	mod 3 chance	4	u8	0	134	
+cubemain	32	mod 3 param	3	u16	0	128	
+cubemain	33	mod 3 min	3	u16	0	130	
+cubemain	34	mod 3 max	3	u16	0	132	
+cubemain	35	mod 4	19	link32	0	136	properties.code
+cubemain	36	mod 4 chance	4	u8	0	146	
+cubemain	37	mod 4 param	3	u16	0	140	
+cubemain	38	mod 4 min	3	u16	0	142	
+cubemain	39	mod 4 max	3	u16	0	144	
+cubemain	40	mod 5	19	link32	0	148	properties.code
+cubemain	41	mod 5 chance	4	u8	0	158	
+cubemain	42	mod 5 param	3	u16	0	152	
+cubemain	43	mod 5 min	3	u16	0	154	
+cubemain	44	mod 5 max	3	u16	0	156	
+cubemain	45	output b	23	cb	0	1	cb(cubemain.output)
+cubemain	46	b lvl	4	u8	0	169	
+cubemain	47	b plvl	4	u8	0	170	
+cubemain	48	b ilvl	4	u8	0	171	
+cubemain	49	b mod 1	19	link32	0	184	properties.code
+cubemain	50	b mod 1 chance	4	u8	0	194	
+cubemain	51	b mod 1 param	3	u16	0	188	
+cubemain	52	b mod 1 min	3	u16	0	190	
+cubemain	53	b mod 1 max	3	u16	0	192	
+cubemain	54	b mod 2	19	link32	0	196	properties.code
+cubemain	55	b mod 2 chance	4	u8	0	206	
+cubemain	56	b mod 2 param	3	u16	0	200	
+cubemain	57	b mod 2 min	3	u16	0	202	
+cubemain	58	b mod 2 max	3	u16	0	204	
+cubemain	59	b mod 3	19	link32	0	208	properties.code
+cubemain	60	b mod 3 chance	4	u8	0	218	
+cubemain	61	b mod 3 param	3	u16	0	212	
+cubemain	62	b mod 3 min	3	u16	0	214	
+cubemain	63	b mod 3 max	3	u16	0	216	
+cubemain	64	b mod 4	19	link32	0	220	properties.code
+cubemain	65	b mod 4 chance	4	u8	0	230	
+cubemain	66	b mod 4 param	3	u16	0	224	
+cubemain	67	b mod 4 min	3	u16	0	226	
+cubemain	68	b mod 4 max	3	u16	0	228	
+cubemain	69	b mod 5	19	link32	0	232	properties.code
+cubemain	70	b mod 5 chance	4	u8	0	242	
+cubemain	71	b mod 5 param	3	u16	0	236	
+cubemain	72	b mod 5 min	3	u16	0	238	
+cubemain	73	b mod 5 max	3	u16	0	240	
+cubemain	74	output c	23	cb	0	2	cb(cubemain.output)
+cubemain	75	c lvl	4	u8	0	253	
+cubemain	76	c plvl	4	u8	0	254	
+cubemain	77	c ilvl	4	u8	0	255	
+cubemain	78	c mod 1	19	link32	0	268	properties.code
+cubemain	79	c mod 1 chance	4	u8	0	278	
+cubemain	80	c mod 1 param	3	u16	0	272	
+cubemain	81	c mod 1 min	3	u16	0	274	
+cubemain	82	c mod 1 max	3	u16	0	276	
+cubemain	83	c mod 2	19	link32	0	280	properties.code
+cubemain	84	c mod 2 chance	4	u8	0	290	
+cubemain	85	c mod 2 param	3	u16	0	284	
+cubemain	86	c mod 2 min	3	u16	0	286	
+cubemain	87	c mod 2 max	3	u16	0	288	
+cubemain	88	c mod 3	19	link32	0	292	properties.code
+cubemain	89	c mod 3 chance	4	u8	0	302	
+cubemain	90	c mod 3 param	3	u16	0	296	
+cubemain	91	c mod 3 min	3	u16	0	298	
+cubemain	92	c mod 3 max	3	u16	0	300	
+cubemain	93	c mod 4	19	link32	0	304	properties.code
+cubemain	94	c mod 4 chance	4	u8	0	314	
+cubemain	95	c mod 4 param	3	u16	0	308	
+cubemain	96	c mod 4 min	3	u16	0	310	
+cubemain	97	c mod 4 max	3	u16	0	312	
+cubemain	98	c mod 5	19	link32	0	316	properties.code
+cubemain	99	c mod 5 chance	4	u8	0	326	
+cubemain	100	c mod 5 param	3	u16	0	320	
+cubemain	101	c mod 5 min	3	u16	0	322	
+cubemain	102	c mod 5 max	3	u16	0	324	
+difficultylevels	0	ResistPenalty	2	u32	0	0	
+difficultylevels	1	DeathExpPenalty	2	u32	0	4	
+difficultylevels	2	UberCodeOddsNormal	2	u32	0	8	
+difficultylevels	3	UberCodeOddsGood	2	u32	0	12	
+difficultylevels	4	UltraCodeOddsNormal	2	u32	0	32	
+difficultylevels	5	UltraCodeOddsGood	2	u32	0	36	
+difficultylevels	6	LifeStealDivisor	2	u32	0	40	
+difficultylevels	7	ManaStealDivisor	2	u32	0	44	
+difficultylevels	8	MonsterSkillBonus	2	u32	0	16	
+difficultylevels	9	MonsterFreezeDivisor	2	u32	0	20	
+difficultylevels	10	MonsterColdDivisor	2	u32	0	24	
+difficultylevels	11	AiCurseDivisor	2	u32	0	28	
+difficultylevels	12	UniqueDamageBonus	2	u32	0	48	
+difficultylevels	13	ChampionDamageBonus	2	u32	0	52	
+difficultylevels	14	HireableBossDamagePercent	2	u32	0	56	
+difficultylevels	15	MonsterCEDamagePercent	2	u32	0	60	
+difficultylevels	16	StaticFieldMin	2	u32	0	64	
+difficultylevels	17	GambleRare	2	u32	0	68	
+difficultylevels	18	GambleSet	2	u32	0	72	
+difficultylevels	19	GambleUnique	2	u32	0	76	
+difficultylevels	20	GambleUber	2	u32	0	80	
+difficultylevels	21	GambleUltra	2	u32	0	84	
+unused_653db0	0	Name	22	strkey	0	0	

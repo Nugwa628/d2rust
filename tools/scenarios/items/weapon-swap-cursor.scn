@@ -1,0 +1,40 @@
+scenario 2
+tick_rate 25
+# Owner bug 2026-10-20 #2: swapping weapons showed the wrong weapon and
+# left the old weapon's art on the cursor until a restart. A weapon on the
+# cursor clicked on another weapon swaps them: the clicked weapon must come
+# to the cursor, in the backpack and in the hand alike.
+name weapon-swap-cursor
+seed 7
+end 140
+# A level 30 Paladin in the Rogue Encampment.
+char class 3
+char level 30
+# A short sword into the right hand.
+at 0 dev item ssd
+at 4 input action toggle_inventory
+at 10 input click ui:inventory.slot(0,0)
+by 16 check client.cursor.code == "ssd"
+at 20 input click ui:inventory.equip(4)
+by 28 check client.worn.0.code == "ssd"
+by 28 check client.cursor == null
+# Two weapons in the backpack: the scepter at (0,0), the dagger at (1,0).
+at 32 dev item scp
+at 34 dev item dgr
+# The scepter clicked on the dagger: the dagger comes to the cursor.
+at 40 input click ui:inventory.slot(0,0)
+by 48 check client.cursor.code == "scp"
+at 52 input click ui:inventory.slot(1,0)
+by 64 check client.cursor.code == "dgr"
+# The dagger goes down in a free spot: nothing is left on the cursor.
+at 68 input click ui:inventory.slot(5,0)
+by 80 check client.cursor == null
+# The scepter clicked on the sword in the hand: the sword comes to the
+# cursor, the scepter is worn.
+at 84 input click ui:inventory.slot(1,0)
+by 92 check client.cursor.code == "scp"
+at 96 input click ui:inventory.equip(4)
+by 108 check client.cursor.code == "ssd"
+at 108 check client.worn.0.code == "scp"
+at 112 input click ui:inventory.slot(7,0)
+by 130 check client.cursor == null

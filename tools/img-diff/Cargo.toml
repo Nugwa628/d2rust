@@ -1,0 +1,17 @@
+[package]
+name = "img-diff"
+default-run = "img-diff"
+description = "Tolerant per-pixel A/B compare of two screenshots or two folders of screenshots."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+serde_json.workspace = true
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+[lints]
+workspace = true

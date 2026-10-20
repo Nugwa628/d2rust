@@ -1,0 +1,14 @@
+op	guard	prev	operand	contribution	recompute_block	note
+1	owner	owner_item_base	none	muldiv_prev_r	always	percent of prev (prev := owner item's own base value of the target when the owner is an item)
+2	listtype_pm	keep	opbase_list_total	shift_r_x	listtype_pm_and_entrybase_list_total_pos	(r * x) >> param, x from the op base on the evaluated list
+3	listtype_pm	keep	opbase_list_total	muldiv_prev_shift_r_x	listtype_pm_and_entrybase_list_total_pos	percent of prev by (r * x) >> param
+4	unit_pm	keep	opbase_unit_total	shift_r_x	unit_pm_and_entrybase_unit_total_pos	(r * x) >> param, x from the op base on the attached unit
+5	unit_pm	keep	opbase_unit_total	muldiv_prev_shift_r_x	unit_pm_and_entrybase_unit_total_pos	percent of prev by (r * x) >> param, x from the attached unit
+6	owner_act	keep	none	bytime_r	listtype_pm	by-time value of r
+7	owner_act	keep	none	muldiv_acc_bytime_r	listtype_pm	percent of the running total by the by-time value of r
+8	owner_player	keep	none	charstat_mana_bonus	none	(ManaPerMagic * (r - own base of source)) << 6
+9	owner_player	keep	none	charstat_vit_bonus	none	(LifePerVitality, or StaminaPerVitality for target 11) * (r - own base of source) << 6
+10	never	keep	none	none	none	no contribution
+11	owner_pm_prev	keep	none	muldiv_prev_r	none	percent of prev
+12	never	keep	none	none	always	no contribution
+13	owner_item	owner_item_base	none	muldiv_prev_r	listtype_item	percent of the owner item's own base value of the target

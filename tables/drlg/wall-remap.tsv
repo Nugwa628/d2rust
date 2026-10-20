@@ -1,0 +1,21 @@
+new_type	class	r0	r1	r2	r3	r4	r5	r6	r7
+0	keep								
+1	table	0	1	3	3	4	1	3	1
+2	table	1	1	2	3	4	3	2	2
+3	table	2	3	3	3	4	3	3	3
+4	keep								
+5	table	3	1	3	3	4	5	6	1
+6	table	1	3	2	3	4	3	6	2
+7	table	2	1	2	3	4	1	2	7
+8	stop								
+9	stop								
+10	keep								
+11	keep								
+12	keep								
+13	stop								
+14	keep								
+15	keep								
+16	keep								
+17	keep								
+18	keep								
+19	keep								

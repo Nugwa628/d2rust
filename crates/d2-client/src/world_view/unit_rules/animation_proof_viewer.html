@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Local animation proof</title>
+<style>
+body{margin:32px;background:#16191f;color:#eee;font:16px system-ui}main{max-width:1050px;margin:auto}h1{font-size:25px}p{color:#bbc3ce}button,select,input{font:inherit}button,select{padding:7px 12px;background:#252b36;color:#eee;border:1px solid #566071;border-radius:4px}nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:24px 0}canvas{display:block;width:100%;image-rendering:pixelated;background:#000;border:1px solid #343c49}.labels{display:grid;grid-template-columns:1fr 1fr;text-align:center;font-weight:600;margin-bottom:8px}input{flex:1;min-width:160px}small{display:block;margin-top:16px;color:#9ca8b8}
+</style>
+<main><h1>Walk / run animation proof</h1><p>Local generation from this machine's game files. Keep these pictures local.</p>
+<nav><label>Cycle <select id="mode"></select></label><label>Facing <select id="facing"></select></label><button id="play">Pause</button><input id="seek" type="range" min="0" value="0" aria-label="Frame"><span id="counter"></span></nav>
+<div class="labels"><span>Original</span><span>Smooth</span></div><canvas id="view" width="512" height="256"></canvas>
+<small id="status">Loading local pictures…</small><small>60 Hz sequence · fixed feet · unlit body components · act 1 palette. Rejected samples retain source pictures. Space toggles playback.</small></main>
+<script>
+const report=__PROOF_REPORT__;
+const mode=document.querySelector('#mode'),facing=document.querySelector('#facing'),play=document.querySelector('#play'),seek=document.querySelector('#seek'),counter=document.querySelector('#counter'),status=document.querySelector('#status'),ctx=document.querySelector('#view').getContext('2d');
+ctx.imageSmoothingEnabled=false;
+for(const a of report.animations){const o=new Option(a.mode,a.mode);mode.add(o)}
+for(let d=0;d<64;d+=4)facing.add(new Option(String(d).padStart(2,'0'),d));
+let pictures=[],playing=true,origin=performance.now(),position=0,serial=0;
+function show(i){if(!pictures.length)return;position=i%pictures.length;ctx.clearRect(0,0,512,256);ctx.drawImage(pictures[position],0,0);seek.value=position;counter.textContent=`${position+1} / ${pictures.length}`}
+async function load(){const request=++serial;pictures=[];const animation=report.animations.find(a=>a.mode===mode.value);seek.max=animation.cycle_ticks-1;status.textContent='Loading local pictures…';try{const next=await Promise.all(Array.from({length:animation.cycle_ticks},async(_,i)=>{const image=new Image();image.src=`${mode.value}/dir-${String(facing.value).padStart(2,'0')}/tick-${String(i).padStart(4,'0')}.png`;await image.decode();return image}));if(request!==serial)return;pictures=next;position=0;origin=performance.now();show(0);status.textContent=`${animation.accepted} accepted component samples · ${animation.rejected} rejected · ${animation.generation_seconds.toFixed(3)} seconds generation`}
+catch(error){if(request===serial)status.textContent=`Cannot load local pictures: ${error.message}`}}
+mode.onchange=facing.onchange=load;
+play.onclick=()=>{playing=!playing;play.textContent=playing?'Pause':'Play';origin=performance.now()-position*1000/60};
+seek.oninput=()=>{show(Number(seek.value));origin=performance.now()-position*1000/60};
+document.onkeydown=event=>{if(event.code==='Space'&&event.target.tagName!=='SELECT'){event.preventDefault();play.click()}};
+function animate(now){if(playing&&pictures.length)show(Math.floor((now-origin)*60/1000));requestAnimationFrame(animate)}
+load();requestAnimationFrame(animate);
+</script></html>

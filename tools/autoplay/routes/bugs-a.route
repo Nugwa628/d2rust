@@ -1,0 +1,31 @@
+autoplay-route 1
+# Playtest bugs group (a), input / click (written by hand 2026-10-12 from
+# `state` reads): fresh sorceress in the Rogue Encampment, seed 1234.
+host --new sorceress BugsA --seed 1234
+step 150
+# milestone B001: Esc through the window's key path opens the game menu, Esc closes it
+rawkey esc
+step 3
+check open 9
+rawkey esc
+step 3
+check closed 9
+# milestone B021: W swaps the weapon sets (0x60 sent; 0x97 flips the set, the staff goes to slot 11)
+key W
+step 20
+check sent 60 >= 1
+check client weapon_set == 1
+check client worn == [{"body":11,"code":"sst"}]
+key W
+step 20
+check client weapon_set == 0
+check client worn == [{"body":4,"code":"sst"}]
+# milestone B029: with the inventory open a click on the free left half walks
+key I
+step 3
+check open 1
+press L 150 350
+step 2
+release L 150 350
+step 20
+check sent 01 >= 1

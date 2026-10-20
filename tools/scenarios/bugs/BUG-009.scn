@@ -1,0 +1,23 @@
+scenario 2
+tick_rate 25
+# BUG-009: a walk with the left button held goes on after a cast with the
+# right button; the cast does not end the held walk.
+name bug-009-held-walk-after-cast
+seed 1234
+end 70
+# A level 30 Sorceress with Fire Ball (skill 47) at 20, in the Blood Moor,
+# with mana refilled every tick (god) so the cast always goes out.
+char class 1
+char level 30
+char skill 47 20
+char area 0 2
+at 0 dev god on
+# Hold the left button east of her: she walks there and keeps walking.
+at 2 input down L 560 300
+by 12 check player.mode == walk
+# Cast Fire Ball with the right button while the left is still down.
+at 14 input cast fireball at 560 260
+at 15 input wait-until player.mode == cast max 15
+# The cast ends and the held walk resumes.
+at 16 input wait-until player.mode == walk max 25
+at 17 input up L 560 300

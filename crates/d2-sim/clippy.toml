@@ -1,0 +1,12 @@
+# Determinism rules for d2-sim (CLAUDE.md rule 6), enforced by clippy.
+disallowed-types = [
+    { path = "std::collections::HashMap", reason = "iteration order is non-deterministic; use BTreeMap or an indexed Vec" },
+    { path = "std::collections::HashSet", reason = "iteration order is non-deterministic; use BTreeSet or an indexed Vec" },
+    { path = "std::time::Instant", reason = "no wall-clock time in the sim; use the tick counter" },
+    { path = "std::time::SystemTime", reason = "no wall-clock time in the sim; use the tick counter" },
+]
+disallowed-methods = [
+    { path = "std::thread::sleep", reason = "the sim never blocks or waits" },
+    { path = "std::fs::read", reason = "no I/O in the sim; data arrives via d2-data" },
+    { path = "std::fs::File::open", reason = "no I/O in the sim; data arrives via d2-data" },
+]

@@ -1,0 +1,40 @@
+wp	level	act	town	tile_calc	level_name
+0	1	0	1	13	Rogue Encampment
+1	3	0	0	0	Cold Plains
+2	4	0	0	0	Stony Field
+3	5	0	0	0	Dark Wood
+4	6	0	0	0	Black Marsh
+5	27	0	0	0	Outer Cloister
+6	29	0	0	0	Jail Level 1
+7	32	0	0	0	Inner Cloister
+8	35	0	0	0	Catacombs Level 2
+9	40	1	1	13	Lut Gholein
+10	48	1	0	0	Sewers Level 2
+11	42	1	0	0	Dry Hills
+12	57	1	0	0	Halls of the Dead Level 2
+13	43	1	0	0	Far Oasis
+14	44	1	0	0	Lost City
+15	52	1	0	0	Palace Cellar Level 1
+16	74	1	0	13	Arcane Sanctuary
+17	46	1	0	13	Canyon of the Magi
+18	75	2	1	13	Kurast Docktown
+19	76	2	0	0	Spider Forest
+20	77	2	0	0	Great Marsh
+21	78	2	0	0	Flayer Jungle
+22	79	2	0	0	Lower Kurast
+23	80	2	0	0	Kurast Bazaar
+24	81	2	0	0	Upper Kurast
+25	83	2	0	0	Travincal
+26	101	2	0	0	Durance of Hate Level 2
+27	103	3	1	13	The Pandemonium Fortress
+28	106	3	0	0	City of the Damned
+29	107	3	0	0	River of Flame
+30	109	4	1	13	Harrogath
+31	111	4	0	0	Rigid Highlands
+32	112	4	0	0	Arreat Plateau
+33	113	4	0	0	Crystalized Cavern Level 1
+34	115	4	0	0	Crystalized Cavern Level 2
+35	123	4	0	0	Halls of Death's Calling
+36	117	4	0	0	Tundra Wastelands
+37	118	4	0	0	Glacial Caves Level 1
+38	129	4	0	0	The Worldstone Keep Level 2

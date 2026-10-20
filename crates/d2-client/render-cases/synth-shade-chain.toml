@@ -1,0 +1,29 @@
+# render-pipeline.md Test vectors row 3 (§A4 order: m1 first, then m2).
+version = 1
+kind = "synthetic"
+description = "chain [m1, m2], m1[5] = 9, m2[9] = 3"
+view = [0, 0, 32, 32]
+
+[[frame]]
+width = 2
+height = 2
+pixels = [0, 5, 7, 0]
+
+[[map]]
+base = "identity"
+set = [[5, 9]]
+
+[[map]]
+base = "identity"
+set = [[9, 3]]
+
+[[item]]
+frame = 0
+x = 10
+y = 10
+shade = [0, 1]
+
+[[expect]]
+x = 11
+y = 10
+index = 3

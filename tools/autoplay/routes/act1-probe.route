@@ -1,0 +1,625 @@
+autoplay-route 1
+# Act I probe: fresh Amazon; town NPC talks, waypoint menus, walks (unit targets and UI ids)
+host --front --seed 1234
+# milestone front: main menu, Single Player (no saves: the create screen), Amazon, name, OK
+click ui:menu.single_player
+step 1
+click ui:create.class.amazon
+step 50
+text AutoProbe
+step 1
+click ui:create.ok
+step 1
+check level 1
+key esc
+step 2
+step 6
+key esc
+step 2
+step 6
+press L 560 364
+step 1
+release L 560 364
+step 1
+step 8
+press L 554 361
+step 1
+release L 554 361
+step 1
+step 8
+press L 606 339
+step 1
+release L 606 339
+step 1
+step 8
+press L 600 347
+step 1
+release L 600 347
+step 1
+step 8
+press L 590 342
+step 1
+release L 590 342
+step 1
+step 8
+press L 598 343
+step 1
+release L 598 343
+step 1
+step 8
+press L 589 353
+step 1
+release L 589 353
+step 1
+step 8
+press L 585 344
+step 1
+release L 585 344
+step 1
+step 8
+press L 610 337
+step 1
+release L 610 337
+step 1
+step 8
+press L 615 341
+step 1
+release L 615 341
+step 1
+step 8
+press L 603 338
+step 1
+release L 603 338
+step 1
+step 8
+press L 639 327
+step 1
+release L 639 327
+step 1
+step 8
+press L 662 316
+step 1
+release L 662 316
+step 1
+step 8
+press L 613 306
+step 1
+release L 613 306
+step 1
+step 8
+press L 531 297
+step 1
+release L 531 297
+step 1
+step 8
+press L 448 289
+step 1
+release L 448 289
+step 1
+step 8
+press L 400 284
+step 1
+release L 400 284
+step 1
+step 8
+press L 454 257
+step 1
+release L 454 257
+step 1
+step 8
+press L 406 281
+step 1
+release L 406 281
+step 1
+step 8
+# milestone talk-akara: talk to akara (148): Talk opens a dialog
+interactunit 1 148
+step 200
+interactunit 1 148
+step 200
+check client npc_menu.class == 148
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 1
+check sent 2F >= 1
+check sent 30 >= 1
+press L 208 220
+step 1
+release L 208 220
+step 1
+step 8
+press L 206 235
+step 1
+release L 206 235
+step 1
+step 8
+press L 183 239
+step 1
+release L 183 239
+step 1
+step 8
+press L 164 241
+step 1
+release L 164 241
+step 1
+step 8
+press L 147 257
+step 1
+release L 147 257
+step 1
+step 8
+press L 165 268
+step 1
+release L 165 268
+step 1
+step 8
+press L 248 276
+step 1
+release L 248 276
+step 1
+step 8
+press L 331 284
+step 1
+release L 331 284
+step 1
+step 8
+press L 399 283
+step 1
+release L 399 283
+step 1
+step 8
+# milestone talk-kashya: talk to kashya (150): Talk opens a dialog
+interactunit 1 150
+step 200
+interactunit 1 150
+step 200
+check client npc_menu.class == 150
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 1
+check sent 2F >= 2
+check sent 30 >= 2
+press L 288 180
+step 1
+release L 288 180
+step 1
+step 8
+press L 262 183
+step 1
+release L 262 183
+step 1
+step 8
+press L 279 185
+step 1
+release L 279 185
+step 1
+step 8
+press L 261 188
+step 1
+release L 261 188
+step 1
+step 8
+press L 264 182
+step 1
+release L 264 182
+step 1
+step 8
+press L 281 169
+step 1
+release L 281 169
+step 1
+step 8
+press L 274 182
+step 1
+release L 274 182
+step 1
+step 8
+press L 256 186
+step 1
+release L 256 186
+step 1
+step 8
+press L 254 197
+step 1
+release L 254 197
+step 1
+step 8
+press L 312 204
+step 1
+release L 312 204
+step 1
+step 8
+press L 450 245
+step 1
+release L 450 245
+step 1
+step 8
+press L 131 272
+step 1
+release L 131 272
+step 1
+step 8
+press L 131 270
+step 1
+release L 131 270
+step 1
+step 8
+press L 153 234
+step 1
+release L 153 234
+step 1
+step 8
+press L 252 198
+step 1
+release L 252 198
+step 1
+step 8
+press L 310 191
+step 1
+release L 310 191
+step 1
+step 8
+press L 350 179
+step 1
+release L 350 179
+step 1
+step 8
+press L 375 172
+step 1
+release L 375 172
+step 1
+step 8
+press L 390 182
+step 1
+release L 390 182
+step 1
+step 8
+press L 400 224
+step 1
+release L 400 224
+step 1
+step 8
+press L 410 266
+step 1
+release L 410 266
+step 1
+step 8
+press L 384 306
+step 1
+release L 384 306
+step 1
+step 8
+press L 416 276
+step 1
+release L 416 276
+step 1
+step 8
+press L 480 244
+step 1
+release L 480 244
+step 1
+step 8
+press L 426 271
+step 1
+release L 426 271
+step 1
+step 8
+# milestone talk-charsi: talk to charsi (154): Talk opens a dialog
+interactunit 1 154
+step 200
+interactunit 1 154
+step 200
+check client npc_menu.class == 154
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 1
+check sent 2F >= 3
+check sent 30 >= 3
+press L 272 380
+step 1
+release L 272 380
+step 1
+step 8
+press L 282 380
+step 1
+release L 282 380
+step 1
+step 8
+press L 262 376
+step 1
+release L 262 376
+step 1
+step 8
+press L 248 373
+step 1
+release L 248 373
+step 1
+step 8
+press L 261 368
+step 1
+release L 261 368
+step 1
+step 8
+press L 246 361
+step 1
+release L 246 361
+step 1
+step 8
+press L 242 363
+step 1
+release L 242 363
+step 1
+step 8
+press L 238 365
+step 1
+release L 238 365
+step 1
+step 8
+press L 234 367
+step 1
+release L 234 367
+step 1
+step 8
+press L 246 361
+step 1
+release L 246 361
+step 1
+step 8
+press L 242 363
+step 1
+release L 242 363
+step 1
+step 8
+press L 238 365
+step 1
+release L 238 365
+step 1
+step 8
+press L 234 367
+step 1
+release L 234 367
+step 1
+step 8
+press L 262 369
+step 1
+release L 262 369
+step 1
+step 8
+press L 316 336
+step 1
+release L 316 336
+step 1
+step 8
+press L 369 303
+step 1
+release L 369 303
+step 1
+step 8
+# milestone talk-gheed: talk to gheed (147): Talk opens a dialog
+interactunit 1 147
+step 200
+interactunit 1 147
+step 200
+check client npc_menu.class == 147
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 1
+check sent 2F >= 4
+check sent 30 >= 4
+press L 608 228
+step 1
+release L 608 228
+step 1
+step 8
+press L 604 230
+step 1
+release L 604 230
+step 1
+step 8
+press L 642 242
+step 1
+release L 642 242
+step 1
+step 8
+press L 660 258
+step 1
+release L 660 258
+step 1
+step 8
+press L 667 269
+step 1
+release L 667 269
+step 1
+step 8
+press L 669 275
+step 1
+release L 669 275
+step 1
+step 8
+press L 670 280
+step 1
+release L 670 280
+step 1
+step 8
+press L 671 284
+step 1
+release L 671 284
+step 1
+step 8
+press L 671 285
+step 1
+release L 671 285
+step 1
+step 8
+press L 671 286
+step 1
+release L 671 286
+step 1
+step 8
+press L 671 288
+step 1
+release L 671 288
+step 1
+step 8
+press L 594 287
+step 1
+release L 594 287
+step 1
+step 8
+press L 512 275
+step 1
+release L 512 275
+step 1
+step 8
+press L 432 262
+step 1
+release L 432 262
+step 1
+step 8
+press L 403 268
+step 1
+release L 403 268
+step 1
+step 8
+# milestone talk-warriv: talk to warriv (155): Talk opens a dialog
+interactunit 1 155
+step 200
+interactunit 1 155
+step 200
+check client npc_menu.class == 155
+click ui:npc.menu(0)
+step 23
+click ui:npc.topic(0)
+step 13
+check client npc_menu.talking == true
+click ui:dialog.skip
+step 13
+key space
+step 4
+key space
+step 4
+
+check level 1
+check sent 2F >= 5
+check sent 30 >= 5
+press L 670 277
+step 1
+release L 670 277
+step 1
+step 8
+press L 670 280
+step 1
+release L 670 280
+step 1
+step 8
+press L 670 283
+step 1
+release L 670 283
+step 1
+step 8
+press L 671 284
+step 1
+release L 671 284
+step 1
+step 8
+press L 671 285
+step 1
+release L 671 285
+step 1
+step 8
+press L 668 270
+step 1
+release L 668 270
+step 1
+step 8
+press L 666 264
+step 1
+release L 666 264
+step 1
+step 8
+press L 608 292
+step 1
+release L 608 292
+step 1
+step 8
+press L 544 308
+step 1
+release L 544 308
+step 1
+step 8
+press L 468 302
+step 1
+release L 468 302
+step 1
+step 8
+press L 400 284
+step 1
+release L 400 284
+step 1
+step 8
+press L 454 257
+step 1
+release L 454 257
+step 1
+step 8
+press L 406 281
+step 1
+release L 406 281
+step 1
+step 8
+# milestone town-wp-menu: the town waypoint menu opens
+interactunit 2 119
+step 200
+useunit 2 119
+step 40
+check level 1
+check open 20
+check sent 2F >= 5
+check sent 30 >= 5
+click ui:waypoint.close
+step 2
+walklevel 2
+# milestone blood-moor: walk into Blood Moor (2)
+check level 2
+check sent 2F >= 5
+check sent 30 >= 5

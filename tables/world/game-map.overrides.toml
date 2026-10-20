@@ -1,0 +1,603 @@
+# The base game's game-map overrides. The map reader takes everything the
+# game's tables can say from the tables; this file says only what they cannot.
+# A mod keeps its own game-map.overrides.toml next to its files.
+game = "D2RUST base game"
+final_objective = "Defeat Baal in the Worldstone Chamber"
+
+# The five act towns (safe areas with waypoints). Mods name their own.
+towns = [1, 40, 75, 103, 109]
+
+[[act_transition]]
+from = 1
+to = 2
+quest = "A1Q6 Sisters to the Slaughter"
+
+[[act_transition]]
+from = 2
+to = 3
+quest = "A2Q6 The Seven Tombs"
+
+[[act_transition]]
+from = 3
+to = 4
+quest = "A3Q6 The Guardian"
+
+[[act_transition]]
+from = 4
+to = 5
+quest = "A4Q4 Malachai"
+
+[[quest]]
+chain = 6
+prerequisites = [1, 2, 3, 4, 5]
+
+[[quest]]
+chain = 13
+prerequisites = [9, 10, 11, 12]
+
+[[quest]]
+chain = 20
+prerequisites = [15, 16, 17, 18, 19]
+
+[[quest]]
+chain = 24
+prerequisites = [22, 23]
+
+[[quest]]
+chain = 36
+prerequisites = [31, 32, 33, 34, 35]
+
+[[reward]]
+chain = 1
+kind = "respec"
+name = "free respec"
+
+[[reward]]
+chain = 2
+kind = "item"
+name = "Akara's ring"
+item = "rin "
+
+[[reward]]
+chain = 4
+kind = "unlock"
+name = "Cain identifies items"
+
+# World links the tables cannot say. `Leveldefs` `Vis*` records the cave and
+# tomb neighbours it can draw. The outdoor placer joins the wilderness levels
+# and the act towns by geometry, and quest portals are created by scripts;
+# none of those edges is in the tables.
+[[path]]
+areas = [1, 2, 3, 4, 5, 6, 7, 26]
+kind = "path"
+reason = "Act I town gate, wilderness chain and Monastery Gate (outdoor placer edges)"
+
+[[link]]
+from = 3
+to = 17
+kind = "path"
+reason = "Cold Plains to the Burial Grounds (outdoor placer branch)"
+
+[[link]]
+from = 4
+to = 38
+kind = "portal"
+reason = "Stony Field to Tristram through the Cairn Stones portal (A1Q4)"
+
+[[link]]
+from = 1
+to = 39
+kind = "portal"
+reason = "Rogue Encampment to the secret cow level after the final quest"
+
+[[path]]
+areas = [40, 41, 42, 43, 44, 46]
+kind = "path"
+reason = "Act II town gate and desert chain to the Canyon of the Magi (outdoor placer edges)"
+
+[[link]]
+from = 44
+to = 45
+kind = "path"
+reason = "Lost City to the Valley of Snakes (outdoor placer branch)"
+
+[[link]]
+from = 46
+to = 73
+kind = "portal"
+reason = "the true tomb's orifice to Duriel's Lair (A2Q6 quest portal)"
+
+[[link]]
+from = 54
+to = 74
+kind = "portal"
+reason = "Palace Cellar Level 3 to the Arcane Sanctuary (A2Q4 quest portal)"
+
+[[path]]
+areas = [75, 76, 77, 78, 79, 80, 81, 82, 83]
+kind = "path"
+reason = "Act III town gate, jungle and Kurast chain to Travincal (outdoor placer edges)"
+
+[[path]]
+areas = [103, 104, 105, 106]
+kind = "path"
+reason = "Act IV town gate and steppes/plains/city chain (outdoor placer edges)"
+
+[[path]]
+areas = [109, 110, 111, 112]
+kind = "path"
+reason = "Act V town gate and foothills/highlands/plateau chain (outdoor placer edges)"
+
+[[link]]
+from = 109
+to = 121
+kind = "portal"
+reason = "Harrogath to Nihlathak's Temple (A5Q4 red portal)"
+
+[[link]]
+from = 109
+to = 133
+kind = "portal"
+reason = "Harrogath to Pandemonium Run 1 (event portal)"
+
+[[link]]
+from = 109
+to = 134
+kind = "portal"
+reason = "Harrogath to Pandemonium Run 2 (event portal)"
+
+[[link]]
+from = 109
+to = 135
+kind = "portal"
+reason = "Harrogath to Pandemonium Run 3 (event portal)"
+
+[[link]]
+from = 109
+to = 136
+kind = "portal"
+reason = "Harrogath to Uber Tristram after the event bosses (event portal)"
+
+# The Hell levels (Levels.txt "Act 5 - Hell 1/2/3") are entered through the
+# permanent portals the Barricade Hell Portal presets (LvlPrest 955/956) place
+# in the highlands, plateau and tundra; the object init maps level 111 to 125,
+# 112 to 126 and 117 to 127.
+[[link]]
+from = 111
+to = 125
+kind = "portal"
+reason = "Rigid Highlands to Hell 1 (preset permanent portal)"
+
+[[link]]
+from = 112
+to = 126
+kind = "portal"
+reason = "Arreat Plateau to Hell 2 (preset permanent portal)"
+
+[[link]]
+from = 117
+to = 127
+kind = "portal"
+reason = "Tundra Wastelands to Hell 3 (preset permanent portal)"
+
+# T-jump talk goals: the first NPC conversation in each act that starts a quest.
+[[goal]]
+name = "talk-warriv-a1"
+kind = "talk"
+act = 1
+area = 1
+npc = 155
+chain = 0
+max_ticks = 200
+
+[[goal]]
+name = "talk-akara-a1"
+kind = "talk"
+act = 1
+area = 1
+npc = 148
+chain = 1
+max_ticks = 200
+
+[[goal]]
+name = "talk-kashya-a1"
+kind = "talk"
+act = 1
+area = 1
+npc = 150
+chain = 2
+max_ticks = 200
+
+# Charsi's A1Q3 is not a first conversation: the Malus and the earlier act
+# progress gate it, and its first line records the intro without moving the
+# quest word. The act's starting conversations end with Kashya.
+
+[[goal]]
+name = "talk-atma-a2"
+kind = "talk"
+act = 2
+area = 40
+npc = 176
+chain = 8
+max_ticks = 200
+
+[[goal]]
+name = "talk-hratli-a3"
+kind = "talk"
+act = 3
+area = 75
+npc = 253
+chain = 14
+max_ticks = 200
+
+[[goal]]
+name = "talk-tyrael-a4"
+kind = "talk"
+act = 4
+area = 103
+npc = 367
+chain = 22
+max_ticks = 200
+
+[[goal]]
+name = "talk-larzuk-a5"
+kind = "talk"
+act = 5
+area = 109
+npc = 511
+chain = 31
+max_ticks = 200
+
+# The level bosses. Where a boss stands is in the level maps, not the
+# tables, so each one is named here: a superuniques row (its class comes
+# from the row) or the monster class of a boss that is the only one of
+# its class. One T-jump boss goal each.
+
+# Den of Evil: Corpsefire
+[[boss]]
+area = 8
+superunique = 40
+
+# Cold Plains: Bishibosh
+[[boss]]
+area = 3
+superunique = 0
+
+# Cave Level 1: Coldcrow
+[[boss]]
+area = 9
+superunique = 2
+
+# Burial Grounds: Blood Raven
+[[boss]]
+area = 17
+monster = 267
+
+# Stony Field: Rakanishu
+[[boss]]
+area = 4
+superunique = 3
+
+# Dark Wood: Treehead WoodFist
+[[boss]]
+area = 5
+superunique = 4
+
+# Crypt: Bonebreaker
+[[boss]]
+area = 18
+superunique = 1
+
+# Tristram: Griswold
+[[boss]]
+area = 38
+superunique = 5
+
+# Tower Cellar Level 5: The Countess
+[[boss]]
+area = 25
+superunique = 6
+
+# Barracks: The Smith
+[[boss]]
+area = 28
+superunique = 20
+
+# Jail Level 2: Pitspawn Fouldog
+[[boss]]
+area = 30
+superunique = 7
+
+# Cathedral: Bone Ash
+[[boss]]
+area = 33
+superunique = 9
+
+# Catacombs Level 4: Andariel
+[[boss]]
+area = 37
+monster = 156
+
+# Moo Moo Farm: The Cow King
+[[boss]]
+area = 39
+superunique = 39
+
+# Sewers Level 3: Radament
+[[boss]]
+area = 49
+superunique = 10
+
+# Far Oasis: Beetleburst
+[[boss]]
+area = 43
+superunique = 13
+
+# Lost City: Dark Elder
+[[boss]]
+area = 44
+superunique = 17
+
+# Palace Cellar Level 3: Fire Eye
+[[boss]]
+area = 54
+superunique = 16
+
+# Stony Tomb Level 2: Creeping Feature
+[[boss]]
+area = 59
+superunique = 14
+
+# Halls of the Dead Level 3: Bloodwitch the Wild
+[[boss]]
+area = 60
+superunique = 11
+
+# Claw Viper Temple Level 2: Fangskin
+[[boss]]
+area = 61
+superunique = 12
+
+# Maggot Lair Level 3: Coldworm the Burrower
+[[boss]]
+area = 64
+superunique = 15
+
+# Arcane Sanctuary: The Summoner. The level map places him as his
+# monster class, not as his superuniques row.
+[[boss]]
+area = 74
+monster = 250
+
+# Duriel's Lair: Duriel
+[[boss]]
+area = 73
+monster = 211
+
+# Spider Cavern: Sszark the Burning
+[[boss]]
+area = 85
+superunique = 21
+
+# Flayer Jungle: Stormtree (the Flayer Jungle level maps place him)
+[[boss]]
+area = 78
+superunique = 23
+
+# Flayer Dungeon Level 3: Witch Doctor Endugu
+[[boss]]
+area = 91
+superunique = 22
+
+# Sewers Level 1: Icehawk Riftwing
+[[boss]]
+area = 92
+superunique = 25
+
+# Ruined Temple: Battlemaid Sarina
+[[boss]]
+area = 94
+superunique = 24
+
+# Travincal: Ismail Vilehand
+[[boss]]
+area = 83
+superunique = 26
+
+# Travincal: Geleb Flamefinger
+[[boss]]
+area = 83
+superunique = 27
+
+# Travincal: Toorc Icefist
+[[boss]]
+area = 83
+superunique = 29
+
+# Durance of Hate Level 3: Bremm Sparkfist
+[[boss]]
+area = 102
+superunique = 28
+
+# Durance of Hate Level 3: Wyand Voidbringer
+[[boss]]
+area = 102
+superunique = 30
+
+# Durance of Hate Level 3: Maffer Dragonhand
+[[boss]]
+area = 102
+superunique = 31
+
+# Durance of Hate Level 3: Mephisto
+[[boss]]
+area = 102
+monster = 242
+
+# Plains of Despair: Izual
+[[boss]]
+area = 105
+monster = 256
+# The goal's Bone Spear takes him from 11946 life to 2557 by tick 1500
+# (about 690 life per 200 ticks): he needs about 1850 ticks of fight, not
+# the default 1470.
+fight = 2100
+
+# River of Flame: Hephasto The Armorer
+[[boss]]
+area = 107
+superunique = 41
+# He stands by the Hellforge, far into the level: walk there first.
+setup = ["poke goto unit 2:376"]
+
+# Chaos Sanctuary: Grand Vizier of Chaos
+[[boss]]
+area = 108
+superunique = 38
+# Released by opening seal 396.
+setup = ["poke goto unit 2:396", "poke operate @2:396"]
+
+# Chaos Sanctuary: Lord De Seis
+[[boss]]
+area = 108
+superunique = 37
+# Released by opening seal 394.
+setup = ["poke goto unit 2:394", "poke operate @2:394"]
+
+# Chaos Sanctuary: Infector of Souls
+[[boss]]
+area = 108
+superunique = 36
+# Released by opening seal 392.
+setup = ["poke goto unit 2:392", "poke operate @2:392"]
+
+# Chaos Sanctuary: Diablo
+[[boss]]
+area = 108
+monster = 243
+# He comes when all five seals are open and their three bosses are dead:
+# the boss seals first, so their bosses are out when the level is cleared.
+setup = [
+    "poke goto unit 2:396",
+    "poke operate @2:396",
+    "poke goto unit 2:394",
+    "poke operate @2:394",
+    "poke goto unit 2:392",
+    "poke operate @2:392",
+    "poke goto unit 2:393",
+    "poke operate @2:393",
+    "poke goto unit 2:395",
+    "poke operate @2:395",
+    "dev kill level",
+]
+
+# Bloody Foothills: Shenk the Overseer
+[[boss]]
+area = 110
+superunique = 42
+
+# Bloody Foothills: Dac Farren
+[[boss]]
+area = 110
+superunique = 48
+
+# Frigid Highlands: Eldritch the Rectifier
+[[boss]]
+area = 111
+superunique = 49
+
+# Frigid Highlands: Eyeback the Unleashed
+[[boss]]
+area = 111
+superunique = 50
+
+# Frigid Highlands: Sharptooth Slayer
+[[boss]]
+area = 111
+superunique = 56
+
+# Arreat Plateau: Thresh Socket
+[[boss]]
+area = 112
+superunique = 51
+
+# Frozen River: Frozenstein
+[[boss]]
+area = 114
+superunique = 59
+
+# Glacial Trail: Bonesaw Breaker
+[[boss]]
+area = 115
+superunique = 47
+
+# Icy Cellar: Snapchip Shatter
+[[boss]]
+area = 119
+superunique = 53
+
+# Nihlathak's Temple: Pindleskin
+[[boss]]
+area = 121
+superunique = 52
+
+# Halls of Vaught: Nihlathak
+[[boss]]
+area = 124
+superunique = 60
+# He leaves Harrogath for his temple when a player enters the temple's
+# levels: a level change inside Act 5, which an act-change warp is not.
+from_town = true
+
+# Arreat Summit: Talic
+[[boss]]
+area = 120
+superunique = 43
+# The Ancients wake when the altar's message is read.
+setup = ["poke goto unit 2:546", "poke operate @2:546", "msg QuestMessage npc=4294967295 msg=20002"]
+
+# Arreat Summit: Madawc
+[[boss]]
+area = 120
+superunique = 44
+# The Ancients wake when the altar's message is read.
+setup = ["poke goto unit 2:546", "poke operate @2:546", "msg QuestMessage npc=4294967295 msg=20002"]
+
+# Arreat Summit: Korlic
+[[boss]]
+area = 120
+superunique = 45
+# The Ancients wake when the altar's message is read.
+setup = ["poke goto unit 2:546", "poke operate @2:546", "msg QuestMessage npc=4294967295 msg=20002"]
+
+# Throne of Destruction: Colenzo the Annihilator
+[[boss]]
+area = 131
+superunique = 61
+# The first wave comes when a player stands before Baal's throne.
+setup = ["poke goto unit 1:543"]
+
+# Throne of Destruction: Achmel the Cursed
+[[boss]]
+area = 131
+superunique = 62
+
+# Throne of Destruction: Bartuc the Bloody
+[[boss]]
+area = 131
+superunique = 63
+
+# Throne of Destruction: Ventar the Unholy
+[[boss]]
+area = 131
+superunique = 64
+
+# Throne of Destruction: Lister the Tormentor
+[[boss]]
+area = 131
+superunique = 65
+
+# Worldstone Chamber: Baal
+[[boss]]
+area = 132
+monster = 544

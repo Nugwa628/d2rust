@@ -1,0 +1,5 @@
+soak-log 1 tick_rate=60 seed=2 save=target/soak/saves/Soaktown3.d2s difficulty=0 kit=1
+5 click L 496 235
+6 click L 18 533
+13 pick 1 1
+17 click L 737 278

@@ -1,0 +1,15 @@
+id	name	tbl_path	dc6_path	dc6_archive	height	line_step	frame_w	frame_h
+0	Font8	data\local\font\latin\font8.tbl	data\local\font\latin\font8.dc6	d2data	14	22	15	14
+1	Font16	data\local\font\latin\font16.tbl	data\local\font\latin\font16.dc6	d2data	10	16	14	16
+2	Font30	data\local\font\latin\font30.tbl	data\local\font\latin\font30.dc6	d2data	19	30	29	30
+3	Font42	data\local\font\latin\font42.tbl	data\local\font\latin\font42.dc6	d2data	27	43	39	41
+4	FontFormal10	data\local\font\latin\fontformal10.tbl	data\local\font\latin\fontformal10.dc6	d2exp	15	24	15	15
+5	FontFormal12	data\local\font\latin\fontformal12.tbl	data\local\font\latin\fontformal12.dc6	d2data	20	32	35	30
+6	Font6	data\local\font\latin\font6.tbl	data\local\font\latin\font6.dc6	d2data	7	11	9	11
+7	Font24	data\local\font\latin\font24.tbl	data\local\font\latin\font24.dc6	d2data	15	24	22	26
+8	FontFormal11	data\local\font\latin\fontformal11.tbl	data\local\font\latin\fontformal11.dc6	d2data	16	25	18	16
+9	FontExocet10	data\local\font\latin\fontexocet10.tbl	data\local\font\latin\fontexocet10.dc6	d2data	10	16	17	18
+10	FontRidiculous	data\local\font\latin\fontridiculous.tbl	data\local\font\latin\fontridiculous.dc6	d2data	7	11	12	14
+11	FontExocet8	data\local\font\latin\fontexocet8.tbl	data\local\font\latin\fontexocet8.dc6	d2data	13	20	13	13
+12	ReallyTheLastSucker	data\local\font\latin\reallythelastsucker.tbl	data\local\font\latin\reallythelastsucker.dc6	d2exp	7	11	9	11
+13	FontInGameChat	data\local\font\latin\fontingamechat.tbl	data\local\font\latin\fontingamechat.dc6	d2data	15	24	16	15

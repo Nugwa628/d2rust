@@ -1,0 +1,72 @@
+index	addr_114d	d2moo_name	rows	examples	params	rng	behaviour	status
+0	-	-	591	arrow(0) javelin(1) bighead1(2) bighead2(3)	-	-	no function: every caller skips an index <= 0 (signed 16-bit read)	spec'd-here
+1	0x005A9A70	MISSMODE_SrvHit01_Fireball_ExplodingArrow_FreezingArrowExplosion	8	fireball(62) vampirefireball(129) desertfireball(283) impfireball(404)	sHitPar1 (or skill calc1)	element roll (R9.6 elem_roll) then area damage draws	single-element roll, area damage radius sHitPar1 around the missile; returns 1 (R9.6)	spec'd-here
+2	0x005A9D80	MISSMODE_SrvHit02_PlagueJavelin_PoisonPotion	6	plaguejavelin(43) rancidgasepotion(47) chokinggaspoition(48) stranglinggaspotion(49)	sHitPar1-3;HitSubMissile1	none	ring helper 0x005A9370 at the hit unit or missile: 16-direction radius-2 ring of HitSubMissile1, step sHitPar2 (velocity Param1<<7), then step sHitPar1 (Param2<<7), loops sHitPar3; returns 3 (bodies.md §6)	spec'd-here
+3	0x005A9F90	MISSMODE_SrvHit03_ExplosivePotion_BombOnGround	4	oilpotion(44) explosivepotion(45) fulminatingpotion(46) bomb on ground(386)	(via 44)	damage rolls (missile seed)	with a unit: 0; else server-hit 44 with no unit (bodies.md §8)	spec'd-here
+4	0x005B07A0	MISSMODE_SrvHit04_ExplodingArrow_FreezingArrow_RoyalStrikeMeteorCenter	3	explodingarrow(41) freezingarrow(87) royalstrikemeteorcenter(564)	sHitPar1;HitSubMissile1-4	- (creation draws)	creates each HitSubMissile at the missile; with sHitPar1>0 each runs the hit handler on the unit at once; returns 3 (R9.6)	spec'd-here
+5	0x005ABC40	MISSMODE_SrvHit05_Unused	0	-	sHitPar1;HitSubMissile1	none	unused: 64-step radius-30 circle of HitSubMissile1 every sHitPar1 steps, offsets in data +0x28/+0x2C; returns 3 (bodies-2.md §62)	spec'd-here
+6	0x005AA1C0	MISSMODE_SrvHit06_Unused	0	-	sHitPar1;sHitPar2	none	unused: spawns monstats sHitPar1 in mode sHitPar2 (0-15, else 1) at the missile; returns 1 (bodies-2.md §62)	spec'd-here
+7	0x005A9FB0	MISSMODE_SrvHit07_HolyBolt_FistOfTheHeavenBolt	2	holybolt(55) fistoftheheavensbolt(234)	sHitPar1;sHitPar2;skill calc1-2;ProgOverlay	heal roll (missile seed)	pet/ally of the owner with sHitPar1: heal calc1..calc2 (<<8) on the missile seed, ProgOverlay, 1; else by type and sHitPar2 (0 all, 2 demons, else undead): 3 or 4 (bodies.md §17)	spec'd-here
+8	0x005AA180	MISSMODE_SrvHit08_Blaze	1	blaze(67)	-	none	no unit: 2; the owner itself with state 13 (blaze): 0; else 2 (bodies.md §24)	spec'd-here
+9	0x005AA250	MISSMODE_SrvHit09_ImmolationArrow	1	immolationarrow(85)	sHitPar1;sHitPar2;SHitCalc1;HitSubMissile1;skill calc1-2	elem_roll (missile seed)	clears stats 56/134, fire disc of HitSubMissile1 radius sHitPar1 (<=0: calc1) with range SHitCalc1; elem_roll + area damage radius sHitPar2 (<=0: calc2); returns 3 (bodies.md §25)	spec'd-here
+10	0x005AA650	MISSMODE_SrvHit10_GuidedArrow_BoneSpirit	3	guidedarrow(86) bonespirit(193) monbonespirit(329)	Param2	none	bone spirit state machine on data +0x28; at expiry re-targets the smallest-GUID unit within Param2 and restarts its frames (bodies.md §11)	spec'd-here
+11	0x005B0870	MISSMODE_SrvHit11_Unused	0	-	sHitPar1;HitSubMissile1-4	none	unused: HitSubMissile1-4 (> 0) at the missile, each hit-handled when sHitPar1 > 0; returns 1 (bodies-2.md §62)	spec'd-here
+12	0x005AA730	MISSMODE_SrvHit12_ChainLightning_LightningStrike	3	chainlightning(93) lightningstrike(232) chainlightning2(267)	sHitPar1 (or skill aurarangecalc)	-	while bounces (data+0x28) > 1, fires a copy at the next hostile unit in GUID order within range (line of sight); returns 3 (R9.6)	spec'd-here
+13	0x005AA8B0	MISSMODE_SrvHit13_GlacialSpike_HellMeteorDown	3	glacialspike(96) monglacialspike(271) hellmeteordown(336)	sHitPar1;sHitPar2 (or skill aurarangecalc/auralencalc)	element roll then area damage draws	single-element roll with element length sHitPar2, area damage radius sHitPar1; always returns 1 (R9.6)	spec'd-here
+14	0x005AABB0	MISSMODE_SrvHit14_MeteorCenter_CatapultMeteor_RoyalStrikeMeteor	4	meteorcenter(101) vampiremeteorcenter(133) catapult meteor ball(422) royalstrikemeteor(563)	sHitPar1;sHitPar2;HitSubMissile1;skill Param3-4	damage rolls (missile seed)	area damage radius sHitPar1 (<=0: aurarangecalc); 18-point scatter of HitSubMissile1, step sHitPar2, range skill Param3+(lvl-1)*Param4; returns 1 (bodies.md §9)	spec'd-here
+15	0x005AAD40	MISSMODE_SrvHit15_SpiderGooLay	1	spidergoolay(143)	HitSubMissile1	none	creates HitSubMissile1 at the missile (owner required); returns 0 (bodies.md §27)	spec'd-here
+16	0x005AAE10	MISSMODE_SrvHit16_SpiderGoo_VinesTrail_VinesWither	3	spidergoo(146) vines trail(472) vines wither(473)	- (skill calcs)	none	with a unit: auratargetstate list for max(calc4,5) frames (first contact without its aurastat values); returns 0; no unit: 0 (bodies.md §12)	spec'd-here
+17	0x005AAFB0	MISSMODE_SrvHit17_Howl	1	howl(148)	- (skill params)	none	monster without auratargetstate and with level < owner level + lvl + Param2: terror install 0x005DDD00 (Param3/4, Param5/6); returns 0 (bodies.md §28)	spec'd-here
+18	0x005AB0B0	MISSMODE_SrvHit18_Shout_BattleCommand_BattleOrders	3	shout(149) battlecommand(236) battleorders(237)	-	none	ally unit: shout_state 0x005D8290 (skills/bodies.md §6.8); returns 0 (bodies.md §13)	spec'd-here
+19	0x005AB110	MISSMODE_SrvHit19_FingerMageSpider	1	fingermagespider(177)	- (skill calcs)	none	as server-hit 16 with auralencalc, no unit -> 1, result 3 (bodies.md §30)	spec'd-here
+20	0x005AB370	MISSMODE_SrvHit20_LightningFury	1	lightningfury(206)	sHitPar1;sHitPar2;HitSubMissile1;skill aurarangecalc,calc1,aurafilter	none	scan_unit radius sHitPar1 (<=0: aurarangecalc), filter aurafilter or 0xA783: HitSubMissile1 at each of the first sHitPar2 (<=0: calc1) units; returns 3 (bodies-2.md §32)	spec'd-here
+21	0x005AB500	MISSMODE_SrvHit21_BattleCry	1	battlecry(219)	- (skill calcs)	none	accepted unit: apply_state auratargetstate for auralencalc frames, aura_fill; returns 0 (bodies-2.md §34)	spec'd-here
+22	0x005ADD20	MISSMODE_SrvHit22_FistOfTheHeavensDelay	1	fistoftheheavensdelay(233)	sHitPar1;sHitPar2;HitSubMissile1;skill aurarangecalc,calc4,aurafilter	damage rolls (missile seed)	full damage on the stored unit, then HitSubMissile1 at up to sHitPar2 (<=0: calc4) units within sHitPar1 (<=0: aurarangecalc); returns 1 (bodies-2.md §35)	spec'd-here
+23	0x005ACFC0	MISSMODE_SrvHit23_Unused	0	-	sHitPar1	none	unused: skill server-do sHitPar1 with the missile as caster, target the hit unit; returns 1 (bodies-2.md §62)	spec'd-here
+24	0x005A9BF0	MISSMODE_SrvHit24_PantherPotOrange	1	pantherpotorange(238)	sHitPar1	damage rolls (missile seed)	full damage roll, area damage radius sHitPar1 (<=0: calc1); returns 1 (bodies-2.md §36)	spec'd-here
+25	0x005AB820	MISSMODE_SrvHit25_PantherPotGreen	1	pantherpotgreen(239)	sHitPar1;HitSubMissile1	none	8-direction radius-2 ring (step sHitPar1) of HitSubMissile1 at the hit unit or missile, velocity Param1<<7, loops lvl-1; returns 3 (bodies-2.md §37)	spec'd-here
+26	0x005AB8D0	MISSMODE_SrvHit26_GrimWardStart	3	grimwardsmallstart(249) grimwardmediumstart(252) grimwardlargestart(255)	sHitPar1;HitSubMissile1;skill calc1	none	creates HitSubMissile1 at the missile with range sHitPar1 or max(calc1,5); returns 1 (bodies.md §14)	spec'd-here
+27	0x005ABA00	MISSMODE_SrvHit27_GrimWard	3	grimwardsmall(250) grimwardmedium(253) grimwardlarge(256)	-	none	returns 1 (bodies.md §15)	spec'd-here
+28	0x005ABA10	MISSMODE_SrvHit28_GrimWardScare	1	grimwardscare(259)	- (skill Param1-2, Param5-6)	none	monster within Param1+(lvl-1)*Param2 of the grim ward (missile GUID data +0x28): terror install from the ward (Param5, Param6); returns 1 (bodies-2.md §38)	spec'd-here
+29	0x005ABB00	MISSMODE_SrvHit29_FrozenOrb	1	frozenorb(260)	sHitPar1;HitSubMissile1	none	frames left 0: circle of HitSubMissile1 every sHitPar1 steps, offsets stored in data +0x28/+0x2C, 3; frames left: 2 (bodies-2.md §39)	spec'd-here
+30	-	-	0	-	-	-	null entry	spec'd-here
+31	0x005ABD70	MISSMODE_SrvHit31_FireHead	1	firehead(277)	-	elem_roll (missile seed)	heals the owner by an elem_roll value; returns 2, or 3 with CollideKill (bodies-2.md §41)	spec'd-here
+32	0x005ABE50	MISSMODE_SrvHit32_CairnStones	1	cairnstones(288)	Param4	none	no unit and portal not yet opened: opens the Tristram portal (Param4); returns 0 (bodies-2.md §42)	spec'd-here
+33	0x005ABEB0	MISSMODE_SrvHit33_TowerChestSpawner	1	towerchestspawner(332)	-	none	no unit: refreshes the missile's room; returns 0 (bodies-2.md §43)	spec'd-here
+34	-	-	0	-	-	-	null entry	spec'd-here
+35	0x005ABEE0	MISSMODE_SrvHit35_OrbMist	1	orbmist(368)	-	none	no unit: object GUID data +0x28 refreshes its room and, in mode 0, goes to mode 1 with an end-animation timer; returns 1 (bodies-2.md §45)	spec'd-here
+36	0x005ABF70	MISSMODE_SrvHit36_MissileInAir	4	bomb in air(385) shock field in air(388) catapult spike in air(412) sentryspikeinair(496)	HitSubMissile1	none	no unit: creates HitSubMissile1 at the missile via 0x0056EDE0 and copies data +0x28; with a unit: 0 (bodies.md §10)	spec'd-here
+37	0x005AC020	MISSMODE_SrvHit37_BladeCreeper	1	blade creeper(392)	-	none	unit: 2; else 0 (bodies-2.md §46)	spec'd-here
+38	0x005AC0A0	MISSMODE_SrvHit38_CatapultChargedBall	1	catapultchargedball(407)	sHitPar1;sHitPar2;HitSubMissile1;skill calc4	zigzag callback re-seeds each sub-missile	nova of sHitPar1+(lvl-1)*sHitPar2 (<=0: max(calc4,1)) HitSubMissile1 with the zigzag callback; returns 1 (bodies.md §19)	spec'd-here
+39	0x005AC1D0	MISSMODE_SrvHit39_ImpSpawnMonsters	1	imp spawn monsters(409)	-	roll(n) on the room seed	spawns a random isSpawn monster of the level's mon list at the missile (room seed draw); returns 1 (bodies-2.md §47)	spec'd-here
+40	0x005AC250	MISSMODE_SrvHit40_CatapultSpikeBall	1	catapult spike ball(411)	sHitPar1;sHitPar2;HitSubMissile1;skill calc4	re-seed init_low(target x); roll(2r) x2 per target	scatter at the missile's target: n = sHitPar1+(lvl-1)*sHitPar2 (<=0: calc4) HitSubMissile1 within n/4, re-seeding the missile from the target x; returns 1 (bodies-2.md §48)	spec'd-here
+41	-	-	0	-	-	-	null entry	spec'd-here
+42	-	-	0	-	-	-	null entry	spec'd-here
+43	0x005AC350	MISSMODE_SrvHit43_HealingVortex	1	healing vortex(425)	- (skill damage)	roll(hi-lo) (missile seed)	heals the unit by phys_min..phys_max of the skill (missile seed roll), ProgOverlay when hurt; returns CollideKill != 0 (bodies-2.md §49)	spec'd-here
+44	0x005A9E10	MISSMODE_SrvHit44_ExplodingJavelin	2	explodingjavalin(429) icejavalin(434)	sHitPar1	damage rolls (missile seed)	full damage roll 0x005A89A0 + area damage radius sHitPar1 (0: aurarangecalc); always returns 1 (bodies.md §8)	spec'd-here
+45	0x005AC480	MISSMODE_SrvHit45_LightningTrailingJavelin	2	lightingtrailingjavalin(431) advlighttrailingjav(438)	sHitPar1;sHitPar2;HitSubMissile1	zigzag callback re-seeds each sub-missile	nova 0x0056D4E0 of sHitPar1 HitSubMissile1 at the missile, zigzag init callback when sHitPar2; returns 1 (bodies.md §19)	spec'd-here
+46	-	-	0	-	-	-	null entry	spec'd-here
+47	0x005AC550	MISSMODE_SrvHit47_MoltenBoulder	1	moltenboulder(452)	sHitPar1;sHitPar2;HitSubMissile1	damage rolls (missile seed)	small monster: 2; large monster or expiry: full damage roll, area damage, 18-point scatter of HitSubMissile1 (range = radius); returns 1 (bodies-2.md §50)	spec'd-here
+48	0x005AC6D0	MISSMODE_SrvHit48_MoltenBoulderEmerge	1	moltenboulderemerge(453)	HitSubMissile1	none	creates HitSubMissile1 at the missile aimed at its path target; returns 1 (bodies-2.md §51)	spec'd-here
+49	-	-	0	-	-	-	null entry	spec'd-here
+50	0x005AC800	MISSMODE_SrvHit50_PlagueVinesTrail	1	plague vines trail(475)	sHitPar1	none	unit and elapsed < total - sHitPar1: 2; else 0 (bodies-2.md §52)	spec'd-here
+51	0x005AC870	MISSMODE_SrvHit51_VolcanoDebris	1	volcano debris 2(481)	HitSubMissile1-3	none	creates HitSubMissile1-3 (each >= 0) at the missile; returns 1 (bodies-2.md §54)	spec'd-here
+52	0x005AC940	MISSMODE_SrvHit52_BladeFury	3	bladefury1(505) bladefury2(507) bladefury3(509)	sHitPar1;HitSubMissile1	none	8-direction ring (step sHitPar1) of class-0 missiles (class never set; HitSubMissile1 only tested), offset stored in data +0x28/+0x2C; returns 1 (bodies.md §16)	spec'd-here
+53	0x005ACA50	MISSMODE_SrvHit53_RabiesContagion	1	rabiescontagion(516)	-	none	unit and 10 <= state frames left <= elem_len: rabies poison 0x005C7DB0, 2; else 1 (bodies-2.md §56)	spec'd-here
+54	0x005ACAF0	MISSMODE_SrvHit54_BaalSpawnMonsters	1	baal spawn monsters(550)	-	none	no unit: spawns the owner's skill entry param 1 monster class at the missile (0x0054E600); returns 1 (bodies-2.md §58)	spec'd-here
+55	0x005ACB60	MISSMODE_SrvHit55_Baalnferno	1	baal inferno(554)	sHitPar1	none	player unit: burns clamp(sHitPar1,1,100) % of mana (at least 1), 2; other units 2 (bodies-2.md §59)	spec'd-here
+56	0x005ACC50	MISSMODE_SrvHit56_ArmageddonControl	2	armageddoncontrol(577) diablogeddoncontrol(670)	sHitPar1;HitSubMissile1	damage rolls (missile seed)	full damage roll, area damage radius sHitPar1 (<=0: aurarangecalc), HitSubMissile1 at the missile; returns 1 (bodies.md §23)	spec'd-here
+57	0x005AD970	MISSMODE_SrvHit57_BaalFxControl	1	baalfx control(625)	-	none	no unit, once: Tyrael spawn (quest 36 test) and room refresh; returns 0 (bodies-2.md §60)	spec'd-here
+58	0x005ACDF0	MISSMODE_SrvHit58_BaalTauntLightningControl	1	baal taunt lightning control(654)	sHitPar1;HitSubMissile1	init_low(missile x) then rolls on the missile seed	re-seeds from x and creates HitSubMissile1 at a random point within sHitPar1 of the missile; returns 1 (bodies.md §5)	spec'd-here
+59	0x005ACF20	MISSMODE_SrvHit59_BaalTauntPoisonControl	1	baal taunt poison control(655)	sHitPar1;HitSubMissile1	none	plague ring 0x005A9370 of HitSubMissile1 (steps 2 and max(sHitPar1,1), no loops); returns 1 (bodies-2.md §61)	spec'd-here
+60	-	-	0	-	-	-	null entry	spec'd-here
+61	-	-	0	-	-	-	null entry	spec'd-here
+62	-	-	0	-	-	-	null entry	spec'd-here
+63	-	-	0	-	-	-	null entry	spec'd-here
+64	-	-	0	-	-	-	null entry	spec'd-here
+65	-	-	0	-	-	-	null entry	spec'd-here
+66	-	-	0	-	-	-	null entry	spec'd-here
+67	-	-	0	-	-	-	null entry	spec'd-here
+68	-	-	0	-	-	-	null entry	spec'd-here
+69	-	-	0	-	-	-	null entry	spec'd-here
+70	-	-	0	-	-	-	null entry	spec'd-here

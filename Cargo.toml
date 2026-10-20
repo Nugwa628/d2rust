@@ -1,0 +1,115 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/d2-formats",
+    "crates/d2-data",
+    "crates/d2-sim",
+    "crates/d2-proto",
+    "crates/d2-net",
+    "crates/d2-quic",
+    "crates/d2-online",
+    "crates/d2-server",
+    "crates/d2rust-server",
+    "crates/d2-client",
+    "crates/d2-verify",
+    "crates/test-fixtures",
+    "crates/d2-native",
+    "crates/d2-report",
+    "crates/mp-test",
+    "tools/depcheck",
+    "tools/mpq-tool",
+    "tools/data-tool",
+    "tools/d2s-tool",
+    "tools/d2-convert",
+    "tools/img-diff",
+    "tools/report-service",
+    "examples/mod-game",
+]
+
+[workspace.package]
+version = "0.0.0"
+edition = "2021"
+rust-version = "1.95"
+publish = false
+license = "LicenseRef-Private"
+
+[workspace.dependencies]
+# Internal crates
+d2-formats = { path = "crates/d2-formats" }
+d2-data = { path = "crates/d2-data" }
+d2-sim = { path = "crates/d2-sim" }
+d2-proto = { path = "crates/d2-proto" }
+d2-net = { path = "crates/d2-net" }
+d2-quic = { path = "crates/d2-quic" }
+d2-online = { path = "crates/d2-online" }
+d2-server = { path = "crates/d2-server" }
+d2rust-server = { path = "crates/d2rust-server" }
+d2-verify = { path = "crates/d2-verify" }
+test-fixtures = { path = "crates/test-fixtures" }
+d2-native = { path = "crates/d2-native" }
+d2-report = { path = "crates/d2-report" }
+
+# Bevy is pinned to one exact version and may only be used by d2-client.
+# Upgrades are their own task between milestones (see CLAUDE.md).
+bevy = "=0.19.1"
+
+thiserror = "2"
+anyhow = "1"
+sha2 = "0.10"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# Network transport (d2-quic, multiplayer only): QUIC over tokio, TLS 1.3 with the ring backend.
+quinn = { version = "0.11", default-features = false, features = ["runtime-tokio", "rustls-ring"] }
+rustls = { version = "0.23", default-features = false, features = ["ring", "std"] }
+tokio = { version = "1", default-features = false, features = ["rt-multi-thread", "time", "sync", "net"] }
+rcgen = { version = "0.13", default-features = false, features = ["crypto", "ring"] }
+getrandom = "0.3"
+# Dedicated server accounts (d2rust-server only): SQLite with its bundled C library, argon2id hashes.
+rusqlite = { version = "0.40", features = ["bundled"] }
+argon2 = "0.5"
+proptest = { version = "1", default-features = false, features = ["std"] }
+# Benchmarks (`cargo bench`); not run in CI, but `--all-targets` compiles them.
+criterion = { version = "0.5", default-features = false }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+
+# Line tables keep file:line in panics and backtraces at a fraction of the
+# disk cost of full debug info (Bevy's full debug info is ~10 GB).
+[profile.dev]
+debug = "line-tables-only"
+
+# The shipped build (`cargo build -p d2-client --profile dist`, used by
+# windows-build.yml): release plus thin cross-crate LTO, built on all cores
+# (about 10 min on the runner; fat LTO with one codegen unit took 33 min for
+# a few percent of speed). Not stripped on purpose: on Windows the line
+# tables go into the .pdb shipped next to the exe (never into the exe), so
+# crash-log backtraces keep file and line, and stripping would make the
+# linker drop the .pdb. CI checks the plain `release` profile, which
+# builds much faster.
+[profile.dist]
+inherits = "release"
+lto = "thin"
+codegen-units = 16
+debug = "line-tables-only"
+
+# The fully optimized build, for milestone releases only (slow: ~35 min).
+[profile.dist-max]
+inherits = "dist"
+lto = "fat"
+codegen-units = 1
+
+# Bevy compiles very slowly unoptimized; optimize dependencies in dev builds.
+# No debug info for dependencies.
+[profile.dev.package."*"]
+opt-level = 2
+debug = false
+
+# Workspace crates are excluded from the dependency override above. Headless
+# scenarios also load music: decompressing a whole MPQ WAV without optimization
+# stalls the client for seconds at a song change, even when server ticks are fast.
+[profile.dev.package.d2-formats]
+opt-level = 2

@@ -1,0 +1,100 @@
+{
+ "version": 1,
+ "files": [
+  {
+   "path": "d2char.mpq",
+   "size": 266908965,
+   "sha256": "0bf3499122cf6245afd91cbde9d7c9cacbc517fc40ab7bb2c812cb38bfc473da",
+   "parts": [
+    "d2char.mpq.part-000",
+    "d2char.mpq.part-001",
+    "d2char.mpq.part-002"
+   ]
+  },
+  {
+   "path": "d2data.mpq",
+   "size": 256225123,
+   "sha256": "bb3835a14aa3935b2204d32dca9e2409f51507a35679f889a97526240ce6f055",
+   "parts": [
+    "d2data.mpq.part-000",
+    "d2data.mpq.part-001",
+    "d2data.mpq.part-002"
+   ]
+  },
+  {
+   "path": "d2exp.mpq",
+   "size": 250156780,
+   "sha256": "04e35bffeae8d9959042832055702f8b5b4567ca5505ff1df0cf3fd6d5beb6c2",
+   "parts": [
+    "d2exp.mpq.part-000",
+    "d2exp.mpq.part-001",
+    "d2exp.mpq.part-002"
+   ]
+  },
+  {
+   "path": "d2music.mpq",
+   "size": 345349632,
+   "sha256": "107da6ea2dcf822e272e48733e47d108a888e11066dab004cf101a6086a72ac9",
+   "parts": [
+    "d2music.mpq.part-000",
+    "d2music.mpq.part-001",
+    "d2music.mpq.part-002",
+    "d2music.mpq.part-003"
+   ]
+  },
+  {
+   "path": "d2sfx.mpq",
+   "size": 51948991,
+   "sha256": "567472f862eb1af41f9294930a05457e16e8c747252ee983c8b8f02663feb87b",
+   "parts": []
+  },
+  {
+   "path": "d2speech.mpq",
+   "size": 163021838,
+   "sha256": "7a238f808be9fbc74da55c98dc629ab7fac9a4f40c537cec3c1b042fa45d211a",
+   "parts": [
+    "d2speech.mpq.part-000",
+    "d2speech.mpq.part-001"
+   ]
+  },
+  {
+   "path": "d2video.mpq",
+   "size": 441697807,
+   "sha256": "7bf1bbcd6e73a415775444ff78e1bfcce83ca1af75c52b1f33998526e6e186b6",
+   "parts": [
+    "d2video.mpq.part-000",
+    "d2video.mpq.part-001",
+    "d2video.mpq.part-002",
+    "d2video.mpq.part-003",
+    "d2video.mpq.part-004"
+   ]
+  },
+  {
+   "path": "D2xMusic.mpq",
+   "size": 54691647,
+   "sha256": "4aae5a0c456236693226380d062daa3f5cd36a90a9010d036a7da0ba132f71a1",
+   "parts": []
+  },
+  {
+   "path": "d2xtalk.mpq",
+   "size": 60278192,
+   "sha256": "305a35331629e7054c34682774e18398f5cbcbed293ddf0ce3c16e25c3f0463c",
+   "parts": []
+  },
+  {
+   "path": "D2XVIDEO.MPQ",
+   "size": 110685575,
+   "sha256": "209c7a250e2117bac2720e40f0c3687549678cf5e993e5f74a6dbb2914c97591",
+   "parts": [
+    "D2XVIDEO.MPQ.part-000",
+    "D2XVIDEO.MPQ.part-001"
+   ]
+  },
+  {
+   "path": "Patch_D2.mpq",
+   "size": 5727413,
+   "sha256": "531bad76d520eea8cb0601bea5a40e1ec52f51fe7b94a6892dc483d18170c607",
+   "parts": []
+  }
+ ]
+}

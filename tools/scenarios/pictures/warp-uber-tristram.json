@@ -1,0 +1,22 @@
+{
+  "name": "warp-uber-tristram",
+  "args": [
+    "--new",
+    "sorceress",
+    "Picture",
+    "--seed",
+    "7",
+    "--poke",
+    "60 warp 136"
+  ],
+  "ticks": [
+    300,
+    303
+  ],
+  "phases": [
+    0,
+    0.5
+  ],
+  "size": "1280x720",
+  "tick_rate": 60
+}

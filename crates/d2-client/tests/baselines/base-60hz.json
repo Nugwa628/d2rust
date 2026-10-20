@@ -1,0 +1,25 @@
+{
+  "rows": [
+    {
+      "frame": 2,
+      "rgba": "b4a2bbaddff9d662",
+      "state": "b16edcbed8ae813c"
+    },
+    {
+      "frame": 32,
+      "rgba": "b4a2bbaddff9d662",
+      "state": "6525ec2ee97c3aa7"
+    },
+    {
+      "frame": 62,
+      "rgba": "b4a2bbaddff9d662",
+      "state": "b82bf56967009b95"
+    },
+    {
+      "frame": 122,
+      "rgba": "b4a2bbaddff9d662",
+      "state": "2855f1f3158a072a"
+    }
+  ],
+  "tick_rate": 60
+}
